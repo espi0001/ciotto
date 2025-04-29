@@ -1,47 +1,52 @@
 "use client";
 
 import { useEffect, useState } from "react";
-// import Image from "next/image";
+import { api } from "../../lib/api";
 
-export default function CiottoList() {
-  const [data, setData] = useState([]);
+export default function ProductsPage() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch("https://tgjjsvjkhezqddxxcfsb.supabase.co/rest/v1/ciotto?", {
-        headers: {
-          apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRnampzdmpraGV6cWRkeHhjZnNiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU4MzI0ODcsImV4cCI6MjA2MTQwODQ4N30.WzP6rDDmHrGefYnSnyAuDqwbf1mmxEv6akc0abEZARE",
-          Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRnampzdmpraGV6cWRkeHhjZnNiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU4MzI0ODcsImV4cCI6MjA2MTQwODQ4N30.WzP6rDDmHrGefYnSnyAuDqwbf1mmxEv6akc0abEZARE",
-        },
-      });
-      const fetchedData = await response.json();
-      const arrayData = Array.isArray(fetchedData) ? fetchedData : []; // safe fallback
+    const fetchProducts = async () => {
+      try {
+        const data = await api.getProducts();
+        console.log("Products data:", data);
+        setProducts(data || []);
+      } catch (error) {
+        console.error("Error:", error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-      const mappedData = arrayData.map((item) => ({
-        id: item.id,
-        name: item.name,
-        description: item.description,
-        dimension: item.dimension,
-        material: item.material,
-        color: item.color,
-        price: item.price,
-        size: item.size,
-        image: item.image,
-      }));
-      setData(mappedData);
-    }
-
-    fetchData();
+    fetchProducts();
   }, []);
 
+  if (loading)
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
+      </div>
+    );
+
+  if (error)
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="text-red-500">Error: {error}</div>
+      </div>
+    );
+
   return (
-    <div>
-      <h1>Ciotto produkter</h1>
-      <div className="grid grid-cols-3 gap-[8px]">
-        {data.map((item) => (
-          <div key={item.id}>
-            <img src={item.image} alt={item.name} />
-            <h2 className="">{item.name}</h2>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-8">Our Collection</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {products.map((product) => (
+          <div key={product.id} className="">
+            <h2 className="">{product.name}</h2>
+            <img src={product.image[0]} alt={product.name} className="w-full h-64 object-cover" />
           </div>
         ))}
       </div>
