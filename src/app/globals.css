@@ -25,6 +25,42 @@
   --font-mono: var(--font-geist-mono); */
 }
 
+*,
+*::before,
+*::after {
+
+  /* ☠️ = private */
+
+  /* default values */
+  --fs-def: inherit;
+  --fs-min: inherit;
+  --fs-max: inherit;
+
+  /* viewport and font size delta */
+  --☠️-vp-delta: calc(var(--max-scale-bound) - var(--min-scale-bound));
+  --☠️-fs-delta: calc(var(--fs-max) - var(--fs-min));
+
+  /* numeric delta values */
+  --☠️-vp-num: tan(atan2(var(--☠️-vp-delta), 1rem));
+  --☠️-fs-num: tan(atan2(var(--☠️-fs-delta), 1rem));
+
+  /* mid range values (components) */
+  --☠️-divisor: calc(var(--☠️-vp-num) / var(--☠️-fs-num));
+  --☠️-vw-mid: calc(100vw / var(--☠️-divisor));
+  --☠️-fs-mid: calc(var(--fs-min) - (var(--min-scale-bound) / var(--☠️-divisor)));
+
+  /* clamp value */
+  --☠️-fs-clamp: clamp(var(--fs-min), var(--☠️-vw-mid) + var(--☠️-fs-mid), var(--fs-max));
+
+  /* property value */
+  font-size: var(--fs, var(--☠️-fs-clamp, var(--fs-def, var(--fs-min, var(--fs-max)))));
+}
+
+h1 {
+  --fs-min: 2rem;
+  --fs-max: 4rem;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
