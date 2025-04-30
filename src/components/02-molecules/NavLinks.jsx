@@ -28,43 +28,33 @@ export default function NavLinks() {
             setHoveredIndex(null);
           }}
         >
-          <button className="relative flex items-center gap-1 cursor-pointer uppercase z-30 group">
-            <span className="relative">
-              Works +<span className="absolute bottom-0 left-0 w-full h-[1px] bg-brown-500 origin-right transform scale-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:origin-left group-hover:scale-x-100"></span>
-            </span>
+          <button className="relative flex items-center cursor-pointer uppercase z-30 group">
+            <span className="relative group-hover:opacity-50 transition-opacity duration-300">Works</span>
+            <div className="relative w-4 h-4 flex items-center justify-center ml-1">
+              <span className={`absolute w-3 h-0.5 bg-brown-500 transition-all duration-300 ${worksOpen ? "-translate-y-0.5" : "rotate-0"}`} />
+              <span className={`absolute w-3 h-0.5 bg-brown-500 transition-all duration-300 ${worksOpen ? "translate-y-0.5" : "-rotate-90"}`} />
+            </div>
           </button>
         </li>
         {/* Other links */}
         <li className="relative z-30">
           <a href="/products" className="relative group">
-            <span className="relative">
-              Products
-              <span className="absolute bottom-0 left-0 w-full h-[1px] bg-brown-500 origin-right transform scale-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:origin-left group-hover:scale-x-100"></span>
-            </span>
+            <span className="relative group-hover:opacity-50 transition-opacity duration-300">Products</span>
           </a>
         </li>
         <li className="relative z-30">
           <a href="/about" className="relative group">
-            <span className="relative">
-              About
-              <span className="absolute bottom-0 left-0 w-full h-[1px] bg-brown-500 origin-right transform scale-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:origin-left group-hover:scale-x-100"></span>
-            </span>
+            <span className="relative group-hover:opacity-50 transition-opacity duration-300">About</span>
           </a>
         </li>
         <li className="relative z-30">
           <a href="/contact" className="relative group">
-            <span className="relative">
-              Contact
-              <span className="absolute bottom-0 left-0 w-full h-[1px] bg-brown-500 origin-right transform scale-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:origin-left group-hover:scale-x-100"></span>
-            </span>
+            <span className="relative group-hover:opacity-50 transition-opacity duration-300">Contact</span>
           </a>
         </li>
         <li className="relative z-30">
           <a href="/ciotto-bar" className="relative group text-orange-500">
-            <span className="relative">
-              Ciotto Bar
-              <span className="absolute bottom-0 left-0 w-full h-[1px] bg-brown-500 origin-right transform scale-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:origin-left group-hover:scale-x-100"></span>
-            </span>
+            <span className="relative group-hover:opacity-50 transition-opacity duration-300">Ciotto Bar</span>
           </a>
         </li>
       </ul>
@@ -121,10 +111,7 @@ export default function NavLinks() {
                       ease: [0.23, 1, 0.32, 1],
                     }}
                   >
-                    <span className="relative">
-                      {link.name}
-                      <span className="absolute bottom-0 left-0 w-full h-[1px] bg-brown-500 origin-right transform scale-x-0 transition-transform duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:origin-left group-hover:scale-x-100"></span>
-                    </span>
+                    <span className="relative group-hover:opacity-50 transition-opacity duration-300">{link.name}</span>
                   </motion.a>
                 ))}
               </div>
