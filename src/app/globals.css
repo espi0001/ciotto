@@ -9,82 +9,79 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-
-  --color-beige-950: #1E1910FF;
-  --color-grey-950: #0C0B09FF;
-  --color-brown-950: #0B0704FF;
-  --color-orange-950: #0F0502FF;
-  --color-green-950: #080901FF;
+  --color-beige-950: #1e1910ff;
+  --color-grey-950: #0c0b09ff;
+  --color-brown-950: #0b0704ff;
+  --color-orange-950: #0f0502ff;
+  --color-green-950: #080901ff;
 
   /* Green */
-  --color-green-900: #0B0D02FF;
-  --color-green-800: #1A1F03FF;
-  --color-green-700: #262D06FF;
-  --color-green-600: #313A07FF;
-  --color-green-500: #3C490BFF;
-  --color-green-400: #7C9416FF;
-  --color-green-300: #BDE01EFF;
-  --color-green-200: #D4EB6BFF;
-  --color-green-100: #E7F5B3FF;
-  --color-green-50: #F4FADBFF;
+  --color-green-900: #0b0d02ff;
+  --color-green-800: #1a1f03ff;
+  --color-green-700: #262d06ff;
+  --color-green-600: #313a07ff;
+  --color-green-500: #3c490bff;
+  --color-green-400: #7c9416ff;
+  --color-green-300: #bde01eff;
+  --color-green-200: #d4eb6bff;
+  --color-green-100: #e7f5b3ff;
+  --color-green-50: #f4fadbff;
 
   /* Orange */
-  --color-orange-900: #1E0A02FF;
-  --color-orange-800: #3E1604FF;
-  --color-orange-700: #5A1E06FF;
-  --color-orange-600: #7B2909FF;
-  --color-orange-500: #9A330BFF;
-  --color-orange-400: #DB490FFF;
-  --color-orange-300: #F1703CFF;
-  --color-orange-200: #F6A07EFF;
-  --color-orange-100: #FACEBCFF;
-  --color-orange-50: #FDE6DEFF;
+  --color-orange-900: #1e0a02ff;
+  --color-orange-800: #3e1604ff;
+  --color-orange-700: #5a1e06ff;
+  --color-orange-600: #7b2909ff;
+  --color-orange-500: #9a330bff;
+  --color-orange-400: #db490fff;
+  --color-orange-300: #f1703cff;
+  --color-orange-200: #f6a07eff;
+  --color-orange-100: #facebcff;
+  --color-orange-50: #fde6deff;
 
   /* Brown */
-  --color-brown-900: #0E0A07FF;
-  --color-brown-800: #18110CFF;
-  --color-brown-700: #261912FF;
-  --color-brown-600: #342419FF;
-  --color-brown-500: #402D1FFF;
-  --color-brown-400: #78492BFF;
-  --color-brown-300: #AE7B58FF;
-  --color-brown-200: #C9A68EFF;
-  --color-brown-100: #E4D4C8FF;
-  --color-brown-50: #F2E9E4FF;
-
+  --color-brown-900: #0e0a07ff;
+  --color-brown-800: #18110cff;
+  --color-brown-700: #261912ff;
+  --color-brown-600: #342419ff;
+  --color-brown-500: #402d1fff;
+  --color-brown-400: #78492bff;
+  --color-brown-300: #ae7b58ff;
+  --color-brown-200: #c9a68eff;
+  --color-brown-100: #e4d4c8ff;
+  --color-brown-50: #f2e9e4ff;
 
   /* Grey */
-  --color-grey-900: #1A1814FF;
-  --color-grey-800: #312D26FF;
-  --color-grey-700: #4B443AFF;
-  --color-grey-600: #645C4FFF;
-  --color-grey-500: #7E7361FF;
-  --color-grey-400: #9B907DFF;
-  --color-grey-300: #B4AB9CFF;
-  --color-grey-200: #CCC6BDFF;
-  --color-grey-100: #E6E4DEFF;
-  --color-grey-50: #F2F0EEFF;
+  --color-grey-900: #1a1814ff;
+  --color-grey-800: #312d26ff;
+  --color-grey-700: #4b443aff;
+  --color-grey-600: #645c4fff;
+  --color-grey-500: #7e7361ff;
+  --color-grey-400: #9b907dff;
+  --color-grey-300: #b4ab9cff;
+  --color-grey-200: #ccc6bdff;
+  --color-grey-100: #e6e4deff;
+  --color-grey-50: #f2f0eeff;
 
   /* Beige */
-  --color-beige-900: #392F1DFF;
-  --color-beige-800: #725D3BFF;
-  --color-beige-700: #AC8E5EFF;
-  --color-beige-600: #CAB696FF;
-  --color-beige-500: #E7DED0FF;
-  --color-beige-400: #ECE5DAFF;
-  --color-beige-300: #F1ECE4FF;
-  --color-beige-200: #F5F1EBFF;
-  --color-beige-100: #FAF8F5FF;
-  --color-beige-50: #FDFDFCFF;
-
+  --color-beige-900: #392f1dff;
+  --color-beige-800: #725d3bff;
+  --color-beige-700: #ac8e5eff;
+  --color-beige-600: #cab696ff;
+  --color-beige-500: #e7ded0ff;
+  --color-beige-400: #ece5daff;
+  --color-beige-300: #f1ece4ff;
+  --color-beige-200: #f5f1ebff;
+  --color-beige-100: #faf8f5ff;
+  --color-beige-50: #fdfdfcff;
 
   /* Inner shadow color */
-  --color-innershadow2: #402D1FFF;
-  --color-innershadow1: #402D1FFF;
+  --color-innershadow2: #402d1fff;
+  --color-innershadow1: #402d1fff;
 
   /* Drop shadow color */
-  --color-dropshadow2: #4C4941FF;
-  --color-dropshadow1: #402D1FFF;
+  --color-dropshadow2: #4c4941ff;
+  --color-dropshadow1: #402d1fff;
 
   /* Border */
   --border-1px: 1px;
@@ -97,7 +94,6 @@
   --radius-24px: 24px;
   --radius-34px: 34px;
   --radius-44px: 44px;
-
 
   /* spacing */
   --spacing-8px: 8px;
@@ -129,7 +125,6 @@
   --shadow-innershadow1-spread: 0px;
   --shadow-innershadow1-opacity: 25px;
 
-
   /* Drop shadows */
 
   --drop-shadow-dropshadow2-x: 4px;
@@ -142,7 +137,6 @@
   --drop-shadow-dropshadow1-blur: 4px;
   --drop-shadow-dropshadow1-spread: 0px;
   --drop-shadow-dropshadow1-opacity: 25px;
-
 
   --font-sofia: "sofia", sans-serif;
   /* --font-sans: var(--font-geist-sans);
@@ -169,3 +163,5 @@ body {
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: var(--font-sofia);
 }
+
+/* Remove nav-dd styles as we're using Tailwind now */
