@@ -10,15 +10,13 @@
   --color-foreground: var(--foreground);
 
   /* backgorund color */
-  --color-beige-500: #E7DED0FF;
+  --color-beige-500: #e7ded0ff;
 
   /* primary p color */
-  --color-brown-500: #402D1FFF;
+  --color-brown-500: #402d1fff;
 
   /* secondary p color */
-  --color-beige-100: #FAF8F5FF;
-
-
+  --color-beige-100: #faf8f5ff;
 
   --font-sofia: "sofia", sans-serif;
   /* --font-sans: var(--font-geist-sans);
@@ -28,7 +26,6 @@
 *,
 *::before,
 *::after {
-
   /* ☠️ = private */
 
   /* default values */
@@ -81,3 +78,5 @@ body {
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: var(--font-sofia);
 }
+
+/* Remove nav-dd styles as we're using Tailwind now */

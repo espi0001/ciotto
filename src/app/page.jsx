@@ -8,8 +8,9 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      <h2 className="text-3xl font-semibold mb-4">Velkommen til forsiden</h2>
-      <p>Her kan du læse mere om vores projekt og hvad vi laver.</p>
+      <video autoPlay muted loop className="object-cover">
+        <source src="/video/testvideo.mp4" type="video/mp4" />
+      </video>
     </div>
   );
 }
