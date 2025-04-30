@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import Head from "next/head";
 import Menu from "../components/03-organisms/Menu";
 import Footer from "../components/03-organisms/Footer";
 
@@ -22,11 +23,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <Head>
+      <Head>
         <title>Ciotto</title>
         <meta name="description" content="Ciotto" />
         <link rel="stylesheet" href="https://use.typekit.net/xns4hfr.css"></link>
-      </Head> */}
+      </Head>
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-beige-500 text-brown-500`}>
         <Menu />
