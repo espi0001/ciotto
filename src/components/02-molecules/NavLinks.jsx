@@ -29,7 +29,9 @@ export default function NavLinks() {
           }}
         >
           <button className="relative flex items-center cursor-pointer uppercase z-30 group">
-            <span className="relative group-hover:opacity-50 transition-opacity duration-300">Works</span>
+            <span className="relative group-hover:opacity-50 transition-opacity duration-300">
+              <a href="/works">Works</a>
+            </span>
             <div className="relative w-4 h-4 flex items-center justify-center ml-1">
               <span className={`absolute w-3 h-0.5 bg-brown-500 transition-all duration-300 ${worksOpen ? "-translate-y-0.5" : "rotate-0"}`} />
               <span className={`absolute w-3 h-0.5 bg-brown-500 transition-all duration-300 ${worksOpen ? "translate-y-0.5" : "-rotate-90"}`} />

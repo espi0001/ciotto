@@ -1,16 +1,14 @@
-import ImageProps from "../01-atoms/ImageProps";
-import TextProps from "../01-atoms/TextProps";
-import LinkWrapperProps from "../01-atoms/LinkWrapperProps";
+import Link from "next/link";
 import PropTypes from "prop-types";
 
 const ProductCard = ({ image, title, link }) => {
   return (
-    <LinkWrapperProps href={link}>
-      <div className="bg-gray-300 w-full h-auto flex flex-col items-center justify-center hover:opacity-90 transition">
-        <ImageProps src={image} alt={title} />
-        <TextProps content={title} />
+    <Link href={link || "/"}>
+      <div className="bg-gray-300 w-full h-auto flex flex-col items-center justify-center hover:scale-[1.05] hover:opacity-90 transition">
+        <img src={image} alt={title} className="w-full h-auto object-cover aspect-[1/1.5]" />
+        <p className="text-beige-100 text-4xl absolute font-medium text-center">{title}</p>
       </div>
-    </LinkWrapperProps>
+    </Link>
   );
 };
 
