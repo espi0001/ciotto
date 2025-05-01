@@ -4,13 +4,17 @@ import PropTypes from "prop-types";
 const WorkCard = ({ image, title, number, link }) => {
   return (
     <Link href={link || "/"}>
-      <div className="flex flex-col space-y-2">
-        <div className="w-full aspect-square">
-          <img src={image} alt={title} className="w-full h-full object-cover" />
+      <div className="w-[540px] h-full">
+        <div className="">
+          <img
+            src={image}
+            alt={title} //
+            className="w-full h-full object-cover"
+          />
         </div>
-        <div className="flex text-sm justify-between pt-2">
+        <div className="w-full flex mt-2 justify-between items-center">
           <p className="">{String(number).padStart(3, "0")}</p>
-          <p className="uppercase tracking-wide">{title}</p>
+          <p className="uppercase">{title}</p>
         </div>
       </div>
     </Link>

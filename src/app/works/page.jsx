@@ -1,5 +1,5 @@
-import WorkCard from "../../components/02-molecules/WorkCard";
-import WorksGrid from "../../components/04-templates/WorksGrid";
+import WorkCardSmall from "../../components/02-molecules/WorkCardSmall";
+import WorkCardBig from "../../components/02-molecules/WorkCardBig";
 
 const works = [
   {
@@ -112,10 +112,33 @@ const works = [
 // ];
 
 export default function Works() {
+  const isLargeCard = (index) => {
+    // Pattern: small, big, big, small, small, big, big, small
+    const largeCardIndexes = [1, 2, 5, 6];
+    return largeCardIndexes.includes(index);
+  };
+
   return (
-    <main className="p-8">
-      {/* <WorksGrid works={works} /> */}
-      <WorkCard />
-    </main>
+    <div className="flex flex-wrap justify-center gap-[9rem] p-8">
+      {works.map((work, index) =>
+        isLargeCard(index) ? (
+          <WorkCardBig
+            key={work.id}
+            image={work.image} //
+            title={work.title}
+            number={index + 1}
+            link={work.link}
+          />
+        ) : (
+          <WorkCardSmall
+            key={work.id} //
+            image={work.image}
+            title={work.title}
+            number={index + 1}
+            link={work.link}
+          />
+        )
+      )}
+    </div>
   );
 }
