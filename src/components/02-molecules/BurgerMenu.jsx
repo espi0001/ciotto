@@ -42,7 +42,7 @@ export default function BurgerMenu({ isOpen, onClose }) {
               <div className="flex flex-col items-center space-y-12">
                 {/* Works Section */}
                 <div className="w-full text-center">
-                  <button className="text-6xl uppercase font-semibold tracking-wide relative group inline-flex items-center" onClick={() => setIsWorksOpen(!isWorksOpen)}>
+                  <button className="text-6xl uppercase font-semibold tracking-wide relative group inline-flex items-center justify-center" onClick={() => setIsWorksOpen(!isWorksOpen)}>
                     <span className="relative group-hover:opacity-50 transition-opacity duration-300">
                       Works
                       <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-brown-500 origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
@@ -52,32 +52,44 @@ export default function BurgerMenu({ isOpen, onClose }) {
                       <span className={`absolute w-8 h-0.5 bg-brown-500 transition-all duration-300 ${isWorksOpen ? "translate-y-1" : "-rotate-90"}`} />
                     </div>
                   </button>
-                  <AnimatePresence>
+                  <AnimatePresence mode="wait" onExitComplete={() => null}>
                     {isWorksOpen && (
-                      <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }} className="mt-8 overflow-hidden">
-                        <div className="flex flex-col items-center space-y-8">
-                          {worksLinks.map((link, idx) => (
-                            <motion.a
-                              key={link.name}
-                              href={link.href}
-                              initial={{ opacity: 0, filter: "blur(10px)" }}
-                              animate={{ opacity: 1, filter: "blur(0px)" }}
-                              exit={{ opacity: 0, filter: "blur(10px)" }}
-                              transition={{
-                                duration: 0.5,
-                                delay: idx * 0.05,
-                                ease: [0.23, 1, 0.32, 1],
-                              }}
-                              className="text-4xl uppercase tracking-wide relative group"
-                              onClick={onClose}
-                            >
-                              <span className="relative group-hover:opacity-50 transition-opacity duration-300">
-                                {link.name}
-                                <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-brown-500 origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-                              </span>
-                            </motion.a>
-                          ))}
-                        </div>
+                      <motion.div
+                        initial={{ height: 0 }}
+                        animate={{ height: "auto" }}
+                        exit={{ height: 0 }}
+                        transition={{
+                          duration: 1,
+                          ease: [0.23, 1, 0.32, 1],
+                        }}
+                        className="mt-8 overflow-hidden"
+                      >
+                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className="flex flex-col items-center space-y-8">
+                          <AnimatePresence>
+                            {isWorksOpen &&
+                              worksLinks.map((link, idx) => (
+                                <motion.a
+                                  key={link.name}
+                                  href={link.href}
+                                  initial={{ opacity: 0, filter: "blur(10px)" }}
+                                  animate={{ opacity: 1, filter: "blur(0px)" }}
+                                  exit={{ opacity: 0, filter: "blur(10px)" }}
+                                  transition={{
+                                    duration: 0.3,
+                                    delay: idx * 0.05,
+                                    ease: [0.23, 1, 0.32, 1],
+                                  }}
+                                  className="text-4xl uppercase tracking-wide relative group"
+                                  onClick={onClose}
+                                >
+                                  <span className="relative group-hover:opacity-50 transition-opacity duration-300">
+                                    {link.name}
+                                    <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-brown-500 origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                                  </span>
+                                </motion.a>
+                              ))}
+                          </AnimatePresence>
+                        </motion.div>
                       </motion.div>
                     )}
                   </AnimatePresence>
