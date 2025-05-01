@@ -111,7 +111,7 @@ const works = [
 //   },
 // ];
 
-export default function Works() {
+export default function Home() {
   const isLargeCard = (index) => {
     // Pattern: small, big, big, small, small, big, big, small
     const largeCardIndexes = [1, 2, 5, 6];
