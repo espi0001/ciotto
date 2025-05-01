@@ -13,19 +13,19 @@
 
 @font-face {
   font-family: "sofia-pro";
-  src: url("../../public/fonts/Sofia\ Pro\ Regular\ Az.otf") format("otf"),
-    url("../../public/fonts/Sofia\ Pro\ Regular\ Az.otf") format("otf");
+  src: url("../../public/fonts/SofiaProRegularAz.otf") format("otf"),
+    url("../../public/fonts/SofiaProRegularAz.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
+/* @font-face {
   font-family: "sofia-pro";
   src: url("../../public/fonts/Sofia\ Pro\ Bold\ Az.otf") format("otf"),
     url("../../public/fonts/Sofia\ Pro\ Bold\ Az.otf") format("otf");
   font-weight: bold;
   font-style: normal;
-}
+} */
 
 @theme {
 
