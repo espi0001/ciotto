@@ -54,8 +54,23 @@
 }
 
 h1 {
-  --fs-min: 2rem;
-  --fs-max: 4rem;
+  --fs-max: 5.5rem;
+  --fs-min: 4.25rem;
+}
+
+h2 {
+  --fs-max: 3rem;
+  --fs-min: 1.8rem;
+}
+
+h3 {
+  --fs-max: 1.5rem;
+  --fs-min: 1.13rem;
+}
+
+p {
+  --fs-max: 1rem;
+  --fs-min: 0.75rem;
 }
 
 @theme inline {

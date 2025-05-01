@@ -8,9 +8,9 @@ const WorkCard = ({ image, title, number, link }) => {
         <div className="w-full aspect-square">
           <img src={image} alt={title} className="w-full h-full object-cover" />
         </div>
-        <div className="flex text-sm space-x-4 pt-2">
-          <span className="font-light">{String(number).padStart(3, "0")}</span>
-          <span className="uppercase tracking-wide">{title}</span>
+        <div className="flex text-sm justify-between pt-2">
+          <p className="">{String(number).padStart(3, "0")}</p>
+          <p className="uppercase tracking-wide">{title}</p>
         </div>
       </div>
     </Link>

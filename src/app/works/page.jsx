@@ -1,3 +1,4 @@
+import WorkCard from "../../components/02-molecules/WorkCard";
 import WorksGrid from "../../components/04-templates/WorksGrid";
 
 const works = [
@@ -113,7 +114,8 @@ const works = [
 export default function Works() {
   return (
     <main className="p-8">
-      <WorksGrid works={works} />
+      {/* <WorksGrid works={works} /> */}
+      <WorkCard />
     </main>
   );
 }
