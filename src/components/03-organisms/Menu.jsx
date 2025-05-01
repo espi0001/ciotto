@@ -117,8 +117,8 @@ export default function Menu() {
         <AnimatePresence mode="wait">
           {!isDesktop && (
             <motion.button className="lg:hidden relative z-50 w-8 h-8 flex flex-col justify-center items-center cursor-pointer" onClick={() => setIsBurgerOpen(!isBurgerOpen)} initial="hidden" animate="visible" exit="hidden" variants={burgerVariants}>
-              <span className={`w-6 h-0.5 bg-brown-500 transition-all duration-300 ${isBurgerOpen ? "rotate-0 !translate-y-0" : "-translate-y-1"}`} />
-              <span className={`w-6 h-0.5 bg-brown-500 transition-all duration-300 ${isBurgerOpen ? "-rotate-90 !translate-y-0 absolute" : "translate-y-1"}`} />
+              <span className={`w-6 h-0.5 bg-primary-text transition-all duration-300 ${isBurgerOpen ? "rotate-0 !translate-y-0" : "-translate-y-1"}`} />
+              <span className={`w-6 h-0.5 bg-primary-text transition-all duration-300 ${isBurgerOpen ? "-rotate-90 !translate-y-0 absolute" : "translate-y-1"}`} />
             </motion.button>
           )}
         </AnimatePresence>
