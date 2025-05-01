@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.typekit.net/xns4hfr.css"></link>
       </Head> */}
 
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-beige-500 text-brown-500`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-body-bg text-brown-500`}>
         <Menu />
         <main>{children}</main>
         <Footer />
