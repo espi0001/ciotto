@@ -22,10 +22,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <link rel="stylesheet" href="https://use.typekit.net/xns4hfr.css"></link>
-      </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sofia-pro antialiased bg-body-bg text-brown-500`}>
+      </head> */}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-body-bg text-brown-500`}>
         <Menu />
         <main>{children}</main>
         <Footer />

@@ -11,6 +11,22 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: "sofia-pro";
+  src: url("../../public/fonts/Sofia\ Pro\ Regular\ Az.otf") format("otf"),
+    url("../../public/fonts/Sofia\ Pro\ Regular\ Az.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sofia-pro";
+  src: url("../../public/fonts/Sofia\ Pro\ Bold\ Az.otf") format("otf"),
+    url("../../public/fonts/Sofia\ Pro\ Bold\ Az.otf") format("otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
 @theme {
 
   /*********** BACKGROUND ***********/
@@ -23,7 +39,7 @@
 
 
   /*********** TYPOGRAPHY ***********/
-  --font-sofia-pro: "sofia pro", sans-serif;
+  /* --font-sofia-pro: "sofia pro", sans-serif; */
 
   /* brown-500*/
   --color-primary-text: #402d1fff;
@@ -128,7 +144,7 @@ p {
 } */
 
 body {
-  font-family: sofia pro, sans-serif;
+  font-family: "sofia-pro", sans-serif;
   color: var(--color-primary-text);
 }
 
