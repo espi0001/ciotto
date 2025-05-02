@@ -123,6 +123,11 @@ h1 {
   --fs-min: 4.25rem;
 }
 
+.h1-small {
+  --fs-max: 3rem;
+  --fs-min: 1.8rem;
+}
+
 h2 {
   --fs-max: 3rem;
   --fs-min: 1.8rem;
@@ -143,6 +148,11 @@ p {
   --fs-min: 0.75rem;
 }
 
+label {
+  --fs-max: 1rem;
+  --fs-min: 0.75rem;
+}
+
 .nav-links {
   --fs-max: 1rem;
   --fs-min: 0.7rem;
@@ -151,16 +161,6 @@ p {
 .burger-links {
   --fs-max: 2rem;
   --fs-min: 1.5rem;
-}
-
-.contact-h1 {
-  --fs-max: 3rem;
-  --fs-min: 1.8rem;
-}
-
-.contact-h2 {
-  --fs-max: 1.13rem;
-  --fs-min: 0.8rem;
 }
 
 .logo-size {

@@ -1,8 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import Logo from '../01-atoms/Logo';
-import NavLinks from "../02-molecules/NavLinks";
+import NavLinks from "../02-molecules/Navigation";
 import BurgerMenu from "../02-molecules/BurgerMenu";
 import Link from "next/link";
 

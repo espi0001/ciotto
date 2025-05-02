@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import NavLink from "./NavLink";
 
 const worksLinks = [
   { name: "Andra Eatery", image: "/image/andra.avif", href: "/works/andra-eatery" },
@@ -15,7 +16,7 @@ const worksLinks = [
   //   { name: "Library & Press", image: "/images/placeholder.jpg", href: "/works/library-press" },
 ];
 
-export default function NavLinks({ navColor = "#402d1f", transition = "color 0.4s cubic-bezier(0.4,0,0.2,1)", setWorksOpen }) {
+export default function Navigation({ navColor = "#402d1f", transition = "color 0.4s cubic-bezier(0.4,0,0.2,1)", setWorksOpen }) {
   const [worksOpen, setLocalWorksOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const pathname = usePathname();
@@ -49,38 +50,10 @@ export default function NavLinks({ navColor = "#402d1f", transition = "color 0.4
           </button>
         </li>
         {/* Other links */}
-        <li className="relative z-30 nav-links">
-          <a href="/products" className={`relative group ${pathname === "/products" ? "text-tertiary-text" : ""}`} style={{ color: effectiveNavColor, transition }}>
-            <span className="relative">
-              Products
-              <span className="absolute -bottom-2 left-0 w-full h-[1px] origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" style={{ backgroundColor: effectiveNavColor }}></span>
-            </span>
-          </a>
-        </li>
-        <li className="relative z-30 nav-links">
-          <a href="/about" className={`relative group ${pathname === "/about" ? "text-tertiary-text" : ""}`} style={{ color: effectiveNavColor, transition }}>
-            <span className="relative">
-              About
-              <span className="absolute -bottom-2 left-0 w-full h-[1px] origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" style={{ backgroundColor: effectiveNavColor }}></span>
-            </span>
-          </a>
-        </li>
-        <li className="relative z-30 nav-links">
-          <a href="/contact" className={`relative group ${pathname === "/contact" ? "text-tertiary-text" : ""}`} style={{ color: effectiveNavColor, transition }}>
-            <span className="relative">
-              Contact
-              <span className="absolute -bottom-2 left-0 w-full h-[1px] origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" style={{ backgroundColor: effectiveNavColor }}></span>
-            </span>
-          </a>
-        </li>
-        <li className="relative z-30 nav-links">
-          <a href="/ciotto-bar" className="relative group text-tertiary-text">
-            <span className="relative">
-              Ciotto Bar
-              <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-tertiary-text origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-            </span>
-          </a>
-        </li>
+        <NavLink href="/products" label="Products" navColor={effectiveNavColor} transition={transition} />
+        <NavLink href="/about" label="About" navColor={effectiveNavColor} transition={transition} />
+        <NavLink href="/contact" label="Contact" navColor={effectiveNavColor} transition={transition} />
+        <NavLink href="/ciotto-bar" label="Ciotto Bar" navColor={effectiveNavColor} highlighted />
       </ul>
 
       <AnimatePresence>

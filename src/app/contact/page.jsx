@@ -1,4 +1,5 @@
 import Image from "next/image";
+import InputField from "../../components/02-molecules/InputField";
 
 export default function Contact() {
   return (
@@ -12,11 +13,11 @@ export default function Contact() {
         <div />
         {/* Right side - Contact Form */}
         <div className="flex items-center justify-center bg-black/30 h-full px-8 py-32">
-          <div className="w-full max-w-md text-white">
+          <div className="w-full max-w-md text-secondary-text">
             <div className="mb-8">
               <h2 className="h2-small uppercase mb-2">Ari Prasetya</h2>
               {/* Responsive h1: one line on md+, two lines on mobile/tablet */}
-              <h1 className="contact-h1 font-medium uppercase leading-tight">
+              <h1 className="h1-small font-medium uppercase leading-tight">
                 Contact
                 <br />
                 For Purchase
@@ -25,40 +26,12 @@ export default function Contact() {
 
             <form className="flex flex-col space-y-6 w-full">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex flex-col">
-                  <label htmlFor="firstName" className="text-sm uppercase mb-1">
-                    First Name
-                  </label>
-                  <input type="text" id="firstName" name="firstName" className="bg-transparent border border-beige-100/50 py-1 px-2 focus:outline-none focus:border-white transition-colors" />
-                </div>
-                <div className="flex flex-col">
-                  <label htmlFor="lastName" className="text-sm uppercase mb-1">
-                    Last Name
-                  </label>
-                  <input type="text" id="lastName" name="lastName" className="bg-transparent border border-beige-100/50 py-1 px-2 focus:outline-none focus:border-white transition-colors" />
-                </div>
+                <InputField label="First Name" id="firstName" name="firstName" />
+                <InputField label="Last Name" id="lastName" name="lastName" />
               </div>
-
-              <div className="flex flex-col">
-                <label htmlFor="email" className="text-sm uppercase mb-1">
-                  Email
-                </label>
-                <input type="email" id="email" name="email" className="bg-transparent border border-beige-100/50 py-1 px-2 focus:outline-none focus:border-white transition-colors" />
-              </div>
-
-              <div className="flex flex-col">
-                <label htmlFor="subject" className="text-sm uppercase mb-1">
-                  Subject
-                </label>
-                <input type="text" id="subject" name="subject" className="bg-transparent border border-beige-100/50 py-1 px-2 focus:outline-none focus:border-white transition-colors" />
-              </div>
-
-              <div className="flex flex-col">
-                <label htmlFor="message" className="text-sm uppercase mb-1">
-                  Message
-                </label>
-                <textarea id="message" name="message" rows={5} className="bg-transparent border border-beige-100/50 py-1 px-2 focus:outline-none focus:border-white transition-colors resize-none" />
-              </div>
+              <InputField label="Email" id="email" name="email" type="email" />
+              <InputField label="Subject" id="subject" name="subject" />
+              <InputField label="Message" id="message" name="message" textarea rows={5} />
             </form>
           </div>
         </div>
