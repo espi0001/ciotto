@@ -30,7 +30,7 @@ export default function NavLinks() {
         >
           <button className="relative flex items-center cursor-pointer uppercase z-30 group">
             <span className="relative">
-              Works
+              <a href="/works">Works</a>
               <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-primary-text origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
             </span>
             <div className="relative w-4 h-4 flex items-center justify-center ml-1">
