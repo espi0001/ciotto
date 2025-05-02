@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PropTypes from "prop-types";
 
-const WorkCard = ({ image, title, number, link }) => {
+const WorkCardBig = ({ image, title, number, link }) => {
   return (
     <Link href={link || "/"}>
       <div className="w-[540px] h-full">
@@ -21,11 +21,11 @@ const WorkCard = ({ image, title, number, link }) => {
   );
 };
 
-WorkCard.propTypes = {
+WorkCardBig.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
   link: PropTypes.string.isRequired,
 };
 
-export default WorkCard;
+export default WorkCardBig;
