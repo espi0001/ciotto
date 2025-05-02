@@ -3,7 +3,7 @@ import InputField from "../../components/02-molecules/InputField";
 
 export default function Contact() {
   return (
-    <section className="nav-text-color-change relative w-full h-screen min-h-screen overflow-hidden">
+    <section className="nav-text-color-change relative w-full h-full min-h-screen overflow-hidden">
       {/* Background Image */}
       <Image src="/image/contact_hero.avif" alt="Interior design with wooden panels and chair" fill className="object-cover absolute inset-0 z-0" priority quality={100} />
 

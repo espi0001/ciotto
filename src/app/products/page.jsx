@@ -59,9 +59,15 @@ const mockData = [
 
 export default function Home() {
   return (
-    <main className="p-8">
-      <ProductGrid products={mockData} />
-    </main>
+    <section className="p-8">
+      <article className="py-32">
+        <h1>Products</h1>
+        <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
+      </article>
+      <article>
+        <ProductGrid products={mockData} />
+      </article>
+    </section>
   );
 }
 
