@@ -125,12 +125,12 @@ export default function BurgerMenu({ isOpen, onClose }) {
                     delay: 0.2,
                     ease: [0.23, 1, 0.32, 1],
                   }}
-                  className="text-6xl uppercase font-semibold tracking-wide text-orange-500 relative group"
+                  className="text-6xl uppercase font-semibold tracking-wide text-tertiary-text relative group"
                   onClick={onClose}
                 >
                   <span className="relative group-hover:opacity-50 transition-opacity duration-300">
                     Ciotto Bar
-                    <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-orange-500 origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                    <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-tertiary-text origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                   </span>
                 </motion.a>
               </div>
