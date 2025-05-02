@@ -128,6 +128,11 @@ h2 {
   --fs-min: 1.8rem;
 }
 
+.h2-small {
+  --fs-max: 1.13rem;
+  --fs-min: 0.8rem;
+}
+
 h3 {
   --fs-max: 1.5rem;
   --fs-min: 1.13rem;
@@ -154,8 +159,8 @@ p {
 }
 
 .contact-h2 {
-  --fs-max: 1.5rem;
-  --fs-min: 1.13rem;
+  --fs-max: 1.13rem;
+  --fs-min: 0.8rem;
 }
 
 .logo-size {

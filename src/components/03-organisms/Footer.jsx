@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#e7ddd0] min-h-[266px]">
+    <footer className="w-full bg-[#e7ddd0] min-h-[266px] z-50">
       <div className="border-t border-[#402d1f]">
         <div className="max-w-[1440px] mx-auto py-16 px-8">
           {/* Logo above columns */}
