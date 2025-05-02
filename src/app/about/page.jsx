@@ -11,42 +11,42 @@ const About = () => {
             <span className="text-secondary-text">ABOUT</span> CIOTTO
           </h1>
           <p className="tracking-widest mt-2">
-            <span className="text-secondary-text">ARI PRASETYA</span> SPIROS KOUZIS
+            <span className="text-secondary-text">ARI PRASETYA</span> SPIROS LOUKOPOULOS
           </p>
         </div>
       </article>
 
-      <article className="grid grid-cols-2 gap-[100px] px-[70px] items-center">
+      <article className="grid grid-cols-2 gap-[5rem] px-[70px] items-center">
         <img height={700} width={570} src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b7bfd55b-750d-400c-ade7-4ad928bd84a7/IMG_7701+2.jpg?" alt="" />
         <div>
           <h2>How it started</h2>
-          <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
-          <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
-          <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
-
-          <p className="mt-[40px]">dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim.</p>
+          <p>It started quietly – with coffee, wood, and conversation. Ari was already deep in his craft, shaping furniture and ceramics with the same hands that pulled espresso shots. What began as solo explorations slowly attracted others who shared his pace and values. Spiros, with a background in design and a shared eye for detail, was one of them.</p>
+          <br />
+          <p>Rather than chasing a brand or building a business plan, they followed instinct. They met around tools and textures, learning from each other through making. What emerged was a shared language – not just in form, but in rhythm, attitude, and care. The project grew from that space: intuitive, analogue, grounded in the physical world, and driven by a common belief that good things take time.</p>
         </div>
       </article>
 
-      <article className="grid grid-cols-2 gap-[100px] px-[70px] items-center">
+      <article className="grid grid-cols-2 gap-[5rem] px-[70px] items-center">
         <div>
           <h2>WHO IS ARI PRASATYA</h2>
-          <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula</p>
-          <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
-          <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
-
-          <p className="mt-[40px]">dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim.</p>
+          <p>Ari Prasetya is an Australian designer based in Copenhagen, known for his multidisciplinary work in furniture, ceramics, and interior design. With roots in Indonesia and professional experience across continents, Ari brings a quiet depth to his craft – blending precision, philosophy, and a playful approach to material. His objects live at the intersection of functionality and sculpture, often challenging the conventions of commercial design through process-driven experimentation.</p>
+          <br />
+          <p>Ari’s design philosophy centers around expression through play. He resists being boxed into a single discipline, instead allowing curiosity and analogue exploration to guide his work. He builds full-scale prototypes by hand, believing that true understanding of material and proportion comes through tactile experience. His creative process is intuitive, shaped by a sensitivity to space, feeling, and the unnoticed objects that shape our daily lives.</p>
+          <br />
+          <p>In conversation, Ari often speaks of rhythm – not just in design, but in life. He views his work as an ongoing dialogue between stillness and motion, tradition and spontaneity. Whether crafting a chair, a cup, or a room, Ari seeks to evoke feeling over form, simplicity over spectacle, and presence over perfection.</p>
         </div>
         <img height={700} width={690} src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/4b34d5f9-e971-46bc-a907-266e83daee09/tempImageLz0EL9.jpg?" alt="" />
       </article>
 
-      <article className="grid grid-cols-2 gap-[100px] px-[70px] items-center">
-        <img height={670} width={530} src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/2c40199e-b9d0-4d76-8c91-84d8b1cb1a06/tempImage1Pp5NA.png?" alt="" />
+      <article className="grid grid-cols-2 gap-[5rem] px-[70px] items-center">
+        <img height={700} width={690} src="https://www.eyeshotstreetphotography.com/wp-content/uploads/2023/10/Spiros-Loukopoulos.jpeg" alt="" />
         <div>
-          <h2>WHO IS SPIROS</h2>
-          <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed sed si</p>
+          <h2>WHO IS SPIROS LOUKOPOULOS</h2>
+          <p>Spiros Loukopoulos is a Copenhagen-based creative with a multifaceted background in civil engineering, street photography, and spatial design. Originally from Patras, Greece, he transitioned from engineering to the food and beverage industry, where he now operates street food markets and designs bars and cultural spaces.</p>
           <br />
-          <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed sed si</p>
+          <p>As a self-taught photographer, Spiros captures the nuances of everyday life through his lens, often focusing on the unnoticed moments that define urban existence. His work has been featured in various publications and exhibitions, reflecting his keen eye for detail and storytelling.</p>
+          <br />
+          <p>In his collaborative projects, Spiros brings a unique perspective that blends his technical expertise with artistic sensibility, contributing to creations that are both functional and aesthetically engaging.</p>
         </div>
       </article>
 
