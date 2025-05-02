@@ -1,5 +1,6 @@
 import WorkCardSmall from "../../components/02-molecules/WorkCardSmall";
 import WorkCardBig from "../../components/02-molecules/WorkCardBig";
+import WorkCard from "../../components/02-molecules/WorkCard";
 
 const works = [
   {
@@ -59,7 +60,7 @@ const works = [
     link: "/products/8",
   },
 ];
-
+const isLargeCard = (index) => [1, 2, 5, 6].includes(index);
 // const works = [
 //   {
 //     id: "1",
@@ -112,15 +113,31 @@ const works = [
 // ];
 
 export default function Home() {
-  const isLargeCard = (index) => {
-    // Pattern: small, big, big, small, small, big, big, small
-    const largeCardIndexes = [1, 2, 5, 6];
-    return largeCardIndexes.includes(index);
-  };
+  //   const isLargeCard = (index) => {
+  //     // Pattern: small, big, big, small, small, big, big, small
+  //     const largeCardIndexes = [1, 2, 5, 6];
+  //     return largeCardIndexes.includes(index);
+  //   };
 
   return (
-    <div className="flex flex-wrap justify-center gap-[9rem] p-8">
-      {works.map((work, index) =>
+    <section className="p-8">
+      <article className="py-32">
+        <h1>WORKS OF ARI PRASETYA</h1>
+        <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
+      </article>
+
+      <article className=" mx-auto px-4 flex flex-wrap justify-between gap-y-[2.5rem] md:gap-y-[11rem] gap-10 xl:grid xl:grid-cols-2">
+        {works.map((work, index) => (
+          <WorkCard
+            key={work.id} //
+            image={work.image}
+            title={work.title}
+            number={index + 1}
+            link={work.link}
+            size={isLargeCard(index) ? "big" : "small"}
+          />
+        ))}
+        {/* {works.map((work, index) =>
         isLargeCard(index) ? (
           <WorkCardBig
             key={work.id}
@@ -138,7 +155,8 @@ export default function Home() {
             link={work.link}
           />
         )
-      )}
-    </div>
+      )} */}
+      </article>
+    </section>
   );
 }
