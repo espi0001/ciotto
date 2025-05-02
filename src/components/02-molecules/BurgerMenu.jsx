@@ -42,7 +42,7 @@ export default function BurgerMenu({ isOpen, onClose }) {
               <div className="flex flex-col items-center space-y-12">
                 {/* Works Section */}
                 <div className="w-full text-center">
-                  <button className="text-6xl uppercase font-semibold tracking-wide relative group inline-flex items-center justify-center" onClick={() => setIsWorksOpen(!isWorksOpen)}>
+                  <button className="burger-links uppercase font-semibold tracking-wide relative group inline-flex items-center justify-center" onClick={() => setIsWorksOpen(!isWorksOpen)}>
                     <span className="relative group-hover:opacity-50 transition-opacity duration-300">
                       Works
                       <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary-text origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
@@ -107,7 +107,7 @@ export default function BurgerMenu({ isOpen, onClose }) {
                       delay: idx * 0.05,
                       ease: [0.23, 1, 0.32, 1],
                     }}
-                    className="text-6xl uppercase font-semibold tracking-wide relative group"
+                    className="burger-links uppercase font-semibold tracking-wide relative group"
                     onClick={onClose}
                   >
                     <span className="relative group-hover:opacity-50 transition-opacity duration-300">
@@ -125,10 +125,10 @@ export default function BurgerMenu({ isOpen, onClose }) {
                     delay: 0.2,
                     ease: [0.23, 1, 0.32, 1],
                   }}
-                  className="text-6xl uppercase font-semibold tracking-wide text-tertiary-text relative group"
+                  className="burger-links uppercase font-semibold tracking-wide text-tertiary-text relative group"
                   onClick={onClose}
                 >
-                  <span className="relative group-hover:opacity-50 transition-opacity duration-300">
+                  <span className="burger-links relative group-hover:opacity-50 transition-opacity duration-300">
                     Ciotto Bar
                     <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-tertiary-text origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                   </span>

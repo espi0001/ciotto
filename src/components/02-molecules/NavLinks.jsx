@@ -40,7 +40,7 @@ export default function NavLinks() {
           </button>
         </li>
         {/* Other links */}
-        <li className="relative z-30">
+        <li className="relative z-30 nav-links">
           <a href="/products" className="relative group">
             <span className="relative">
               Products
@@ -48,7 +48,7 @@ export default function NavLinks() {
             </span>
           </a>
         </li>
-        <li className="relative z-30">
+        <li className="relative z-3 nav-links">
           <a href="/about" className="relative group">
             <span className="relative">
               About
@@ -56,7 +56,7 @@ export default function NavLinks() {
             </span>
           </a>
         </li>
-        <li className="relative z-30">
+        <li className="relative z-30 nav-links">
           <a href="/contact" className="relative group">
             <span className="relative">
               Contact
@@ -64,7 +64,7 @@ export default function NavLinks() {
             </span>
           </a>
         </li>
-        <li className="relative z-30">
+        <li className="relative z-30 nav-links">
           <a href="/ciotto-bar" className="relative group text-tertiary-text">
             <span className="relative">
               Ciotto Bar

@@ -146,7 +146,15 @@ p {
   --fs-min: 0.75rem;
 }
 
+.nav-links {
+  --fs-max: 1rem;
+  --fs-min: 0.7rem;
+}
 
+.burger-links {
+  --fs-max: 2rem;
+  --fs-min: 1.5rem;
+}
 
 @theme inline {
   /* --color-background: var(--background); */
