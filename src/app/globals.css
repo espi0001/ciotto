@@ -2,7 +2,14 @@
 
 @font-face {
   font-family: "Sofia Pro";
-  src: url("/fonts/SofiaProRegularAz.otf") format("opentype");
+  src: url("/fonts/Sofia-Pro-Regular.otf") format("opentype");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sofia Pro Woff";
+  src: url("/fonts/Sofia-Pro-Regular.woff2") format("opentype");
   font-weight: bold;
   font-display: swap;
 }
@@ -158,7 +165,7 @@ h3 {
 
 body {
   color: var(--color-primary-text);
-  font-family: "Sofia Pro", sans-serif;
+  font-family: "Sofia Pro Woff", sans-serif;
 }
 
 /* Remove nav-dd styles as we're using Tailwind now */
