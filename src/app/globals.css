@@ -1,18 +1,41 @@
 @import "tailwindcss";
 
+
 @font-face {
   font-family: "Sofia Pro";
-  src: url("/fonts/Sofia-Pro-Regular.otf") format("opentype");
-  font-weight: bold;
+  src: url("/fonts/Sofia-Pro-Bold.woff2") format("opentype");
+  font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Sofia Pro Woff";
-  src: url("/fonts/Sofia-Pro-Regular.woff2") format("opentype");
-  font-weight: bold;
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia-Pro-Semi-Bold.woff2") format("opentype");
+  font-weight: 600;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia-Pro-Medium.woff2") format("opentype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia-Pro-Regular.woff2") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia-Pro-Light.woff2") format("opentype");
+  font-weight: 1 300;
+  font-display: swap;
+}
+
 
 *,
 *::before,
@@ -25,26 +48,11 @@
   --foreground: #171717;
 }
 
-/* @font-face {
-  font-family: "sofia-pro";
-  src: url("../../public/fonts/SofiaProRegularAz.otf") format("otf"),
-    url("../../public/fonts/SofiaProRegularAz.otf") format("otf");
-  font-weight: normal;
-  font-style: normal;
-} */
 
-/* @font-face {
-  font-family: "sofia-pro";
-  src: url("../../public/fonts/Sofia\ Pro\ Bold\ Az.otf") format("otf"),
-    url("../../public/fonts/Sofia\ Pro\ Bold\ Az.otf") format("otf");
-  font-weight: bold;
-  font-style: normal;
-} */
 
 @theme {
 
   /*********** BACKGROUND ***********/
-
   /* beige-500 */
   --color-body-bg: #e7ded0ff;
 
@@ -53,8 +61,6 @@
 
 
   /*********** TYPOGRAPHY ***********/
-  /* --font-sofia-pro: "sofia pro", sans-serif; */
-
   /* brown-500*/
   --color-primary-text: #402d1fff;
 
@@ -138,15 +144,8 @@ h3 {
 p {
   --fs-max: 1rem;
   --fs-min: 0.75rem;
-  color: primary-text;
-
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Sofia Pro", sans-serif;
-}
 
 
 @theme inline {
@@ -165,7 +164,7 @@ h3 {
 
 body {
   color: var(--color-primary-text);
-  font-family: "Sofia Pro Woff", sans-serif;
+  font-family: "Sofia Pro", sans-serif;
 }
 
 /* Remove nav-dd styles as we're using Tailwind now */
