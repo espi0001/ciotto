@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const worksLinks = [
   { name: "Andra Eatery", image: "/image/andra.avif", href: "/works/andra-eatery" },
@@ -14,53 +15,61 @@ const worksLinks = [
   //   { name: "Library & Press", image: "/images/placeholder.jpg", href: "/works/library-press" },
 ];
 
-export default function NavLinks() {
-  const [worksOpen, setWorksOpen] = useState(false);
+export default function NavLinks({ navColor = "#402d1f", transition = "color 0.4s cubic-bezier(0.4,0,0.2,1)", setWorksOpen }) {
+  const [worksOpen, setLocalWorksOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const pathname = usePathname();
+  const effectiveNavColor = worksOpen ? "#402d1f" : navColor;
+  const handleWorksOpen = (open) => {
+    setLocalWorksOpen(open);
+    if (setWorksOpen) setWorksOpen(open);
+  };
   return (
     <>
-      <ul className="text-sm flex space-x-8 uppercase relative whitespace-nowrap z-50">
+      <ul className="text-sm flex space-x-8 uppercase whitespace-nowrap z-50">
         <li
           className="relative"
-          onMouseEnter={() => setWorksOpen(true)}
+          onMouseEnter={() => handleWorksOpen(true)}
           onMouseLeave={() => {
-            setWorksOpen(false);
+            handleWorksOpen(false);
             setHoveredIndex(null);
           }}
         >
           <button className="relative flex items-center cursor-pointer uppercase z-30 group">
             <span className="relative">
-              <a href="/works">Works</a>
-              <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-primary-text origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              <a href="/works" className={pathname.startsWith("/works") ? "text-tertiary-text" : ""} style={{ color: effectiveNavColor, transition }}>
+                Works
+              </a>
+              <span className="absolute -bottom-2 left-0 w-full h-[1px] origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" style={{ backgroundColor: effectiveNavColor }}></span>
             </span>
             <div className="relative w-4 h-4 flex items-center justify-center ml-1">
-              <span className={`absolute w-3 h-0.5 bg-primary-text transition-all duration-300 ${worksOpen ? "-translate-y-0.5" : "rotate-0"}`} />
-              <span className={`absolute w-3 h-0.5 bg-primary-text transition-all duration-300 ${worksOpen ? "translate-y-0.5" : "-rotate-90"}`} />
+              <span className={`absolute w-3 h-0.5 transition-all duration-300 ${worksOpen ? "-translate-y-0.5" : "rotate-0"}`} style={{ backgroundColor: effectiveNavColor }} />
+              <span className={`absolute w-3 h-0.5 transition-all duration-300 ${worksOpen ? "translate-y-0.5" : "-rotate-90"}`} style={{ backgroundColor: effectiveNavColor }} />
             </div>
           </button>
         </li>
         {/* Other links */}
         <li className="relative z-30 nav-links">
-          <a href="/products" className="relative group">
+          <a href="/products" className={`relative group ${pathname === "/products" ? "text-tertiary-text" : ""}`} style={{ color: effectiveNavColor, transition }}>
             <span className="relative">
               Products
-              <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-primary-text origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-            </span>
-          </a>
-        </li>
-        <li className="relative z-3 nav-links">
-          <a href="/about" className="relative group">
-            <span className="relative">
-              About
-              <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-primary-text origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              <span className="absolute -bottom-2 left-0 w-full h-[1px] origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" style={{ backgroundColor: effectiveNavColor }}></span>
             </span>
           </a>
         </li>
         <li className="relative z-30 nav-links">
-          <a href="/contact" className="relative group">
+          <a href="/about" className={`relative group ${pathname === "/about" ? "text-tertiary-text" : ""}`} style={{ color: effectiveNavColor, transition }}>
+            <span className="relative">
+              About
+              <span className="absolute -bottom-2 left-0 w-full h-[1px] origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" style={{ backgroundColor: effectiveNavColor }}></span>
+            </span>
+          </a>
+        </li>
+        <li className="relative z-30 nav-links">
+          <a href="/contact" className={`relative group ${pathname === "/contact" ? "text-tertiary-text" : ""}`} style={{ color: effectiveNavColor, transition }}>
             <span className="relative">
               Contact
-              <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-primary-text origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              <span className="absolute -bottom-2 left-0 w-full h-[1px] origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" style={{ backgroundColor: effectiveNavColor }}></span>
             </span>
           </a>
         </li>
@@ -77,9 +86,9 @@ export default function NavLinks() {
       <AnimatePresence>
         {worksOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 1, height: 0 }}
             animate={{ opacity: 1, height: "80vh" }}
-            exit={{ opacity: 0, height: 0 }}
+            exit={{ opacity: 1, height: 0 }}
             transition={{
               height: {
                 duration: 1,
@@ -96,11 +105,13 @@ export default function NavLinks() {
               width: "100vw",
               backgroundColor: "#CAB696",
               zIndex: 20,
+              color: "#402d1f",
+              transition,
             }}
             className="flex overflow-hidden"
-            onMouseEnter={() => setWorksOpen(true)}
+            onMouseEnter={() => handleWorksOpen(true)}
             onMouseLeave={() => {
-              setWorksOpen(false);
+              handleWorksOpen(false);
               setHoveredIndex(null);
             }}
           >
@@ -125,10 +136,11 @@ export default function NavLinks() {
                       delay: idx * 0.05,
                       ease: [0.23, 1, 0.32, 1],
                     }}
+                    style={{ color: "#402d1f", transition }}
                   >
                     <span className="relative">
                       {link.name}
-                      <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-primary-text origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                      <span className="absolute -bottom-2 left-0 w-full h-[1px] origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" style={{ backgroundColor: "#402d1f" }}></span>
                     </span>
                   </motion.a>
                 ))}
