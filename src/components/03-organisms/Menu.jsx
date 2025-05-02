@@ -89,7 +89,7 @@ export default function Menu() {
         {/* <Logo /> */}
         <motion.div className="flex items-center gap-16 group relative z-30 mix-blend-multiply" initial="hidden" animate="visible" variants={navVariants}>
           <motion.div variants={logoVariants}>
-            <Link href="/" className="text-2xl font-bold relative z-30">
+            <Link href="/" className="logo-size font-bold relative z-30">
               CIOTTO
             </Link>
           </motion.div>

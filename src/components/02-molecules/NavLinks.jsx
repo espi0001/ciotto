@@ -111,7 +111,7 @@ export default function NavLinks() {
                   <motion.a
                     key={link.name}
                     href={link.href}
-                    className={`text-4xl font-semibold tracking-wide relative group`}
+                    className={`works-link text-4xl font-semibold tracking-wide relative group`}
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                     initial={{ opacity: 0, filter: "blur(10px)" }}

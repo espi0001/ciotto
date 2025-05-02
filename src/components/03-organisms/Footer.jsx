@@ -62,7 +62,7 @@ export default function Footer() {
               <h3 className="text-[#402d1f] font-bold mb-4">SOCIAL MEDIA</h3>
               <div className="flex items-center gap-3">
                 <a href="https://www.instagram.com/ciotto.frb/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[#402d1f] hover:underline transition-all" aria-label="Follow us on Instagram">
-                  <img src="/instagram-icon.png" alt="" className="w-[21px] h-[21px]" aria-hidden="true" />
+                  <img src="/image/insta-svg.svg" alt="" className="w-[21px] h-[21px]" aria-hidden="true" />
                   <span>ciotto.frb</span>
                 </a>
               </div>

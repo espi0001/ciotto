@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @font-face {
   font-family: "Sofia Pro";
   src: url("/fonts/Sofia-Pro-Bold.woff2") format("opentype");
@@ -36,7 +35,6 @@
   font-display: swap;
 }
 
-
 *,
 *::before,
 *::after {
@@ -48,17 +46,13 @@
   --foreground: #171717;
 }
 
-
-
 @theme {
-
   /*********** BACKGROUND ***********/
   /* beige-500 */
   --color-body-bg: #e7ded0ff;
 
   /* beige-500 */
   --color-body-footer: #e7ded0ff;
-
 
   /*********** TYPOGRAPHY ***********/
   /* brown-500*/
@@ -68,25 +62,23 @@
   --color-secondary-text: #faf8f5ff;
 
   /* orange-500 */
-  --color-tertiary-text: #9A330B;
+  --color-tertiary-text: #9a330b;
 
   /* brown-500 */
   --color-body-footer-p-color: #402d1fff;
-
 
   /*********** BUTTONS ***********/
   /* brown-500 */
   --color-primary-button: #402d1fff;
 
   /* orange-500 */
-  --color-button-hover: #9A330B;
+  --color-button-hover: #9a330b;
 
   /* beige-100*/
   --color-secondary-button: #faf8f5ff;
 
   /* brown-500 */
   --color-secondary-button-hover: #402d1fff;
-
 }
 
 /*********** TYPOGRAPHY ***********/
@@ -154,6 +146,27 @@ p {
 .burger-links {
   --fs-max: 2rem;
   --fs-min: 1.5rem;
+}
+
+.contact-h1 {
+  --fs-max: 3rem;
+  --fs-min: 1.8rem;
+}
+
+.contact-h2 {
+  --fs-max: 1.5rem;
+  --fs-min: 1.13rem;
+}
+
+.logo-size {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 1024px) {
+  .works-link {
+    --fs-max: 2rem;
+    --fs-min: 1.5rem;
+  }
 }
 
 @theme inline {
