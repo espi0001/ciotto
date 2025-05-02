@@ -1,3 +1,5 @@
+import PartnerCard from "../../components/02-molecules/PartnerCard";
+
 const About = () => {
   return (
     <section className="grid gap-[11rem]">
@@ -16,7 +18,7 @@ const About = () => {
         </div>
       </article>
 
-      <article className="grid grid-cols-2 gap-[5rem] px-[70px] items-center">
+      <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-[70px] items-center">
         <img height={700} width={570} src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b7bfd55b-750d-400c-ade7-4ad928bd84a7/IMG_7701+2.jpg?" alt="" />
         <div>
           <h2>How it started</h2>
@@ -26,7 +28,7 @@ const About = () => {
         </div>
       </article>
 
-      <article className="grid grid-cols-2 gap-[5rem] px-[70px] items-center">
+      <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-[70px] items-center">
         <div>
           <h2>WHO IS ARI PRASATYA</h2>
           <p>Ari Prasetya is an Australian designer based in Copenhagen, known for his multidisciplinary work in furniture, ceramics, and interior design. With roots in Indonesia and professional experience across continents, Ari brings a quiet depth to his craft – blending precision, philosophy, and a playful approach to material. His objects live at the intersection of functionality and sculpture, often challenging the conventions of commercial design through process-driven experimentation.</p>
@@ -38,7 +40,7 @@ const About = () => {
         <img height={700} width={690} src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/4b34d5f9-e971-46bc-a907-266e83daee09/tempImageLz0EL9.jpg?" alt="" />
       </article>
 
-      <article className="grid grid-cols-2 gap-[5rem] px-[70px] items-center">
+      <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-[70px] items-center">
         <img height={700} width={690} src="https://www.eyeshotstreetphotography.com/wp-content/uploads/2023/10/Spiros-Loukopoulos.jpeg" alt="" />
         <div>
           <h2>WHO IS SPIROS LOUKOPOULOS</h2>
@@ -51,27 +53,15 @@ const About = () => {
       </article>
 
       <article className="px-[70px] items-center">
-        <div className="flex gap-12">
+        <div className="flex flex-wrap gap-12">
           <h2 className="content-end border-b-1 border-r-1">
             WHO ARE WE <br />
             WORKING WITH
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div className="flex flex-col items-center">
-              <img className="mb-2 w-full h-[350px] object-cover" src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/2bb6df1a-0a1e-4460-a043-90754523f544/IMG_7700.jpg?format=2500w" alt="GATTI - SALAKA" />
-              <h3 className="font-semibold text-sm mb-1">GATTI - SALAMA</h3>
-              <p className="text-xs text-center">Description of partnership or collaborator.</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img className="mb-2 w-full h-[350px] object-cover" src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b7bfd55b-750d-400c-ade7-4ad928bd84a7/IMG_7701+2.jpg?format=2500w" alt="JOMSEE - TEA" />
-              <h3 className="font-semibold text-sm mb-1">JOMSEE - TEA</h3>
-              <p className="text-xs text-center">Description of partnership or collaborator.</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img className="mb-2 w-full h-[350px] object-cover" src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b020ba90-025d-4156-b148-f2835cd9d4ea/Andra+in.jpg?format=2500w" alt="HOUSE OF NORDIC" />
-              <h3 className="font-semibold text-sm mb-1">ANDRA EATERY</h3>
-              <p className="text-xs text-center">Description of partnership or collaborator.</p>
-            </div>
+            <PartnerCard image="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/2bb6df1a-0a1e-4460-a043-90754523f544/IMG_7700.jpg?format=2500w" alt="GATTI - SALAKA" title="GATTI - SALAMA" description="Description of partnership or collaborator." />
+            <PartnerCard image="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b7bfd55b-750d-400c-ade7-4ad928bd84a7/IMG_7701+2.jpg?format=2500w" title="JOMSEE - TEA" description="Description of partnership or collaborator." />
+            <PartnerCard image="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b020ba90-025d-4156-b148-f2835cd9d4ea/Andra+in.jpg?format=2500w" title="ANDRA EATERY" description="Description of partnership or collaborator." />
           </div>
         </div>
       </article>
