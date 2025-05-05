@@ -21,7 +21,7 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
   const [mainImage, setMainImage] = useState(images[0]);
 
   return (
-    <div className="max-w-[1303px] mx-auto px-5 py-10 font-sans">
+    <div className="px-section py-10 font-sans">
       {/* Top Section: Description | Main Image | Thumbnails */}
       <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr_186px] gap-8 items-start mb-10">
         <div>

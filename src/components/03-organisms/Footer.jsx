@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#e7ddd0] min-h-[266px] z-50">
       <div className="border-t border-[#402d1f]">
-        <div className="max-w-[1440px] mx-auto py-16 px-8">
+        <div className="max-w-[1440px] mx-auto py-16 px-section">
           {/* Logo above columns */}
           <div className="mb-12">
             <Link href="/" className="text-[#402d1f] text-2xl font-bold">

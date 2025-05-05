@@ -18,7 +18,7 @@ const About = () => {
         </div>
       </article>
 
-      <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-[70px] items-center">
+      <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-section items-center">
         <img height={700} width={570} src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b7bfd55b-750d-400c-ade7-4ad928bd84a7/IMG_7701+2.jpg?" alt="" />
         <div>
           <h2>How it started</h2>
@@ -28,19 +28,19 @@ const About = () => {
         </div>
       </article>
 
-      <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-[70px] items-center">
+      <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-section items-center">
         <div>
           <h2>WHO IS ARI PRASATYA</h2>
           <p>Ari Prasetya is an Australian designer based in Copenhagen, known for his multidisciplinary work in furniture, ceramics, and interior design. With roots in Indonesia and professional experience across continents, Ari brings a quiet depth to his craft – blending precision, philosophy, and a playful approach to material. His objects live at the intersection of functionality and sculpture, often challenging the conventions of commercial design through process-driven experimentation.</p>
           <br />
-          <p>Ari’s design philosophy centers around expression through play. He resists being boxed into a single discipline, instead allowing curiosity and analogue exploration to guide his work. He builds full-scale prototypes by hand, believing that true understanding of material and proportion comes through tactile experience. His creative process is intuitive, shaped by a sensitivity to space, feeling, and the unnoticed objects that shape our daily lives.</p>
+          <p>Ari's design philosophy centers around expression through play. He resists being boxed into a single discipline, instead allowing curiosity and analogue exploration to guide his work. He builds full-scale prototypes by hand, believing that true understanding of material and proportion comes through tactile experience. His creative process is intuitive, shaped by a sensitivity to space, feeling, and the unnoticed objects that shape our daily lives.</p>
           <br />
           <p>In conversation, Ari often speaks of rhythm – not just in design, but in life. He views his work as an ongoing dialogue between stillness and motion, tradition and spontaneity. Whether crafting a chair, a cup, or a room, Ari seeks to evoke feeling over form, simplicity over spectacle, and presence over perfection.</p>
         </div>
         <img height={700} width={690} src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/4b34d5f9-e971-46bc-a907-266e83daee09/tempImageLz0EL9.jpg?" alt="" />
       </article>
 
-      <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-[70px] items-center">
+      <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-section items-center">
         <img height={700} width={690} src="https://www.eyeshotstreetphotography.com/wp-content/uploads/2023/10/Spiros-Loukopoulos.jpeg" alt="" />
         <div>
           <h2>WHO IS SPIROS LOUKOPOULOS</h2>
@@ -52,7 +52,7 @@ const About = () => {
         </div>
       </article>
 
-      <article className="px-[70px] items-center">
+      <article className="px-section items-center">
         <div className="flex flex-wrap gap-12">
           <h2 className="content-end border-b-1 border-r-1">
             WHO ARE WE <br />

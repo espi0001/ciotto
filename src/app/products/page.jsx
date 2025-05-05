@@ -59,8 +59,8 @@ const mockData = [
 
 export default function Home() {
   return (
-    <section className="p-8">
-      <article className="py-32">
+    <section className="px-section">
+      <article className="pb-32 pt-24">
         <h1>Products</h1>
         <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
       </article>

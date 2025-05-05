@@ -111,7 +111,7 @@ export default function Menu() {
   const effectiveNavColor = worksOpen ? "#402d1f" : navColor;
 
   return (
-    <header ref={navRef} className="w-full fixed flex justify-between items-center py-4 pt-8 px-10 z-50 before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-0 before:border-b before:z-30" style={{ color: effectiveNavColor, transition }}>
+    <header ref={navRef} className="w-full fixed flex justify-between items-center py-4 pt-8 px-section z-50 before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-0 before:border-b before:z-30" style={{ color: effectiveNavColor, transition }}>
       <div className="flex justify-between items-center w-full" style={{ color: effectiveNavColor, transition }}>
         {/* <Logo /> */}
         <motion.div className="flex items-center gap-16 group relative z-30" initial="hidden" animate="visible" variants={navVariants} style={{ color: effectiveNavColor, transition }}>

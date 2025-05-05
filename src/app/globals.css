@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-
-
 *,
 *::before,
 *::after {
@@ -196,3 +194,10 @@ body {
 }
 
 /* Remove nav-dd styles as we're using Tailwind now */
+
+@layer utilities {
+  .px-section {
+    padding-left: calc(var(--spacing) * 10);
+    padding-right: calc(var(--spacing) * 10);
+  }
+}
