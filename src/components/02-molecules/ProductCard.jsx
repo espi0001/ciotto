@@ -1,12 +1,27 @@
 import Link from "next/link";
 import PropTypes from "prop-types";
 
-const ProductCard = ({ image, title, link }) => {
+const ProductCard = ({ image, title, link, small = false }) => {
+  if (small) {
+    return (
+      <div className="flex flex-col items-center w-full">
+        <div className="w-full aspect-[1/1] flex items-center justify-center overflow-hidden">
+          <img src={image} alt={title} className="w-full h-full object-cover aspect-[1/1]" />
+        </div>
+        <div className="flex flex-row justify-between items-center w-full mt-2 px-2">
+          <span className="text-xs text-black font-normal">{title}</span>
+          <Link href={link || "/"} className="flex items-center gap-1 text-black text-xs font-medium group">
+            BUTTON <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
+        </div>
+      </div>
+    );
+  }
   return (
     <Link href={link || "/"}>
-      <div className="w-full h-auto flex flex-col items-center justify-center hover:scale-[1.05] hover:opacity-90 transition">
-        <img src={image} alt={title} className="w-full h-auto object-cover aspect-[1/1.5]" />
-        <h2 className="text-secondary-text absolute font-medium text-center">{title}</h2>
+      <div className="bg-gray-300 w-full aspect-[1/1] flex flex-col items-center justify-center hover:scale-[1.05] hover:opacity-90 transition overflow-hidden">
+        <img src={image} alt={title} className="w-full h-full object-cover aspect-[1/1]" />
+        <h2 className="text-secondary-text text-4xl absolute font-medium text-center">{title}</h2>
       </div>
     </Link>
   );
@@ -16,6 +31,7 @@ ProductCard.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  small: PropTypes.bool,
 };
 
 export default ProductCard;

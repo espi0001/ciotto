@@ -16,9 +16,9 @@ export async function getRelatedProducts(product) {
     .neq("id", product.id)
     .filter("name", "ilike", `${product.name.split(" ")[0]}%`);
   if (error) throw new Error(`Error fetching related products: ${error.message}`);
-  // If none found, just get 3 random products (excluding current)
+  // If none found, just get 4 random products (excluding current)
   if (!data || data.length === 0) {
-    const { data: randomData, error: randomError } = await supabase.from("ciotto").select("*").neq("id", product.id).limit(3);
+    const { data: randomData, error: randomError } = await supabase.from("ciotto").select("*").neq("id", product.id).limit(4);
     if (randomError) throw new Error(`Error fetching fallback products: ${randomError.message}`);
     return randomData;
   }

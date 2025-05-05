@@ -49,12 +49,13 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
         <div className="mt-12">
           <h2 className="text-2xl font-bold mb-6">You May Also Like</h2>
           <ProductGrid
-            products={relatedData.map((p) => ({
+            products={relatedData.slice(0, 4).map((p) => ({
               id: p.id,
               image: parseJSONField(p.image)[0],
               title: p.name,
               link: `/products/${p.id}`,
             }))}
+            small
           />
         </div>
       )}
