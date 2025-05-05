@@ -2,11 +2,17 @@
 
 import { useState } from "react";
 
-const ProductQuantity = ({ onAddToCart }) => {
+const ProductQuantity = ({ colors = [], sizes = [], prices = [] }) => {
   const [quantity, setQuantity] = useState(1);
+  // Optionally, you can add state for selected color/size/price
+  // const [selectedColor, setSelectedColor] = useState(colors[0] || "");
+  // const [selectedSize, setSelectedSize] = useState(sizes[0] || "");
+  // const [selectedPrice, setSelectedPrice] = useState(prices[0] || "");
 
   const handleAddToCart = () => {
-    onAddToCart(quantity);
+    // You can expand this to include selected options
+    console.log("Adding to cart:", { quantity, colors, sizes, prices });
+    // Add your cart logic here
   };
 
   return (
