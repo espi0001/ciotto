@@ -8,7 +8,7 @@ const ProductCard = ({ image, title, link, small = false }) => {
         <div className="w-full aspect-[1/1] flex items-center justify-center overflow-hidden">
           <img src={image} alt={title} className="w-full h-full object-cover aspect-[1/1]" />
         </div>
-        <div className="flex flex-row justify-between items-center w-full mt-2 px-2">
+        <div className="flex flex-row justify-between items-center w-full mt-2">
           <span className="text-xs text-black font-normal">{title}</span>
           <Link href={link || "/"} className="flex items-center gap-1 text-black text-xs font-medium group">
             BUTTON <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
