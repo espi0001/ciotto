@@ -10,9 +10,11 @@ function parseJSONField(field) {
   }
 }
 
+console.log(process.env);
+
 export default async function ProductDetail({ params }) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const product = await getProductById(id);
     const relatedData = await getRelatedProducts(product);
 
