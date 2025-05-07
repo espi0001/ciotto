@@ -2,8 +2,8 @@ import PartnerCard from "../../components/02-molecules/PartnerCard";
 
 const About = () => {
   return (
-    <section className="grid gap-[11rem]">
-      <article className="w-full h-screen grid grid-cols-1 md:grid-cols-2">
+    <main className="grid gap-[11rem]">
+      <section className="w-full h-screen grid grid-cols-1 md:grid-cols-2">
         <div className="flex">
           <img className="w-full h-full object-cover" src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/663a01b6-06f2-4f2e-9aea-91115293fd9d/Screen+Shot+2024-06-21+at+3.25.53+pm.png?" alt="" />
           <div className="w-full h-full object-cover" />
@@ -16,9 +16,9 @@ const About = () => {
             <span className="text-secondary-text">ARI PRASETYA</span> SPIROS LOUKOPOULOS
           </p>
         </div>
-      </article>
+      </section>
 
-      <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-section items-center">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-section items-center spacing-section">
         <img height={700} width={570} src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b7bfd55b-750d-400c-ade7-4ad928bd84a7/IMG_7701+2.jpg?" alt="" />
         <div>
           <h2>How it started</h2>
@@ -26,9 +26,9 @@ const About = () => {
           <br />
           <p>Rather than chasing a brand or building a business plan, they followed instinct. They met around tools and textures, learning from each other through making. What emerged was a shared language – not just in form, but in rhythm, attitude, and care. The project grew from that space: intuitive, analogue, grounded in the physical world, and driven by a common belief that good things take time.</p>
         </div>
-      </article>
+      </section>
 
-      <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-section items-center">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-section items-center spacing-section">
         <div>
           <h2>WHO IS ARI PRASATYA</h2>
           <p>Ari Prasetya is an Australian designer based in Copenhagen, known for his multidisciplinary work in furniture, ceramics, and interior design. With roots in Indonesia and professional experience across continents, Ari brings a quiet depth to his craft – blending precision, philosophy, and a playful approach to material. His objects live at the intersection of functionality and sculpture, often challenging the conventions of commercial design through process-driven experimentation.</p>
@@ -38,9 +38,9 @@ const About = () => {
           <p>In conversation, Ari often speaks of rhythm – not just in design, but in life. He views his work as an ongoing dialogue between stillness and motion, tradition and spontaneity. Whether crafting a chair, a cup, or a room, Ari seeks to evoke feeling over form, simplicity over spectacle, and presence over perfection.</p>
         </div>
         <img height={700} width={690} src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/4b34d5f9-e971-46bc-a907-266e83daee09/tempImageLz0EL9.jpg?" alt="" />
-      </article>
+      </section>
 
-      <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-section items-center">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-section items-center spacing-section">
         <img height={700} width={690} src="https://www.eyeshotstreetphotography.com/wp-content/uploads/2023/10/Spiros-Loukopoulos.jpeg" alt="" />
         <div>
           <h2>WHO IS SPIROS LOUKOPOULOS</h2>
@@ -50,9 +50,9 @@ const About = () => {
           <br />
           <p>In his collaborative projects, Spiros brings a unique perspective that blends his technical expertise with artistic sensibility, contributing to creations that are both functional and aesthetically engaging.</p>
         </div>
-      </article>
+      </section>
 
-      <article className="px-section items-center">
+      <section className="px-section items-center spacing-section">
         <div className="flex flex-wrap gap-12">
           <h2 className="content-end border-b-1 border-r-1">
             WHO ARE WE <br />
@@ -64,9 +64,9 @@ const About = () => {
             <PartnerCard image="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b020ba90-025d-4156-b148-f2835cd9d4ea/Andra+in.jpg?format=2500w" title="ANDRA EATERY" description="Description of partnership or collaborator." />
           </div>
         </div>
-      </article>
+      </section>
 
-      <article className="grid grid-cols-1 md:grid-cols-2 gap-[100px] items-center px-4 mt-[8rem]">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-[100px] items-center px-4 mt-[8rem] spacing-section">
         <img className="w-full" src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/65053e0b-e935-437f-8868-aa0b2af8e4a9/IMG_2542.jpeg?format=1500w" alt="Chair" />
         <div>
           <h2 className="mb-4 text-center">SUSTAINABILITY</h2>
@@ -77,11 +77,11 @@ const About = () => {
           <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
           <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor. dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
         </div>
-      </article>
-      <article className="px-4 mt-8">
+      </section>
+      <section className="px-4 mt-8 spacing-section">
         <img className="w-full h-96 object-cover " src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/c4486bc0-4f96-402c-92a7-31711cdeca14/LYFA_SS22_12.JPG?format=2500w" alt="Espresso and Shelf" />
-      </article>
-    </section>
+      </section>
+    </main>
   );
 };
 
