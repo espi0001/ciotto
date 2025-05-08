@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const ProductQuantity = ({ colors = [], sizes = [], prices = [] }) => {
   const [quantity, setQuantity] = useState(1);
@@ -18,7 +19,7 @@ const ProductQuantity = ({ colors = [], sizes = [], prices = [] }) => {
       {/* Quantity and Add to Cart */}
       <div className="flex items-center gap-8">
         <div className="flex items-center gap-1">
-          <span className="text-black">QUANTITY</span>
+          <span className="">QUANTITY</span>
           <div className="flex items-center gap-2">
             <button className="cursor-pointer w-6 h-6 border border-black flex items-center justify-center" onClick={() => setQuantity(Math.max(1, quantity - 1))}>
               -
@@ -29,15 +30,15 @@ const ProductQuantity = ({ colors = [], sizes = [], prices = [] }) => {
             </button>
           </div>
         </div>
-        <button className="cursor-pointer flex items-center gap-2 text-[#402D1F]" onClick={handleAddToCart}>
+        <button className="cursor-pointer flex items-center gap-2" onClick={handleAddToCart}>
           ADD TO CART
-          <span className="text-xl">→</span>
+          <Image src="/image/arrow.svg" alt="arrow-right" width={86} height={86} />
         </button>
       </div>
       {/* Color Swatches */}
       {colors.length > 0 && (
         <div className="flex items-center gap-2 mt-2">
-          <span className="text-black mr-2">COLOR:</span>
+          <span className="mr-2">COLOR:</span>
           <div className="flex gap-2">
             {colors.map((color, idx) => (
               <button key={idx} className={`w-10 h-6 border-2 ${selectedColor === color ? "border-[#402D1F]" : "border-gray-300"} transition-all duration-150`} style={{ backgroundColor: color }} onClick={() => setSelectedColor(color)} aria-label={`Select color ${color}`} />

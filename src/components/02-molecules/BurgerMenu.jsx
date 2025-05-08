@@ -19,6 +19,7 @@ const menuVariants = {
 };
 
 const worksLinks = [
+  { name: "All Works", href: "/works" },
   { name: "Andra Eatery", href: "/works/andra-eatery" },
   { name: "Beit Samla", href: "/works/beit-samla" },
   { name: "oi japanese tea", href: "/works/oi-japanese-tea" },

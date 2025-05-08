@@ -44,6 +44,9 @@
 
   /* brown-500 */
   --color-secondary-button-hover: #402d1fff;
+
+  /* beige-400 */
+  --color-thumbnail-bg: #ece5da;
 }
 
 /*********** TYPOGRAPHY ***********/

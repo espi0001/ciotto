@@ -2,7 +2,7 @@ import PartnerCard from "../../components/02-molecules/PartnerCard";
 
 const About = () => {
   return (
-    <main className="grid gap-[11rem]">
+    <main className="grid">
       <section className="w-full h-screen grid grid-cols-1 md:grid-cols-2">
         <div className="flex">
           <img className="w-full h-full object-cover" src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/663a01b6-06f2-4f2e-9aea-91115293fd9d/Screen+Shot+2024-06-21+at+3.25.53+pm.png?" alt="" />

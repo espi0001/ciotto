@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import NavLinks from "../02-molecules/Navigation";
 import BurgerMenu from "../02-molecules/BurgerMenu";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const slide = {
   initial: { x: 80 },
@@ -24,6 +25,7 @@ export default function Menu() {
   const [navLight, setNavLight] = useState(false);
   const [worksOpen, setWorksOpen] = useState(false);
   const navRef = useRef(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleResize = () => {
@@ -60,7 +62,7 @@ export default function Menu() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   const navVariants = {
     hidden: {
@@ -111,7 +113,7 @@ export default function Menu() {
   const effectiveNavColor = worksOpen ? "#402d1f" : navColor;
 
   return (
-    <header ref={navRef} className="w-full fixed flex justify-between items-center py-4 pt-8 px-section z-50 before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-0 before:border-b before:z-30" style={{ color: effectiveNavColor, transition }}>
+    <header ref={navRef} className="relative w-full flex justify-between items-center py-4 pt-8 px-section z-50 before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-0 before:border-b before:z-30" style={{ color: effectiveNavColor, transition }}>
       <div className="flex justify-between items-center w-full" style={{ color: effectiveNavColor, transition }}>
         {/* <Logo /> */}
         <motion.div className="flex items-center gap-16 group relative z-30" initial="hidden" animate="visible" variants={navVariants} style={{ color: effectiveNavColor, transition }}>
@@ -120,17 +122,19 @@ export default function Menu() {
               CIOTTO
             </Link>
           </motion.div>
-          <motion.div className="relative overflow-hidden h-[48px] w-[180px] ml-2 z-30" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} variants={logoVariants} style={{ color: effectiveNavColor, transition }}>
-            <motion.div className="flex w-[360px] h-full" animate={{ x: hovered ? -180 : 0 }} transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }} style={{ color: effectiveNavColor, transition }}>
-              <span className="text-sm select-none font-normal w-[180px] h-full flex items-center" style={{ color: effectiveNavColor, transition }}>
-                EST - 2025
-              </span>
-              <span className="w-[180px] text-xs font-normal h-full flex flex-col justify-center whitespace-nowrap" style={{ color: effectiveNavColor, transition }}>
-                <span>Godthåbsvej 18A,</span>
-                <span>2000 Frederiksberg</span>
-              </span>
+          <a href="https://www.google.com/maps/search/?api=1&query=Godthåbsvej+18A,+2000+Frederiksberg" target="_blank" rel="noopener noreferrer" className="w-[180px] h-[48px] ml-2 z-30 cursor-pointer block" style={{ color: effectiveNavColor, transition, textDecoration: "none" }} tabIndex={0}>
+            <motion.div className="relative overflow-hidden h-full w-full flex flex-col justify-center text-xs font-normal whitespace-nowrap" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} variants={logoVariants} style={{ color: effectiveNavColor, transition }}>
+              <motion.div className="flex w-[360px] h-full" animate={{ x: hovered ? -180 : 0 }} transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }} style={{ color: effectiveNavColor, transition }}>
+                <span className="text-sm select-none font-normal w-[180px] h-full flex items-center" style={{ color: effectiveNavColor, transition }}>
+                  EST - 2025
+                </span>
+                <span className="w-[180px] text-xs font-normal h-full flex flex-col justify-center whitespace-nowrap" style={{ color: effectiveNavColor, transition }}>
+                  <span>Godthåbsvej 18A,</span>
+                  <span>2000 Frederiksberg</span>
+                </span>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </a>
         </motion.div>
 
         {/* Desktop Navigation */}

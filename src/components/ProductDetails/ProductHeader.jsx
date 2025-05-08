@@ -3,7 +3,7 @@
 const ProductHeader = ({ title }) => {
   return (
     <div className="mb-10">
-      <h1 className="text-5xl text-black">{title}</h1>
+      <h1 className="text-5xl">{title}</h1>
     </div>
   );
 };

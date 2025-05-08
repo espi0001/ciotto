@@ -3,8 +3,8 @@
 import Image from "next/image";
 
 const ProductImages = ({ mainImage }) => (
-  <div className="flex-grow max-w-[923px] h-[547px] flex items-center justify-center">
-    <Image src={mainImage} alt="Product Main Image" width={923} height={547} className="w-full h-full object-contain" />
+  <div className="flex-grow max-w-[898px] h-[532px] flex items-center justify-center">
+    <Image src={mainImage} alt="Product Main Image" width={898} height={532} className="absolute object-contain" />
   </div>
 );
 

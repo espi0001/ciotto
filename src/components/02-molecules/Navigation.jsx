@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import NavLink from "./NavLink";
 
 const worksLinks = [
+  { name: "All Works", image: "/image/andra.avif", href: "/works" },
   { name: "Andra Eatery", image: "/image/andra.avif", href: "/works/andra-eatery" },
   { name: "Beit Samla", image: "/image/salma.avif", href: "/works/beit-samla" },
   { name: "oi japanese tea", image: "/image/iojapan.avif", href: "/works/oi-japanese-tea" },
@@ -53,7 +54,8 @@ export default function Navigation({ navColor = "#402d1f", transition = "color 0
         <NavLink href="/products" label="Products" navColor={effectiveNavColor} transition={transition} />
         <NavLink href="/about" label="About" navColor={effectiveNavColor} transition={transition} />
         <NavLink href="/contact" label="Contact" navColor={effectiveNavColor} transition={transition} />
-        <NavLink href="/ciotto-bar" label="Ciotto Bar" navColor={effectiveNavColor} highlighted />
+        <NavLink href="/ciotto-bar" label="Ciotto Bar" navColor={effectiveNavColor} highlighted bold />
+        <NavLink href="/" label="Cart (0)" navColor={effectiveNavColor} transition={transition} />
       </ul>
 
       <AnimatePresence>

@@ -22,10 +22,13 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
 
   return (
     <div className="px-section py-10 font-sans">
+      {/* Large Heading at the Top */}
+      <div className="mb-10">
+        <ProductHeader title={product.name} />
+      </div>
       {/* Top Section: Description | Main Image | Thumbnails */}
       <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr_186px] gap-8 items-start mb-10">
         <div>
-          <ProductHeader title={product.name} />
           <ProductDescription description={product.description} />
         </div>
         <ProductImages mainImage={mainImage} />
@@ -35,7 +38,7 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
       </div>
 
       {/* Specs and Quantity Section */}
-      <div className="mb-10 flex flex-col lg:flex-row gap-8">
+      <div className="mb-10 flex flex-col lg:flex-row gap-8 spacing-section">
         <div className="flex-1">
           <ProductSpecs measurements={measurements} price={product.price} />
         </div>
