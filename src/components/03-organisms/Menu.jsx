@@ -5,6 +5,7 @@ import NavLinks from "../02-molecules/Navigation";
 import BurgerMenu from "../02-molecules/BurgerMenu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "../01-atoms/Logo";
 
 const slide = {
   initial: { x: 80 },
@@ -118,9 +119,7 @@ export default function Menu() {
         {/* <Logo /> */}
         <motion.div className="flex items-center gap-16 group relative z-30" initial="hidden" animate="visible" variants={navVariants} style={{ color: effectiveNavColor, transition }}>
           <motion.div variants={logoVariants} style={{ color: effectiveNavColor, transition }}>
-            <Link href="/" className="logo-size font-bold relative z-30" style={{ color: effectiveNavColor, transition }}>
-              CIOTTO
-            </Link>
+            <Logo color={effectiveNavColor} className="relative z-30 logo-size" />
           </motion.div>
           <a href="https://www.google.com/maps/search/?api=1&query=Godthåbsvej+18A,+2000+Frederiksberg" target="_blank" rel="noopener noreferrer" className="w-[180px] h-[48px] ml-2 z-30 cursor-pointer block" style={{ color: effectiveNavColor, transition, textDecoration: "none" }} tabIndex={0}>
             <motion.div className="relative overflow-hidden h-full w-full flex flex-col justify-center text-xs font-normal whitespace-nowrap" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} variants={logoVariants} style={{ color: effectiveNavColor, transition }}>
@@ -149,9 +148,23 @@ export default function Menu() {
         {/* Burger Menu Button */}
         <AnimatePresence mode="wait">
           {!isDesktop && (
-            <motion.button className="lg:hidden relative z-50 w-8 h-8 flex flex-col justify-center items-center cursor-pointer" onClick={() => setIsBurgerOpen(!isBurgerOpen)} initial="hidden" animate="visible" exit="hidden" variants={burgerVariants} style={{ color: effectiveNavColor, transition }}>
-              <span className={`w-6 h-0.5 transition-all duration-300 ${isBurgerOpen ? "rotate-0 !translate-y-0" : "-translate-y-1"}`} style={{ backgroundColor: effectiveNavColor, transition }} />
-              <span className={`w-6 h-0.5 transition-all duration-300 ${isBurgerOpen ? "-rotate-90 !translate-y-0 absolute" : "translate-y-1"}`} style={{ backgroundColor: effectiveNavColor, transition }} />
+            <motion.button className="lg:hidden z-50 w-8 h-8 flex items-center justify-center cursor-pointer" onClick={() => setIsBurgerOpen(!isBurgerOpen)} initial="hidden" animate="visible" exit="hidden" variants={burgerVariants} style={{ color: effectiveNavColor, transition }} aria-label="Toggle menu">
+              <div className="relative w-6 h-6">
+                {/* Top bar */}
+                <div
+                  className={`absolute left-0 top-1/2 w-6 h-0.5 bg-current transition-all duration-500 ease-in-out
+                    ${isBurgerOpen ? "rotate-45 -translate-y-1/2" : "-translate-y-2 -translate-y-1/2"}
+                  `}
+                  style={{ backgroundColor: effectiveNavColor, transition }}
+                />
+                {/* Bottom bar */}
+                <div
+                  className={`absolute left-0 top-1/2 w-6 h-0.5 bg-current transition-all duration-500 ease-in-out
+                    ${isBurgerOpen ? "-rotate-45 -translate-y-1/2" : "translate-y-2 -translate-y-1/2"}
+                  `}
+                  style={{ backgroundColor: effectiveNavColor, transition }}
+                />
+              </div>
             </motion.button>
           )}
         </AnimatePresence>
