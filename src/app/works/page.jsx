@@ -1,5 +1,3 @@
-import WorkCardSmall from "../../components/02-molecules/WorkCardSmall";
-import WorkCardBig from "../../components/02-molecules/WorkCardBig";
 import WorkCard from "../../components/02-molecules/WorkCard";
 
 const works = [
@@ -113,12 +111,6 @@ const isLargeCard = (index) => [1, 2, 5, 6].includes(index);
 // ];
 
 export default function Home() {
-  //   const isLargeCard = (index) => {
-  //     // Pattern: small, big, big, small, small, big, big, small
-  //     const largeCardIndexes = [1, 2, 5, 6];
-  //     return largeCardIndexes.includes(index);
-  //   };
-
   return (
     <section className="p-8">
       <article className="py-32">
@@ -137,25 +129,6 @@ export default function Home() {
             size={isLargeCard(index) ? "big" : "small"}
           />
         ))}
-        {/* {works.map((work, index) =>
-        isLargeCard(index) ? (
-          <WorkCardBig
-            key={work.id}
-            image={work.image} //
-            title={work.title}
-            number={index + 1}
-            link={work.link}
-          />
-        ) : (
-          <WorkCardSmall
-            key={work.id} //
-            image={work.image}
-            title={work.title}
-            number={index + 1}
-            link={work.link}
-          />
-        )
-      )} */}
       </article>
     </section>
   );

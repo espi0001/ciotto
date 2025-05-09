@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-import Button from "../components/01-atoms/Button.jsx";
+// import Button from "../components/01-atoms/Button.jsx";
+import Button from "@/components/01-atoms/Button";
 
 export const metadata = {
   title: "Ciotto | Home",
