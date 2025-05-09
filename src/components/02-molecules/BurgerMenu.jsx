@@ -30,7 +30,7 @@ const blurVariant = {
 };
 
 export default function BurgerMenu({ isOpen, onClose }) {
-  const [isWorksOpen, setIsWorksOpen] = useState(false);
+  const [worksOpen, setWorksOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [mainHoveredIndex, setMainHoveredIndex] = useState(null);
   const [footerHovered, setFooterHovered] = useState(null);
@@ -39,26 +39,12 @@ export default function BurgerMenu({ isOpen, onClose }) {
     <AnimatePresence>
       {isOpen && (
         <motion.div variants={menuVariants} initial="closed" animate="open" exit="closed" className="fixed inset-0 bg-[#CAB696] z-40 overflow-y-auto">
-          <div className="min-h-screen pt-36">
+          <div className="pt-32">
             <div className="w-full px-6 flex gap-8 px-section">
               {/* Left column: nav links */}
               <div className="flex flex-col flex-1 space-y-12">
                 {/* Nav Links */}
-                <div className="flex flex-col space-y-10">
-                  {/* Works Section */}
-                  <div className="w-full">
-                    <button className="burger-links uppercase font-semibold tracking-wide relative group inline-flex items-center" onClick={() => setIsWorksOpen(!isWorksOpen)} type="button">
-                      <AppLink href="/works" onClick={(e) => e.preventDefault()} underline={false} highlighted={isWorksOpen}>
-                        Works
-                      </AppLink>
-                      <div className="relative w-8 h-8 flex items-center ml-3">
-                        <span className={`absolute w-6 h-0.5 bg-primary-text transition-all duration-300 ${isWorksOpen ? "-translate-y-1" : "rotate-0"}`} />
-                        <span className={`absolute w-6 h-0.5 bg-primary-text transition-all duration-300 ${isWorksOpen ? "translate-y-1" : "-rotate-90"}`} />
-                      </div>
-                    </button>
-                  </div>
-                  <WorksDropdown open={isWorksOpen} setOpen={setIsWorksOpen} hoveredIndex={hoveredIndex} setHoveredIndex={setHoveredIndex} onClose={onClose} context="burger" />
-                  {/* Other Links */}
+                <div className="flex flex-col space-y-6 uppercase">
                   {mainLinks.map((link, idx) => (
                     <motion.div
                       key={link.label}
@@ -73,9 +59,38 @@ export default function BurgerMenu({ isOpen, onClose }) {
                         ease: [0.23, 1, 0.32, 1],
                       }}
                     >
-                      <AppLink href={link.href} onClick={onClose} underline={true} highlighted={link.highlighted} className={link.highlighted ? "text-tertiary-text" : undefined}>
-                        {link.label}
-                      </AppLink>
+                      {link.dropdown ? (
+                        <>
+                          <AppLink
+                            href={link.href}
+                            underline={false}
+                            className="burger-links uppercase font-normal tracking-wide flex items-center cursor-pointer group"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setWorksOpen((open) => !open);
+                            }}
+                            onKeyPress={(e) => {
+                              if (e.key === "Enter" || e.key === " ") {
+                                e.preventDefault();
+                                setWorksOpen((open) => !open);
+                              }
+                            }}
+                            tabIndex={0}
+                            role="button"
+                            style={{ userSelect: "none" }}
+                          >
+                            {link.label}
+                            <span className={`ml-1 text-lg font-semibold transition-transform duration-300 ${worksOpen ? "rotate-45" : ""}`} style={{ color: "#402d1f" }}>
+                              +
+                            </span>
+                          </AppLink>
+                          <WorksDropdown open={worksOpen} setOpen={setWorksOpen} hoveredIndex={hoveredIndex} setHoveredIndex={setHoveredIndex} onClose={onClose} context="burger" />
+                        </>
+                      ) : (
+                        <AppLink href={link.href} onClick={onClose} underline={true} highlighted={link.highlighted} extrabold={link.label === "Ciotto Bar"} underlineColor={link.label === "Ciotto Bar" ? "bg-tertiary-text" : undefined} className={link.label === "Ciotto Bar" ? "text-tertiary-text burger-links" : "burger-links"}>
+                          {link.label}
+                        </AppLink>
+                      )}
                     </motion.div>
                   ))}
                 </div>
@@ -83,14 +98,14 @@ export default function BurgerMenu({ isOpen, onClose }) {
               {/* Right column: Big image only */}
               <div className="flex flex-col flex-1 items-end justify-center">
                 <div className="w-full flex justify-end">
-                  <Image width={400} height={600} src="/image/andra.avif" alt="Placeholder" className="object-cover w-[350px] h-[350px]" />
+                  <Image width={400} height={600} src="/image/andra.avif" alt="Placeholder" className="object-cover w-[350px] h-[400px]" />
                 </div>
               </div>
             </div>
             {/* Footer: SoMe and Contact Info */}
             <footer className="w-full mt-12 flex flex-col space-y-4 py-8 border-t border-primary-text/20 px-section">
               {/* Logo */}
-              <Logo color="primary-text" className="logo-size font-bold mb-8" />
+              <Logo size="text-3xl" color="#402d1f" className="mb-8" />
               <div className="flex justify-between max-w-[400px]">
                 {/* Contact Info */}
                 <div className="flex flex-col space-y-2 text-base">
@@ -107,7 +122,7 @@ export default function BurgerMenu({ isOpen, onClose }) {
                 <div>
                   {/* Instagram */}
                   <AppLink href="https://www.instagram.com/ciotto.frb/" target="_blank" rel="noopener noreferrer" className="flex gap-2" aria-label="Follow us on Instagram">
-                    <Image width={24} height={24} src="/image/insta-svg.svg" alt="Instagram" className="w-6 h-6 transition-all duration-300" aria-hidden="true" />
+                    <Image width={24} height={24} src="/image/insta-svg.svg" alt="Instagram" className="w-4 h-4 transition-all duration-300" aria-hidden="true" />
                     ciotto.frb
                   </AppLink>
                   {/* Address */}
