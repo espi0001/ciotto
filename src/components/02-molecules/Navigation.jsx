@@ -20,37 +20,40 @@ export default function Navigation({ navColor = "#402d1f", transition = "color 0
   const effectiveNavColor = worksOpen ? "#402d1f" : navColor;
   const handleWorksOpen = (open) => {
     setLocalWorksOpen(open);
-    if (setWorksOpen) setWorksOpen(open);
+    if (typeof setWorksOpen === "function") setWorksOpen(open);
   };
   return (
     <>
-      <ul className="text-sm flex space-x-8 uppercase whitespace-nowrap z-50">
-        <li
-          className="relative"
-          onMouseEnter={() => handleWorksOpen(true)}
-          onMouseLeave={() => {
-            handleWorksOpen(false);
-            setHoveredIndex(null);
-          }}
-        >
-          <button className="relative flex items-center cursor-pointer uppercase z-30 group">
-            <span className="relative">
-              <AppLink href="/works" underline={false} highlighted={pathname.startsWith("/works")}>
-                Works
-              </AppLink>
-              <span className="absolute -bottom-2 left-0 w-full h-[1px] origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" style={{ backgroundColor: effectiveNavColor }}></span>
-            </span>
-            <div className="relative w-4 h-4 flex items-center justify-center ml-1">
-              <span className={`absolute w-3 h-0.5 transition-all duration-300 ${worksOpen ? "-translate-y-0.5" : "rotate-0"}`} style={{ backgroundColor: effectiveNavColor }} />
-              <span className={`absolute w-3 h-0.5 transition-all duration-300 ${worksOpen ? "translate-y-0.5" : "-rotate-90"}`} style={{ backgroundColor: effectiveNavColor }} />
-            </div>
-          </button>
-        </li>
-        {mainLinks.map((link) => (
-          <AppLink key={link.href} href={link.href} highlighted={link.highlighted} bold={link.bold} navColor={effectiveNavColor} transition={transition} asListItem>
-            {link.label}
-          </AppLink>
-        ))}
+      <ul className="nav-links flex space-x-8 uppercase whitespace-nowrap z-50 relative">
+        {mainLinks.map((link) =>
+          link.dropdown ? (
+            <li
+              key={link.href}
+              className="relative"
+              onMouseEnter={() => handleWorksOpen(true)}
+              onMouseLeave={() => {
+                handleWorksOpen(false);
+                setHoveredIndex(null);
+              }}
+            >
+              <button className="relative flex items-center cursor-pointer uppercase z-30 group font-normal">
+                <span className="relative flex items-center">
+                  <AppLink href={link.href} underline={false} highlighted={pathname.startsWith(link.href)}>
+                    {link.label}
+                  </AppLink>
+                  {/* Plus icon */}
+                  <span className="ml-1 text-lg font-bold transition-transform duration-300 group-hover:rotate-45" style={{ color: effectiveNavColor }}>
+                    +
+                  </span>
+                </span>
+              </button>
+            </li>
+          ) : (
+            <AppLink key={link.href} href={link.href} highlighted={link.highlighted} bold={link.label === "Ciotto Bar" || link.bold} navColor={effectiveNavColor} transition={transition} asListItem underlineColor={link.label === "Ciotto Bar" ? "bg-tertiary-text" : undefined} className={link.label === "Ciotto Bar" ? "text-tertiary-text font-bold" : undefined}>
+              {link.label}
+            </AppLink>
+          )
+        )}
       </ul>
       <WorksDropdown open={worksOpen} setOpen={handleWorksOpen} hoveredIndex={hoveredIndex} setHoveredIndex={setHoveredIndex} context="desktop" />
     </>

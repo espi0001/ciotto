@@ -181,8 +181,7 @@ label {
 }
 
 .nav-links {
-  --fs-max: 1rem;
-  --fs-min: 0.7rem;
+  font-size: 1rem;
 }
 
 .burger-links {

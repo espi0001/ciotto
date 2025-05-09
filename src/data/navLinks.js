@@ -1,4 +1,5 @@
 export const mainLinks = [
+  { label: "Works", href: "/works", dropdown: true },
   { label: "Products", href: "/products" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
