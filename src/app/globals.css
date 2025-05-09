@@ -149,11 +149,13 @@ h1 {
 h2 {
   --fs-max: 3rem;
   --fs-min: 1.8rem;
+  text-transform: uppercase;
 }
 
 .h2-small {
   --fs-max: 1.13rem;
   --fs-min: 0.8rem;
+  text-transform: uppercase;
 }
 
 h3,
