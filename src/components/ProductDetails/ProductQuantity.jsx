@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 
+import Button from "../01-atoms/Button";
+
 const ProductQuantity = ({ colors = [], sizes = [], prices = [] }) => {
   const [quantity, setQuantity] = useState(1);
   const [selectedColor, setSelectedColor] = useState(colors[0] || "");
@@ -30,10 +32,13 @@ const ProductQuantity = ({ colors = [], sizes = [], prices = [] }) => {
             </button>
           </div>
         </div>
-        <button className="cursor-pointer flex items-center gap-2" onClick={handleAddToCart}>
+        <Button variant="primary" onClick={handleAddToCart}>
+          Add to cart
+        </Button>
+        {/* <button className="cursor-pointer flex items-center gap-2" onClick={handleAddToCart}>
           ADD TO CART
           <Image src="/image/arrow.svg" alt="arrow-right" width={86} height={86} />
-        </button>
+        </button> */}
       </div>
       {/* Color Swatches */}
       {colors.length > 0 && (

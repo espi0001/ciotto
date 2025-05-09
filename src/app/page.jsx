@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+import Button from "../components/01-atoms/Button.jsx";
+
 export const metadata = {
   title: "Ciotto | Home",
   description: "Welcome to Ciotto.",
@@ -58,14 +60,9 @@ export default function Home() {
 
           <div className="flex flex-col justify-center gap-[18px]">
             <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
-
-            <button className="text-tertiary-text uppercase cursor-pointer flex items-center gap-2">
+            <Button variant="primary" onClick={() => console.log("Clicked")}>
               Go to products
-              {/* <Image src="/image/arrow.svg" alt="arrow-right" width={86} height={86} className="" /> */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="88" height="16" fill="none">
-                <path fill="#9A330B" d="M87.207 8.707a1 1 0 0 0 0-1.414L80.843.929a1 1 0 1 0-1.414 1.414L85.086 8l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364ZM.5 8v1h86V7H.5v1Z" />
-              </svg>
-            </button>
+            </Button>
           </div>
         </article>
 
@@ -81,13 +78,9 @@ export default function Home() {
           </div>
           <div>
             <img src="/image/andra.avif" alt="" />
-            <button className="text-tertiary-text uppercase cursor-pointer flex items-center gap-2">
+            <Button variant="primary" onClick={() => console.log("Clicked")}>
               Go to about
-              {/* <Image src="/image/arrow.svg" alt="arrow-right" width={86} height={86} className="" /> */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="88" height="16" fill="none">
-                <path fill="#9A330B" d="M87.207 8.707a1 1 0 0 0 0-1.414L80.843.929a1 1 0 1 0-1.414 1.414L85.086 8l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364ZM.5 8v1h86V7H.5v1Z" />
-              </svg>
-            </button>
+            </Button>
           </div>
         </article>
 
@@ -105,14 +98,9 @@ export default function Home() {
               Bar
             </h2>
             <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
-
-            <button className="text-tertiary-text uppercase cursor-pointer flex items-center gap-2">
+            <Button variant="primary" onClick={() => console.log("Clicked")}>
               Go to Ciotto Bar
-              {/* <Image src="/image/arrow.svg" alt="arrow-right" width={86} height={86} className="" /> */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="88" height="16" fill="none">
-                <path fill="#9A330B" d="M87.207 8.707a1 1 0 0 0 0-1.414L80.843.929a1 1 0 1 0-1.414 1.414L85.086 8l-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364ZM.5 8v1h86V7H.5v1Z" />
-              </svg>
-            </button>
+            </Button>
           </div>
           <img src="/image/andra.avif" alt="" />
         </article>

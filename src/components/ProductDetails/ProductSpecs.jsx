@@ -16,7 +16,7 @@ const ProductSpecs = ({ measurements, price }) => {
       </div>
 
       <div>
-        <h3 className="text-[#402D1F] mb-4">PRICE</h3>
+        <h3 className="text-primary-text mb-4">PRICE</h3>
         <div className="text-xl font-semibold">€{price}</div>
       </div>
     </div>

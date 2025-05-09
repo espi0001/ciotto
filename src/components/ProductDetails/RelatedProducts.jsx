@@ -15,7 +15,7 @@ const RelatedProducts = ({ products }) => {
             </div>
             <div className="flex justify-between items-center px-2">
               <span>{product.title}</span>
-              <Link href={`/products/${product.id}`} className="flex items-center gap-2 text-[#402D1F] text-sm">
+              <Link href={`/products/${product.id}`} className="flex items-center gap-2 text-primary-text text-sm">
                 VIEW
                 <span className="text-lg">→</span>
               </Link>
