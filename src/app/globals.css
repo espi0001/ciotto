@@ -93,6 +93,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Playfar";
+  src: url("/fonts/PlayfairDisplay-Regular.ttf") format("opentype");
+  font-weight: 1 300;
+  font-display: swap;
+}
+
 html {
   /* min and max scale bounds (global layout) */
   --min-scale-bound: 20rem;
@@ -149,14 +156,21 @@ h2 {
   --fs-min: 0.8rem;
 }
 
-h3 {
+h3,
+.h3-large {
   --fs-max: 1.5rem;
   --fs-min: 1.13rem;
+}
+
+.h3-small {
+  --fs-max: 1.1rem;
+  --fs-min: 0.7rem;
 }
 
 p {
   --fs-max: 1rem;
   --fs-min: 0.75rem;
+  max-width: 64ch;
 }
 
 label {
