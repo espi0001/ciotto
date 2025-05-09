@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Logo from "../01-atoms/Logo";
 
 export default function Footer() {
   return (
@@ -8,9 +9,7 @@ export default function Footer() {
         <div className="max-w-[1440px] mx-auto py-16 px-section">
           {/* Logo above columns */}
           <div className="mb-12">
-            <Link href="/" className="text-[#402d1f] text-2xl font-bold">
-              CIOTTO
-            </Link>
+            <Logo color="primary-text" className="logo-size font-bold" />
           </div>
 
           {/* Desktop: 4 evenly spaced columns, Tablet: 2 columns */}
