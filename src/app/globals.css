@@ -93,8 +93,9 @@
   font-display: swap;
 }
 
+/* Playfair */
 @font-face {
-  font-family: "Playfar";
+  font-family: "Playfair";
   src: url("/fonts/PlayfairDisplay-Regular.ttf") format("opentype");
   font-weight: 1 300;
   font-display: swap;
