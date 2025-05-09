@@ -47,6 +47,14 @@
 
   /* beige-400 */
   --color-thumbnail-bg: #ece5da;
+
+  --drop-shadow-primary: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --drop-shadow-secondary: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  /* --drop-shadow-dshadow-y: 4px;
+  --blur: 4px; */
+  /* --shadow-dropshadow2-spread: 0px; */
+
+  /* --shadow-dropshadow2-color: rgba(76, 73, 65, 1); */
 }
 
 /*********** TYPOGRAPHY ***********/
@@ -203,9 +211,11 @@ body {
     padding-left: calc(var(--spacing) * 10);
     padding-right: calc(var(--spacing) * 10);
   }
+
   .spacing-section {
     margin-top: 184px;
   }
+
   .spacing-section-small {
     margin-top: 120px;
   }

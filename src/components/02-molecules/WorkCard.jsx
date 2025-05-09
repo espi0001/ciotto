@@ -11,7 +11,7 @@ const WorkCard = ({ image, title, number, link, size = "small" }) => {
   `}
       >
         <div>
-          <img src={image} alt={title} className="w-full h-full object-cover" />
+          <img src={image} alt={title} className="drop-shadow-primary w-full h-full object-cover" />
         </div>
         <div className="flex mt-2 justify-between items-center">
           <p>{String(number).padStart(3, "0")}</p>
