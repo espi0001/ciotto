@@ -7,7 +7,7 @@ const ProductCard = ({ image, title, link, small = false }) => {
     return (
       <div className="flex flex-col items-center w-full">
         <div className="w-full aspect-[1/1] flex items-center justify-center overflow-hidden">
-          <Image src={image} alt={title} width={600} height={600} className="w-full h-full object-contain aspect-[1/1]" />
+          <Image src={image} alt={title} width={1920} height={1080} className="w-full h-full object-cover aspect-[1/1]" />
         </div>
         <div className="flex flex-row justify-between items-center w-full mt-2">
           <span className="text-xs text-black font-normal">{title}</span>
@@ -21,7 +21,7 @@ const ProductCard = ({ image, title, link, small = false }) => {
   return (
     <Link href={link || "/"}>
       <div className="drop-shadow-primary w-full aspect-[3/4] flex flex-col items-center justify-center hover:scale-[1.05] hover:opacity-90 transition overflow-hidden">
-        <Image src={image} alt={title} width={400} height={400} className="w-full h-full object-contain aspect-[1/1]" />
+        <Image src={image} alt={title} width={1920} height={1080} className="w-full h-full object-contain" />
         <h2 className="text-secondary-text absolute font-medium text-center text-wrap w-min">{title}</h2>
       </div>
     </Link>

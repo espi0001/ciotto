@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import AppLink from "../01-atoms/AnimatedLink";
+import AppLink from "../01-atoms/NavLink";
 import { mainLinks } from "../../data/navLinks";
 import WorksDropdown from "./WorksDropdown";
 import Logo from "../01-atoms/Logo";

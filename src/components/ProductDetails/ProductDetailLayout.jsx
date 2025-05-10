@@ -24,7 +24,7 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
     <div className="px-section py-10 font-sans">
       {/* Large Heading at the Top */}
       <div className="mb-10">
-        <ProductHeader title={product.name} />
+        <ProductHeader title={product.single_name} />
       </div>
       {/* Top Section: Description | Main Image | Thumbnails */}
       <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr_186px] gap-8 items-start mb-10">

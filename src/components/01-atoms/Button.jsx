@@ -1,14 +1,14 @@
 export default function Button({ children, variant = "primary", size = "large", type = "button" }) {
-  const base = "uppercase cursor-pointer inline-flex items-center gap-[1rem] transition-colors";
+  const base = "uppercase cursor-pointer inline-flex items-center gap-[1rem] transition-colors group";
 
   const variants = {
     primary: {
       base: "text-tertiary-text",
-      hover: "hover:text-secondary-button-hover",
+      hover: "",
     },
     secondary: {
       base: "text-secondary-button",
-      hover: "hover:text-secondary-button-hover",
+      hover: "",
     },
   };
 
@@ -21,9 +21,11 @@ export default function Button({ children, variant = "primary", size = "large", 
 
   //const styles = "uppercase cursor-pointer flex items-center gap-2";
   return (
-    <button className={classes}>
+    <button className={classes} type={type}>
       {children}
-      <ArrowIcon variant={variant} />
+      <span className="transition-transform duration-300 group-hover:translate-x-2">
+        <ArrowIcon variant={variant} />
+      </span>
     </button>
   );
 

@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { worksLinks } from "../../data/navLinks";
-import AppLink from "../01-atoms/AnimatedLink";
+import AppLink from "../01-atoms/NavLink";
 
 const blurVariant = {
   focused: { opacity: 1, filter: "blur(0px)" },
