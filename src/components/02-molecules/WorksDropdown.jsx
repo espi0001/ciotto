@@ -95,20 +95,14 @@ export default function WorksDropdown({ open, setOpen, hoveredIndex, setHoveredI
                         alt={worksLinks[hoveredIndex].label}
                         initial={{
                           opacity: 0,
-                          y: `${hoveredIndex * 30}px`,
-                          scale: 1 + hoveredIndex * 0.03,
                           filter: "blur(10px)",
                         }}
                         animate={{
                           opacity: 1,
-                          y: 0,
-                          scale: 1,
                           filter: "blur(0px)",
                         }}
                         exit={{
                           opacity: 0,
-                          y: `${hoveredIndex * 30}px`,
-                          scale: 1 + hoveredIndex * 0.03,
                           filter: "blur(10px)",
                         }}
                         transition={{

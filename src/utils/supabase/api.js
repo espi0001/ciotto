@@ -24,3 +24,10 @@ export async function getRelatedProducts(product) {
   }
   return data;
 }
+
+export async function getAllProducts() {
+  const supabase = await createClient();
+  const { data, error } = await supabase.from("ciotto").select("*").order("id", { ascending: true });
+  if (error) throw new Error(`Error fetching products: ${error.message}`);
+  return data;
+}

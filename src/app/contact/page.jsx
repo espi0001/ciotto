@@ -3,16 +3,16 @@ import InputField from "../../components/02-molecules/InputField";
 
 export default function Contact() {
   return (
-    <section className="nav-text-color-change h-screen">
+    <section className="nav-text-color-change h-[120vh]">
       {/* Background Image */}
-      <Image src="/image/contact_hero.avif" alt="Interior design with wooden panels and chair" fill className="absolute top-0 left-0 object-cover z-0" priority quality={100} />
+      <Image src="/image/contact_hero.avif" alt="Interior design with wooden panels and chair" width={1920} height={1080} className="absolute top-0 left-0 object-cover z-0 h-[120vh]" priority quality={100} />
 
       {/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-[55%_45%] w-full absolute top-0">
         {/* Left side - just empty to show image */}
         <div />
         {/* Right side - Contact Form */}
-        <div className="flex items-center justify-center bg-black/30 px-8 pt-28 z-20 h-screen">
+        <div className="flex items-center justify-center bg-black/30 px-8 z-20 h-[120vh]">
           <div className="w-full max-w-md text-secondary-text">
             <div className="mb-8">
               <h2 className="h2-small uppercase mb-2">Ari Prasetya</h2>

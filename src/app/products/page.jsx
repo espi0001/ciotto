@@ -1,63 +1,15 @@
 import ProductGrid from "../../components/04-templates/ProductGrid";
+import { getAllProducts } from "../../utils/supabase/api";
 
-const mockData = [
-  {
-    id: "86",
-    image: "https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/ciotto-images/gatti-ask(1).avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJjaW90dG8taW1hZ2VzL2dhdHRpLWFzaygxKS5hdmlmIiwiaWF0IjoxNzQ1OTMwMTUwLCJleHAiOjE3Nzc0NjYxNTB9.pWRQ3atuyMb9kd8Iybm1tvGNLLwu1WIT12fJpnizbGo",
-    title: "GATTI",
-    link: "/products/86",
-  },
-  {
-    id: "87",
-    image: "https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/ciotto-images/genno-black(1).avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJjaW90dG8taW1hZ2VzL2dlbm5vLWJsYWNrKDEpLmF2aWYiLCJpYXQiOjE3NDU5MzAzMzAsImV4cCI6MTc3NzQ2NjMzMH0.SWzPgfR13uITUMuTWtMdnt8Z8EP2fpiKOGQMzwPOii8",
-    title: "GENNO",
-    link: "/products/87",
-  },
-  {
-    id: "88",
-    image: "https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/ciotto-images/armmi(1).avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJjaW90dG8taW1hZ2VzL2FybW1pKDEpLmF2aWYiLCJpYXQiOjE3NDU5MjkyNTIsImV4cCI6MTc3NzQ2NTI1Mn0._FQwpjGgbskZntJq_qC5FOaSNxh-YdLfjXGAHQDuS0o",
-    title: "ARMMI",
-    link: "/products/88",
-  },
-  {
-    id: "89",
-    image: "https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/ciotto-images/borche(1).avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJjaW90dG8taW1hZ2VzL2JvcmNoZSgxKS5hdmlmIiwiaWF0IjoxNzQ1OTI5NjQyLCJleHAiOjE3Nzc0NjU2NDJ9.0MfN10A7vgAcR_X26XfXWBahvx17TpPZp1kPBNsjeh4",
-    title: "BORCHE",
-    link: "/products/89",
-  },
-  {
-    id: "90",
-    image: "https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/ciotto-images/plica-natural(2).avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJjaW90dG8taW1hZ2VzL3BsaWNhLW5hdHVyYWwoMikuYXZpZiIsImlhdCI6MTc0NTkzMDU1OCwiZXhwIjoxNzc3NDY2NTU4fQ.iZPnFxLvUVGt9fnnX3pdUMFoESvVYp4RjkdTuJ3UZYs",
-    title: "PLICA",
-    link: "/products/90",
-  },
-  {
-    id: "91",
-    image: "https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/ciotto-images/toshi-brown(1).avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJjaW90dG8taW1hZ2VzL3Rvc2hpLWJyb3duKDEpLmF2aWYiLCJpYXQiOjE3NDU5MzA2MzYsImV4cCI6MTc3NzQ2NjYzNn0.EI8U4a6wDOaOo_stTarVIUnap__mvM2wiuRbUvkQMqw",
-    title: "TOSHI",
-    link: "/products/91",
-  },
-  {
-    id: "92",
-    image: "https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/ciotto-images/ciotto-black(1).avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJjaW90dG8taW1hZ2VzL2Npb3R0by1ibGFjaygxKS5hdmlmIiwiaWF0IjoxNzQ1OTI5ODMxLCJleHAiOjE3Nzc0NjU4MzF9.I_eeK1wYWJqqpM2gjo9a5oKKZWUSkCUX4FLN3ralwyc",
-    title: "CIOTTO STONEWARE",
-    link: "/products/92",
-  },
-  {
-    id: "93",
-    image: "https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/ciotto-images/ciotto-silver(1).avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJjaW90dG8taW1hZ2VzL2Npb3R0by1zaWx2ZXIoMSkuYXZpZiIsImlhdCI6MTc0NTkzMDA1NCwiZXhwIjoxNzc3NDY2MDU0fQ.cfGWqwKjHBX3bnhw5NqOlJ4chCxMNMKjAxfHN9PwJNk",
-    title: "CIOTTO ALUMINIUM",
-    link: "/products/93",
-  },
-  {
-    id: "94",
-    image: "https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/ciotto-images/ciotto-wood(1).avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJjaW90dG8taW1hZ2VzL2Npb3R0by13b29kKDEpLmF2aWYiLCJpYXQiOjE3NDU5MzAxMTksImV4cCI6MTc3NzQ2NjExOX0.q_gDMtVVoSlSsoC-4JfCeg7XUsTpOohzVEdrgGASckc",
-    title: "CIOTTO WOOD",
-    link: "/products/94",
-  },
-];
-
-export default function Home() {
+export default async function Home() {
+  const productsRaw = await getAllProducts();
+  // Map to the format expected by ProductGrid
+  const products = (productsRaw || []).map((item) => ({
+    id: item.id,
+    image: Array.isArray(item.image) ? item.image[0] : typeof item.image === "string" && item.image.startsWith("[") ? JSON.parse(item.image)[0] : item.image,
+    title: item.name || item.title,
+    link: `/products/${item.id}`,
+  }));
   return (
     <section className="px-section">
       <article className="pb-32 pt-24">
@@ -65,7 +17,7 @@ export default function Home() {
         <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
       </article>
       <article>
-        <ProductGrid products={mockData} />
+        <ProductGrid products={products} />
       </article>
     </section>
   );
