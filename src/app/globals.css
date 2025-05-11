@@ -137,7 +137,8 @@ html {
   font-size: var(--fs, var(--☠️-fs-clamp, var(--fs-def, var(--fs-min, var(--fs-max)))));
 }
 
-h1 {
+h1,
+.h2-large {
   --fs-max: 5.5rem;
   --fs-min: 4.25rem;
 }
@@ -229,10 +230,12 @@ body {
   }
 
   .spacing-section {
-    margin-top: 184px;
+    /* margin-top: 184px; */
+    margin-top: 11.5rem;
   }
 
   .spacing-section-small {
-    margin-top: 120px;
+    /* margin-top: 120px; */
+    margin-top: 7.5rem;
   }
 }
