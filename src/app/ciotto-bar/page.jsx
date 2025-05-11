@@ -5,7 +5,9 @@ export default function CiottoBar() {
   return (
     <section className="">
       <article className="relative h-screen">
-        <img src="/image/ciotto-coffee.jpg" alt="Coffee bar" className="w-full h-full object-cover" />
+        <video autoPlay muted loop className="w-full h-full object-cover">
+          <source src="/video/tester.mp4" type="video/mp4" className="w-full h-full object-cover" />
+        </video>
         <div className="flex flex-col justify-end absolute top-0 left-0 w-full h-full  text-secondary-text px-[44px]">
           <p className="h3-large mb-[10px] md:mb-[60px] uppercase">Godthåbsvej 18 A, 2000 Frederiksberg</p>
           <h1 className="uppercase">Ciotto Bar</h1>
@@ -20,8 +22,8 @@ export default function CiottoBar() {
             </p>
           </div>
           <div className="flex gap-[15px] md:gap-[35px]">
-            <img src="/image/iojapan.avif" alt="" className="w-[210px] h-[290px] md:w-[490px] md:h-[670px] aspect-[3/4]" />
-            <img src="/image/andra.avif" alt="" className="w-[130px] h-[180px] md:w-[320px] md:h-[430px] self-end aspect-[3/4]" />
+            <img src="/image/coffee.jpg" alt="" className="w-[490px]" />
+            <img src="/image/ciotto2.jpg" alt="" className="w-[130px] h-[180px] md:w-[320px] md:h-[430px] self-end aspect-[3/4]" />
           </div>
         </article>
 

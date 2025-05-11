@@ -12,24 +12,26 @@ export const metadata = {
 export default function Home() {
   return (
     <section className="">
-      <article className="relative h-screen">
+      <article className="relative h-full md:h-screen">
         <video autoPlay muted loop className="object-cover">
           <source src="/video/tester.mp4" type="video/mp4" className="w-full h-full object-cover" />
         </video>
       </article>
 
       {/* ---------- */}
-      <article>
-        <img className="w-full" src="/image/image1.jpg" alt="" />
+      <article className="relative w-full h-screen px-section spacing-section-small md:spacing-section">
+        <img src="/image/andra.avif" alt="" class="absolute top-0 left-[16px] w-1/4 max-w-xs" />
+        <img src="/image/oberra.avif" alt="" class="absolute bottom-0 right-[16px] w-1/4 max-w-xs" />
+
+        <h2 className="font-[Playfair] h2-large absolute inset-0 flex items-center justify-center text-center">
+          A creative space <br /> in the heart <br /> of copenhagen
+        </h2>
       </article>
 
-      {/* <article className="grid grid-cols-3 mb-[80px]">
-          <img src="/image/andra.avif" alt="" />
-          <h2 className="uppercase">
-            A creative space <br /> in the heart <br /> of copenhagen
-          </h2>
-          <img src="/image/oberra.avif" alt="" />
-        </article> */}
+      {/* ---------- */}
+      <article className="spacing-section-small md:spacing-section">
+        <img className="w-full" src="/image/image1.jpg" alt="" />
+      </article>
 
       {/* ---------- */}
       {/* <article className="pb-[184px]">
@@ -41,7 +43,7 @@ export default function Home() {
         {/* ------ Products ------ */}
         <article className="pb-[184px] grid md:grid-cols-3 gap-[3rem]">
           <div className="flex flex-col justify-between">
-            <h2 className="uppercase font-[Playfair]">
+            <h2 className="font-[Playfair]">
               Every <br />
               products <br />
               tells a <br />
