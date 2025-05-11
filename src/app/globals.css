@@ -220,7 +220,7 @@ body {
   font-family: "Sofia Pro", sans-serif;
 }
 
-/* Remove nav-dd styles as we're using Tailwind now */
+/* spacing */
 
 @layer utilities {
   .px-section {
