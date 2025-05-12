@@ -27,7 +27,8 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
         <ProductHeader title={product.single_name} />
       </div>
       {/* Top Section: Description | Main Image | Thumbnails */}
-      <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr_186px] gap-8 items-start mb-10">
+      {/* grid grid-cols-1 lg:grid-cols-[300px_1fr_186px] gap-8 items-start mb-10 */}
+      <div className="grid lg:grid-cols-[1fr_2fr_auto] gap-8 items-start mb-10">
         <div>
           <ProductDescription description={product.description} />
         </div>
@@ -38,7 +39,7 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
       </div>
 
       {/* Specs and Quantity Section */}
-      <div className="flex flex-col lg:flex-row gap-8 spacing-section-small md:spacing-section">
+      <div className="flex flex-col lg:flex-row gap-[20%] spacing-section-small md:spacing-section">
         <div className="flex-1">
           <ProductSpecs measurements={measurements} price={product.price} />
         </div>
