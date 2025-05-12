@@ -48,7 +48,7 @@ export default function CiottoBar() {
 
         <article className="flex flex-col items-center pb-[184px]">
           <h2 className="text-center font-[Playfair] pb-[30px] md:pb-[60px]">Menu</h2>
-          <img src="/image/menu.jpg" alt="" width={1030} height={1320} />
+          <Image className="drop-shadow-primary" src="/image/menukort.svg" alt="Ciotto Bar Menu Card" width={1030} height={1320} />
         </article>
 
         <article>
