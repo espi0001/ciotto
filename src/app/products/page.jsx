@@ -1,6 +1,7 @@
 import ProductGrid from "../../components/04-templates/ProductGrid";
 import { getAllProducts } from "../../utils/supabase/api";
 import TitleSection from "../../components/02-molecules/TitleSection";
+import Copy from "../../components/gsap-anim/Copy";
 
 export default async function Products() {
   const productsRaw = await getAllProducts();
@@ -14,7 +15,9 @@ export default async function Products() {
   return (
     <section className="px-section">
       <article className="spacing-section-small md:spacing-section">
-        <TitleSection title="Products" description="Handcrafted with precision and care, each product is a unique expression of craftsmanship and designed to bring beauty and function into everyday life. Explore the collection and find the perfect piece that speaks to you." />
+        <Copy delay={1}>
+          <TitleSection title="Products" description="Handcrafted with precision and care, each product is a unique expression of craftsmanship and designed to bring beauty and function into everyday life. Explore the collection and find the perfect piece that speaks to you." />
+        </Copy>
       </article>
       <article className="spacing-section-small md:spacing-section">
         <ProductGrid products={products} />

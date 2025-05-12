@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Copy from "@/components/gsap-anim/Copy";
 
 // import Button from "../components/01-atoms/Button.jsx";
 import Button from "@/components/01-atoms/Button";
@@ -21,9 +22,13 @@ export default function Home() {
       {/* ---------- */}
       <article className="relative w-full md:h-screen px-section spacing-section-small md:spacing-section">
         <img src="/image/andra.avif" alt="" className="md:absolute md:top-0 md:left-[3.75rem] md:w-1/4 md:max-w-xs" />
-        <h2 className="font-[Playfair] h2-large md:absolute md:inset-0 flex items-center justify-center text-center">
-          A creative space <br /> in the heart <br /> of copenhagen
-        </h2>
+        <Copy delay={0.5}>
+          <h1 className="hero-h1 font-[Playfair] z-50 md:absolute md:inset-0 flex flex-col items-center justify-center text-center h-full w-full">
+            <span>A CREATIVE SPACE</span>
+            <span>IN THE HEART</span>
+            <span>OF COPENHAGEN</span>
+          </h1>
+        </Copy>
         <img src="/image/oberra.avif" alt="" className="md:absolute md:bottom-0 md:right-[3.75rem] md:w-1/4 md:max-w-xs" />
       </article>
 
@@ -42,19 +47,23 @@ export default function Home() {
         {/* ------ Products ------ */}
         <article className="spacing-section-small md:spacing-section grid md:grid-cols-[1fr_3fr] gap-[3rem]">
           <div className="flex flex-col justify-between">
-            <h2 className="font-[Playfair] h2-large text-9xl">
-              Every <br />
-              product <br />
-              tells a <br />
-              story
-            </h2>
-            <p className="h2-small uppercase">Products</p>
+            <Copy>
+              <h2 className="font-[Playfair] h2-large">
+                Every <br />
+                product <br />
+                tells a <br />
+                story
+              </h2>
+              <p className="h2-small uppercase">Products</p>
+            </Copy>
           </div>
           <div className="flex flex-col md:flex-row gap-[70px]">
             <img src="/image/ciotto-silver.jpg" alt="" width={460} height={570} />
 
             <div className="flex flex-col justify-center gap-[18px]">
-              <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
+              <Copy>
+                <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
+              </Copy>
               <Button variant="primary" onClick={() => console.log("Clicked")}>
                 Go to products
               </Button>
@@ -67,17 +76,21 @@ export default function Home() {
           <img className="aspect-[7/10]" src="/image/gatti.jpg" alt="" />
           <div className="flex flex-col justify-between">
             <div className="">
-              <h2 className="uppercase font-[Playfair] h2-large">
-                How it <br />
-                started
-              </h2>
-              <p className="uppercase h3-small">Ai Prasetya & Spiros Loukopoulos </p>
+              <Copy>
+                <h2 className="uppercase font-[Playfair] h2-large">
+                  How it <br />
+                  started
+                </h2>
+                <p className="uppercase h3-small">Ai Prasetya & Spiros Loukopoulos </p>
+              </Copy>
             </div>
             <img className="aspect-[4/5]" src="/image/cup.jpg" alt="" width={260} height={340} />
           </div>
 
           <div className=" flex flex-col justify-between items-end">
-            <p className="h2-small uppercase">About</p>
+            <Copy>
+              <p className="h2-small uppercase">About</p>
+            </Copy>
             <Button variant="primary" link={"/about"}>
               Go to about
             </Button>
@@ -87,17 +100,21 @@ export default function Home() {
         {/* ------ Bar ------ */}
         <article className="px-section spacing-section-small md:spacing-section pb-[184px] grid md:grid-cols-3 gap-[3rem]">
           <div className="flex flex-col justify-between">
-            <p className="h2-small uppercase">Coffee bar</p>
+            <Copy>
+              <p className="h2-small uppercase">Coffee bar</p>
+            </Copy>
             <img src="/image/ciotto2.jpg" alt="" className="w-[280px]" />
           </div>
 
           <div className="flex flex-col justify-end gap-[18px]">
-            <h2 className="uppercase font-[Playfair] h2-large text-9xl">
-              The <br />
-              Ciotto <br />
-              Bar
-            </h2>
-            <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
+            <Copy>
+              <h2 className="uppercase font-[Playfair] h2-large text-9xl">
+                The <br />
+                Ciotto <br />
+                Bar
+              </h2>
+              <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
+            </Copy>
             <Button variant="primary" onClick={() => console.log("Clicked")}>
               Go to Ciotto Bar
             </Button>

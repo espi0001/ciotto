@@ -7,6 +7,7 @@ import ProductThumbnails from "./ProductThumbnails";
 import ProductSpecs from "./ProductSpecs";
 import ProductQuantity from "./ProductQuantity";
 import ProductGrid from "../04-templates/ProductGrid";
+import Copy from "../gsap-anim/Copy";
 
 function parseJSONField(field) {
   if (!field) return [];
@@ -51,7 +52,9 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
       {/* You May Also Like */}
       {relatedData && relatedData.length > 0 && (
         <div className="spacing-section-small md:spacing-section">
-          <h2 className="h2-product font-bold mb-6">You May Also Like</h2>
+          <Copy>
+            <h2 className="h2-product font-bold mb-6">You May Also Like</h2>
+          </Copy>
           <ProductGrid
             products={relatedData.slice(0, 4).map((p) => ({
               id: p.id,
