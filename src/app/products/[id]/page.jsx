@@ -28,7 +28,17 @@ export default async function ProductDetail({ params }) {
     // This is a simple example, you can improve parsing as needed
     const measurements = { Dimensions: product.dimension };
 
-    return <ProductDetailLayout product={product} images={images} colors={colors} sizes={sizes} prices={prices} measurements={measurements} relatedData={relatedData} />;
+    return (
+      <ProductDetailLayout
+        product={product} //
+        images={images}
+        colors={colors}
+        sizes={sizes}
+        prices={prices}
+        measurements={measurements}
+        relatedData={relatedData}
+      />
+    );
   } catch (error) {
     console.error("Error:", error);
     return (

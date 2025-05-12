@@ -21,7 +21,7 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
   const [mainImage, setMainImage] = useState(images[0]);
 
   return (
-    <div className="px-section py-10 font-sans">
+    <div className="px-section spacing-section-small md:spacing-section">
       {/* Large Heading at the Top */}
       <div className="mb-10">
         <ProductHeader title={product.single_name} />
@@ -43,7 +43,7 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
           <ProductSpecs measurements={measurements} price={product.price} />
         </div>
         <div className="flex-1">
-          <ProductQuantity colors={colors} sizes={sizes} prices={prices} />
+          <ProductQuantity product={product} colors={colors} sizes={sizes} prices={prices} />
         </div>
       </div>
 
