@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#e7ddd0] min-h-[266px] z-50">
       <div className="border-t border-[#402d1f]">
-        <div className="max-w-[1440px] mx-auto py-16 px-section">
+        <div className="max-w-full mx-auto py-16 px-section">
           {/* Logo above columns */}
           <div className="mb-12">
             <Logo color="primary-text" className="logo-size font-bold" />
@@ -16,8 +16,8 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:justify-between">
             {/* Contact Info */}
             <div>
-              <h3 className="text-[#402d1f] font-bold mb-4">CONTACT INFO</h3>
-              <div className="text-[#402d1f] space-y-2">
+              <h3 className="text-primary-text font-bold mb-4">CONTACT INFO</h3>
+              <div className="text-primary-text space-y-2">
                 <p>
                   <a href="tel:+4593981186" className="hover:underline transition-all" aria-label="Call us at +45 93 98 11 86">
                     Ari Tel: +45 93 98 11 86
@@ -38,8 +38,8 @@ export default function Footer() {
 
             {/* Location */}
             <div>
-              <h3 className="text-[#402d1f] font-bold mb-4">LOCATION</h3>
-              <div className="text-[#402d1f] space-y-2">
+              <h3 className="text-primary-text font-bold mb-4">LOCATION</h3>
+              <div className="text-primary-text space-y-2">
                 <a href="https://maps.google.com/?q=Godthåbsvej+18+A,+2000+Frederiksberg,+Denmark" target="_blank" rel="noopener noreferrer" className="hover:underline transition-all block" aria-label="Open our location in Google Maps">
                   <p>Godthåbsvej 18 A,</p>
                   <p>2000 Frederiksberg</p>
@@ -49,8 +49,8 @@ export default function Footer() {
 
             {/* Opening Hours */}
             <div>
-              <h3 className="text-[#402d1f] font-bold mb-4">OPENING HOURS</h3>
-              <div className="text-[#402d1f] space-y-2">
+              <h3 className="text-primary-text font-bold mb-4">OPENING HOURS</h3>
+              <div className="text-primary-text space-y-2">
                 <p>Monday - Saturday</p>
                 <p>9 AM to 6 PM</p>
               </div>
@@ -58,7 +58,7 @@ export default function Footer() {
 
             {/* Social Media */}
             <div>
-              <h3 className="text-[#402d1f] font-bold mb-4">SOCIAL MEDIA</h3>
+              <h3 className="text-primary-text font-bold mb-4">SOCIAL MEDIA</h3>
               <div className="flex items-center gap-3">
                 <a href="https://www.instagram.com/ciotto.frb/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[#402d1f] hover:underline transition-all" aria-label="Follow us on Instagram">
                   <img src="/image/insta-svg.svg" alt="" className="w-[21px] h-[21px]" aria-hidden="true" />
