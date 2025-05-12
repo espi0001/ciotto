@@ -6,12 +6,12 @@ const WorkCard = ({ image, title, number, link, size = "small" }) => {
     <Link href={link || "/"}>
       <div
         className={`
-    w-[clamp(300px,90vw,400px)] max-w-full box-border
-    ${size === "big" ? "md:w-[clamp(400px,50vw,540px)]" : "md:w-[clamp(300px,40vw,400px)]"}
+    ${size === "big" ? "w-[600px] h-[700px]" : "w-[480px] h-[540px]"}
+    box-border
   `}
       >
-        <div>
-          <img src={image} alt={title} className="drop-shadow-primary w-full h-full object-cover" />
+        <div className="w-full h-full overflow-hidden">
+          <img src={image} alt={title} className="w-full h-full object-cover hover:scale-110 transition-all duration-300" />
         </div>
         <div className="flex mt-2 justify-between items-center">
           <p>{String(number).padStart(3, "0")}</p>
