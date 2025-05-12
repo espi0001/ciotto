@@ -1,8 +1,9 @@
 const ProductDescription = ({ description }) => {
   return (
-    <div className="w-full lg:w-[207px]">
-      <h3 className="text-primary-text text-lg mb-3">Description:</h3>
-      <p className="text-primary-text leading-relaxed">{description}</p>
+    // w-full lg:w-[207px]
+    <div className="mt-[80px]">
+      <h3 className="mb-3 font-bold h3-product">Description:</h3>
+      <p className="">{description}</p>
     </div>
   );
 };

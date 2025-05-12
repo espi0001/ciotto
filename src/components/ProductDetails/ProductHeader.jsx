@@ -2,8 +2,8 @@
 
 const ProductHeader = ({ title }) => {
   return (
-    <div className="mb-10">
-      <h1 className="text-5xl">{title}</h1>
+    <div className="mb-4">
+      <h1 className="font-bold h1-product">{title}</h1>
     </div>
   );
 };
