@@ -23,7 +23,7 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
   return (
     <div className="px-section spacing-section-small md:spacing-section">
       {/* Large Heading at the Top */}
-      <div className="mb-4 text-5xl">
+      <div className="text-5xl">
         <ProductHeader title={product.single_name} />
       </div>
       {/* Top Section: Description | Main Image | Thumbnails */}

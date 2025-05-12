@@ -2,7 +2,7 @@
 
 const ProductHeader = ({ title }) => {
   return (
-    <div className="mb-4">
+    <div className="">
       <h1 className="font-bold h1-product">{title}</h1>
     </div>
   );
