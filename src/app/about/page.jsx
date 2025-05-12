@@ -17,7 +17,7 @@ const About = () => {
           </p>
         </div>
       </article>
-      <div className="px-section-mobile md:px-section spacing-section-small md:spacing-section">
+      <div className="px-section spacing-section-small md:spacing-section">
         <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] items-center spacing-section">
           <img height={700} width={570} src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b7bfd55b-750d-400c-ade7-4ad928bd84a7/IMG_7701+2.jpg?" alt="" />
           <div>
@@ -28,7 +28,7 @@ const About = () => {
           </div>
         </article>
 
-        <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] px-section items-center spacing-section-small md:spacing-section">
+        <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] items-center spacing-section-small md:spacing-section">
           <div>
             <h2>WHO IS ARI PRASATYA</h2>
             <p>Ari Prasetya is an Australian designer based in Copenhagen, known for his multidisciplinary work in furniture, ceramics, and interior design. With roots in Indonesia and professional experience across continents, Ari brings a quiet depth to his craft – blending precision, philosophy, and a playful approach to material. His objects live at the intersection of functionality and sculpture, often challenging the conventions of commercial design through process-driven experimentation.</p>

@@ -13,7 +13,7 @@ export default function CiottoBar() {
           <h1 className="uppercase">Ciotto Bar</h1>
         </div>
       </article>
-      <div className="px-section-mobile md:px-section spacing-section-small md:spacing-section">
+      <div className="px-section spacing-section-small md:spacing-section">
         <article className="grid md:grid-cols-[1fr_2fr] gap-[30px] md:gap-[100px] pb-[184px]">
           <div className="content-center">
             <h2 className="font-[Playfair]">Ciotto Bar</h2>
