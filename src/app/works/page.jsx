@@ -5,7 +5,7 @@ const works = [
   {
     id: "1",
     image: "https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b7bfd55b-750d-400c-ade7-4ad928bd84a7/IMG_7701+2.jpg?format=2500w",
-    title: "IO_JAPANESE_TEA",
+    title: "JAPANESE_TEA",
     number: "001",
     link: "/products/1",
   },
@@ -33,14 +33,14 @@ const works = [
   {
     id: "5",
     image: "https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/a5ca902e-89c7-427b-b8c0-36e724d1b04f/IMG_7629.jpg?format=2500w",
-    title: "CC MUSEUM",
+    title: "CC_MUSEUM",
     number: "005",
     link: "/products/5",
   },
   {
     id: "6",
     image: "https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/f57a38ad-d73a-48db-b57e-4f2e655d0cdd/IMG_2344.jpeg?format=2500w",
-    title: "OBERRA",
+    title: "OBERRA_",
     number: "006",
     link: "/products/6",
   },
@@ -54,7 +54,7 @@ const works = [
   {
     id: "8",
     image: "https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/c4486bc0-4f96-402c-92a7-31711cdeca14/LYFA_SS22_12.JPG?format=2500w",
-    title: "OBJECTS",
+    title: "OBJECTS_",
     number: "008",
     link: "/products/8",
   },
@@ -116,7 +116,7 @@ export default function Works() {
     <section className="px-section spacing-section-small md:spacing-section">
       <TitleSection title="WORKS OF ARI PRASETYA" description="dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor." />
 
-      <article className="spacing-section-small md:spacing-section mx-auto flex flex-wrap justify-between gap-y-[2.5rem] md:gap-y-[11rem] gap-10 xl:grid xl:grid-cols-2">
+      <article className="spacing-section-small md:spacing-section  flex flex-wrap justify-between gap-y-[2.5rem] md:gap-y-[11rem] gap-10 mb-48">
         {works.map((work, index) => (
           <WorkCard
             key={work.id} //
