@@ -52,16 +52,16 @@ const ProductQuantity = ({ product, colors = [], sizes = [], prices = [] }) => {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4 ">
       {/* Quantity and Add to Cart */}
-      <div className="flex items-center justify-between py-[0.5rem]">
+      <div className="flex items-center justify-between border-b border-[#402D1F]">
         <div className="flex items-center gap-2">
           <span className="h3-large">QUANTITY</span>
 
           <div className="flex items-center gap-3 px-2">
-            <button type="button" onClick={() => setQuantity(Math.max(1, quantity - 1))} className="h3-large flex items-center justify-center">
+            <button type="button" onClick={() => setQuantity(Math.max(1, quantity - 1))} className="h3-large flex items-center justify-center cursor-pointer">
               -
             </button>
             <span className="h3-large">{quantity}</span>
-            <button type="button" onClick={() => setQuantity(quantity + 1)} className="h3-large flex items-center justify-center">
+            <button type="button" onClick={() => setQuantity(quantity + 1)} className="h3-large flex items-center justify-center cursor-pointer">
               +
             </button>
           </div>
@@ -71,35 +71,24 @@ const ProductQuantity = ({ product, colors = [], sizes = [], prices = [] }) => {
           Add to cart
         </Button>
 
-        {/* <div className="flex items-center gap-1">
-          <span className="">QUANTITY</span>
-          <div className="flex items-center gap-2">
-            <button className="cursor-pointer w-6 h-6 flex items-center justify-center" onClick={() => setQuantity(Math.max(1, quantity - 1))}>
-              -
-            </button>
-            <span>{quantity}</span>
-            <button className="cursor-pointer w-6 h-6 flex items-center justify-center" onClick={() => setQuantity(quantity + 1)}>
-              +
-            </button>
-          </div>
-        </div>
-        <Button variant="primary" onClick={handleAddToCart}>
+        {/* <Button variant="primary" onClick={handleAddToCart}>
           Add to cart
         </Button> */}
-        {/* <button className="cursor-pointer flex items-center gap-2" onClick={handleAddToCart}>
-          ADD TO CART
-          <Image src="/image/arrow.svg" alt="arrow-right" width={86} height={86} />
-        </button> */}
       </div>
-      {/* Color Swatches */}
-      {/* {colors.length > 0 && (
-        <div className="flex items-center gap-2 mt-2">
-          <span className="mr-2">COLOR:</span>
+
+      {/* Farvevalg */}
+      {colors.length > 0 && (
+        <div className="flex flex-col gap-[15px] md:gap-[30px]">
+          <div className="flex items-center gap-2">
+            <label className="h3-large">COLOR:</label>
+            <span className="h3-large">{selectedColor}</span>
+          </div>
           <div className="flex gap-2">
             {colors.map((color, idx) => (
               <button
                 key={idx}
-                className={`w-10 h-6 border-2 ${
+                type="button"
+                className={`h3-large w-[95px] h-[46px] border-2 bg-secondary-button transition-all duration-150 cursor-pointer ${
                   selectedColor === color
                     ? "border-[#402D1F]" //
                     : "border-gray-300"
@@ -108,17 +97,6 @@ const ProductQuantity = ({ product, colors = [], sizes = [], prices = [] }) => {
                 onClick={() => setSelectedColor(color)}
                 aria-label={`Select color ${color}`}
               />
-            ))}
-          </div>
-        </div>
-      )} */}
-      <hr className="w-full border-[#402D1F]" />
-      {colors.length > 0 && (
-        <div className="flex items-center gap-2 mt-2">
-          <span className="mr-2">COLOR:</span>
-          <div className="flex gap-2">
-            {colors.map((color, idx) => (
-              <button key={idx} type="button" className={`w-10 h-6 border-2 ${selectedColor === color ? "border-[#402D1F]" : "border-gray-300"} transition-all duration-150`} style={{ backgroundColor: color }} onClick={() => setSelectedColor(color)} aria-label={`Select color ${color}`} />
             ))}
           </div>
         </div>
