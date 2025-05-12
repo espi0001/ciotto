@@ -11,7 +11,7 @@ export default async function Products() {
     link: `/products/${item.id}`,
   }));
   return (
-    <section className="px-section spacing-section-small md:spacing-section">
+    <section className="px-section-mobile md:px-section">
       <article className="spacing-section-small md:spacing-section">
         <h1>Products</h1>
         <p>Handcrafted with precision and care, each product is a unique expression of craftsmanship and designed to bring beauty and function into everyday life. Explore the collection and find the perfect piece that speaks to you.</p>

@@ -19,7 +19,7 @@ export default function Home() {
       </article>
 
       {/* ---------- */}
-      <article className="relative w-full h-screen px-section spacing-section-small md:spacing-section">
+      <article className="relative w-full h-screen px-section-mobile md:px-section spacing-section-small md:spacing-section">
         <img src="/image/andra.avif" alt="" className="absolute top-0 left-[16px] w-1/4 max-w-xs" />
         <img src="/image/oberra.avif" alt="" className="absolute bottom-0 right-[16px] w-1/4 max-w-xs" />
 
@@ -39,7 +39,7 @@ export default function Home() {
           <h2 className="uppercase">Authenticit in every design</h2>
         </article> */}
 
-      <div className="px-section spacing-section-small md:spacing-section">
+      <div className="px-section-mobile md:px-section spacing-section-small md:spacing-section">
         {/* ------ Products ------ */}
         <article className="pb-[184px] grid md:grid-cols-3 gap-[3rem]">
           <div className="flex flex-col justify-between">

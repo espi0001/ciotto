@@ -112,13 +112,13 @@ const isLargeCard = (index) => [1, 2, 5, 6].includes(index);
 
 export default function Works() {
   return (
-    <section className="px-section spacing-section-small md:spacing-section">
+    <section className="px-section-mobile md:px-section spacing-section-small md:spacing-section">
       <article className="py-32">
         <h1>WORKS OF ARI PRASETYA</h1>
         <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
       </article>
 
-      <article className="mx-auto px-4 flex flex-wrap justify-between gap-y-[2.5rem] md:gap-y-[11rem] gap-10 xl:grid xl:grid-cols-2">
+      <article className="spacing-section-small md:spacing-section mx-auto flex flex-wrap justify-between gap-y-[2.5rem] md:gap-y-[11rem] gap-10 xl:grid xl:grid-cols-2">
         {works.map((work, index) => (
           <WorkCard
             key={work.id} //
