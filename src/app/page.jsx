@@ -19,13 +19,12 @@ export default function Home() {
       </article>
 
       {/* ---------- */}
-      <article className="relative w-full h-screen px-section spacing-section-small md:spacing-section">
-        <img src="/image/andra.avif" alt="" className="absolute top-0 left-[16px] w-1/4 max-w-xs" />
-        <img src="/image/oberra.avif" alt="" className="absolute bottom-0 right-[16px] w-1/4 max-w-xs" />
-
-        <h2 className="font-[Playfair] h2-large absolute inset-0 flex items-center justify-center text-center">
+      <article className="relative w-full md:h-screen px-section spacing-section-small md:spacing-section">
+        <img src="/image/andra.avif" alt="" className="md:absolute md:top-0 md:left-[3.75rem] md:w-1/4 md:max-w-xs" />
+        <h2 className="font-[Playfair] h2-large md:absolute md:inset-0 flex items-center justify-center text-center">
           A creative space <br /> in the heart <br /> of copenhagen
         </h2>
+        <img src="/image/oberra.avif" alt="" className="md:absolute md:bottom-0 md:right-[3.75rem] md:w-1/4 md:max-w-xs" />
       </article>
 
       {/* ---------- */}
@@ -39,30 +38,32 @@ export default function Home() {
           <h2 className="uppercase">Authenticit in every design</h2>
         </article> */}
 
-      <div className="px-sectionspacing-section-small md:spacing-section">
+      <div className="px-section">
         {/* ------ Products ------ */}
-        <article className="pb-[184px] grid md:grid-cols-3 gap-[3rem]">
+        <article className="spacing-section-small md:spacing-section grid md:grid-cols-[1fr_3fr] gap-[3rem]">
           <div className="flex flex-col justify-between">
-            <h2 className="font-[Playfair]">
+            <h2 className="font-[Playfair] h2-large text-9xl">
               Every <br />
-              products <br />
+              product <br />
               tells a <br />
               story
             </h2>
             <p className="h2-small uppercase">Products</p>
           </div>
-          <img src="/image/andra.avif" alt="" width={460} height={570} />
+          <div className="flex flex-col md:flex-row gap-[70px]">
+            <img src="/image/ciotto-silver.jpg" alt="" width={460} height={570} />
 
-          <div className="flex flex-col justify-center gap-[18px]">
-            <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
-            <Button variant="primary" onClick={() => console.log("Clicked")}>
-              Go to products
-            </Button>
+            <div className="flex flex-col justify-center gap-[18px]">
+              <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
+              <Button variant="primary" onClick={() => console.log("Clicked")}>
+                Go to products
+              </Button>
+            </div>
           </div>
         </article>
 
         {/* ------ About ------ */}
-        <article className="pb-[184px] grid grid-cols-[auto_auto_auto]">
+        <article className="px-section spacing-section-small md:spacing-section pb-[184px] grid grid-cols-[auto_auto_auto]">
           <img className="aspect-[7/10]" src="/image/gatti.jpg" alt="" />
           <div className="flex flex-col justify-between">
             <div className="">
@@ -77,21 +78,21 @@ export default function Home() {
 
           <div className=" flex flex-col justify-between items-end">
             <p className="h2-small uppercase">About</p>
-            <Button variant="primary" onClick={() => console.log("Clicked")}>
+            <Button variant="primary" link={"/about"}>
               Go to about
             </Button>
           </div>
         </article>
 
         {/* ------ Bar ------ */}
-        <article className="pb-[184px] grid md:grid-cols-3 gap-[3rem]">
+        <article className="px-section spacing-section-small md:spacing-section pb-[184px] grid md:grid-cols-3 gap-[3rem]">
           <div className="flex flex-col justify-between">
             <p className="h2-small uppercase">Coffee bar</p>
             <img src="/image/ciotto2.jpg" alt="" className="w-[280px]" />
           </div>
 
           <div className="flex flex-col justify-end gap-[18px]">
-            <h2 className="uppercase font-light">
+            <h2 className="uppercase font-[Playfair] h2-large text-9xl">
               The <br />
               Ciotto <br />
               Bar
