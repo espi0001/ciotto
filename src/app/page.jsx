@@ -20,8 +20,8 @@ export default function Home() {
 
       {/* ---------- */}
       <article className="relative w-full h-screen px-section spacing-section-small md:spacing-section">
-        <img src="/image/andra.avif" alt="" class="absolute top-0 left-[16px] w-1/4 max-w-xs" />
-        <img src="/image/oberra.avif" alt="" class="absolute bottom-0 right-[16px] w-1/4 max-w-xs" />
+        <img src="/image/andra.avif" alt="" className="absolute top-0 left-[16px] w-1/4 max-w-xs" />
+        <img src="/image/oberra.avif" alt="" className="absolute bottom-0 right-[16px] w-1/4 max-w-xs" />
 
         <h2 className="font-[Playfair] h2-large absolute inset-0 flex items-center justify-center text-center">
           A creative space <br /> in the heart <br /> of copenhagen

@@ -175,12 +175,12 @@ p {
   --fs-max: 1.25rem;
   --fs-min: 1rem;
   max-width: 64ch;
+  text-wrap: pretty;
 }
 
 label {
   --fs-max: 1.25rem;
   --fs-min: 1rem;
-  max-width: 64ch;
 }
 
 .nav-links {

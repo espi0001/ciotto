@@ -1,7 +1,7 @@
 import ProductGrid from "../../components/04-templates/ProductGrid";
 import { getAllProducts } from "../../utils/supabase/api";
 
-export default async function Home() {
+export default async function Products() {
   const productsRaw = await getAllProducts();
   // Map to the format expected by ProductGrid
   const products = (productsRaw || []).map((item) => ({

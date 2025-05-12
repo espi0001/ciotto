@@ -110,7 +110,7 @@ const isLargeCard = (index) => [1, 2, 5, 6].includes(index);
 //   },
 // ];
 
-export default function Home() {
+export default function Works() {
   return (
     <section className="p-8">
       <article className="py-32">
