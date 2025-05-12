@@ -1,4 +1,5 @@
 import WorkCard from "../../components/02-molecules/WorkCard";
+import TitleSection from "../../components/02-molecules/TitleSection";
 
 const works = [
   {
@@ -113,10 +114,7 @@ const isLargeCard = (index) => [1, 2, 5, 6].includes(index);
 export default function Works() {
   return (
     <section className="px-section spacing-section-small md:spacing-section">
-      <article className="py-32">
-        <h1>WORKS OF ARI PRASETYA</h1>
-        <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
-      </article>
+      <TitleSection title="WORKS OF ARI PRASETYA" description="dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor." />
 
       <article className="spacing-section-small md:spacing-section mx-auto flex flex-wrap justify-between gap-y-[2.5rem] md:gap-y-[11rem] gap-10 xl:grid xl:grid-cols-2">
         {works.map((work, index) => (
