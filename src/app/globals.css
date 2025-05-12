@@ -178,8 +178,9 @@ p {
 }
 
 label {
-  --fs-max: 1rem;
-  --fs-min: 0.75rem;
+  --fs-max: 1.25rem;
+  --fs-min: 1rem;
+  max-width: 64ch;
 }
 
 .nav-links {
