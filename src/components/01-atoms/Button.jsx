@@ -1,5 +1,5 @@
-export default function Button({ children, variant = "primary", size = "large", type = "button" }) {
-  const base = "uppercase cursor-pointer inline-flex items-center gap-[1rem] transition-colors group";
+export default function Button({ children, variant = "primary", link, size = "large", type = "button" }) {
+  const base = "body-text uppercase cursor-pointer inline-flex items-center gap-[1rem] transition-colors group";
 
   const variants = {
     primary: {
@@ -21,7 +21,7 @@ export default function Button({ children, variant = "primary", size = "large", 
 
   //const styles = "uppercase cursor-pointer flex items-center gap-2";
   return (
-    <button className={classes} type={type}>
+    <button className={classes} type={type} href={link}>
       {children}
       <span className="transition-transform duration-300 group-hover:translate-x-2">
         <ArrowIcon variant={variant} />

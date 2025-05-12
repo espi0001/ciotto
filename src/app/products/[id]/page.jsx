@@ -26,7 +26,9 @@ export default async function ProductDetail({ params }) {
 
     // Parse measurements from dimension string (e.g., "H.740mm/SH.440mm x D.520mm x W.420mm")
     // This is a simple example, you can improve parsing as needed
-    const measurements = { Dimensions: product.dimension };
+    // const measurements = { Dimensions: product.dimension };
+
+    const measurements = parseJSONField(product.dimension);
 
     return (
       <ProductDetailLayout
