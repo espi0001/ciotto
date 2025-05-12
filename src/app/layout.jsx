@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Menu from "../components/03-organisms/Menu";
 import Footer from "../components/03-organisms/Footer";
+import Lenis from "../components/lenis/LenisScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.typekit.net/xns4hfr.css"></link>
       </head> */}
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-body-bg`}>
+        <Lenis />
         <Menu />
         <main>{children}</main>
         <Footer />
