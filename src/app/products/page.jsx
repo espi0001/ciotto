@@ -11,12 +11,12 @@ export default async function Products() {
     link: `/products/${item.id}`,
   }));
   return (
-    <section className="px-section">
-      <article className="pb-32 pt-24">
+    <section className="px-section spacing-section-small md:spacing-section">
+      <article className="spacing-section-small md:spacing-section">
         <h1>Products</h1>
-        <p>dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor.</p>
+        <p>Handcrafted with precision and care, each product is a unique expression of craftsmanship and designed to bring beauty and function into everyday life. Explore the collection and find the perfect piece that speaks to you.</p>
       </article>
-      <article>
+      <article className="spacing-section-small md:spacing-section">
         <ProductGrid products={products} />
       </article>
     </section>

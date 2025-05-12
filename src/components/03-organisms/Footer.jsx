@@ -4,7 +4,7 @@ import Logo from "../01-atoms/Logo";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#e7ddd0] min-h-[266px] z-50">
+    <footer className="w-full bg-[#e7ddd0] min-h-[266px] z-50 spacing-section-small md:spacing-section">
       <div className="border-t border-[#402d1f]">
         <div className="max-w-full mx-auto py-16 px-section">
           {/* Logo above columns */}

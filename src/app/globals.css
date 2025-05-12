@@ -138,6 +138,11 @@ html {
 }
 
 h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h1,
 .h2-large {
   --fs-max: 5.5rem;
   --fs-min: 4.25rem;
@@ -151,7 +156,6 @@ h1,
 h2 {
   --fs-max: 3rem;
   --fs-min: 1.8rem;
-  text-transform: uppercase;
 }
 
 .h2-small {
@@ -171,12 +175,12 @@ h3,
   --fs-min: 0.7rem;
 }
 
-p {
+/* p {
   --fs-max: 1.25rem;
   --fs-min: 1rem;
   max-width: 64ch;
   text-wrap: pretty;
-}
+} */
 
 label {
   --fs-max: 1.25rem;
