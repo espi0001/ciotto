@@ -1,7 +1,19 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function AppLink({ href, children, className = "", underline = true, underlineColor = "bg-primary-text", highlighted = false, bold = false, extrabold = false, asListItem = false, ...props }) {
+export default function AppLink({
+  href, //
+  children,
+  className = "",
+  underline = true,
+  underlineColor = "bg-primary-text",
+  highlighted = false,
+  bold = false,
+  extrabold = false,
+  asListItem = false,
+  navColor = "",
+  ...props
+}) {
   const pathname = usePathname();
   const isActive = pathname === href;
   const base = `relative group text-base ${extrabold ? "font-extrabold" : bold ? "font-bold" : ""} ${className}`;

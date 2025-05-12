@@ -227,14 +227,10 @@ body {
 }
 
 /* spacing */
-@theme {
-  --spacing: 0.5rem;
-}
-
 @layer utilities {
   .px-section {
-    padding-left: calc(var(--spacing) * 10);
-    padding-right: calc(var(--spacing) * 10);
+    padding-left: calc(0.5rem * 10);
+    padding-right: calc(0.5rem * 10);
   }
 
   .spacing-section {
