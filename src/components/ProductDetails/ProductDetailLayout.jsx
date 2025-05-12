@@ -38,7 +38,7 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
       </div>
 
       {/* Specs and Quantity Section */}
-      <div className="mb-10 flex flex-col lg:flex-row gap-8 spacing-section">
+      <div className="flex flex-col lg:flex-row gap-8 spacing-section-small md:spacing-section">
         <div className="flex-1">
           <ProductSpecs measurements={measurements} price={product.price} />
         </div>
@@ -49,8 +49,8 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
 
       {/* You May Also Like */}
       {relatedData && relatedData.length > 0 && (
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold mb-6">You May Also Like</h2>
+        <div className="spacing-section-small md:spacing-section">
+          <h2 className="h2-product font-bold mb-6">You May Also Like</h2>
           <ProductGrid
             products={relatedData.slice(0, 4).map((p) => ({
               id: p.id,

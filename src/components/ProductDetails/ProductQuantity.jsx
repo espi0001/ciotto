@@ -50,9 +50,9 @@ const ProductQuantity = ({ product, colors = [], sizes = [], prices = [] }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 mb-5">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 ">
       {/* Quantity and Add to Cart */}
-      <div className="flex items-center gap-8">
+      <div className="flex items-center justify-between py-[0.5rem]">
         <div className="flex items-center gap-2">
           <span className="h3-large">QUANTITY</span>
 

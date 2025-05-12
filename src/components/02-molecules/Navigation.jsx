@@ -24,21 +24,26 @@ export default function Navigation({ navColor = "#402d1f", transition = "color 0
   };
   return (
     <>
-      <ul className="nav-links flex space-x-8 uppercase whitespace-nowrap z-50 relative">
+      <ul className="nav-links font-medium flex space-x-8 uppercase whitespace-nowrap z-50 relative">
         {mainLinks.map((link) =>
           link.dropdown ? (
             <li
               key={link.href}
-              className="relative"
+              className="relative font-medium"
               onMouseEnter={() => handleWorksOpen(true)}
               onMouseLeave={() => {
                 handleWorksOpen(false);
                 setHoveredIndex(null);
               }}
             >
-              <button className="relative flex items-center cursor-pointer uppercase z-30 group font-normal">
+              <button className="relative flex items-center cursor-pointer uppercase z-30 group font-medium">
                 <span className="relative flex items-center">
-                  <AppLink href={link.href} underline={false} highlighted={pathname.startsWith(link.href)}>
+                  <AppLink
+                    href={link.href}
+                    underline={false} //
+                    highlighted={pathname.startsWith(link.href)}
+                    className="font-medium"
+                  >
                     {link.label}
                   </AppLink>
                   {/* Plus icon */}
@@ -49,7 +54,21 @@ export default function Navigation({ navColor = "#402d1f", transition = "color 0
               </button>
             </li>
           ) : (
-            <AppLink key={link.href} href={link.href} highlighted={link.highlighted} bold={link.label === "Ciotto Bar" || link.bold} navColor={effectiveNavColor} transition={transition} asListItem underlineColor={link.label === "Ciotto Bar" ? "bg-tertiary-text" : undefined} className={link.label === "Ciotto Bar" ? "text-tertiary-text font-bold" : undefined}>
+            <AppLink
+              key={link.href}
+              href={link.href}
+              highlighted={link.highlighted}
+              bold={link.label === "Ciotto Bar" || link.bold}
+              navColor={effectiveNavColor}
+              transition={transition}
+              asListItem
+              underlineColor={
+                link.label === "Ciotto Bar"
+                  ? "bg-tertiary-text" //
+                  : undefined
+              }
+              className={link.label === "Ciotto Bar" ? "text-tertiary-text font-bold" : undefined}
+            >
               {link.label}
             </AppLink>
           )

@@ -2,22 +2,28 @@ import PropTypes from "prop-types";
 
 const ProductSpecs = ({ measurements, price }) => {
   return (
-    <div className="flex justify-between py-5 border-y border-[#402D1F]">
-      <div>
-        <h3 className="text-black mb-4">SPECIFICATIONS</h3>
+    <div className="">
+      {/* Measurements */}
+      <h3 className="mb-[0.8rem] uppercase">Measurements</h3>
+      <div className="border-y border-[#402D1F] flex justify-between py-[0.5rem]">
         <div className="flex flex-col gap-1.5">
           {Object.entries(measurements).map(([label, value]) => (
-            <div key={label} className="flex justify-between w-[506px]">
-              <span>{label}</span>
-              <span>{value}</span>
+            <div key={label} className="flex justify-between  w-full max-w-[506px]">
+              <ul>
+                <li className="before:content-['•'] before:mr-2">{value}</li>
+                <li className="before:content-['•'] before:mr-2">{value}</li>
+                <li className="before:content-['•'] before:mr-2">{value}</li>
+                <li className="before:content-['•'] before:mr-2">{value}</li>
+              </ul>
             </div>
           ))}
         </div>
       </div>
 
-      <div>
-        <h3 className="text-primary-text mb-4">PRICE</h3>
-        <div className="text-xl font-semibold">€{price}</div>
+      {/* Price */}
+      <div className="py-[0.5rem]">
+        <h3 className="">PRICE</h3>
+        <div className="">{price}</div>
       </div>
     </div>
   );
