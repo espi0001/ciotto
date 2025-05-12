@@ -114,7 +114,7 @@ export default function Menu() {
   const effectiveNavColor = worksOpen ? "#402d1f" : navColor;
 
   return (
-    <header ref={navRef} className="relative w-full flex justify-between items-center py-4 pt-8 px-section z-50 before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-0 before:border-b before:z-30" style={{ color: effectiveNavColor, transition }}>
+    <header ref={navRef} className="relative w-full flex justify-between items-center py-4 pt-8 px-section z-50" style={{ color: effectiveNavColor, transition }}>
       <div className="flex justify-between items-center w-full" style={{ color: effectiveNavColor, transition }}>
         {/* <Logo /> */}
         <motion.div className="flex items-center gap-16 group relative z-30" initial="hidden" animate="visible" variants={navVariants} style={{ color: effectiveNavColor, transition }}>
@@ -174,6 +174,17 @@ export default function Menu() {
 
       {/* Mobile Navigation */}
       <BurgerMenu isOpen={isBurgerOpen} onClose={() => setIsBurgerOpen(false)} />
+
+      <motion.div
+        className="absolute left-0 bottom-0 w-full h-[1px] bg-primary-text origin-left pointer-events-none z-50"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{
+          duration: 0.7,
+          delay: 0.5,
+          ease: [0.23, 1, 0.32, 1],
+        }}
+      />
     </header>
   );
 }
