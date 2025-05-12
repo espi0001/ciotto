@@ -96,8 +96,8 @@
 /* Playfair */
 @font-face {
   font-family: "Playfair";
-  src: url("/fonts/PlayfairDisplay-Regular.ttf") format("opentype");
-  font-weight: 1 300;
+  src: url("/fonts/Playfair-VariableFont_opsz,wdth,wght.ttf") format("opentype");
+  font-weight: 1 900;
   font-display: swap;
 }
 
@@ -153,6 +153,11 @@ h1,
   --fs-min: 1.8rem;
 }
 
+.h1-product {
+  --fs-max: 12.5rem;
+  --fs-min: 10rem;
+}
+
 h2 {
   --fs-max: 3rem;
   --fs-min: 1.8rem;
@@ -173,6 +178,11 @@ h3,
 .h3-small {
   --fs-max: 1.1rem;
   --fs-min: 0.7rem;
+}
+
+.h3-product {
+  --fs-max: 2rem;
+  --fs-min: 1.5rem;
 }
 
 p {
