@@ -50,7 +50,7 @@ const ProductQuantity = ({ product, colors = [], sizes = [], prices = [] }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 ">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       {/* Quantity and Add to Cart */}
       <div className="flex items-center justify-between border-b border-[#402D1F]">
         <div className="flex items-center gap-2">

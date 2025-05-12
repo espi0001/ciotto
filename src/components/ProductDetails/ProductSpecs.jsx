@@ -5,32 +5,31 @@ const ProductSpecs = ({ measurements, price }) => {
     <div className="">
       {/* Measurements */}
       <h3 className="uppercase">Measurements</h3>
-      <div className="border-b border-[#402D1F] flex justify-between py-[0.5rem]">
-        <div className="flex flex-col gap-1.5">
-          {Object.entries(measurements).map(([label, value]) => (
-            <div key={label} className="flex justify-between  w-full max-w-[506px]">
-              <ul>
-                <li className="before:content-['•'] before:mr-2">{value}</li>
-                <li className="before:content-['•'] before:mr-2">{value}</li>
-                <li className="before:content-['•'] before:mr-2">{value}</li>
-                <li className="before:content-['•'] before:mr-2">{value}</li>
-              </ul>
-            </div>
-          ))}
-        </div>
+      <div className="border-y border-[#402D1F] flex flex-col justify-between py-[0.5rem] ">
+        {measurements.map(({ label, value }, index) => (
+          <div key={index} className="flex justify-between w-full  ">
+            <p className="before:content-['•'] before:mr-2">{label}</p>
+            <p>{value}</p>
+          </div>
+        ))}
       </div>
 
       {/* Price */}
       <div className="py-[0.5rem]">
         <h3>PRICE</h3>
-        <div>{price}</div>
+        <p>{price}</p>
       </div>
     </div>
   );
 };
 
 ProductSpecs.propTypes = {
-  measurements: PropTypes.objectOf(PropTypes.string).isRequired,
+  measurements: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      value: PropTypes.string.isRequired,
+    })
+  ).isRequired,
   price: PropTypes.string.isRequired,
 };
 
