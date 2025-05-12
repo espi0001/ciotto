@@ -172,8 +172,8 @@ h3,
 }
 
 p {
-  --fs-max: 1rem;
-  --fs-min: 0.75rem;
+  --fs-max: 1.25rem;
+  --fs-min: 1rem;
   max-width: 64ch;
 }
 
@@ -222,6 +222,9 @@ body {
 }
 
 /* spacing */
+@theme {
+  --spacing: 0.5rem;
+}
 
 @layer utilities {
   .px-section {
