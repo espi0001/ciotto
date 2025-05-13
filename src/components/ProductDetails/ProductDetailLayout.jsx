@@ -22,16 +22,19 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
   const [mainImage, setMainImage] = useState(images[0]);
 
   return (
-    <div className="px-section spacing-section-small md:spacing-section">
+    <div className="px-section mt-18 md:spacing-section">
       {/* Large Heading at the Top */}
-      <div className="text-5xl">
+      <div>
         <ProductHeader title={product.single_name} />
       </div>
       {/* Top Section: Description | Main Image | Thumbnails */}
       {/* grid grid-cols-1 lg:grid-cols-[300px_1fr_186px] gap-8 items-start mb-10 */}
-      <div className="grid lg:grid-cols-[1fr_2fr_auto] gap-8 items-start mb-10">
-        <div>
-          <ProductDescription description={product.description} price={product.price} />
+      <div className="grid lg:grid-cols-[1fr_2fr_auto] gap-8 items-start">
+        <div className="flex flex-col gap-2">
+          <ProductDescription description={product.description} price={product.price} colors={colors} />
+          <div className="flex-1 max-w-[500px]">
+            <ProductQuantity product={product} colors={colors} sizes={sizes} prices={prices} />
+          </div>
         </div>
         <ProductImages mainImage={mainImage} />
         <div className="hidden lg:flex flex-col gap-[18px]">
@@ -40,12 +43,9 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
       </div>
 
       {/* Specs and Quantity Section */}
-      <div className="flex flex-col lg:flex-row justify-between gap-[20%] spacing-section-small md:spacing-section">
+      <div className="flex flex-col lg:flex-row justify-between gap-[20%] md:spacing-section">
         <div className="flex-1 max-w-[500px]">
-          <ProductSpecs measurements={measurements} price={product.price} />
-        </div>
-        <div className="flex-1 max-w-[500px]">
-          <ProductQuantity product={product} colors={colors} sizes={sizes} prices={prices} />
+          <ProductSpecs measurements={measurements} />
         </div>
       </div>
 

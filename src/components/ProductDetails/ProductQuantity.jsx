@@ -50,57 +50,29 @@ const ProductQuantity = ({ product, colors = [], sizes = [], prices = [] }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form onSubmit={handleSubmit}>
+      {/* Color selection */}
+      {/* <ProductColorSwatch colors={colors} selectedColor={selectedColor} setSelectedColor={setSelectedColor} /> */}
       {/* Quantity and Add to Cart */}
-      <div className="flex items-center justify-between border-b border-[#402D1F]">
-        <div className="flex items-center gap-2">
-          <span className="h3-large">QUANTITY</span>
-
-          <div className="flex items-center gap-3 px-2">
-            <button type="button" onClick={() => setQuantity(Math.max(1, quantity - 1))} className="h3-large flex items-center justify-center cursor-pointer">
-              -
-            </button>
-            <span className="h3-large">{quantity}</span>
-            <button type="button" onClick={() => setQuantity(quantity + 1)} className="h3-large flex items-center justify-center cursor-pointer">
-              +
-            </button>
-          </div>
-        </div>
-
-        <Button variant="primary" type="submit">
-          Add to cart
-        </Button>
-
-        {/* <Button variant="primary" onClick={handleAddToCart}>
-          Add to cart
-        </Button> */}
-      </div>
-
-      {/* Farvevalg */}
-      {colors.length > 0 && (
-        <div className="flex flex-col gap-[15px] md:gap-[30px]">
+      <div className="flex flex-col gap-4 border-b border-[#402D1F] pb-6">
+        <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <label className="h3-large">COLOR:</label>
-            <span className="h3-large">{selectedColor}</span>
+            <span className="font-semibold">QUANTITY</span>
+            <div className="flex items-center gap-2 px-1">
+              <button type="button" onClick={() => setQuantity(Math.max(1, quantity - 1))} className="text-xl flex items-center justify-center cursor-pointer">
+                -
+              </button>
+              <span className="text-xl">{quantity}</span>
+              <button type="button" onClick={() => setQuantity(quantity + 1)} className="text-xl flex items-center justify-center cursor-pointer">
+                +
+              </button>
+            </div>
           </div>
-          <div className="flex gap-2">
-            {colors.map((color, idx) => (
-              <button
-                key={idx}
-                type="button"
-                className={`h3-large w-[95px] h-[46px] border-2 bg-secondary-button transition-all duration-150 cursor-pointer ${
-                  selectedColor === color
-                    ? "border-[#402D1F]" //
-                    : "border-gray-300"
-                } transition-all duration-150`}
-                style={{ backgroundColor: color }}
-                onClick={() => setSelectedColor(color)}
-                aria-label={`Select color ${color}`}
-              />
-            ))}
-          </div>
+          <Button className="text-xl" variant="primary" type="submit">
+            Add to cart
+          </Button>
         </div>
-      )}
+      </div>
     </form>
   );
 };

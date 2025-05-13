@@ -155,7 +155,7 @@ h1,
 }
 
 .h1-product {
-  --fs-max: 12.5rem;
+  --fs-max: 10.5rem;
   --fs-min: 10rem;
 }
 
@@ -187,8 +187,8 @@ h3,
 }
 
 .h3-product {
-  --fs-max: 2rem;
-  --fs-min: 1.5rem;
+  --fs-max: 1.5rem;
+  --fs-min: 1.2rem;
 }
 
 p,
@@ -200,9 +200,14 @@ p,
   line-height: 1.5;
 }
 
+.p-product {
+  --fs-max: 1rem;
+  --fs-min: 0.8rem;
+}
+
 label {
-  --fs-max: 1.25rem;
-  --fs-min: 1rem;
+  --fs-max: 1rem;
+  --fs-min: 0.8rem;
 }
 
 .nav-links {
