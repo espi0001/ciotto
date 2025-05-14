@@ -1,0 +1,96 @@
+"use client";
+import Image from "next/image";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Copy from "@/components/gsap-anim/Copy";
+
+const sections = [
+  {
+    title: "Handmade furniture",
+    description: "Nothing is mass-produced. Each piece is made by hand, with care and intention — built to be used, not hidden away.",
+    image: {
+      src: "/image/furniture-parallax.avif",
+      alt: "Handmade furniture",
+      width: 1440,
+      height: 900,
+    },
+    number: 1,
+  },
+  {
+    title: "Ceramic Works",
+    description: "Nothing is mass-produced. Each piece is made by hand, with care and intention — built to be used, not hidden away.",
+    image: {
+      src: "/image/ceramic-parallax.avif",
+      alt: "Creative space",
+      width: 1440,
+      height: 900,
+    },
+    number: 2,
+  },
+  {
+    title: "Coffee Bar",
+    description: "Nothing is mass-produced. Each piece is made by hand, with care and intention — built to be used, not hidden away.",
+    image: {
+      src: "/image/coffee-parallax.avif",
+      alt: "Creative space",
+      width: 1440,
+      height: 900,
+    },
+    number: 3,
+  },
+];
+
+// Inline StickySection component
+function StickySection({ title, description, image, number }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const scale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
+
+  return (
+    <section ref={ref} className="sticky top-0 h-screen w-full flex items-center justify-center bg-[#e7ded0] overflow-hidden" style={{ zIndex: 1 }}>
+      <div className="px-section text-secondary-text relative flex justify-between items-start h-full w-full pt-[112px] z-10">
+        <div className="flex flex-col">
+          <Copy>
+            <h2 className="h2-large font-[Playfair] mb-8 font-semibold">{title}</h2>
+            <p className="p-product mb-8 max-w-[400px]">{description}</p>
+          </Copy>
+        </div>
+        <p className="logo-size font-[Playfair]">({number})</p>
+      </div>
+      {image && image.src && (
+        <motion.div
+          style={{
+            scale,
+            position: "absolute",
+            inset: 0,
+            zIndex: 0,
+          }}
+        >
+          <Image width={image.width} height={image.height} className="object-cover h-screen w-full" src={image.src} alt={image.alt} priority />
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              pointerEvents: "none",
+              background: "radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 60%)",
+              zIndex: 1,
+            }}
+          />
+        </motion.div>
+      )}
+    </section>
+  );
+}
+
+export default function StickySections() {
+  return (
+    <div style={{ minHeight: `${sections.length * 100}vh`, position: "relative" }}>
+      {sections.map((section, i) => (
+        <StickySection key={i} {...section} />
+      ))}
+    </div>
+  );
+}

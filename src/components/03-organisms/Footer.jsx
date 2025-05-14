@@ -1,99 +1,115 @@
 "use client";
 import Link from "next/link";
 import Logo from "../01-atoms/Logo";
+import Copy from "@/components/gsap-anim/Copy";
+import AnimatedLine from "../01-atoms/AnimatedLine";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#e7ddd0] min-h-[326px] z-50 pt-0 pb-8">
+    <footer className="relative w-full bg-[#e7ddd0] min-h-[326px] z-50 pt-0 pb-8">
       {/* Top border line */}
-      <div className="border-t border-[#402d1f] w-full"></div>
+      <AnimatedLine inViewTrigger={true} width="100%" height="1px" color="var(--color-primary-text)" duration={0.7} delay={0.5} className="absolute left-0 top-0 w-full z-50" style={{ position: "absolute", left: 0, top: 0 }} />
       <div className="max-w-full pt-16 pb-8 relative px-section">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 lg:gap-48">
           {/* Left: Logo */}
           <div className="flex flex-col justify-between h-full min-w-[200px]">
             <div className="mb-8">
-              {/* Logo or Title */}
-              <Logo color="primary-text" className="logo-size font-bold" />
+              <Copy>
+                {/* Logo or Title */}
+                <Logo color="primary-text" className="logo-size font-bold" />
+              </Copy>
             </div>
             {/* Copyright: only show on desktop here */}
-            <div className="mt-auto text-xs text-black opacity-80 hidden lg:block">Copyright 2025 © Ciotto, All rights reserved</div>
+            <Copy>
+              <p className="p-product mt-auto text-xs text-black opacity-80 hidden lg:block">Copyright 2025 © Ciotto, All rights reserved</p>
+            </Copy>
           </div>
 
           {/* Right: 3 columns */}
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-16 lg:gap-[126px] flex-1">
             {/* Pages */}
             <div className="max-w-[100px]">
-              <h3 className="text-[#402d1f] font-bold mb-4 tracking-wide">PAGES</h3>
-              <ul className="space-y-2 text-[#402d1f]">
-                <li>
-                  <Link href="/works" className="hover:underline">
-                    Works
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/products" className="hover:underline">
-                    Products
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="hover:underline">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:underline">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/ciotto-bar" className="hover:underline">
-                    Ciotto bar
-                  </Link>
-                </li>
-              </ul>
+              <Copy>
+                <h3 className="text-[#402d1f] font-bold mb-4 tracking-wide">PAGES</h3>
+                <ul className="space-y-2 text-[#402d1f]">
+                  <li>
+                    <Link href="/works" className="hover:underline">
+                      Works
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products" className="hover:underline">
+                      Products
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about" className="hover:underline">
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="hover:underline">
+                      Contact
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/ciotto-bar" className="hover:underline">
+                      Ciotto bar
+                    </Link>
+                  </li>
+                </ul>
+              </Copy>
             </div>
             {/* Opening Hours */}
             <div className="max-w-[210px]">
-              <h3 className="text-[#402d1f] font-bold mb-4 tracking-wide">OPENING HOURS</h3>
-              <div className="text-[#402d1f] text-sm space-y-1">
-                <div className="flex justify-between w-full">
-                  <span>Monday</span>
-                  <span>09:00-18:00</span>
+              <Copy>
+                <h3 className="text-[#402d1f] font-bold mb-4 tracking-wide">OPENING HOURS</h3>
+              </Copy>
+              <Copy>
+                <div className="text-[#402d1f] text-sm space-y-1">
+                  <div className="flex justify-between w-full">
+                    <span>Monday</span>
+                    <span>09:00-18:00</span>
+                  </div>
+                  <div className="flex justify-between w-full">
+                    <span>Tuesday</span>
+                    <span>09:00-18:00</span>
+                  </div>
+                  <div className="flex justify-between w-full">
+                    <span>Wednesday</span>
+                    <span>09:00-18:00</span>
+                  </div>
+                  <div className="flex justify-between w-full">
+                    <span>Thursday</span>
+                    <span>09:00-18:00</span>
+                  </div>
+                  <div className="flex justify-between w-full">
+                    <span>Friday</span>
+                    <span>09:00-18:00</span>
+                  </div>
+                  <div className="flex justify-between w-full">
+                    <span>Saturday</span>
+                    <span>10:00-14:00</span>
+                  </div>
+                  <div className="flex justify-between w-full">
+                    <span>Sunday</span>
+                    <span>Closed</span>
+                  </div>
                 </div>
-                <div className="flex justify-between w-full">
-                  <span>Tuesday</span>
-                  <span>09:00-18:00</span>
-                </div>
-                <div className="flex justify-between w-full">
-                  <span>Wednesday</span>
-                  <span>09:00-18:00</span>
-                </div>
-                <div className="flex justify-between w-full">
-                  <span>Thursday</span>
-                  <span>09:00-18:00</span>
-                </div>
-                <div className="flex justify-between w-full">
-                  <span>Friday</span>
-                  <span>09:00-18:00</span>
-                </div>
-                <div className="flex justify-between w-full">
-                  <span>Saturday</span>
-                  <span>10:00-14:00</span>
-                </div>
-                <div className="flex justify-between w-full">
-                  <span>Sunday</span>
-                  <span>Closed</span>
-                </div>
-              </div>
+              </Copy>
             </div>
             {/* Contact Info + Social Media */}
             <div className="max-w-[190px]">
-              <h3 className="text-[#402d1f] font-bold mb-4 tracking-wide">CONTACT INFO</h3>
-              <div className="text-[#402d1f] text-sm space-y-2">
-                <div>
-                  Godthåbsvej 18 A,
-                  <br />
-                  2000 Frederiksberg
+              <Copy>
+                <h3 className="text-[#402d1f] font-bold mb-4 tracking-wide">CONTACT INFO</h3>
+              </Copy>
+              <Copy>
+                <div className="text-[#402d1f] text-sm space-y-2">
+                  <div>
+                    Godthåbsvej 18 A,
+                    <br />
+                    2000 Frederiksberg
+                  </div>
                 </div>
                 <div>
                   Ari Tel:{" "}
@@ -117,7 +133,7 @@ export default function Footer() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </Copy>
             </div>
           </div>
         </div>

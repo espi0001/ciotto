@@ -3,23 +3,19 @@ import Copy from "../gsap-anim/Copy";
 
 const ProductSpecs = ({ measurements, price }) => {
   return (
-    <div>
-      <Copy>
+    <div className="">
+      <Copy startAtTenPercent={true}>
         {/* Measurements */}
-        <h3 className="h3-product font-bold uppercase">Measurements</h3>
+        <h3 className="uppercase">Measurements</h3>
       </Copy>
       <div className="border-y border-[#402D1F] flex flex-col justify-between py-[0.5rem] ">
         {measurements.map(({ label, value }, index) => (
           <div key={index} className="flex justify-between w-full  ">
             <div className="flex items-center">
               <span className="mr-2">•</span>
-              <Copy delay={0.5}>
-                <span>{label}</span>
-              </Copy>
+              <span>{label}</span>
             </div>
-            <Copy delay={0.5}>
-              <span>{value}</span>
-            </Copy>
+            <span>{value}</span>
           </div>
         ))}
       </div>

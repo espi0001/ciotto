@@ -195,7 +195,6 @@ p,
 .body-text {
   --fs-max: 1.25rem;
   --fs-min: 1rem;
-  max-width: 64ch;
   text-wrap: pretty;
   line-height: 1.5;
 }

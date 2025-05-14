@@ -9,7 +9,7 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
+export default function Copy({ children, animateOnScroll = true, delay = 0, startAtTenPercent = false }) {
   const containerRef = useRef(null);
   const elementRefs = useRef([]);
   const splitRefs = useRef([]);
@@ -70,7 +70,7 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
           ...animationProps,
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top 75%",
+            start: startAtTenPercent ? "top 95%" : "top 75%",
             once: true,
           },
         });
@@ -86,7 +86,7 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
         });
       };
     },
-    { scope: containerRef, dependencies: [animateOnScroll, delay] }
+    { scope: containerRef, dependencies: [animateOnScroll, delay, startAtTenPercent] }
   );
 
   if (React.Children.count(children) === 1) {

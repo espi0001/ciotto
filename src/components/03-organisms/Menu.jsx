@@ -6,6 +6,7 @@ import BurgerMenu from "../02-molecules/BurgerMenu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "../01-atoms/Logo";
+import AnimatedLine from "../01-atoms/AnimatedLine";
 
 const slide = {
   initial: { x: 80 },
@@ -175,16 +176,7 @@ export default function Menu() {
       {/* Mobile Navigation */}
       <BurgerMenu isOpen={isBurgerOpen} onClose={() => setIsBurgerOpen(false)} />
 
-      <motion.div
-        className="absolute left-0 bottom-0 w-full h-[1px] bg-primary-text origin-left pointer-events-none z-50"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{
-          duration: 0.7,
-          delay: 0.5,
-          ease: [0.23, 1, 0.32, 1],
-        }}
-      />
+      <AnimatedLine width="100%" height="1px" color="var(--color-primary-text)" duration={0.7} delay={0.5} className="absolute left-0 bottom-0 w-full z-50" style={{ position: "absolute", left: 0, bottom: 0 }} />
     </header>
   );
 }

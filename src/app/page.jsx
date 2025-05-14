@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Copy from "@/components/gsap-anim/Copy";
+import StickySections from "@/components/sticky-sections/StickySections";
 
 // import Button from "../components/01-atoms/Button.jsx";
 import Button from "@/components/01-atoms/Button";
@@ -33,9 +34,7 @@ export default function Home() {
       </article>
 
       {/* ---------- */}
-      <article className="spacing-section-small md:spacing-section">
-        <img className="w-full" src="/image/image1.jpg" alt="" />
-      </article>
+      <StickySections />
 
       {/* ---------- */}
       {/* <article className="pb-[184px]">
@@ -60,14 +59,14 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-[70px]">
             <img src="/image/ciotto-silver.jpg" alt="" width={460} height={570} />
 
-            <div className="flex flex-col justify-center gap-[18px]">
-              <Copy>
+            <Copy>
+              <div className="flex flex-col justify-center gap-[18px]">
                 <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
-              </Copy>
-              <Button variant="primary" onClick={() => console.log("Clicked")}>
-                Go to products
-              </Button>
-            </div>
+                <Button variant="primary" onClick={() => console.log("Clicked")}>
+                  Go to products
+                </Button>
+              </div>
+            </Copy>
           </div>
         </article>
 
@@ -91,9 +90,11 @@ export default function Home() {
             <Copy>
               <p className="h2-small uppercase">About</p>
             </Copy>
-            <Button variant="primary" link={"/about"}>
-              Go to about
-            </Button>
+            <Copy startAtTenPercent={true}>
+              <Button variant="primary" link={"/about"}>
+                Go to about
+              </Button>
+            </Copy>
           </div>
         </article>
 
@@ -106,19 +107,19 @@ export default function Home() {
             <img src="/image/ciotto2.jpg" alt="" className="w-[280px]" />
           </div>
 
-          <div className="flex flex-col justify-end gap-[18px]">
-            <Copy>
+          <Copy>
+            <div className="flex flex-col justify-end gap-[18px]">
               <h2 className="uppercase font-[Playfair] h2-large text-9xl">
                 The <br />
                 Ciotto <br />
                 Bar
               </h2>
               <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
-            </Copy>
-            <Button variant="primary" onClick={() => console.log("Clicked")}>
-              Go to Ciotto Bar
-            </Button>
-          </div>
+              <Button variant="primary" onClick={() => console.log("Clicked")}>
+                Go to Ciotto Bar
+              </Button>
+            </div>
+          </Copy>
 
           <img src="/image/coffee.jpg" alt="" />
         </article>

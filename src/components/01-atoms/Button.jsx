@@ -1,3 +1,5 @@
+import Copy from "@/components/gsap-anim/Copy";
+
 export default function Button({ children, variant = "primary", link, size = "large", type = "button" }) {
   const base = "text-xl font-semibold uppercase cursor-pointer inline-flex items-center gap-[1rem] transition-colors group";
 
@@ -22,7 +24,7 @@ export default function Button({ children, variant = "primary", link, size = "la
   //const styles = "uppercase cursor-pointer flex items-center gap-2";
   return (
     <button className={classes} type={type} href={link}>
-      {children}
+      <span>{children}</span>
       <span className="transition-transform duration-300 group-hover:translate-x-2">
         <ArrowIcon variant={variant} />
       </span>
