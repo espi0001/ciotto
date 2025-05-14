@@ -87,7 +87,7 @@ function StickySection({ title, description, image, number }) {
 
 export default function StickySections() {
   return (
-    <div style={{ minHeight: `${sections.length * 100}vh`, position: "relative" }}>
+    <div className="relative min-h-[${sections.length * 100}vh] spacing-section-small md:spacing-section">
       {sections.map((section, i) => (
         <StickySection key={i} {...section} />
       ))}
