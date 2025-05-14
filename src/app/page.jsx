@@ -21,14 +21,10 @@ export default function Home() {
       </article>
 
       {/* ---------- */}
-      <article className="relative w-full md:h-screen px-section spacing-section-small md:spacing-section">
+      <article className="relative w-full md:h-screen px-section spacing-section-small md:spacing-section flex items-center justify-center">
         <img src="/image/andra.avif" alt="" className="md:absolute md:top-0 md:left-[3.75rem] md:w-1/4 md:max-w-xs" />
-        <Copy delay={0.5}>
-          <h1 className="hero-h1 font-[Playfair] z-50 md:absolute md:inset-0 flex flex-col items-center justify-center text-center h-full w-full">
-            <span>A CREATIVE SPACE</span>
-            <span>IN THE HEART</span>
-            <span>OF COPENHAGEN</span>
-          </h1>
+        <Copy>
+          <h1 className="font-[Playfair] z-50 text-center max-w-[800px]">A CREATIVE SPACE IN THE HEART OF COPENHAGEN</h1>
         </Copy>
         <img src="/image/oberra.avif" alt="" className="md:absolute md:bottom-0 md:right-[3.75rem] md:w-1/4 md:max-w-xs" />
       </article>
@@ -59,19 +55,19 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-[70px]">
             <img src="/image/ciotto-silver.jpg" alt="" width={460} height={570} />
 
-            <Copy>
-              <div className="flex flex-col justify-center gap-[18px]">
+            <div className="flex flex-col justify-center gap-[18px]">
+              <Copy>
                 <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
-                <Button variant="primary" onClick={() => console.log("Clicked")}>
-                  Go to products
-                </Button>
-              </div>
-            </Copy>
+              </Copy>
+              <Button variant="primary" onClick={() => console.log("Clicked")}>
+                Go to products
+              </Button>
+            </div>
           </div>
         </article>
 
         {/* ------ About ------ */}
-        <article className="px-section spacing-section-small md:spacing-section pb-[184px] grid grid-cols-[auto_auto_auto]">
+        <article className="px-section spacing-section-small md:spacing-section grid grid-cols-[auto_auto_auto]">
           <img className="aspect-[7/10]" src="/image/gatti.jpg" alt="" />
           <div className="flex flex-col justify-between">
             <div className="">
@@ -107,19 +103,21 @@ export default function Home() {
             <img src="/image/ciotto2.jpg" alt="" className="w-[280px]" />
           </div>
 
-          <Copy>
-            <div className="flex flex-col justify-end gap-[18px]">
+          <div className="flex flex-col justify-end gap-[18px]">
+            <Copy>
               <h2 className="uppercase font-[Playfair] h2-large text-9xl">
                 The <br />
                 Ciotto <br />
                 Bar
               </h2>
+            </Copy>
+            <Copy>
               <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
-              <Button variant="primary" onClick={() => console.log("Clicked")}>
-                Go to Ciotto Bar
-              </Button>
-            </div>
-          </Copy>
+            </Copy>
+            <Button variant="primary" onClick={() => console.log("Clicked")}>
+              Go to Ciotto Bar
+            </Button>
+          </div>
 
           <img src="/image/coffee.jpg" alt="" />
         </article>

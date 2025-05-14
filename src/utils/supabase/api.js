@@ -31,3 +31,10 @@ export async function getAllProducts() {
   if (error) throw new Error(`Error fetching products: ${error.message}`);
   return data;
 }
+
+export async function getWorkBySlug(slug) {
+  const supabase = await createClient();
+  const { data, error } = await supabase.from("works").select("*").eq("slug", slug).single();
+  if (error) throw new Error(`Work not found: ${error.message}`);
+  return data;
+}

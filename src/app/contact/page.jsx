@@ -1,5 +1,6 @@
 import Image from "next/image";
 import InputField from "../../components/02-molecules/InputField";
+import Button from "../../components/01-atoms/Button";
 
 export default function Contact() {
   return (
@@ -32,6 +33,11 @@ export default function Contact() {
               <InputField label="Email" id="email" name="email" type="email" />
               <InputField label="Subject" id="subject" name="subject" />
               <InputField label="Message" id="message" name="message" textarea rows={5} />
+              <div className="flex justify-center">
+                <Button variant="secondary" type="submit">
+                  Send
+                </Button>
+              </div>
             </form>
           </div>
         </div>
