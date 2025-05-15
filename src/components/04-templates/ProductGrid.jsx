@@ -1,4 +1,4 @@
-import ProductCard from "../02-molecules/ProductCard";
+import RelatedProducts from "../02-molecules/RelatedProducts";
 import PropTypes from "prop-types";
 
 const ProductGrid = ({ products, small = false }) => (
@@ -10,7 +10,7 @@ const ProductGrid = ({ products, small = false }) => (
     }
   >
     {products.map((product) => (
-      <ProductCard key={product.id} image={product.image} title={product.title} link={product.link} small={small} />
+      <RelatedProducts key={product.id} image={product.image} title={product.title} link={product.link} small={small} />
     ))}
   </div>
 );

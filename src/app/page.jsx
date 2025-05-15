@@ -86,11 +86,9 @@ export default function Home() {
             <Copy>
               <p className="h2-small uppercase">About</p>
             </Copy>
-            <Copy startAtTenPercent={true}>
-              <Button variant="primary" link={"/about"}>
-                Go to about
-              </Button>
-            </Copy>
+            <Button variant="primary" link={"/about"}>
+              Go to about
+            </Button>
           </div>
         </article>
 
