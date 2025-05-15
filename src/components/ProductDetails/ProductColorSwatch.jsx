@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const ProductColorSwatch = ({ colors = [], selectedColor, setSelectedColorIndex }) => {
+const ProductColorSwatch = ({ colors = [], colorSwatch = [], selectedColor, setSelectedColorIndex }) => {
   if (!colors.length) return null;
 
   return (
@@ -11,7 +11,7 @@ const ProductColorSwatch = ({ colors = [], selectedColor, setSelectedColorIndex 
       </div>
       <div className="flex gap-2">
         {colors.map((color, idx) => (
-          <button key={idx} type="button" className={`text-xl w-[25px] h-[25px] border-1 rounded-full bg-secondary-button transition-all duration-150 cursor-pointer ${selectedColor === color ? "border-[#402D1F]" : "border-gray-300"} transition-all duration-150`} style={{ backgroundColor: color }} onClick={() => setSelectedColorIndex(idx)} aria-label={`Select color ${color}`} />
+          <button key={idx} type="button" className={`text-xl w-[25px] h-[25px] border-1 rounded-full transition-all duration-150 cursor-pointer ${selectedColor === color ? "border-[#402D1F]" : "border-gray-300"}`} style={{ backgroundColor: colorSwatch[idx] || color }} onClick={() => setSelectedColorIndex(idx)} aria-label={`Select color ${color}`} />
         ))}
       </div>
     </div>

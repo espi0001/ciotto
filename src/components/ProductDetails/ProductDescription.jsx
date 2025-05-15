@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Copy from "../gsap-anim/TextAnimation";
 import ProductColorSwatch from "./ProductColorSwatch";
 
-const ProductDescription = ({ description, price, colors = [], selectedColor, setSelectedColorIndex }) => {
+const ProductDescription = ({ description, price, colors = [], colorSwatch = [], selectedColor, setSelectedColorIndex }) => {
   useEffect(() => {
     if (!selectedColor && colors.length > 0) {
       setSelectedColor(colors[0]);
@@ -22,7 +22,7 @@ const ProductDescription = ({ description, price, colors = [], selectedColor, se
       </Copy>
 
       <div className=" flex flex-row justify-between">
-        <ProductColorSwatch colors={colors} selectedColor={selectedColor} setSelectedColorIndex={setSelectedColorIndex} />
+        <ProductColorSwatch colors={colors} colorSwatch={colorSwatch} selectedColor={selectedColor} setSelectedColorIndex={setSelectedColorIndex} />
         <p className="p-product">{price}</p>
       </div>
     </div>
@@ -32,6 +32,7 @@ const ProductDescription = ({ description, price, colors = [], selectedColor, se
 ProductDescription.propTypes = {
   price: PropTypes.string.isRequired,
   colors: PropTypes.array,
+  colorSwatch: PropTypes.array,
   selectedColor: PropTypes.string,
   setSelectedColorIndex: PropTypes.func,
 };

@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 // import { createClient } from "../../../utils/supabase/server";
 // import ProductHeader from "../../../components/ProductDetails/ProductHeader";
 // import ProductDescription from "../../../components/ProductDetails/ProductDescription";

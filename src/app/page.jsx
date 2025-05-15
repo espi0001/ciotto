@@ -24,7 +24,7 @@ export default function Home() {
       <article className="relative w-full md:h-screen px-section spacing-section-small md:spacing-section flex items-center justify-center">
         <img src="/image/andra.avif" alt="" className="md:absolute md:top-0 md:left-[3.75rem] md:w-1/4 md:max-w-xs" />
         <Copy>
-          <h1 className="font-[Playfair] z-50 text-center max-w-[800px]">A CREATIVE SPACE IN THE HEART OF COPENHAGEN</h1>
+          <h1 className="font-[Playfair] z-50 text-center max-w-[800px]">A LIVING SPACE IN THE HEART OF COPENHAGEN</h1>
         </Copy>
         <img src="/image/oberra.avif" alt="" className="md:absolute md:bottom-0 md:right-[3.75rem] md:w-1/4 md:max-w-xs" />
       </article>

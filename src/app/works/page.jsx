@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import WorkCard from "../../components/02-molecules/WorkCard";
 import TitleSection from "../../components/02-molecules/TitleSection";
 import { getAll } from "@/utils/supabase/api";

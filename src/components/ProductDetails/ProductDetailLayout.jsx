@@ -18,7 +18,7 @@ function parseJSONField(field) {
   }
 }
 
-const ProductDetailLayout = ({ product, images, colors, sizes, prices, measurements, relatedData }) => {
+const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, prices, measurements, relatedData }) => {
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [mainImage, setMainImage] = useState(images[0]);
 
@@ -36,7 +36,7 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
       {/* grid grid-cols-1 lg:grid-cols-[300px_1fr_186px] gap-8 items-start mb-10 */}
       <div className="grid lg:grid-cols-[1fr_2fr_auto] gap-8 items-start">
         <div className="flex flex-col gap-2">
-          <ProductDescription description={product.description} price={product.price} colors={colors} selectedColor={colors[selectedColorIndex]} setSelectedColorIndex={setSelectedColorIndex} />
+          <ProductDescription description={product.description} price={product.price} colors={colors} colorSwatch={colorSwatch} selectedColor={colors[selectedColorIndex]} setSelectedColorIndex={setSelectedColorIndex} />
           <div className="flex-1 max-w-[500px]">
             <ProductQuantity product={product} colors={colors} sizes={sizes} prices={prices} />
           </div>

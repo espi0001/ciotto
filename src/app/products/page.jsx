@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import ProductGrid from "../../components/04-templates/ProductGrid";
 import { getAll } from "../../utils/supabase/api";
 import TitleSection from "../../components/02-molecules/TitleSection";

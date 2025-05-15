@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { getByColumn, getRelatedByName } from "../../../utils/supabase/api";
 import ProductDetailLayout from "../../../components/ProductDetails/ProductDetailLayout";
 
@@ -24,6 +25,7 @@ export default async function ProductDetail({ params }) {
     const colors = parseJSONField(product.color);
     const sizes = parseJSONField(product.size);
     const prices = parseJSONField(product.price);
+    const colorSwatch = parseJSONField(product.color_swatch);
 
     // Parse measurements from dimension string (e.g., "H.740mm/SH.440mm x D.520mm x W.420mm")
     // This is a simple example, you can improve parsing as needed
@@ -36,6 +38,7 @@ export default async function ProductDetail({ params }) {
         product={product} //
         images={images}
         colors={colors}
+        colorSwatch={colorSwatch}
         sizes={sizes}
         prices={prices}
         measurements={measurements}
