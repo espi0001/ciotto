@@ -22,7 +22,7 @@ const ProductCard = ({ image, title, link, small = false }) => {
   return (
     <Link href={link || "/"}>
       <div className="drop-shadow-primary w-full aspect-[3/4] flex flex-col items-center justify-center overflow-hidden">
-        <Image src={image} alt={title} width={1920} height={1080} className="w-full h-full object-contain hover:scale-[1.10] transition overflow-hidden" />
+        <Image src={image} alt={title} width={1920} height={1080} className="w-full h-full object-cover hover:scale-[1.10] transition" />
         <h2 className="text-secondary-text absolute font-medium text-center text-wrap w-min">{title}</h2>
       </div>
     </Link>
