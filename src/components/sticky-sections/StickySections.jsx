@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Copy from "@/components/gsap-anim/Copy";
+import Copy from "@/components/gsap-anim/TextAnimation";
 
 const sections = [
   {

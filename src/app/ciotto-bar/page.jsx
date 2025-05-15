@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Copy from "@/components/gsap-anim/Copy";
+import Copy from "@/components/gsap-anim/TextAnimation";
 
 export default function CiottoBar() {
   return (

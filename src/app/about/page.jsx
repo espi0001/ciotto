@@ -1,5 +1,5 @@
 import PartnerCard from "../../components/02-molecules/PartnerCard";
-import Copy from "../../components/gsap-anim/Copy";
+import Copy from "../../components/gsap-anim/TextAnimation";
 
 const About = () => {
   return (
@@ -89,10 +89,10 @@ const About = () => {
             </div>
           </Copy>
         </article>
-        <article className="spacing-section-small md:spacing-section">
-          <img className="w-full h-96 object-cover " src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/c4486bc0-4f96-402c-92a7-31711cdeca14/LYFA_SS22_12.JPG?format=2500w" alt="Espresso and Shelf" />
-        </article>
       </div>
+      <article className="spacing-section-small md:spacing-section">
+        <img className="w-full h-[600px] object-cover" src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/c4486bc0-4f96-402c-92a7-31711cdeca14/LYFA_SS22_12.JPG?format=2500w" alt="Espresso and Shelf" />
+      </article>
     </section>
   );
 };

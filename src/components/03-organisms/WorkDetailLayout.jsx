@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Copy from "@/components/gsap-anim/Copy";
+import Copy from "@/components/gsap-anim/TextAnimation";
 import AnimatedLine from "../01-atoms/AnimatedLine";
 
 export default function WorkDetailLayout({ work }) {
@@ -48,7 +48,7 @@ export default function WorkDetailLayout({ work }) {
         <div className="col-span-1 flex flex-col justify-center space-y-6">
           <div>
             <Copy delay={1}>
-              <h2 className="text-lg font-bold mb-2 tracking-wide">INFO:</h2>
+              <h2 className="h2-work-details font-bold mb-2 tracking-wide">INFO:</h2>
             </Copy>
             <AnimatedLine />
             <Copy delay={1}>
@@ -57,22 +57,22 @@ export default function WorkDetailLayout({ work }) {
           </div>
           <div>
             <Copy delay={1}>
-              <h2 className="text-lg font-bold mb-2 tracking-wide">INFO:</h2>
+              <h2 className="h2-work-details font-bold mb-2 tracking-wide">DETAILS:</h2>
             </Copy>
             <AnimatedLine />
             <ul className="text-base space-y-1">
               <li>
-                <h3 className="text-lg font-bold mb-1 tracking-wide">Location</h3>
+                <h3 className="h3-large font-bold mb-1 tracking-wide">Location</h3>
                 <p>{location}</p>
               </li>
               <AnimatedLine />
               <li>
-                <h3 className="text-lg font-bold mb-1 tracking-wide">Main Features</h3>
+                <h3 className="h3-large font-bold mb-1 tracking-wide">Main Features</h3>
                 <p>{mainFeatures}</p>
               </li>
               <AnimatedLine />
               <li>
-                <h3 className="text-lg font-bold mb-1 tracking-wide">By</h3>
+                <h3 className="h3-large font-bold mb-1 tracking-wide">Designed By</h3>
                 <p>{by}</p>
               </li>
               <AnimatedLine />

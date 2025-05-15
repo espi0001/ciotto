@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProductHeader from "./ProductHeader";
 import ProductDescription from "./ProductDescription";
 import ProductImages from "./ProductImages";
@@ -7,7 +7,7 @@ import ProductThumbnails from "./ProductThumbnails";
 import ProductSpecs from "./ProductSpecs";
 import ProductQuantity from "./ProductQuantity";
 import ProductGrid from "../04-templates/ProductGrid";
-import Copy from "../gsap-anim/Copy";
+import Copy from "../gsap-anim/TextAnimation";
 
 function parseJSONField(field) {
   if (!field) return [];
@@ -19,10 +19,15 @@ function parseJSONField(field) {
 }
 
 const ProductDetailLayout = ({ product, images, colors, sizes, prices, measurements, relatedData }) => {
+  const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [mainImage, setMainImage] = useState(images[0]);
 
+  useEffect(() => {
+    setMainImage(images[selectedColorIndex]);
+  }, [selectedColorIndex, images]);
+
   return (
-    <div className="px-section mt-18 md:spacing-section">
+    <div className="px-section mt-18 md:spacing-section spacing-section-small">
       {/* Large Heading at the Top */}
       <div>
         <ProductHeader title={product.single_name} />
@@ -31,7 +36,7 @@ const ProductDetailLayout = ({ product, images, colors, sizes, prices, measureme
       {/* grid grid-cols-1 lg:grid-cols-[300px_1fr_186px] gap-8 items-start mb-10 */}
       <div className="grid lg:grid-cols-[1fr_2fr_auto] gap-8 items-start">
         <div className="flex flex-col gap-2">
-          <ProductDescription description={product.description} price={product.price} colors={colors} />
+          <ProductDescription description={product.description} price={product.price} colors={colors} selectedColor={colors[selectedColorIndex]} setSelectedColorIndex={setSelectedColorIndex} />
           <div className="flex-1 max-w-[500px]">
             <ProductQuantity product={product} colors={colors} sizes={sizes} prices={prices} />
           </div>

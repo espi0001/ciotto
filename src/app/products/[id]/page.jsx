@@ -19,7 +19,8 @@ export default async function ProductDetail({ params }) {
     const relatedData = await getRelatedByName("ciotto", product.id, product.name);
 
     // Parse fields
-    const images = parseJSONField(product.image);
+    const allImages = parseJSONField(product.image);
+    const images = allImages.slice(1, 4); // This gets images at index 1, 2, 3
     const colors = parseJSONField(product.color);
     const sizes = parseJSONField(product.size);
     const prices = parseJSONField(product.price);

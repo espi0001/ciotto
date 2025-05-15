@@ -1,5 +1,5 @@
 "use client";
-import Copy from "../gsap-anim/Copy";
+import Copy from "../gsap-anim/TextAnimation";
 
 const ProductHeader = ({ title }) => {
   return (

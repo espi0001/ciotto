@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Copy from "../gsap-anim/Copy";
+import Copy from "../gsap-anim/TextAnimation";
 
 const ProductSpecs = ({ measurements, price }) => {
   return (

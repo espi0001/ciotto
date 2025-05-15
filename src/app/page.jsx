@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Copy from "@/components/gsap-anim/Copy";
+import Copy from "@/components/gsap-anim/TextAnimation";
 import StickySections from "@/components/sticky-sections/StickySections";
 
 // import Button from "../components/01-atoms/Button.jsx";
@@ -95,7 +95,7 @@ export default function Home() {
         </article>
 
         {/* ------ Bar ------ */}
-        <article className="px-section spacing-section-small md:spacing-section pb-[184px] grid md:grid-cols-3 gap-[3rem]">
+        <article className="px-section spacing-section-small md:spacing-section grid md:grid-cols-3 gap-[3rem]">
           <div className="flex flex-col justify-between">
             <Copy>
               <p className="h2-small uppercase">Coffee bar</p>
