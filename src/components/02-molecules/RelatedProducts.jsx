@@ -13,7 +13,7 @@ const ProductCard = ({ image, title, link, small = false }) => {
         <div className="flex flex-row justify-between items-center w-full mt-2">
           <span className="text-xs text-black font-normal">{title}</span>
           <Button variant="primary" type="button" link={link || "/"}>
-            Go to Product
+            View Piece
           </Button>
         </div>
       </Link>
