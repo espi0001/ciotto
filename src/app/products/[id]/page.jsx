@@ -1,4 +1,4 @@
-import { getProductById, getRelatedProducts } from "../../../utils/supabase/api";
+import { getByColumn, getRelatedByName } from "../../../utils/supabase/api";
 import ProductDetailLayout from "../../../components/ProductDetails/ProductDetailLayout";
 
 function parseJSONField(field) {
@@ -15,8 +15,8 @@ console.log(process.env);
 export default async function ProductDetail({ params }) {
   try {
     const { id } = await params;
-    const product = await getProductById(id);
-    const relatedData = await getRelatedProducts(product);
+    const product = await getByColumn("ciotto", "id", id);
+    const relatedData = await getRelatedByName("ciotto", product.id, product.name);
 
     // Parse fields
     const images = parseJSONField(product.image);

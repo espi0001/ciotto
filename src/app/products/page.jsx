@@ -1,9 +1,9 @@
 import ProductGrid from "../../components/04-templates/ProductGrid";
-import { getAllProducts } from "../../utils/supabase/api";
+import { getAll } from "../../utils/supabase/api";
 import TitleSection from "../../components/02-molecules/TitleSection";
 
 export default async function Products() {
-  const productsRaw = await getAllProducts();
+  const productsRaw = await getAll("ciotto");
   // Map to the format expected by ProductGrid
   const products = (productsRaw || []).map((item) => ({
     id: item.id,

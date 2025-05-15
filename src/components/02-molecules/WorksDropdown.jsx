@@ -32,34 +32,57 @@ export default function WorksDropdown({ open, setOpen, hoveredIndex, setHoveredI
               : undefined
           }
         >
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className={context === "desktop" ? "flex flex-row w-full items-center uppercase px-10" : "flex flex-col space-y-8"}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className={context === "desktop" ? "flex flex-row w-full items-center uppercase px-10" : "flex flex-col space-y-2"}>
             {/* Links */}
-            <div className={context === "desktop" ? "flex flex-col gap-4 w-1/2 pt-24" : undefined}>
-              {worksLinks.map((link, idx) => (
+            {context === "desktop" ? (
+              <div className="flex flex-col gap-4 w-1/2 pt-24">
+                {worksLinks.map((link, idx) => (
+                  <motion.a
+                    key={link.label}
+                    href={link.href}
+                    className={context === "desktop" ? "works-link text-4xl font-semibold tracking-wide relative group" : undefined}
+                    onMouseEnter={() => setHoveredIndex(idx)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                    variants={blurVariant}
+                    initial="initial"
+                    animate={hoveredIndex === null ? "initial" : hoveredIndex === idx ? "focused" : "blurred"}
+                    style={context === "desktop" ? { color: "#402d1f", transition: "color 0.4s cubic-bezier(0.4,0,0.2,1)" } : undefined}
+                    transition={{
+                      duration: 0.3,
+                      delay: idx * 0.05,
+                      ease: [0.23, 1, 0.32, 1],
+                    }}
+                    onClick={onClose}
+                  >
+                    <span className="relative">
+                      {link.label}
+                      {context === "desktop" && <span className="absolute -bottom-2 left-0 w-full h-[1px] origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" style={{ backgroundColor: "#402d1f" }}></span>}
+                    </span>
+                  </motion.a>
+                ))}
+              </div>
+            ) : (
+              worksLinks.map((link, idx) => (
                 <motion.a
                   key={link.label}
                   href={link.href}
-                  className={context === "desktop" ? "works-link text-4xl font-semibold tracking-wide relative group" : undefined}
                   onMouseEnter={() => setHoveredIndex(idx)}
                   onMouseLeave={() => setHoveredIndex(null)}
                   variants={blurVariant}
                   initial="initial"
                   animate={hoveredIndex === null ? "initial" : hoveredIndex === idx ? "focused" : "blurred"}
-                  style={context === "desktop" ? { color: "#402d1f", transition: "color 0.4s cubic-bezier(0.4,0,0.2,1)" } : undefined}
                   transition={{
                     duration: 0.3,
                     delay: idx * 0.05,
                     ease: [0.23, 1, 0.32, 1],
                   }}
                   onClick={onClose}
+                  className="uppercase"
                 >
-                  <span className="relative">
-                    {link.label}
-                    {context === "desktop" && <span className="absolute -bottom-2 left-0 w-full h-[1px] origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" style={{ backgroundColor: "#402d1f" }}></span>}
-                  </span>
+                  <span className="relative">{link.label}</span>
                 </motion.a>
-              ))}
-            </div>
+              ))
+            )}
             {/* Image (desktop only) */}
             {context === "desktop" && (
               <div className="flex items-center justify-center w-1/2 pt-24">

@@ -4,7 +4,7 @@ export default function Input({ label, name, type = "text" }) {
       <label htmlFor={name} className="text-sm font-semibold uppercase">
         {label}
       </label>
-      <input id={name} name={name} type={type} required className="border p-2 shadow-sm focus:outline-none" />
+      <input id={name} name={name} type={type} required className="border p-2 shadow-sm focus:outline-none bg-black bg-opacity-70 text-white" />
     </div>
   );
 }

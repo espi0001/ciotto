@@ -21,7 +21,7 @@ export default function Contact() {
               <h1 className="h1-small font-medium uppercase leading-tight">
                 Contact
                 <br />
-                For Purchase
+                For Inquiries
               </h1>
             </div>
 

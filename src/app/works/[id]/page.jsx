@@ -7,10 +7,10 @@
 // import RelatedProducts from "../../../components/ProductDetails/RelatedProducts";
 
 import WorkDetailLayout from "../../../components/03-organisms/WorkDetailLayout";
-import { getWorkBySlug } from "@/utils/supabase/api";
+import { getByColumn } from "@/utils/supabase/api";
 
 export default async function WorkDetail({ params }) {
-  const work = await getWorkBySlug(params.id); // 'id' is the slug
+  const work = await getByColumn("works", "slug", params.id); // 'id' is the slug
   if (!work) return <div>Not found</div>;
 
   // Transform data to match the component's expected props

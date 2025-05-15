@@ -1,40 +1,34 @@
 import { createClient } from "./server";
 
-export async function getProductById(id) {
+// Generic fetch by column (single)
+export async function getByColumn(table, column, value) {
   const supabase = await createClient();
-  const { data, error } = await supabase.from("ciotto").select("*").eq("id", id).single();
-  if (error) throw new Error(`Product not found: ${error.message}`);
+  const { data, error } = await supabase.from(table).select("*").eq(column, value).single();
+  if (error) throw new Error(`${table} not found: ${error.message}`);
   return data;
 }
 
-export async function getRelatedProducts(product) {
+// Generic fetch all
+export async function getAll(table) {
   const supabase = await createClient();
-  // Try to find related by name
+  const { data, error } = await supabase.from(table).select("*").order("id", { ascending: true });
+  if (error) throw new Error(`Error fetching ${table}: ${error.message}`);
+  return data;
+}
+
+// Generic fetch related (by name prefix, fallback to random)
+export async function getRelatedByName(table, id, name) {
+  const supabase = await createClient();
   let { data, error } = await supabase
-    .from("ciotto")
+    .from(table)
     .select("*")
-    .neq("id", product.id)
-    .filter("name", "ilike", `${product.name.split(" ")[0]}%`);
-  if (error) throw new Error(`Error fetching related products: ${error.message}`);
-  // If none found, just get 4 random products (excluding current)
+    .neq("id", id)
+    .filter("name", "ilike", `${name.split(" ")[0]}%`);
+  if (error) throw new Error(`Error fetching related: ${error.message}`);
   if (!data || data.length === 0) {
-    const { data: randomData, error: randomError } = await supabase.from("ciotto").select("*").neq("id", product.id).limit(4);
-    if (randomError) throw new Error(`Error fetching fallback products: ${randomError.message}`);
+    const { data: randomData, error: randomError } = await supabase.from(table).select("*").neq("id", id).limit(4);
+    if (randomError) throw new Error(`Error fetching fallback: ${randomError.message}`);
     return randomData;
   }
-  return data;
-}
-
-export async function getAllProducts() {
-  const supabase = await createClient();
-  const { data, error } = await supabase.from("ciotto").select("*").order("id", { ascending: true });
-  if (error) throw new Error(`Error fetching products: ${error.message}`);
-  return data;
-}
-
-export async function getWorkBySlug(slug) {
-  const supabase = await createClient();
-  const { data, error } = await supabase.from("works").select("*").eq("slug", slug).single();
-  if (error) throw new Error(`Work not found: ${error.message}`);
   return data;
 }

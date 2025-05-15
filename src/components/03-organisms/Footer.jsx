@@ -112,7 +112,7 @@ export default function Footer() {
                   </div>
                 </div>
                 <div>
-                  Ari Tel:{" "}
+                  Tel:{" "}
                   <a href="tel:+4593981186" className="hover:underline">
                     +45 93 98 11 86
                   </a>
