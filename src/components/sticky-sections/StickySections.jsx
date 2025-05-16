@@ -69,7 +69,7 @@ function StickySection({ title, description, image, number }) {
             zIndex: 0,
           }}
         >
-          <Image width={image.width} height={image.height} className="object-cover h-screen w-full" src={image.src} alt={image.alt} priority />
+          <Image quality={100} width={image.width} height={image.height} className="object-cover h-screen w-full" src={image.src} alt={image.alt} priority />
           <div
             style={{
               position: "absolute",

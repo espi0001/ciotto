@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PropTypes from "prop-types";
+import Image from "next/image";
 
 const WorkCard = ({ image, title, number, link, size = "small" }) => {
   return (
@@ -11,7 +12,7 @@ const WorkCard = ({ image, title, number, link, size = "small" }) => {
   `}
       >
         <div className="w-full h-full overflow-hidden">
-          <img src={image} alt={title} className="w-full h-full object-cover hover:scale-110 transition-all duration-300" />
+          <Image quality={100} width={1920} height={1080} src={image} alt={title} className="w-full h-full object-cover hover:scale-110 transition-all duration-300" />
         </div>
         <div className="flex mt-2 justify-between items-center">
           <p>{String(number).padStart(3, "0")}</p>

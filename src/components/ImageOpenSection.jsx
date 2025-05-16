@@ -30,7 +30,7 @@ function ImageOpenSection() {
                 ease: [0.19, 1, 0.22, 1],
               }}
             >
-              <Image src="/image/contact_hero.avif" alt="Image of some of Ari's furniture in a cosy setting" width={1920} height={1080} className="object-cover max-w-[400px] max-h-[200px]" priority onLoad={() => setImgLoaded(true)} />
+              <Image quality={100} src="/image/contact_hero.avif" alt="Image of some of Ari's furniture in a cosy setting" width={1920} height={1080} className="object-cover max-w-[400px] max-h-[200px]" priority onLoad={() => setImgLoaded(true)} />
             </motion.div>
             <h2 className="h1-product font-[Playfair] font-semibold">&nbsp;&nbsp;EVERY</h2>
           </div>
