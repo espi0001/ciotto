@@ -24,10 +24,14 @@ export default function Button({ children, variant = "primary", link, size = "la
   //const styles = "uppercase cursor-pointer flex items-center gap-2";
   return (
     <button className={classes} type={type} href={link}>
-      <span>{children}</span>
-      <span className="transition-transform duration-300 group-hover:translate-x-2">
-        <ArrowIcon variant={variant} />
-      </span>
+      <Copy delay={1.5}>
+        <span>{children}</span>
+      </Copy>
+      <Copy delay={1.5}>
+        <span className="transition-transform duration-300 group-hover:translate-x-2">
+          <ArrowIcon variant={variant} />
+        </span>
+      </Copy>
     </button>
   );
 
