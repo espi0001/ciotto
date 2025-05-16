@@ -11,7 +11,7 @@ const ProductColorSwatch = ({ colors = [], colorSwatch = [], selectedColor, setS
       </div>
       <div className="flex gap-2">
         {colors.map((color, idx) => (
-          <button key={idx} type="button" className={`text-xl w-[25px] h-[25px] border-1 rounded-full transition-all duration-150 cursor-pointer ${selectedColor === color ? "border-[#402D1F]" : "border-gray-300"}`} style={{ backgroundColor: colorSwatch[idx] || color }} onClick={() => setSelectedColorIndex(idx)} aria-label={`Select color ${color}`} />
+          <button key={idx} type="button" className={`text-xl w-[25px] h-[25px] border-[1.5px] rounded-full transition-all duration-150 cursor-pointer ${selectedColor === color ? "border-[#402D1F]" : "border-[#402d1f31]"}`} style={{ backgroundColor: colorSwatch[idx] || color }} onClick={() => setSelectedColorIndex(idx)} aria-label={`Select color ${color}`} />
         ))}
       </div>
     </div>

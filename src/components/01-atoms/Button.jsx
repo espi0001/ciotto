@@ -1,7 +1,7 @@
 import Copy from "@/components/gsap-anim/TextAnimation";
 
 export default function Button({ children, variant = "primary", link, size = "large", type = "button" }) {
-  const base = "text-xl font-semibold cursor-pointer inline-flex items-center gap-[1rem] transition-colors group";
+  const base = "text-xl font-semibold cursor-pointer inline-flex items-center gap-[1rem] transition-colors group uppercase";
 
   const variants = {
     primary: {

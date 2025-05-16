@@ -1,11 +1,4 @@
 export const dynamic = "force-dynamic";
-// import { createClient } from "../../../utils/supabase/server";
-// import ProductHeader from "../../../components/ProductDetails/ProductHeader";
-// import ProductDescription from "../../../components/ProductDetails/ProductDescription";
-// import ProductImages from "../../../components/ProductDetails/ProductImages";
-// import ProductQuantity from "../../../components/ProductDetails/ProductQuantity";
-// import ProductSpecs from "../../../components/ProductDetails/ProductSpecs";
-// import RelatedProducts from "../../../components/ProductDetails/RelatedProducts";
 
 import WorkDetailLayout from "../../../components/03-organisms/WorkDetailLayout";
 import { getByColumn } from "@/utils/supabase/api";

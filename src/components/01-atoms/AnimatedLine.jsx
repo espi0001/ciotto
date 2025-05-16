@@ -12,7 +12,17 @@ export default function AnimatedLine({ width = "100%", height = "1px", color = "
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
-    const observer = new window.IntersectionObserver(([entry]) => setInView(entry.intersectionRatio >= 0.25), { threshold: [0, 0.25, 1] });
+    let hasAnimated = false;
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (!hasAnimated && entry.intersectionRatio >= 0.25) {
+          setInView(true);
+          hasAnimated = true;
+          observer.disconnect();
+        }
+      },
+      { threshold: [0, 0.25, 1] }
+    );
     observer.observe(node);
     return () => observer.disconnect();
   }, [pathname]);

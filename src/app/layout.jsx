@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Ciotto",
   description: "Ciotto",
+  icons: {
+    icon: "/image/favicon-ciotto.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -18,8 +18,7 @@ export default function WorkDetailLayout({ work }) {
     <>
       {/* Hero Section */}
       <section className="relative w-full h-screen flex items-end mb-16 md:mb-24">
-        <Image width={1000} height={1000} src={heroImage} alt={title} className="absolute inset-0 w-full h-full object-cover z-0" />
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <Image width={1920} height={1080} src={heroImage} alt={title} className="absolute inset-0 w-full h-full object-cover z-0" />
         <div className="relative z-20 p-8 md:p-16 text-left text-secondary-text">
           <Copy startAtTenPercent={true} delay={1}>
             <div className="mb-2 text-lg md:text-xl font-light tracking-wide">DESIGN BY {designer}</div>
