@@ -110,10 +110,7 @@ export default function BurgerMenu({ isOpen, onClose }) {
                 {/* Contact Info */}
                 <div className="flex flex-col space-y-2 text-base">
                   <AppLink href="tel:+4593981186" aria-label="Call us at +45 93 98 11 86">
-                    <span className="relative">Ari Tel: +45 93 98 11 86</span>
-                  </AppLink>
-                  <AppLink href="mailto:desk@ariprasetya.com" aria-label="Send email to desk@ariprasetya.com">
-                    <span className="relative">Mail: desk@ariprasetya.com</span>
+                    <span className="relative">Tel: +45 93 98 11 86</span>
                   </AppLink>
                   <AppLink href="mailto:hello@ciottofrb.com" aria-label="Send email to hello@ciottofrb.com">
                     <span className="relative">Mail: hello@ciottofrb.com</span>

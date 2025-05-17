@@ -10,10 +10,10 @@ export default async function WorkDetail({ params }) {
   // Transform data to match the component's expected props
   const workData = {
     title: work.name,
-    designer: "ARI PRASETYA",
+    designer: "Ari Prasetya",
     subtitle: work.words,
     heroImage: work.heroimage,
-    galleryImages: [work.image1, work.image2, work.image3, work.image4].filter(Boolean),
+    galleryImages: [work.image1, work.image2, work.image3, work.image4, work.image5, work.image6, work.image7].filter(Boolean),
     infoText: work.info,
     details: [
       { label: "Location", value: work.location },
