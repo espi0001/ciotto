@@ -84,10 +84,25 @@ export default function BurgerMenu({ isOpen, onClose }) {
                               +
                             </span>
                           </AppLink>
-                          <WorksDropdown open={worksOpen} setOpen={setWorksOpen} hoveredIndex={hoveredIndex} setHoveredIndex={setHoveredIndex} onClose={onClose} context="burger" />
+                          <WorksDropdown
+                            open={worksOpen} //
+                            setOpen={setWorksOpen}
+                            hoveredIndex={hoveredIndex}
+                            setHoveredIndex={setHoveredIndex}
+                            onClose={onClose}
+                            context="burger"
+                          />
                         </>
                       ) : (
-                        <AppLink href={link.href} onClick={onClose} underline={true} highlighted={link.highlighted} extrabold={link.label === "Ciotto Bar"} underlineColor={link.label === "Ciotto Bar" ? "bg-tertiary-text" : undefined} className={link.label === "Ciotto Bar" ? "text-tertiary-text burger-links" : "burger-links"}>
+                        <AppLink
+                          href={link.href} //
+                          onClick={onClose}
+                          underline={true}
+                          highlighted={link.highlighted}
+                          extrabold={link.label === "Ciotto Bar"}
+                          underlineColor={link.label === "Ciotto Bar" ? "bg-tertiary-text" : undefined}
+                          className={link.label === "Ciotto Bar" ? "text-tertiary-text burger-links" : "burger-links"}
+                        >
                           {link.label}
                         </AppLink>
                       )}
@@ -98,7 +113,8 @@ export default function BurgerMenu({ isOpen, onClose }) {
               {/* Right column: Big image only */}
               <div className="flex flex-col flex-1 items-end justify-center">
                 <div className="w-full flex justify-end">
-                  <Image width={400} height={600} src="/image/andra.avif" alt="Placeholder" className="object-cover w-[350px] h-[400px]" />
+                  {/* <Image width={400} height={600} src="/image/andra.avif" alt="Placeholder" className="object-cover w-[350px] h-[400px]" /> */}
+                  <Image width={400} height={600} src="https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/works-images/andra-landing.avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJ3b3Jrcy1pbWFnZXMvYW5kcmEtbGFuZGluZy5hdmlmIiwiaWF0IjoxNzQ3NDkzOTM2LCJleHAiOjE3NzkwMjk5MzZ9.71AflfvLSPJmlmIosB5uEcpeGW3Mg41YuLJ8I47CR9o" alt="Placeholder" className="object-cover w-[350px] h-[400px]" />
                 </div>
               </div>
             </div>

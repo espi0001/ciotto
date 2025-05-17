@@ -11,7 +11,7 @@ export default async function Works() {
 
   return (
     <section className="px-section">
-      <TitleSection title="WORKS OF ARI PRASETYA" description="dignissim, cursus urna non, id Donec enim. Nam viverra sit dui. nibh eu enim. nec id dui vehicula, sed adipiscing tortor." />
+      <TitleSection title="WORKS OF ARI PRASETYA" />
 
       <article className="spacing-section-small md:spacing-section  flex flex-wrap justify-between gap-y-[2.5rem] md:gap-y-[11rem] gap-10 mb-48">
         {works.map((work, index) => (
