@@ -1,5 +1,6 @@
 import PartnerCard from "../../components/02-molecules/PartnerCard";
 import Copy from "../../components/gsap-anim/TextAnimation";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -34,27 +35,40 @@ const About = () => {
         <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] items-center spacing-section-small md:spacing-section">
           <Copy>
             <div>
-              <h2>WHO IS ARI PRASATYA</h2>
-              <p>Ari Prasetya is an Australian designer based in Copenhagen, known for his multidisciplinary work in furniture, ceramics, and interior design. With roots in Indonesia and professional experience across continents, Ari brings a quiet depth to his craft – blending precision, philosophy, and a playful approach to material. His objects live at the intersection of functionality and sculpture, often challenging the conventions of commercial design through process-driven experimentation.</p>
+              <h2 className="mb-4">Ari Prasetya</h2>
+              <p>Ari Prasetya is an Australian designer based in Copenhagen, known for his multidisciplinary work across furniture, ceramics, and interior design.</p>
+              <p className="mb-6"></p>
+              <p>Rooted in Indonesian heritage and shaped by experience across continents, Ari brings a quiet precision to his practice — blending craftsmanship, curiosity, and an intuitive sense of space. His work often explores the meeting point between sculpture and function, guided by analogue processes and full-scale prototyping.</p>
+
+              <p className="mb-6"></p>
+              <p>Ari’s approach is playful but deliberate. He lets materials lead, allowing rhythm, proportion, and the small overlooked details to define form. Whether it’s a chair, a counter, or a room, his aim is always the same: to make something that feels simple, grounded, and present — never over-designed, but deeply considered.</p>
+              {/* <p>Ari Prasetya is an Australian designer based in Copenhagen, known for his multidisciplinary work in furniture, ceramics, and interior design. With roots in Indonesia and professional experience across continents, Ari brings a quiet depth to his craft – blending precision, philosophy, and a playful approach to material. His objects live at the intersection of functionality and sculpture, often challenging the conventions of commercial design through process-driven experimentation.</p>
               <br />
               <p>Ari's design philosophy centers around expression through play. He resists being boxed into a single discipline, instead allowing curiosity and analogue exploration to guide his work. He builds full-scale prototypes by hand, believing that true understanding of material and proportion comes through tactile experience. His creative process is intuitive, shaped by a sensitivity to space, feeling, and the unnoticed objects that shape our daily lives.</p>
               <br />
-              <p>In conversation, Ari often speaks of rhythm – not just in design, but in life. He views his work as an ongoing dialogue between stillness and motion, tradition and spontaneity. Whether crafting a chair, a cup, or a room, Ari seeks to evoke feeling over form, simplicity over spectacle, and presence over perfection.</p>
+              <p>In conversation, Ari often speaks of rhythm – not just in design, but in life. He views his work as an ongoing dialogue between stillness and motion, tradition and spontaneity. Whether crafting a chair, a cup, or a room, Ari seeks to evoke feeling over form, simplicity over spectacle, and presence over perfection.</p> */}
             </div>
           </Copy>
-          <img height={700} width={690} src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/4b34d5f9-e971-46bc-a907-266e83daee09/tempImageLz0EL9.jpg?" alt="" />
+          <Image src="/image/about/ari_prasetya.avif" alt="Image of Ari Prasetya" height={1000} width={1000} className="max-h-[700px] object-cover" />
         </article>
 
         <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] items-center spacing-section-small md:spacing-section">
-          <img height={700} width={690} src="https://www.eyeshotstreetphotography.com/wp-content/uploads/2023/10/Spiros-Loukopoulos.jpeg" alt="" />
+          <Image src="/image/about/spiros_loukopoulos.avif" alt="Image of Spiros Loukopoulos" height={1000} width={1000} className="max-h-[700px] object-cover" />
           <Copy>
             <div>
-              <h2>WHO IS SPIROS LOUKOPOULOS</h2>
-              <p>Spiros Loukopoulos is a Copenhagen-based creative with a multifaceted background in civil engineering, street photography, and spatial design. Originally from Patras, Greece, he transitioned from engineering to the food and beverage industry, where he now operates street food markets and designs bars and cultural spaces.</p>
+              <h2 className="mb-4">Spiros Loukopoulos</h2>
+              <p>Spiros Loukopoulos is a Copenhagen-based creative with a background spanning civil engineering, street photography, and spatial design.</p>
+              <p className="mb-6"></p>
+              <p>Originally from Patras, Greece, he shifted from engineering into the food and beverage world, where he now operates street food markets and designs bars and cultural venues.</p>
+              <p className="mb-6"></p>
+              <p>As a self-taught photographer, Spiros captures the quiet, often overlooked moments of city life — focusing on the human rhythms that shape urban space. His work has been exhibited and published internationally, marked by a clear eye for detail and narrative.</p>
+              <p className="mb-6"></p>
+              <p>In collaborative projects, he bridges technical know-how with artistic sensitivity, contributing to spaces that are both purposeful and expressive.</p>
+              {/* <p>Spiros Loukopoulos is a Copenhagen-based creative with a multifaceted background in civil engineering, street photography, and spatial design. Originally from Patras, Greece, he transitioned from engineering to the food and beverage industry, where he now operates street food markets and designs bars and cultural spaces.</p>
               <br />
               <p>As a self-taught photographer, Spiros captures the nuances of everyday life through his lens, often focusing on the unnoticed moments that define urban existence. His work has been featured in various publications and exhibitions, reflecting his keen eye for detail and storytelling.</p>
               <br />
-              <p>In his collaborative projects, Spiros brings a unique perspective that blends his technical expertise with artistic sensibility, contributing to creations that are both functional and aesthetically engaging.</p>
+              <p>In his collaborative projects, Spiros brings a unique perspective that blends his technical expertise with artistic sensibility, contributing to creations that are both functional and aesthetically engaging.</p> */}
             </div>
           </Copy>
         </article>
