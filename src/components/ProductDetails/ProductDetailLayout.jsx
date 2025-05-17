@@ -27,7 +27,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
   }, [selectedColorIndex, images]);
 
   return (
-    <div className="px-section mt-18 md:spacing-section spacing-section-small">
+    <div className="px-section mt-18 spacing-section-small">
       {/* Large Heading at the Top */}
       <div>
         <ProductHeader title={product.single_name} />
@@ -48,7 +48,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
       </div>
 
       {/* Specs and Quantity Section */}
-      <div className="flex flex-col lg:flex-row justify-between gap-[20%] md:spacing-section">
+      <div className="flex flex-col lg:flex-row justify-between gap-[20%] ">
         <div className="flex-1 max-w-[500px]">
           <ProductSpecs measurements={measurements} />
         </div>
