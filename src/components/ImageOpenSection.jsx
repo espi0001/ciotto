@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "@/components/01-atoms/Button";
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import Copy from "@/components/gsap-anim/TextAnimation";
 
 function ImageOpenSection() {
   const sectionRef = useRef(null);
@@ -38,8 +39,10 @@ function ImageOpenSection() {
             <h2 className="h1-product font-[Playfair] font-semibold">DESIGN</h2>
             <div>
               {" "}
-              <p className="max-w-[400px] mb-4">Exploring the intersection of craft, design, and storytelling, each collaboration is a journey shaped by shared values and a commitment to thoughtful creation and meaningful connection.</p>
-              <Button size="large" type="button" className="mt-4 text-orange-700">
+              <Copy>
+                <p className="max-w-[400px] mb-4">Exploring the intersection of craft, design, and storytelling, each collaboration is a journey shaped by shared values and a commitment to thoughtful creation and meaningful connection.</p>
+              </Copy>
+              <Button startAtTenPercent withCopy delayVariant={0.5} size="large" type="button">
                 GO TO WORKS
               </Button>
             </div>

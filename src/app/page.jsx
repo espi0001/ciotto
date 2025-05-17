@@ -3,6 +3,7 @@ import Image from "next/image";
 import Copy from "@/components/gsap-anim/TextAnimation";
 import StickySections from "@/components/sticky-sections/StickySections";
 import ImageOpenSection from "@/components/ImageOpenSection";
+import ImageReveal from "@/components/gsap-anim/ImageReveal";
 
 // import Button from "../components/01-atoms/Button.jsx";
 import Button from "@/components/01-atoms/Button";
@@ -67,7 +68,7 @@ export default function Home() {
               <Copy>
                 <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
               </Copy>
-              <Button variant="primary" onClick={() => console.log("Clicked")}>
+              <Button startAtTenPercent withCopy delayVariant={0.5} variant="primary" onClick={() => console.log("Clicked")}>
                 Go to products
               </Button>
             </div>
@@ -94,7 +95,7 @@ export default function Home() {
             <Copy>
               <p className="h2-small uppercase">About</p>
             </Copy>
-            <Button variant="primary" link={"/about"}>
+            <Button startAtTenPercent withCopy delayVariant={0.5} variant="primary" link={"/about"}>
               Go to about
             </Button>
           </div>
@@ -104,10 +105,16 @@ export default function Home() {
         <article className="spacing-section-small md:spacing-section w-full">
           <div className="flex justify-between">
             <div className="flex flex-col justify-between">
-              <Copy>
-                <p className="h2-small uppercase">Coffee bar</p>
-              </Copy>
-              <Image className="max-w-[325px] max-h-[350px] object-cover" src="/image/ciotto2.jpg" alt="" width={325} height={350} quality={100} />
+              <div>
+                <Copy>
+                  <p className="h2-small uppercase">Coffee bar</p>
+                </Copy>
+              </div>
+              <div>
+                <ImageReveal>
+                  <Image className="max-w-[325px] max-h-[350px] object-cover" src="/image/ciotto2.jpg" alt="" width={325} height={350} quality={100} />
+                </ImageReveal>
+              </div>
             </div>
             <div className="flex flex-col justify-end gap-[18px]">
               <Copy>
@@ -120,12 +127,14 @@ export default function Home() {
               <Copy>
                 <p className="max-w-[400px]">Enjoy freshly brewed Mexican coffee to stay or to go. Slow down, feel the space, and explore handmade objects where design and coffee meet at Ciotto coffee bar.</p>
               </Copy>
-              <Button variant="primary" onClick={() => console.log("Clicked")}>
+              <Button startAtTenPercent withCopy delayVariant={0.5} variant="primary" onClick={() => console.log("Clicked")}>
                 Go to Ciotto Bar
               </Button>
             </div>
             <div>
-              <Image className="object-cover max-w-[525px] max-h-[645px]" src="/image/coffee.jpg" alt="" width={540} height={711} quality={100} />
+              <ImageReveal>
+                <Image className="object-cover max-w-[525px] max-h-[645px]" src="/image/coffee.jpg" alt="" width={540} height={711} quality={100} />
+              </ImageReveal>
             </div>
           </div>
         </article>

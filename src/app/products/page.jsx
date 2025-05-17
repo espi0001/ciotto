@@ -3,6 +3,8 @@ import ProductGrid from "../../components/04-templates/ProductGrid";
 import { getAll } from "../../utils/supabase/api";
 import TitleSection from "../../components/02-molecules/TitleSection";
 import Button from "@/components/01-atoms/Button";
+import Copy from "@/components/gsap-anim/TextAnimation";
+
 export default async function Products() {
   const productsRaw = await getAll("ciotto");
   // Map to the format expected by ProductGrid
@@ -16,7 +18,9 @@ export default async function Products() {
     <section className="px-section">
       <article className="flex flex-col gap-8">
         <TitleSection title="Products" description="Handcrafted with precision and care, each product is a unique expression of craftsmanship and designed to bring beauty and function into everyday life. Explore the collection and find the perfect piece that speaks to you." />
-        <Button variant="primary">Contact us</Button>
+        <Button withCopy delayVariant={1.5} variant="primary">
+          Contact us
+        </Button>
       </article>
       <article className="mt-28">
         <ProductGrid products={products} />

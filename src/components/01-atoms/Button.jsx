@@ -1,6 +1,6 @@
 import Copy from "@/components/gsap-anim/TextAnimation";
 
-export default function Button({ children, variant = "primary", link, size = "large", type = "button" }) {
+export default function Button({ children, variant = "primary", link, size = "large", type = "button", withCopy = false, delayVariant = 0, startAtTenPercent = false, className = "" }) {
   const base = "text-xl font-semibold cursor-pointer inline-flex items-center gap-[1rem] transition-colors group uppercase";
 
   const variants = {
@@ -19,19 +19,30 @@ export default function Button({ children, variant = "primary", link, size = "la
     small: "text-sm",
   };
 
-  const classes = [base, variants[variant]?.base, variants[variant]?.hover, sizes[size]].join(" ");
+  const classes = [base, variants[variant]?.base, variants[variant]?.hover, sizes[size], className].join(" ");
 
   //const styles = "uppercase cursor-pointer flex items-center gap-2";
   return (
     <button className={classes} type={type} href={link}>
-      <Copy delay={1.5}>
-        <span>{children}</span>
-      </Copy>
-      <Copy delay={1.5}>
-        <span className="transition-transform duration-300 group-hover:translate-x-2">
-          <ArrowIcon variant={variant} />
-        </span>
-      </Copy>
+      {withCopy ? (
+        <>
+          <Copy delay={delayVariant} startAtTenPercent={startAtTenPercent}>
+            <span>{children}</span>
+          </Copy>
+          <Copy delay={delayVariant} startAtTenPercent={startAtTenPercent}>
+            <span className="transition-transform duration-300 group-hover:translate-x-2">
+              <ArrowIcon variant={variant} />
+            </span>
+          </Copy>
+        </>
+      ) : (
+        <>
+          <span>{children}</span>
+          <span className="transition-transform duration-300 group-hover:translate-x-2">
+            <ArrowIcon variant={variant} />
+          </span>
+        </>
+      )}
     </button>
   );
 
