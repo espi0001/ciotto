@@ -28,7 +28,7 @@ export default function CiottoBar() {
           </div>
           <div className="flex gap-[15px] md:gap-[35px]">
             <img src="/image/ciottobar/coffee.jpg" alt="" className="w-[490px]" />
-            <img src="/image/ciotto2.jpg" alt="" className="w-[130px] h-[180px] md:w-[320px] md:h-[430px] self-end aspect-[3/4]" />
+            <img src="/image/ciottobar/ciotto2.jpg" alt="" className="w-[130px] h-[180px] md:w-[320px] md:h-[430px] self-end aspect-[3/4]" />
           </div>
         </article>
 
@@ -44,7 +44,7 @@ export default function CiottoBar() {
               <img className="aspect-[6/5]" src="https://komunacoffee.com/cdn/shop/files/Komuna_Roasting.jpg?v=1742455322&width=2890" alt="" />
             </div>
 
-            <img className="aspect-[3/4]" src="/image/komuna(9).webp" alt="" />
+            <img className="aspect-[3/4]" src="/image/ciottobar/komuna(9).webp" alt="" />
           </div>
           <div className="grid grid-cols-3 gap-[10px] md:gap-[70px]">
             <img src="https://komunacoffee.com/cdn/shop/files/MayanHarvest_IG.jpg?v=1744896453" alt="" />
@@ -57,7 +57,7 @@ export default function CiottoBar() {
           <Copy>
             <h2 className="text-center font-[Playfair] pb-[30px] md:pb-[60px]">Menu</h2>
           </Copy>
-          <Image className="drop-shadow-primary" src="/image/menukort.svg" alt="Ciotto Bar Menu Card" width={1030} height={1320} />
+          <Image className="drop-shadow-primary" src="/image/ciottobar/menukort.svg" alt="Ciotto Bar Menu Card" width={1030} height={1320} />
         </article>
 
         <article>
@@ -92,7 +92,7 @@ export default function CiottoBar() {
                 </div>
               </div>
             </div>
-            <img className="aspect-[5/6] hidden md:block" src="/image/komuna(9).webp" alt="" />
+            <img className="aspect-[5/6] hidden md:block" src="/image/ciottobar/komuna(9).webp" alt="" />
           </div>
         </article>
       </div>
