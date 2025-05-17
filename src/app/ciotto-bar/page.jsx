@@ -27,7 +27,7 @@ export default function CiottoBar() {
             </Copy>
           </div>
           <div className="flex gap-[15px] md:gap-[35px]">
-            <img src="/image/coffee.jpg" alt="" className="w-[490px]" />
+            <img src="/image/ciottobar/coffee.jpg" alt="" className="w-[490px]" />
             <img src="/image/ciotto2.jpg" alt="" className="w-[130px] h-[180px] md:w-[320px] md:h-[430px] self-end aspect-[3/4]" />
           </div>
         </article>

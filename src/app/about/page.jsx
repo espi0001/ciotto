@@ -6,7 +6,7 @@ const About = () => {
     <section className="grid">
       <article className="w-full h-screen grid grid-cols-1 md:grid-cols-2">
         <div className="flex">
-          <img className="w-full h-full object-cover" src="/image/abouthero.jpg" alt="" />
+          <img className="w-full h-full object-cover" src="/image/about/abouthero.jpg" alt="" />
           <div className="w-full h-full object-cover" />
         </div>
         <div className="absolute flex flex-col justify-center items-center h-full w-full">
@@ -91,7 +91,7 @@ const About = () => {
         </article>
       </div>
       <article className="spacing-section-small md:spacing-section">
-        <img className="w-full h-[600px] object-cover" src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/c4486bc0-4f96-402c-92a7-31711cdeca14/LYFA_SS22_12.JPG?format=2500w" alt="Espresso and Shelf" />
+        <img className="w-full h-[600px] object-cover" src="/image/contact/contact_hero.avif" alt="Espresso and Shelf" />
       </article>
     </section>
   );

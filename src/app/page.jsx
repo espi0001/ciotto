@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Copy from "@/components/gsap-anim/TextAnimation";
 import StickySections from "@/components/sticky-sections/StickySections";
-import ImageOpenSection from "@/components/ImageOpenSection";
+import ImageOpenSection from "@/components/03-organisms/ImageOpenSection";
 import ImageReveal from "@/components/gsap-anim/ImageReveal";
 
 // import Button from "../components/01-atoms/Button.jsx";
@@ -24,7 +24,7 @@ export default function Home() {
 
       {/* ---------- */}
       <article className="relative w-full md:h-screen px-section spacing-section-small md:spacing-section flex items-center justify-center">
-        <Image src="/image/genno-natural.avif" alt="" className="md:absolute md:top-0 md:left-[3.75rem] md:w-1/4 md:max-w-xs" width={460} height={570} quality={100} />
+        <Image src="/image/landing/landing(1).avif" alt="" width={460} height={570} quality={100} className="md:absolute md:top-0 md:left-[3.75rem] md:w-1/4 md:max-w-xs" />
         <h1 className="font-[Playfair] z-50 text-center flex flex-col max-w-[1000px]">
           <Copy>
             <span className="text-left ml-0">A LIVING DESIGN SPACE</span>
@@ -36,13 +36,13 @@ export default function Home() {
             <span className="text-left ml-64">OF COPENHAGEN</span>
           </Copy>
         </h1>
-        <Image src="/image/ciotto-cup-silver.avif" alt="" className="md:absolute md:bottom-0 md:right-[3.75rem] md:w-1/4 md:max-w-xs" width={460} height={570} quality={100} />
+        <Image src="/image/landing/landing(2).avif" alt="" width={460} height={570} quality={100} className="md:absolute md:bottom-0 md:right-[3.75rem] md:w-1/4 md:max-w-xs" />
       </article>
 
-      {/* ---------- */}
+      {/* ----- Parralax ----- */}
       <StickySections />
 
-      {/* ---------- */}
+      {/* ----- AUTHENTICITY ----- */}
       <ImageOpenSection />
 
       <div className="px-section">
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex-row gap-[70px]">
             <ImageReveal>
-              <Image width={560} height={470} src="/image/ciotto-silver.jpg" alt="" quality={100} className="object-cover max-w-[560px] max-h-[470px]" />
+              <Image src="/image/landing/ciotto-silver.jpg" alt="" width={560} height={470} quality={100} className="object-cover max-w-[560px] max-h-[470px]" />
             </ImageReveal>
 
             <div className="flex flex-col justify-center gap-[18px]">
@@ -80,10 +80,11 @@ export default function Home() {
         {/* ------ About ------ */}
         <article className="spacing-section-small md:spacing-section grid grid-cols-[auto_auto_auto]">
           <ImageReveal>
-            <Image className="aspect-[7/10]" src="/image/gatti.jpg" alt="" width={525} height={645} quality={100} />
+            <Image src="/image/landing/gatti.jpg" alt="" width={525} height={645} quality={100} className="aspect-[7/10]" />
           </ImageReveal>
+
           <div className="flex flex-col justify-between">
-            <div className="">
+            <div>
               <Copy>
                 <h2 className="uppercase font-[Playfair] h2-large">
                   How it <br />
@@ -94,7 +95,7 @@ export default function Home() {
             </div>
             <div>
               <ImageReveal>
-                <Image className="aspect-[4/5]" src="/image/cup.jpg" alt="" width={260} height={340} quality={100} />
+                <Image src="/image/landing/cup.jpg" alt="" width={260} height={340} quality={100} className="aspect-[4/5]" />
               </ImageReveal>
             </div>
           </div>
@@ -109,18 +110,18 @@ export default function Home() {
           </div>
         </article>
 
-        {/* ------ Bar ------ */}
+        {/* ------ Ciotto Bar ------ */}
         <article className="spacing-section-small md:spacing-section w-full">
           <div className="flex justify-between">
             <div className="flex flex-col justify-between">
               <div>
                 <Copy>
-                  <p className="h2-small uppercase">Coffee bar</p>
+                  <p className="h2-small uppercase">Coffee Bar</p>
                 </Copy>
               </div>
               <div>
                 <ImageReveal>
-                  <Image className="max-w-[325px] max-h-[350px] object-cover" src="/image/ciotto2.jpg" alt="" width={325} height={350} quality={100} />
+                  <Image src="/image/landing/ciotto2.jpg" alt="" width={325} height={350} quality={100} className="max-w-[325px] max-h-[350px] object-cover" />
                 </ImageReveal>
               </div>
             </div>
@@ -141,7 +142,7 @@ export default function Home() {
             </div>
             <div>
               <ImageReveal>
-                <Image className="object-cover max-w-[525px] max-h-[645px]" src="/image/coffee.jpg" alt="" width={540} height={711} quality={100} />
+                <Image src="/image/landing/coffee.jpg" alt="" width={540} height={711} quality={100} className="object-cover max-w-[525px] max-h-[645px]" />
               </ImageReveal>
             </div>
           </div>

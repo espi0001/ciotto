@@ -90,8 +90,7 @@ export default function WorksDropdown({ open, setOpen, hoveredIndex, setHoveredI
                   {hoveredIndex === null && open ? (
                     <motion.img
                       key="default"
-                      // src="/image/andra.avif"
-                      src="https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/works-images/andra-landing.avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJ3b3Jrcy1pbWFnZXMvYW5kcmEtbGFuZGluZy5hdmlmIiwiaWF0IjoxNzQ3NDkzMzkyLCJleHAiOjE3NzkwMjkzOTJ9.C2Xu7vA4VeVKui0Ma4NBfdEj63l23uQGmMTztaf3sUc"
+                      src="/image/dropdown/andra_eatery.avif"
                       alt="Ciotto Works"
                       initial={{
                         opacity: 0,
