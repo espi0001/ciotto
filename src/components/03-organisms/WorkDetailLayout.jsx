@@ -10,18 +10,18 @@ export default function WorkDetailLayout({ work }) {
   // Extract values for static headings
   const location = details.find((d) => d.label === "Location")?.value || "";
   const mainFeatures = details.find((d) => d.label === "Main Features")?.value || "";
-  const by = designer || "";
+  const by = "" || designer;
   // Filter out these from the details array for the rest
   const filteredDetails = details.filter((d) => !["Location", "Main Features", "By", "Designed by"].includes(d.label));
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-screen flex items-end mb-16 md:mb-24">
+      <section className="relative w-full h-[500px] md:h-screen flex items-end mb-16 md:mb-24">
         <Image width={1920} height={1080} src={heroImage} alt={title} className="absolute inset-0 w-full h-full object-cover z-0" />
         <div className="relative z-20 p-8 md:p-16 text-left text-secondary-text">
           <Copy startAtTenPercent={true} delay={1}>
-            <div className="mb-2 text-lg md:text-xl font-light tracking-wide">DESIGN BY {designer}</div>
+            <div className="mb-2 text-lg md:text-xl font-light tracking-wide uppercase">Design by {designer}</div>
           </Copy>
           <Copy startAtTenPercent={true} delay={0.5}>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-2 uppercase">{title}</h1>
@@ -33,45 +33,45 @@ export default function WorkDetailLayout({ work }) {
       </section>
 
       {/* Gallery Grid 1 */}
-      <section className="px-section grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <section className="px-section grid grid-cols-2 gap-8 spacing-section-small md:spacing-section mb-16">
         {galleryImages.slice(0, 2).map((img, i) => (
-          <Image key={i} width={1000} height={1000} src={img} alt={title} className="w-full max-h-[800px] object-cover" />
+          <Image key={i} width={1000} height={1000} src={img} alt={title} className="w-full max-h-[750px] object-cover drop-shadow-primary" />
         ))}
       </section>
 
       {/* Info & Details Section */}
-      <section className="px-section grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+      <section className="px-section grid grid-cols-1 md:grid-cols-2 gap-12 spacing-section-small md:spacing-section mb-16">
         <div className="col-span-1">
-          <Image width={1000} height={1000} src={galleryImages[2]} alt={title} className="w-full max-h-[610px] object-cover" />
+          <Image width={1000} height={1000} src={galleryImages[2]} alt={title} className="w-full max-h-[610px] object-cover drop-shadow-primary" />
         </div>
         <div className="col-span-1 flex flex-col justify-center space-y-6">
           <div>
             <Copy delay={1}>
-              <h2 className="h2-work-details font-bold mb-2 tracking-wide">INFO:</h2>
+              <h2 className="h2-work-details font-bold mb-2 tracking-wide">Info:</h2>
             </Copy>
             <AnimatedLine />
             <Copy delay={1}>
-              <p className="body-text mb-4 whitespace-pre-line">{infoText}</p>
+              <p className="body-text mb-4 mt-2 whitespace-pre-line">{infoText}</p>
             </Copy>
           </div>
           <div>
             <Copy delay={1}>
-              <h2 className="h2-work-details font-bold mb-2 tracking-wide">DETAILS:</h2>
+              <h2 className="h2-work-details font-bold mb-2 tracking-wide">Details:</h2>
             </Copy>
             <AnimatedLine />
             <ul className="text-base space-y-1">
-              <li>
-                <h3 className="h3-large font-bold mb-1 tracking-wide">Location</h3>
+              <li className="my-2">
+                <h3 className="font-semibold mb-1 tracking-wide">Location</h3>
                 <p>{location}</p>
               </li>
               <AnimatedLine />
-              <li>
-                <h3 className="h3-large font-bold mb-1 tracking-wide">Main Features</h3>
+              <li className="my-2">
+                <h3 className="font-semibold mb-1 tracking-wide">Main Features</h3>
                 <p>{mainFeatures}</p>
               </li>
               <AnimatedLine />
-              <li>
-                <h3 className="h3-large font-bold mb-1 tracking-wide">Designed By</h3>
+              <li className="my-2">
+                <h3 className="font-semibold mb-1 tracking-wide">Designed By</h3>
                 <p>{by}</p>
               </li>
               <AnimatedLine />
@@ -94,10 +94,16 @@ export default function WorkDetailLayout({ work }) {
       </section>
 
       {/* Gallery Grid 2 */}
-      <section className="px-section grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        {galleryImages.slice(3).map((img, i) => (
-          <Image width={1000} height={1000} key={i} src={img} alt={title} className="w-full h-[340px] md:h-[420px] object-cover rounded" />
-        ))}
+      <section className="grid max-sm:gap-8	px-section spacing-section-small md:spacing-section mb-16">
+        <div className="grid grid-cols-2 gap-8">
+          <Image width={1000} height={1000} src={galleryImages[3]} alt={title} className="md:max-w-[425px] md:max-h-[590px] object-cover drop-shadow-primary" />
+          <Image width={1000} height={1000} src={galleryImages[4]} alt={title} className="md:max-w-[540px] object-cover md:justify-self-end drop-shadow-primary" />
+        </div>
+
+        <div className="grid grid-cols-2 md:justify-items-end items-end gap-8">
+          <Image width={1000} height={1000} src={galleryImages[5]} alt={title} className="md:max-w-[700px] md:max-h-[770px] object-cover drop-shadow-primary" />
+          <Image width={1000} height={1000} src={galleryImages[6]} alt={title} className="md:max-w-[420px] md:max-h-[535px] object-cover drop-shadow-primary" />
+        </div>
       </section>
     </>
   );
