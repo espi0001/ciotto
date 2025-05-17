@@ -62,7 +62,9 @@ export default function Home() {
             </Copy>
           </div>
           <div className="flex flex-col md:flex-row gap-[70px]">
-            <Image width={460} height={570} src="/image/ciotto-silver.jpg" alt="" quality={100} />
+            <ImageReveal>
+              <Image width={560} height={470} src="/image/ciotto-silver.jpg" alt="" quality={100} className="object-cover max-w-[560px] max-h-[470px]" />
+            </ImageReveal>
 
             <div className="flex flex-col justify-center gap-[18px]">
               <Copy>
@@ -77,7 +79,9 @@ export default function Home() {
 
         {/* ------ About ------ */}
         <article className="spacing-section-small md:spacing-section grid grid-cols-[auto_auto_auto]">
-          <Image className="aspect-[7/10]" src="/image/gatti.jpg" alt="" width={525} height={645} quality={100} />
+          <ImageReveal>
+            <Image className="aspect-[7/10]" src="/image/gatti.jpg" alt="" width={525} height={645} quality={100} />
+          </ImageReveal>
           <div className="flex flex-col justify-between">
             <div className="">
               <Copy>
@@ -88,7 +92,11 @@ export default function Home() {
                 <p className="uppercase h3-small">Ai Prasetya & Spiros Loukopoulos </p>
               </Copy>
             </div>
-            <Image className="aspect-[4/5]" src="/image/cup.jpg" alt="" width={260} height={340} quality={100} />
+            <div>
+              <ImageReveal>
+                <Image className="aspect-[4/5]" src="/image/cup.jpg" alt="" width={260} height={340} quality={100} />
+              </ImageReveal>
+            </div>
           </div>
 
           <div className=" flex flex-col justify-between items-end">
