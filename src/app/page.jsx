@@ -19,25 +19,25 @@ export default function Home() {
       <HeroVideo src="/video/ciotto-bar-hero.mp4" />
 
       {/* ---------- */}
-      <article className="relative w-full md:h-screen px-section spacing-section-small md:spacing-section flex items-center justify-center">
+      <article className="grid relative w-full md:h-screen px-section spacing-section-small md:spacing-section md:flex items-center justify-center">
         <Image
           src="/image/landing/landing(2).avif"
           alt="A hand holding the alu ciotto cup."
           width={460} //
           height={570}
           quality={100}
-          className="md:absolute md:top-0 md:left-[3.75rem] md:w-1/4 md:max-w-xs"
+          className="col-start-1 col-end-2 row-start-1 row-end-3 md:absolute md:top-0 md:left-[3.75rem] md:w-1/4 md:max-w-xs"
         />
 
-        <h1 className="font-[Playfair] z-50 text-center flex flex-col max-w-[1000px]">
-          <Copy>
-            <span className="text-left ml-0">A LIVING</span>
+        <h1 className="col-start-1 col-end-4 row-start-1 row-end-4 font-[Playfair] z-50 text-center flex flex-col md:max-w-[1000px]">
+          <Copy className="tect-center md:text-left">
+            <span className="md:text-left md:ml-0">A LIVING</span>
           </Copy>
           <Copy>
-            <span className="text-left ml-40">DESIGN SPACE</span>
+            <span className="md:text-left md:ml-40">DESIGN SPACE</span>
           </Copy>
           <Copy>
-            <span className="text-left ml-64">IN COPENHAGEN</span>
+            <span className="md:text-left md:ml-64">IN COPENHAGEN</span>
           </Copy>
         </h1>
         <Image
@@ -46,7 +46,7 @@ export default function Home() {
           width={460} //
           height={570}
           quality={100}
-          className="md:absolute md:bottom-0 md:right-[3.75rem] md:w-1/4 md:max-w-xs"
+          className="col-start-3 col-end-4 row-start-2 row-end-4 md:absolute md:bottom-0 md:right-[3.75rem] md:w-1/4 md:max-w-xs"
         />
       </article>
 
