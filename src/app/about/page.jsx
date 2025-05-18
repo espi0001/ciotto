@@ -74,17 +74,17 @@ const About = () => {
         </article>
 
         <article className="items-center spacing-section-small md:spacing-section">
-          <div className="flex flex-wrap gap-12">
+          <div className="grid md:grid-cols-[1fr_3fr] flex-wrap gap-12">
             <Copy>
               <h2 className="content-end border-b-1 border-r-1">
                 WHO ARE WE <br />
                 WORKING WITH
               </h2>
             </Copy>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              <PartnerCard image="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/2bb6df1a-0a1e-4460-a043-90754523f544/IMG_7700.jpg?format=2500w" alt="Beit Salma" title="Beit Salma" slug="beit-salma" description="Description of partnership or collaborator." />
-              <PartnerCard image="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b7bfd55b-750d-400c-ade7-4ad928bd84a7/IMG_7701+2.jpg?format=2500w" title="Io Japanese Tea" slug="io-japanese-tea" description="Description of partnership or collaborator." />
-              <PartnerCard image="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b020ba90-025d-4156-b148-f2835cd9d4ea/Andra+in.jpg?format=2500w" title="Andra Eatery" slug="andra-eatery" description="Description of partnership or collaborator." />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 max-sm:grid-cols-2 max-sm:grid-rows-3">
+              <PartnerCard image="/image/about/andra_eatery.avif" title="Andra Eatery" slug="andra-eatery" description="Description of partnership or collaborator." className="max-sm:col-start-1 max-sm:row-start-1" />
+              <PartnerCard image="/image/about/beit_salma.avif" alt="Beit Salma" title="Beit Salma" slug="beit-salma" description="Description of partnership or collaborator." className="max-sm:col-start-2 max-sm:row-start-2" />
+              <PartnerCard image="/image/about/io_japanese_tea.avif" title="Io Japanese Tea" slug="io-japanese-tea" description="Description of partnership or collaborator." className="max-sm:col-start-1 max-sm:row-start-3" />
             </div>
           </div>
         </article>

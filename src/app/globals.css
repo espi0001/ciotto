@@ -255,9 +255,9 @@ body {
   font-family: "Sofia Pro", sans-serif;
 }
 
-:root {
+/* :root {
   --spacing: 0.25rem;
-}
+} */
 
 /* spacing */
 @layer utilities {
