@@ -7,14 +7,8 @@ export default function CiottoBar() {
     <section className="">
       <article className="relative h-screen">
         <video autoPlay muted loop className="w-full h-full object-cover">
-          <source src="/video/ciotto-bar-hero.webm" type="video/webm" className="w-full h-full object-cover" />
+          <source src="/video/ciotto-bar-hero-video.webm" type="video/webm" className="w-full h-full object-cover" />
         </video>
-        <div className="flex flex-col justify-end absolute top-0 left-0 w-full h-full  text-secondary-text px-[44px]">
-          <Copy delay={0.5}>
-            <p className="h3-large mb-[10px] md:mb-[60px] uppercase">Godthåbsvej 18 A, 2000 Frederiksberg</p>
-            <h1 className="uppercase">Ciotto Bar</h1>
-          </Copy>
-        </div>
       </article>
       <div className="px-section spacing-section-small md:spacing-section">
         <article className="grid md:grid-cols-[1fr_2fr] gap-[30px] md:gap-[100px] pb-[184px]">
