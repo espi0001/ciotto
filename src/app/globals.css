@@ -156,11 +156,6 @@ h1,
   --fs-min: 1.8rem;
 }
 
-.h1-product {
-  --fs-max: 10.5rem;
-  --fs-min: 10rem;
-}
-
 .hero-h1 {
   --fs-max: 8.5rem;
   --fs-min: 5.5rem;
@@ -177,6 +172,11 @@ h2 {
   text-transform: uppercase;
 }
 
+.h2-product {
+  --fs-max: 10.5rem;
+  --fs-min: 2.5rem;
+}
+
 .h2-work-details {
   --fs-max: 1.8rem;
   --fs-min: 1.5rem;
@@ -190,7 +190,7 @@ h3,
 
 .h3-small {
   --fs-max: 1.1rem;
-  --fs-min: 0.7rem;
+  --fs-min: 0.8rem;
 }
 
 .h3-product {
@@ -208,7 +208,7 @@ p,
 
 .p-product {
   --fs-max: 1rem;
-  --fs-min: 0.8rem;
+  --fs-min: 1rem;
 }
 
 label {

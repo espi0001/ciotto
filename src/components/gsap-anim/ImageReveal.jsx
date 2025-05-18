@@ -48,7 +48,8 @@ export default function ImageReveal({ animateOnScroll = true, delay = 0, duratio
         position: "relative",
         overflow: "hidden",
         display: "inline-block",
-        width: "100%",
+        // width: "100%",
+        width: "auto",
         height: "100%",
         ...style,
       }}

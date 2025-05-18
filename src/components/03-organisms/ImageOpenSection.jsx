@@ -18,10 +18,10 @@ function ImageOpenSection() {
     <section ref={sectionRef} className="spacing-section-small md:spacing-section w-full flex justify-center px-section">
       <div className="w-full flex flex-col items-center">
         <div className="flex flex-col w-full items-center gap-6">
-          <h2 className="h1-product font-[Playfair] font-semibold">AUTHENTICITY&nbsp;</h2>
-          <div className="flex justify-center">
+          <h2 className="h2-product font-[Playfair] font-semibold max-sm:w-full">AUTHENTICITY&nbsp;</h2>
+          <div className="flex justify-between max-sm:w-full">
             {" "}
-            <h2 className="h1-product font-[Playfair] font-semibold">IN&nbsp;&nbsp;</h2>
+            <h2 className="h2-product font-[Playfair] font-semibold">IN&nbsp;&nbsp;</h2>
             <motion.div
               style={{ overflow: "hidden", height: "100%" }}
               initial={{ width: "0%" }}
@@ -30,13 +30,14 @@ function ImageOpenSection() {
                 duration: 2.5,
                 ease: [0.19, 1, 0.22, 1],
               }}
+              className=" max-w-[200px] md:max-w-[400px]"
             >
-              <Image quality={100} src="/image/contact/contact_hero.avif" alt="Image of some of Ari's furniture in a cosy setting" width={1920} height={1080} className="object-cover max-w-[400px] max-h-[200px]" priority onLoad={() => setImgLoaded(true)} />
+              <Image quality={100} src="/image/landing/shadows.avif" alt="Shadows of various kitchen items on a textured light-colored background." width={1920} height={1080} className="object-cover max-w-[200px] md:max-w-[400px] max-h-[100px] md:max-h-[200px]" priority onLoad={() => setImgLoaded(true)} />
             </motion.div>
-            <h2 className="h1-product font-[Playfair] font-semibold">&nbsp;&nbsp;EVERY</h2>
+            <h2 className="h2-product font-[Playfair] font-semibold">&nbsp;&nbsp;EVERY</h2>
           </div>
-          <div className="w-full flex gap-20 justify-center">
-            <h2 className="h1-product font-[Playfair] font-semibold">DESIGN</h2>
+          <div className="w-full flex max-sm:flex-col gap-6 md:gap-20 justify-center">
+            <h2 className="h2-product font-[Playfair] font-semibold ">DESIGN</h2>
             <div>
               {" "}
               <Copy>
