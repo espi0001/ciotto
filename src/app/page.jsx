@@ -18,7 +18,7 @@ export default function Home() {
     <section className="">
       <article className="relative h-full md:h-screen">
         <video autoPlay muted loop className="object-cover">
-          <source src="/video/tester.mp4" type="video/mp4" className="w-full h-full object-cover" />
+          <source src="/video/ciotto-bar-hero.webm" type="video/webm" className="w-full h-full object-cover" />
         </video>
       </article>
 
@@ -142,7 +142,7 @@ export default function Home() {
             </div>
             <div>
               <ImageReveal>
-                <Image src="/image/landing/coffee.jpg" alt="" width={540} height={711} quality={100} className="object-cover max-w-[525px] max-h-[645px]" />
+                <Image src="/image/ciottobar/coffee.jpg" alt="" width={540} height={711} quality={100} className="object-cover max-w-[525px] max-h-[645px]" />
               </ImageReveal>
             </div>
           </div>

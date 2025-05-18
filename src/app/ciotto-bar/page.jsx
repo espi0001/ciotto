@@ -7,7 +7,7 @@ export default function CiottoBar() {
     <section className="">
       <article className="relative h-screen">
         <video autoPlay muted loop className="w-full h-full object-cover">
-          <source src="/video/tester.mp4" type="video/mp4" className="w-full h-full object-cover" />
+          <source src="/video/ciotto-bar-hero.webm" type="video/webm" className="w-full h-full object-cover" />
         </video>
         <div className="flex flex-col justify-end absolute top-0 left-0 w-full h-full  text-secondary-text px-[44px]">
           <Copy delay={0.5}>
