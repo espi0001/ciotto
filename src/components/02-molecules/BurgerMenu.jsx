@@ -5,6 +5,7 @@ import AppLink from "../01-atoms/NavLink";
 import { mainLinks } from "../../data/navLinks";
 import WorksDropdown from "./WorksDropdown";
 import Logo from "../01-atoms/Logo";
+import Copy from "../gsap-anim/TextAnimation";
 
 const menuVariants = {
   closed: {
@@ -55,7 +56,6 @@ export default function BurgerMenu({ isOpen, onClose }) {
                       onMouseLeave={() => setMainHoveredIndex(null)}
                       transition={{
                         duration: 1,
-                        delay: idx * 0.05,
                         ease: [0.23, 1, 0.32, 1],
                       }}
                     >

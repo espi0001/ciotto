@@ -49,7 +49,6 @@ export default function WorksDropdown({ open, setOpen, hoveredIndex, setHoveredI
                     style={context === "desktop" ? { color: "#402d1f", transition: "color 0.4s cubic-bezier(0.4,0,0.2,1)" } : undefined}
                     transition={{
                       duration: 0.3,
-                      delay: idx * 0.05,
                       ease: [0.23, 1, 0.32, 1],
                     }}
                     onClick={onClose}
@@ -73,7 +72,6 @@ export default function WorksDropdown({ open, setOpen, hoveredIndex, setHoveredI
                   animate={hoveredIndex === null ? "initial" : hoveredIndex === idx ? "focused" : "blurred"}
                   transition={{
                     duration: 0.3,
-                    delay: idx * 0.05,
                     ease: [0.23, 1, 0.32, 1],
                   }}
                   onClick={onClose}
