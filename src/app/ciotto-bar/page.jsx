@@ -1,15 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Copy from "@/components/gsap-anim/TextAnimation";
+import HeroVideo from "@/components/HeroVideo";
 
 export default function CiottoBar() {
   return (
     <section className="">
-      <article className="relative h-screen">
-        <video autoPlay muted loop className="w-full h-full object-cover">
-          <source src="/video/ciotto-bar-hero.mp4" type="video/mp4" className="w-full h-full object-cover" />
-        </video>
-      </article>
+      <HeroVideo src="/video/ciotto-bar-hero.mp4" />
       <div className="px-section spacing-section-small md:spacing-section">
         <article className="grid md:grid-cols-[1fr_2fr] gap-[30px] md:gap-[100px] pb-[184px]">
           <div className="content-center">

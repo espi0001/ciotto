@@ -4,7 +4,7 @@ import Copy from "@/components/gsap-anim/TextAnimation";
 import StickySections from "@/components/sticky-sections/StickySections";
 import ImageOpenSection from "@/components/03-organisms/ImageOpenSection";
 import ImageReveal from "@/components/gsap-anim/ImageReveal";
-
+import HeroVideo from "@/components/HeroVideo";
 // import Button from "../components/01-atoms/Button.jsx";
 import Button from "@/components/01-atoms/Button";
 
@@ -16,11 +16,7 @@ export const metadata = {
 export default function Home() {
   return (
     <section className="">
-      <article className="relative h-full md:h-screen">
-        <video autoPlay muted loop className="object-cover">
-          <source src="/video/ciotto-bar-hero.mp4" type="video/mp4" className="w-full h-full object-cover" />
-        </video>
-      </article>
+      <HeroVideo src="/video/ciotto-bar-hero.mp4" />
 
       {/* ---------- */}
       <article className="relative w-full md:h-screen px-section spacing-section-small md:spacing-section flex items-center justify-center">
