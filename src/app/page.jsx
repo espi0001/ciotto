@@ -18,7 +18,7 @@ export default function Home() {
     <section className="">
       <article className="relative h-full md:h-screen">
         <video autoPlay muted loop className="object-cover">
-          <source src="/video/ciotto-bar-hero-video.webm" type="video/webm" className="w-full h-full object-cover" />
+          <source src="/video/ciotto-bar-hero.mp4" type="video/mp4" className="w-full h-full object-cover" />
         </video>
       </article>
 
