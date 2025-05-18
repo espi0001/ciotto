@@ -158,7 +158,7 @@ export default function Home() {
                 <ImageReveal>
                   <Image
                     src="/image/landing/bar(1).avif"
-                    alt="A boot with a cigarette tucked in its toe and a Ciotto cup beside it." // missing
+                    alt="A boot with a cigarette tucked in its toe and a Ciotto cup beside it."
                     width={1000} //
                     height={1000}
                     quality={100}
@@ -167,7 +167,7 @@ export default function Home() {
                 </ImageReveal>
               </div>
             </div>
-            <div className="col-span-2 row-start-1 row-span-1 flex flex-col md:justify-end gap-4 col-start-1 row-start-1">
+            <div className="col-start-1 col-span-2 row-start-1 row-span-1 flex flex-col md:justify-end gap-4 ">
               <Copy>
                 <h2 className="uppercase font-[Playfair] h2-large text-9xl">
                   The <br />
