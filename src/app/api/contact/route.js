@@ -31,7 +31,7 @@ export async function POST(request) {
   // Send confirmation email using React template
   try {
     const { data, error: emailError } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>", // or your verified sender
+      from: "Ari <onboarding@resend.dev>", // or your verified sender
       to: email,
       subject: "Thank you for contacting us!",
       react: EmailTemplate({ firstName, subject, message }),
