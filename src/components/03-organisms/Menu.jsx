@@ -111,7 +111,7 @@ export default function Menu() {
             <Logo color={effectiveNavColor} className="relative z-30 logo-size" />
           </div>
           {/* EST - 2025 and Address */}
-          <a href="https://www.google.com/maps/search/?api=1&query=Godthåbsvej+18A,+2000+Frederiksberg" target="_blank" rel="noopener noreferrer" className="w-[180px] h-[48px] ml-2 z-30 cursor-pointer block" tabIndex={0}>
+          <a href="https://www.google.com/maps/search/?api=1&query=Godthåbsvej+18A,+2000+Frederiksberg" target="_blank" rel="noopener noreferrer" className="w-[180px] h-[48px] ml-2 z-30 cursor-pointer hidden md:block" tabIndex={0}>
             <motion.div className="relative overflow-hidden h-full w-full flex flex-col justify-center text-xs font-normal whitespace-nowrap" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
               <motion.div className="flex w-[360px] h-full" animate={{ x: hovered ? -180 : 0 }} transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}>
                 <span className="nav-links select-none w-[180px] h-full flex items-center font-medium">EST - 2025</span>

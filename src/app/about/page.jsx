@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="grid">
+    <section className="grid max-w-screen">
       <article className="w-full h-screen grid grid-cols-1 md:grid-cols-2">
         <div className="flex">
           <img className="w-full h-full object-cover" src="/image/about/abouthero.jpg" alt="" />
