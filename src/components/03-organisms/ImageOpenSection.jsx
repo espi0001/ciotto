@@ -23,7 +23,7 @@ function ImageOpenSection() {
       <div className="w-full max-w-screen-2xl mx-auto flex flex-col items-center">
         <div className="flex flex-col w-full items-center gap-6">
           {/* Første del af overskriften */}
-          <h2 className="h2-product font-[Playfair] font-semibold w-full md:text-center">
+          <h2 className="h1-product font-[Playfair] font-semibold w-full md:text-center">
             Authenticity <span className="sm:block md:hidden">in</span>
           </h2>
 
