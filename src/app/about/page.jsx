@@ -26,7 +26,7 @@ const About = () => {
         </div>
       </article>
       {/* ----- section 2----- */}
-      <div className="px-section max-w-screen-2xl mx-auto spacing-section-small md:spacing-section">
+      <div className="px-section max-w-screen-2xl mx-auto section-spacing">
         <ImageText imageSrc="/image/about/started(1).avif" altText="A espresso machine on a the counter of Ciotto." h2="How it started">
           <p>It started quietly – with coffee, wood, and conversation. Ari was already deep in his craft, shaping furniture and ceramics with the same hands that pulled espresso shots. What began as solo explorations slowly attracted others who shared his pace and values. Spiros, with a background in design and a shared eye for detail, was one of them.</p>
           <p className="mb-6"></p>
@@ -52,7 +52,7 @@ const About = () => {
           <p>In collaborative projects, he bridges technical know-how with artistic sensitivity, contributing to spaces that are both purposeful and expressive.</p>
         </ImageText>
 
-        <article className="grid md:grid-cols-[1fr_3fr] flex-wrap gap-8 items-center spacing-section-small md:spacing-section">
+        <article className="grid md:grid-cols-[1fr_3fr] flex-wrap gap-8 items-center section-spacing">
           <div className="border-b-1 border-r-1 h-full">
             <Copy>
               <h2 className="h2-large flex md:flex-col justify-end mr-4 h-full">
@@ -67,7 +67,7 @@ const About = () => {
           </div>
         </article>
 
-        <article className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 items-center spacing-section-small md:spacing-section">
+        <article className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 items-center section-spacing">
           <div className="grid grid-cols-2">
             <Image src="/image/about/sustainability(1).avif" alt="Close-up of a wooden Armmi chair with a blurred background." height={1000} width={1000} className="md:max-h-[340px] object-cover" />
             <Image src="/image/about/sustainability(2).avif" alt="A hand holding a dark brown Ciotto cup." height={1000} width={1000} className="md:max-h-[340px] object-cover" />
@@ -86,7 +86,7 @@ const About = () => {
         </article>
       </div>
 
-      <article className="spacing-section-small md:spacing-section mx-auto">
+      <article className="section-spacing mx-auto">
         <Image src="/image/about/toshixciotto.avif" alt="A Toshi stool with a brown Ciotto cup on top illuminated by soft sunlight." width={1920} height={1080} className="md:max-h-[600px] object-cover" />
       </article>
     </section>

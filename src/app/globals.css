@@ -275,11 +275,11 @@ body {
       margin-top: 7.5rem;
     }
   } */
-  .spacing-section {
-    margin-top: 11.5rem;
-  }
+  .section-spacing {
+    margin-top: 4.5rem; /* Default spacing for smaller screens */
 
-  .spacing-section-small {
-    margin-top: 4.5rem;
+    @media (min-width: 1024px) {
+      margin-top: 11.5rem; /* Larger spacing for screens >= 1024px */
+    }
   }
 }
