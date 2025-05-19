@@ -172,7 +172,7 @@ h2 {
   text-transform: uppercase;
 }
 
-.h2-product {
+.h1-product {
   --fs-max: 10.5rem;
   --fs-min: 2rem;
 }
@@ -281,5 +281,9 @@ body {
     @media (min-width: 1024px) {
       margin-top: 11.5rem; /* Larger spacing for screens >= 1024px */
     }
+  }
+
+  .section-spacing-small {
+    margin-top: 4.5rem;
   }
 }

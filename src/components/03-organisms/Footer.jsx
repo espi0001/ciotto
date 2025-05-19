@@ -6,7 +6,7 @@ import AnimatedLine from "../01-atoms/AnimatedLine";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-[#e7ddd0] min-h-[326px] z-50 pt-0 pb-8 section-spacing">
+    <footer className="relative w-full bg-[#e7ddd0] min-h-[326px] z-50 pt-0 pb-8 section-spacing-small">
       {/* Top border line */}
       <AnimatedLine
         inViewTrigger={true}
