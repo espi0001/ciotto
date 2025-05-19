@@ -27,7 +27,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
   }, [selectedColorIndex, images]);
 
   return (
-    <div className="px-section mt-18 spacing-section-small">
+    <div className="px-section mt-[6.5rem]">
       {/* Large Heading at the Top */}
       <div>
         <ProductHeader title={product.single_name} />
@@ -56,7 +56,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
 
       {/* You May Also Like */}
       {relatedData && relatedData.length > 0 && (
-        <div className="spacing-section-small md:spacing-section">
+        <div className="section-spacing">
           <Copy>
             <h2 className="h2-product font-bold mb-6">You May Also Like</h2>
           </Copy>

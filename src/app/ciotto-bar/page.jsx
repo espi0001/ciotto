@@ -29,7 +29,7 @@ export default function CiottoBar() {
     <section className="">
       <HeroVideo src="/video/ciotto-bar-hero.mp4" />
 
-      <div className="px-section spacing-section-small md:spacing-section max-w-screen-2xl mx-auto">
+      <div className="px-section section-spacing max-w-screen-2xl mx-auto">
         <article className="grid md:grid-cols-[1fr_2fr] gap-[30px] md:gap-[100px] pb-[184px]">
           <div className="content-center">
             <Copy>
@@ -106,7 +106,7 @@ export default function CiottoBar() {
       <article>DEFUSER HER</article>
 
       {/* Opening hours */}
-      <div className="px-section spacing-section-small md:spacing-section max-w-screen-2xl mx-auto">
+      <div className="px-section section-spacing max-w-screen-2xl mx-auto">
         <article className="grid grid-cols-2 items-center">
           <div>
             <Copy>
@@ -149,7 +149,7 @@ export default function CiottoBar() {
         </article>
 
         {/* Gallery */}
-        <article className="flex gap-12 spacing-section-small md:spacing-section">
+        <article className="flex gap-12 section-spacing">
           <div className="flex flex-col gap-5">
             <Image
               src="/image/ciottobar/gallery(1).avif"

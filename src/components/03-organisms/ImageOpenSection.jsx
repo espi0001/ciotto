@@ -17,7 +17,7 @@ function ImageOpenSection() {
   return (
     <article
       ref={sectionRef}
-      className="px-section spacing-section-small md:spacing-section w-full flex justify-center" //
+      className="px-section section-spacing w-full flex justify-center" //
     >
       {/* Begrænser max bredde og centrerer indholdet */}
       <div className="w-full max-w-screen-2xl mx-auto flex flex-col items-center">
