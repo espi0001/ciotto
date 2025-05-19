@@ -14,7 +14,7 @@ export const EmailTemplate = ({ firstName, subject, message }) => (
     <p>
       Best regards,
       <br />
-      Your Team
+      The Ciotto team
     </p>
   </div>
 );
