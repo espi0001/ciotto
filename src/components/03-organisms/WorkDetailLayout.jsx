@@ -21,7 +21,7 @@ export default function WorkDetailLayout({ work }) {
         <Image width={1920} height={1080} src={heroImage} alt={title} className="absolute inset-0 w-full h-full object-cover z-0" />
         <div className="relative z-20 p-8 md:p-16 text-left text-secondary-text">
           <Copy startAtTenPercent={true} delay={1}>
-            <div className="mb-2 text-lg md:text-xl font-light tracking-wide uppercase">Design by {designer}</div>
+            <div className="mb-2 text-lg md:text-xl font-light tracking-wide uppercase">Designed by {designer}</div>
           </Copy>
           <Copy startAtTenPercent={true} delay={0.5}>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-2 uppercase">{title}</h1>
@@ -66,12 +66,12 @@ export default function WorkDetailLayout({ work }) {
               </li>
               <AnimatedLine />
               <li className="my-2">
-                <h3 className="font-semibold mb-1 tracking-wide">Main Features</h3>
+                <h3 className="font-semibold mb-1 tracking-wide">Main features</h3>
                 <p>{mainFeatures}</p>
               </li>
               <AnimatedLine />
               <li className="my-2">
-                <h3 className="font-semibold mb-1 tracking-wide">Designed By</h3>
+                <h3 className="font-semibold mb-1 tracking-wide">Designed by</h3>
                 <p>{by}</p>
               </li>
               <AnimatedLine />
