@@ -6,6 +6,11 @@ import { getAll } from "@/utils/supabase/api";
 
 const isLargeCard = (index) => [1, 2, 5, 6].includes(index);
 
+export const metadata = {
+  title: "Ciotto | Works",
+  description: "Works of Ari Prasetya",
+};
+
 export default async function Works() {
   const works = await getAll("works");
 

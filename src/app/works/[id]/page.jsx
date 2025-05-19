@@ -3,6 +3,11 @@ export const dynamic = "force-dynamic";
 import WorkDetailLayout from "../../../components/03-organisms/WorkDetailLayout";
 import { getByColumn } from "@/utils/supabase/api";
 
+export const metadata = {
+  title: "Ciotto | Works",
+  description: "Works of Ari Prasetya",
+};
+
 export default async function WorkDetail({ params }) {
   const work = await getByColumn("works", "slug", params.id); // 'id' is the slug
   if (!work) return <div>Not found</div>;

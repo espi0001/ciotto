@@ -3,6 +3,11 @@ import Image from "next/image";
 import Copy from "@/components/gsap-anim/TextAnimation";
 import HeroVideo from "@/components/HeroVideo";
 
+export const metadata = {
+  title: "Ciotto | Ciotto Bar",
+  description: "Experience the Ciotto Bar",
+};
+
 export default function CiottoBar() {
   return (
     <section className="">

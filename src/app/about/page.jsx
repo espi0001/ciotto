@@ -3,6 +3,11 @@ import Copy from "../../components/gsap-anim/TextAnimation";
 import Image from "next/image";
 import ImageText from "@/components/04-templates/ImageText";
 
+export const metadata = {
+  title: "Ciotto | About",
+  description: "About Ciotto",
+};
+
 const About = () => {
   return (
     <section className="grid max-w-screen">

@@ -5,6 +5,11 @@ import TitleSection from "../../components/02-molecules/TitleSection";
 import Button from "@/components/01-atoms/Button";
 import Copy from "@/components/gsap-anim/TextAnimation";
 
+export const metadata = {
+  title: "Ciotto | Products",
+  description: "Products of Ari Prasetya",
+};
+
 export default async function Products() {
   const productsRaw = await getAll("ciotto");
   // Map to the format expected by ProductGrid

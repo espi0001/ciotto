@@ -2,6 +2,11 @@ export const dynamic = "force-dynamic";
 import { getByColumn, getRelatedByName } from "../../../utils/supabase/api";
 import ProductDetailLayout from "../../../components/ProductDetails/ProductDetailLayout";
 
+export const metadata = {
+  title: "Ciotto | Products",
+  description: "Products of Ari Prasetya",
+};
+
 function parseJSONField(field) {
   if (!field) return [];
   try {
