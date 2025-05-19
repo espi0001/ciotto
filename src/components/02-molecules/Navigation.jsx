@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import AppLink from "../01-atoms/NavLink";
 import { mainLinks } from "../../data/navLinks";
 import WorksDropdown from "./WorksDropdown";
-import Logo from "../01-atoms/Logo";
 
 const blurVariant = {
   focused: { opacity: 1, filter: "blur(0px)" },

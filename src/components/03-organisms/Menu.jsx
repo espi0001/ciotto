@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import NavLinks from "../02-molecules/Navigation";
 import BurgerMenu from "../02-molecules/BurgerMenu";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "../01-atoms/Logo";
 import AnimatedLine from "../01-atoms/AnimatedLine";

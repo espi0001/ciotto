@@ -4,7 +4,6 @@ export const mainLinks = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Ciotto Bar", href: "/ciotto-bar", highlighted: true },
-  { label: "CART (0)", href: "/cart" },
 ];
 
 export const worksLinks = [
