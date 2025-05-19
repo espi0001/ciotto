@@ -5,7 +5,6 @@ import StickySections from "@/components/sticky-sections/StickySections";
 import ImageOpenSection from "@/components/03-organisms/ImageOpenSection";
 import ImageReveal from "@/components/gsap-anim/ImageReveal";
 import HeroVideo from "@/components/HeroVideo";
-// import Button from "../components/01-atoms/Button.jsx";
 import Button from "@/components/01-atoms/Button";
 
 export const metadata = {
@@ -15,11 +14,11 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <section className="">
+    <section>
       <HeroVideo src="/video/ciotto-bar-hero.mp4" />
 
       {/* ----- section 2----- */}
-      <article className="grid grid-cols-2 gap-y-4 relative w-full md:h-screen px-section spacing-section-small md:spacing-section md:flex items-center justify-center">
+      <article className="relative grid grid-cols-2 gap-y-4 w-full max-w-screen-xl mx-auto px-section spacing-section-small md:spacing-section md:h-screen md:flex items-center justify-center">
         <Image
           src="/image/landing/landing(2).avif"
           alt="A hand holding the alu ciotto cup."
@@ -54,12 +53,13 @@ export default function Home() {
       {/* ----- Parralax ----- */}
       <StickySections />
 
-      {/* ----- AUTHENTICITY ----- */}
+      {/* ----- AUTHENTICITY IN EVERY DESIGN ----- */}
       <ImageOpenSection />
 
-      <div className="px-section">
+      <div className="px-section max-w-screen-2xl mx-auto">
         {/* ------ Products ------ */}
-        <article className="spacing-section-small md:spacing-section grid md:grid-cols-[1fr_3fr] gap-6 md:gap-[3rem]">
+        <article className="spacing-section-small md:spacing-section grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
+          {/* Venstre kolonne med overskrift og label */}
           <div className="flex md:flex-col justify-between">
             <Copy>
               <h2 className="font-[Playfair] h2-large">
@@ -73,7 +73,9 @@ export default function Home() {
               <p className="h2-small uppercase">Products</p>
             </Copy>
           </div>
-          <div className="flex flex-col md:flex-row gap-6 md:gap-[70px]">
+
+          {/* Højre kolonne med billede, tekst og knap */}
+          <div className="flex flex-col md:flex-row gap-6 md:gap-16">
             <ImageReveal>
               <Image
                 src="/image/landing/stories.avif"
@@ -85,11 +87,17 @@ export default function Home() {
               />
             </ImageReveal>
 
-            <div className="flex flex-col justify-center gap-[18px]">
+            <div className="flex flex-col justify-center gap-5">
               <Copy>
                 <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
               </Copy>
-              <Button startAtTenPercent withCopy delayVariant={0.5} variant="primary" onClick={() => console.log("Clicked")}>
+              <Button
+                startAtTenPercent
+                withCopy
+                delayVariant={0.5}
+                variant="primary"
+                onClick={"/products"} //
+              >
                 Go to products
               </Button>
             </div>
@@ -97,18 +105,22 @@ export default function Home() {
         </article>
 
         {/* ------ About ------ */}
-        {/* grid md:grid-cols-[auto_auto_auto] */}
         <article className="spacing-section-small md:spacing-section grid md:grid-cols-[2fr_3fr] gap-16">
-          <ImageReveal>
-            <Image
-              src="/image/landing/started(1).avif"
-              alt="A shelf with a coffee pot and Ciotto cups."
-              width={1000} //
-              height={1000}
-              quality={100}
-              className="h-full max-w-fit object-cover hidden md:block"
-            />
-          </ImageReveal>
+          {/* Venstre billede – kun vist på desktop */}
+          <div className="hidden md:block">
+            <ImageReveal>
+              <Image
+                src="/image/landing/started(1).avif"
+                alt="A shelf with a coffee pot and Ciotto cups."
+                width={1000} //
+                height={1000}
+                quality={100}
+                className="h-full max-w-fit object-cover"
+              />
+            </ImageReveal>
+          </div>
+
+          {/* Højre kolonne med overskrift, navne, tekst og knap */}
           <div className="w-full flex flex-col justify-between gap-6">
             <div className="flex md:flex-row justify-between">
               <div className="flex flex-col gap-2">
@@ -139,7 +151,14 @@ export default function Home() {
                 />
               </ImageReveal>
 
-              <Button startAtTenPercent withCopy delayVariant={0.5} variant="primary" link={"/about"} className="self-start md:self-end">
+              <Button
+                startAtTenPercent //
+                withCopy
+                delayVariant={0.5}
+                variant="primary"
+                link={"/about"}
+                className="self-start md:self-end"
+              >
                 Go to about
               </Button>
             </div>
@@ -149,12 +168,11 @@ export default function Home() {
         {/* ------ Ciotto Bar ------ */}
         <article className="spacing-section-small md:spacing-section w-full">
           <div className="grid grid-cols-[1fr_auto] md:flex md:flex-row justify-between gap-6 md:gap-16">
+            {/* Tekst og billede øverst til højre (på desktop) */}
             <div className="col-start-2 col-span-2 row-start-1 md:flex md:flex-col md:justify-between">
-              <div>
-                <Copy>
-                  <p className="h2-small uppercase">Coffee Bar</p>
-                </Copy>
-              </div>
+              <Copy>
+                <p className="h2-small uppercase">Coffee Bar</p>
+              </Copy>
               <div className="hidden md:block">
                 <ImageReveal>
                   <Image
@@ -168,6 +186,8 @@ export default function Home() {
                 </ImageReveal>
               </div>
             </div>
+
+            {/* Overskrift, tekst og knap nederst til venstre */}
             <div className="col-start-1 col-span-2 row-start-1 row-span-1 flex flex-col md:justify-end gap-4 ">
               <Copy>
                 <h2 className="uppercase font-[Playfair] h2-large text-9xl">
@@ -177,12 +197,14 @@ export default function Home() {
                 </h2>
               </Copy>
               <Copy>
-                <p className="">Enjoy freshly brewed Mexican coffee to stay or to go. Slow down, feel the space, and explore handmade objects where design and coffee meet at Ciotto coffee bar.</p>
+                <p>Enjoy freshly brewed Mexican coffee to stay or to go. Slow down, feel the space, and explore handmade objects where design and coffee meet at Ciotto coffee bar.</p>
               </Copy>
               <Button startAtTenPercent withCopy delayVariant={0.5} variant="primary" onClick={() => console.log("Clicked")}>
                 Go to Ciotto Bar
               </Button>
             </div>
+
+            {/* Billede nederst i sektionen */}
             <div className="col-span-2 col-start-1 row-start-2">
               <ImageReveal>
                 <Image
