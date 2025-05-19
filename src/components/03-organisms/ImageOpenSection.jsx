@@ -81,7 +81,7 @@ function ImageOpenSection() {
           </motion.div>
 
           <div className="w-full flex max-sm:flex-col gap-6 md:gap-20 justify-center">
-            <h2 className="h2-product font-[Playfair] font-semibold hidden md:block">design</h2>
+            <h2 className="h1-product font-[Playfair] font-semibold hidden md:block">design</h2>
             <div>
               <Copy>
                 <p className="max-w-[400px] mb-4">Exploring the intersection of craft, design, and storytelling, each collaboration is a journey shaped by shared values and a commitment to thoughtful creation and meaningful connection.</p>
