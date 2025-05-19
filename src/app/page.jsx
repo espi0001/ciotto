@@ -18,7 +18,7 @@ export default function Home() {
       <HeroVideo src="/video/ciotto-bar-hero.mp4" />
 
       {/* ----- section 2----- */}
-      <article className="relative grid grid-cols-2 gap-y-4 w-full max-w-screen-xl mx-auto px-section spacing-section-small md:spacing-section md:h-screen md:flex items-center justify-center">
+      <article className="relative grid grid-cols-2 gap-y-4 w-full max-w-screen-2xl mx-auto px-section spacing-section-small md:spacing-section md:h-screen md:flex items-center justify-center">
         <Image
           src="/image/landing/landing(2).avif"
           alt="A hand holding the alu ciotto cup."

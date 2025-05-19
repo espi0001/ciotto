@@ -102,7 +102,7 @@ export default function Menu() {
 
   return (
     <header ref={navRef} className="relative w-full flex justify-between items-center py-4 pt-8 px-section z-50" style={{ color: effectiveNavColor }}>
-      <div className="flex justify-between items-center w-full" style={{ color: effectiveNavColor }}>
+      <div className="max-w-screen-2xl mx-auto flex justify-between items-center w-full" style={{ color: effectiveNavColor }}>
         {/* Logo and Address Block */}
         <motion.div className="flex items-center gap-4 md:gap-16 group relative z-30" initial="hidden" animate="visible" variants={navVariants}>
           {/* Logo */}

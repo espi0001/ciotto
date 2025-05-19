@@ -20,7 +20,7 @@ function ImageOpenSection() {
       className="px-section spacing-section-small md:spacing-section w-full flex justify-center" //
     >
       {/* Begrænser max bredde og centrerer indholdet */}
-      <div className="w-full max-w-screen-xl mx-auto flex flex-col items-center">
+      <div className="w-full max-w-screen-2xl mx-auto flex flex-col items-center">
         <div className="flex flex-col w-full items-center gap-6">
           {/* Første del af overskriften */}
           <h2 className="h2-product font-[Playfair] font-semibold w-full md:text-center">

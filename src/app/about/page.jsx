@@ -25,7 +25,8 @@ const About = () => {
           </p>
         </div>
       </article>
-      <div className="px-section spacing-section-small md:spacing-section">
+      {/* ----- section 2----- */}
+      <div className="px-section max-w-screen-2xl mx-auto spacing-section-small md:spacing-section">
         <ImageText imageSrc="/image/about/started(1).avif" altText="A espresso machine on a the counter of Ciotto." h2="How it started">
           <p>It started quietly – with coffee, wood, and conversation. Ari was already deep in his craft, shaping furniture and ceramics with the same hands that pulled espresso shots. What began as solo explorations slowly attracted others who shared his pace and values. Spiros, with a background in design and a shared eye for detail, was one of them.</p>
           <p className="mb-6"></p>
@@ -84,7 +85,8 @@ const About = () => {
           </Copy>
         </article>
       </div>
-      <article className="spacing-section-small md:spacing-section">
+
+      <article className="spacing-section-small md:spacing-section mx-auto">
         <Image src="/image/about/toshixciotto.avif" alt="A Toshi stool with a brown Ciotto cup on top illuminated by soft sunlight." width={1920} height={1080} className="md:max-h-[600px] object-cover" />
       </article>
     </section>
