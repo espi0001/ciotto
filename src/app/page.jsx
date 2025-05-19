@@ -18,26 +18,27 @@ export default function Home() {
     <section className="">
       <HeroVideo src="/video/ciotto-bar-hero.mp4" />
 
-      {/* ---------- */}
-      <article className="grid relative w-full md:h-screen px-section spacing-section-small md:spacing-section md:flex items-center justify-center">
+      {/* ----- section 2----- */}
+      <article className="grid grid-cols-2 gap-y-4 relative w-full md:h-screen px-section spacing-section-small md:spacing-section md:flex items-center justify-center">
         <Image
           src="/image/landing/landing(2).avif"
           alt="A hand holding the alu ciotto cup."
           width={460} //
           height={570}
           quality={100}
-          className="col-start-1 col-end-2 row-start-1 row-end-3 md:absolute md:top-0 md:left-[3.75rem] md:w-1/4 md:max-w-xs"
+          className="col-start-1 row-start-1 md:absolute md:top-0 md:left-[3.75rem] md:w-1/4 md:max-w-xs"
         />
 
-        <h1 className="col-start-1 col-end-4 row-start-1 row-end-4 font-[Playfair] z-50 text-center flex flex-col md:max-w-[1000px]">
+        <h1 className="col-span-3 row-start-2 font-[Playfair] z-40 text-center flex flex-col md:max-w-[1000px]">
           <Copy className="tect-center md:text-left">
-            <span className="md:text-left md:ml-0">A LIVING</span>
+            <span className="md:text-left md:ml-0">A LIVING DESIGN SPACE</span>
           </Copy>
           <Copy>
-            <span className="md:text-left md:ml-40">DESIGN SPACE</span>
+            <span className="md:text-left md:ml-40">IN THE HEART</span>
           </Copy>
+
           <Copy>
-            <span className="md:text-left md:ml-64">IN COPENHAGEN</span>
+            <span className="md:text-left md:ml-24 text-nowrap">OF COPENHAGEN</span>
           </Copy>
         </h1>
         <Image
@@ -46,7 +47,7 @@ export default function Home() {
           width={460} //
           height={570}
           quality={100}
-          className="col-start-3 col-end-4 row-start-2 row-end-4 md:absolute md:bottom-0 md:right-[3.75rem] md:w-1/4 md:max-w-xs"
+          className="col-start-2 row-start-3 md:absolute md:bottom-0 md:right-[3.75rem] md:w-1/4 md:max-w-xs"
         />
       </article>
 
@@ -76,7 +77,7 @@ export default function Home() {
             <ImageReveal>
               <Image
                 src="/image/landing/stories.avif"
-                alt="A shelf with ceramic cups, next to a moka pot"
+                alt="A table with papers, a bonsai centerpiece, Gatti chairs and Genno chair in Ciotto."
                 width={1000} //
                 height={1000}
                 quality={100}
@@ -190,7 +191,7 @@ export default function Home() {
                   width={540} //
                   height={711}
                   quality={100}
-                  className="object-cover max-w-[525px] max-h-[645px]"
+                  className="object-cover md:max-w-[525px] max-w-[350px] max-h-[645px]"
                 />
               </ImageReveal>
             </div>

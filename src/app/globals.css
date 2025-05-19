@@ -266,7 +266,7 @@ body {
     padding-right: clamp(calc(0.1rem * 10), 5vw, calc(0.375rem * 10));
   }
 
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     .md\:spacing-section {
       margin-top: 11.5rem;
     }
@@ -274,5 +274,12 @@ body {
     .md\:spacing-section-small {
       margin-top: 7.5rem;
     }
+  } */
+  .spacing-section {
+    margin-top: 11.5rem;
+  }
+
+  .spacing-section-small {
+    margin-top: 4.5rem;
   }
 }

@@ -30,7 +30,7 @@ function ImageOpenSection() {
                 duration: 2.5,
                 ease: [0.19, 1, 0.22, 1],
               }}
-              className=" max-w-[200px] md:max-w-[400px]"
+              className="max-w-[200px] md:max-w-[400px]"
             >
               <Image quality={100} src="/image/landing/shadows.avif" alt="Shadows of various kitchen items on a textured light-colored background." width={1920} height={1080} className="object-cover max-w-[200px] md:max-w-[400px] max-h-[100px] md:max-h-[200px]" priority onLoad={() => setImgLoaded(true)} />
             </motion.div>
