@@ -1,8 +1,50 @@
+"use client";
+
 import Image from "next/image";
 import InputField from "../../components/02-molecules/InputField";
 import Button from "../../components/01-atoms/Button";
+import { useState } from "react";
 
 export default function Contact() {
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setStatus("Thank you! Your message has been sent.");
+        setForm({ firstName: "", lastName: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setStatus("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="nav-text-color-change h-[120vh]">
       {/* Background Image */}
@@ -25,19 +67,20 @@ export default function Contact() {
               </h1>
             </div>
 
-            <form className="flex flex-col space-y-6 w-full">
+            <form className="flex flex-col space-y-6 w-full" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <InputField label="First Name" id="firstName" name="firstName" />
-                <InputField label="Last Name" id="lastName" name="lastName" />
+                <InputField label="First Name" id="firstName" name="firstName" value={form.firstName} onChange={handleChange} />
+                <InputField label="Last Name" id="lastName" name="lastName" value={form.lastName} onChange={handleChange} />
               </div>
-              <InputField label="Email" id="email" name="email" type="email" />
-              <InputField label="Subject" id="subject" name="subject" />
-              <InputField label="Message" id="message" name="message" textarea rows={5} />
+              <InputField label="Email" id="email" name="email" type="email" value={form.email} onChange={handleChange} />
+              <InputField label="Subject" id="subject" name="subject" value={form.subject} onChange={handleChange} />
+              <InputField label="Message" id="message" name="message" textarea rows={5} value={form.message} onChange={handleChange} />
               <div className="flex justify-center">
-                <Button variant="secondary" type="submit">
-                  Send
+                <Button variant="secondary" type="submit" disabled={loading}>
+                  {loading ? "Sending..." : "Send"}
                 </Button>
               </div>
+              {status && <p className="text-center mt-2">{status}</p>}
             </form>
           </div>
         </div>
