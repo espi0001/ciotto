@@ -29,7 +29,7 @@ function ImageOpenSection() {
 
           {/* Række med billede og "IN / EVERY" tekst */}
           <div className="flex justify-between w-full gap-4">
-            <h2 className="hidden md:block h2-product font-[Playfair] font-semibold">in</h2>
+            <h2 className="hidden md:block h1-product font-[Playfair] font-semibold">in</h2>
 
             {/* Billede med animation – vises kun på desktop */}
             <motion.div
@@ -54,7 +54,7 @@ function ImageOpenSection() {
             </motion.div>
 
             {/* "EVERY" vises altid – "DESIGN" kun på mobil */}
-            <h2 className="h2-product font-[Playfair] font-semibold">
+            <h2 className="h1-product font-[Playfair] font-semibold">
               every <span className="md:hidden">design</span>
             </h2>
           </div>
