@@ -86,7 +86,7 @@ function ImageOpenSection() {
               <Copy>
                 <p className="max-w-[400px] mb-4">Exploring the intersection of craft, design, and storytelling, each collaboration is a journey shaped by shared values and a commitment to thoughtful creation and meaningful connection.</p>
               </Copy>
-              <Button startAtTenPercent withCopy delayVariant={0.5} size="large" type="button">
+              <Button startAtTenPercent withCopy delayVariant={0.5} size="large" type="button" link="/works">
                 GO TO WORKS
               </Button>
             </div>

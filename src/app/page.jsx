@@ -91,13 +91,7 @@ export default function Home() {
               <Copy>
                 <p>Handcrafted with care, each product celebrates the beauty of imperfection and the individuality of form. Inspired by everyday moments, the products are rooted in sustainable practices and a deep respect for materials where every product tells its own quiet story.</p>
               </Copy>
-              <Button
-                startAtTenPercent
-                withCopy
-                delayVariant={0.5}
-                variant="primary"
-                onClick={"/products"} //
-              >
+              <Button startAtTenPercent withCopy delayVariant={0.5} variant="primary" link="/products">
                 Go to products
               </Button>
             </div>
@@ -156,7 +150,7 @@ export default function Home() {
                 withCopy
                 delayVariant={0.5}
                 variant="primary"
-                link={"/about"}
+                link="/about"
                 className="self-start md:self-end"
               >
                 Go to about
@@ -199,7 +193,7 @@ export default function Home() {
               <Copy>
                 <p>Enjoy freshly brewed Mexican coffee to stay or to go. Slow down, feel the space, and explore handmade objects where design and coffee meet at Ciotto coffee bar.</p>
               </Copy>
-              <Button startAtTenPercent withCopy delayVariant={0.5} variant="primary" onClick={() => console.log("Clicked")}>
+              <Button startAtTenPercent withCopy delayVariant={0.5} variant="primary" link="/ciotto-bar">
                 Go to Ciotto Bar
               </Button>
             </div>
