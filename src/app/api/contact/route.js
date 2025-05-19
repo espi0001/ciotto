@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "../../../utils/supabase/server";
 import { Resend } from "resend";
+import { EmailTemplate } from "../../../components/EmailTemplate";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -27,23 +28,19 @@ export async function POST(request) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
+  // Send confirmation email using React template
   try {
-    await resend.emails.send({
-      from: "Your Name <noreply@yourdomain.com>",
+    const { data, error: emailError } = await resend.emails.send({
+      from: "Acme <onboarding@resend.dev>", // or your verified sender
       to: email,
       subject: "Thank you for contacting us!",
-      html: `
-        <h2>Hi ${firstName},</h2>
-        <p>Thank you for reaching out! We have received your message:</p>
-        <blockquote>
-          <b>Subject:</b> ${subject}<br/>
-          <b>Message:</b> ${message}
-        </blockquote>
-        <p>We will get back to you as soon as possible.</p>
-        <br/>
-        <p>Best regards,<br/>Your Team</p>
-      `,
+      react: EmailTemplate({ firstName, subject, message }),
     });
+    if (emailError) {
+      console.error("Resend error:", emailError);
+    } else {
+      console.log("Resend email response:", data);
+    }
   } catch (emailError) {
     console.error("Email send error:", emailError);
   }
