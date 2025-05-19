@@ -11,9 +11,9 @@ export const metadata = {
 const About = () => {
   return (
     <section className="grid max-w-screen">
-      <article className="w-full h-screen grid grid-cols-1 md:grid-cols-2">
+      <article className="w-full h-screen grid grid-cols-1 md:grid-cols-2 border-b-1">
         <div className="flex">
-          <img className="w-full h-full object-cover" src="/image/about/abouthero.jpg" alt="" />
+          <Image width={1000} height={1000} quality={100} className="w-full h-full object-cover" src="/image/about/abouthero.jpg" alt="" />
           <div className="w-full h-full object-cover" />
         </div>
         <div className="absolute flex flex-col justify-center items-center h-full w-full">
@@ -25,7 +25,6 @@ const About = () => {
           </p>
         </div>
       </article>
-
       <div className="px-section spacing-section-small md:spacing-section">
         <article className="grid grid-cols-1 md:grid-cols-2 gap-[5rem] items-center spacing-section">
           <img height={700} width={570} src="https://images.squarespace-cdn.com/content/v1/66747988c4481f654ec86537/b7bfd55b-750d-400c-ade7-4ad928bd84a7/IMG_7701+2.jpg?" alt="" />
