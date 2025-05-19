@@ -18,7 +18,7 @@ export default async function Works() {
     <section className="px-section">
       <TitleSection title="WORKS OF ARI PRASETYA" />
 
-      <article className="spacing-section-small md:spacing-section  flex flex-wrap justify-between gap-y-[2.5rem] md:gap-y-[11rem] gap-10 mb-48">
+      <article className="section-spacing flex flex-wrap justify-between gap-y-[2.5rem] md:gap-y-[11rem] gap-10 mb-48">
         {works.map((work, index) => (
           <WorkCard key={work.id} image={work.heroimage} title={work.name} number={index + 1} link={`/works/${work.slug}`} size={isLargeCard(index) ? "big" : "small"} />
         ))}

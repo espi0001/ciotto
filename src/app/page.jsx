@@ -18,7 +18,7 @@ export default function Home() {
       <HeroVideo src="/video/ciotto-bar-hero.mp4" />
 
       {/* ----- section 2----- */}
-      <article className="relative grid grid-cols-2 gap-y-4 w-full max-w-screen-2xl mx-auto px-section spacing-section-small md:spacing-section md:h-screen md:flex items-center justify-center">
+      <article className="relative grid grid-cols-2 gap-y-4 w-full max-w-screen-2xl mx-auto px-section section-spacing md:h-screen md:flex items-center justify-center">
         <Image
           src="/image/landing/landing(2).avif"
           alt="A hand holding the alu ciotto cup."
@@ -58,7 +58,7 @@ export default function Home() {
 
       <div className="px-section max-w-screen-2xl mx-auto">
         {/* ------ Products ------ */}
-        <article className="spacing-section-small md:spacing-section grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
+        <article className="section-spacing grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
           {/* Venstre kolonne med overskrift og label */}
           <div className="flex md:flex-col justify-between">
             <Copy>
@@ -99,7 +99,7 @@ export default function Home() {
         </article>
 
         {/* ------ About ------ */}
-        <article className="spacing-section-small md:spacing-section grid md:grid-cols-[2fr_3fr] gap-16">
+        <article className="section-spacing grid md:grid-cols-[2fr_3fr] gap-16">
           {/* Venstre billede – kun vist på desktop */}
           <div className="hidden md:block">
             <ImageReveal>
@@ -160,7 +160,7 @@ export default function Home() {
         </article>
 
         {/* ------ Ciotto Bar ------ */}
-        <article className="spacing-section-small md:spacing-section w-full">
+        <article className="section-spacing w-full">
           <div className="grid grid-cols-[1fr_auto] md:flex md:flex-row justify-between gap-6 md:gap-16">
             {/* Tekst og billede øverst til højre (på desktop) */}
             <div className="col-start-2 col-span-2 row-start-1 md:flex md:flex-col md:justify-between">
