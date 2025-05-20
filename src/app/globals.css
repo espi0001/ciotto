@@ -105,6 +105,7 @@ html {
   /* min and max scale bounds (global layout) */
   --min-scale-bound: 20rem;
   --max-scale-bound: 80rem;
+  scroll-behavior: smooth;
 }
 
 *,

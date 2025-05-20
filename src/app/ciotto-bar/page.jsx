@@ -4,6 +4,7 @@ import Copy from "@/components/gsap-anim/TextAnimation";
 import HeroVideo from "@/components/HeroVideo";
 import ImageCarousel from "@/components/02-molecules/ImageCarousel";
 import DiffuserSection from "@/components/DiffuserSection";
+import Button from "@/components/01-atoms/Button";
 
 export const metadata = {
   title: "Ciotto | Ciotto Bar",
@@ -35,10 +36,13 @@ export default function CiottoBar() {
           <div className="content-center">
             <Copy>
               <h2 className="font-[Playfair] mb-4">Ciotto Bar</h2>
-              <p>Enjoy a freshly brewed cup made from carefully roasted beans sourced from Mexico. Served with intention, whether you’re staying or taking it to go.</p>
+              <p>Enjoy a freshly brewed cup made from carefully roasted beans sourced from Mexico. Served with intention, whether you're staying or taking it to go.</p>
               <p></p>
-              <p>Take a moment to slow down and experience the atmosphere of the space, where you’re welcome to explore the handmade products, feel and use the materials, and let design and coffee meet in everyday rhythm.</p>
+              <p>Take a moment to slow down and experience the atmosphere of the space, where you're welcome to explore the handmade products, feel and use the materials, and let design and coffee meet in everyday rhythm.</p>
             </Copy>
+            <Button className="mt-8" startAtTenPercent withCopy delayVariant={0.5} variant="primary" link="#menu">
+              See Menu
+            </Button>
           </div>
           <div className="flex flex-wrap gap-[15px] md:gap-[35px]">
             <Image
@@ -95,7 +99,7 @@ export default function CiottoBar() {
         </article>
 
         {/* MENUCARD */}
-        <article className="flex flex-col items-center pb-[184px]">
+        <article id="menu" className="flex flex-col items-center pb-[184px]">
           <Copy>
             <h2 className="text-center font-[Playfair] pb-[30px] md:pb-[60px]">Menu</h2>
           </Copy>
