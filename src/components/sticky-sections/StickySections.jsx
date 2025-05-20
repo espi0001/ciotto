@@ -31,7 +31,7 @@ const sections = [
     title: "Coffee Bar",
     description: "Nothing is mass-produced. Each piece is made by hand, with care and intention — built to be used, not hidden away.",
     image: {
-      src: "/image/landing/sektions_ceramic1.jpg",
+      src: "/image/landing/sektions_ceramic.jpg",
       alt: "Ciotto cup with coffee in it",
       width: 1440,
       height: 900,
