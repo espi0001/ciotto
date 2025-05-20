@@ -3,10 +3,12 @@ import Link from "next/link";
 import Logo from "../01-atoms/Logo";
 import Copy from "@/components/gsap-anim/TextAnimation";
 import AnimatedLine from "../01-atoms/AnimatedLine";
+import AppLink from "../01-atoms/NavLink";
+import { mainLinks } from "../../data/navLinks";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-[#e7ddd0] min-h-[326px] z-50 pt-0 pb-8 section-spacing-small">
+    <footer className="relative w-full bg-body-bg min-h-[326px] z-50 pt-0 pb-8 section-spacing-small">
       {/* Top border line */}
       <AnimatedLine
         inViewTrigger={true}
@@ -40,32 +42,22 @@ export default function Footer() {
             <div className="max-w-[100px]">
               <Copy>
                 <h3 className="text-primary-text font-bold mb-4 tracking-wide">PAGES</h3>
-                <ul className="space-y-2 text-primary-text">
+                <ul className="space-y-2">
+                  {/* Always show 'Works' linking to all works */}
                   <li>
-                    <Link href="/works" className="hover:underline">
+                    <AppLink href="/works" underline underlineColor="bg-primary-text">
                       Works
-                    </Link>
+                    </AppLink>
                   </li>
-                  <li>
-                    <Link href="/products" className="hover:underline">
-                      Products
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about" className="hover:underline">
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/contact" className="hover:underline">
-                      Contact
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/ciotto-bar" className="hover:underline">
-                      Ciotto bar
-                    </Link>
-                  </li>
+                  {mainLinks
+                    .filter((link) => !link.dropdown && link.label !== "Works") // Exclude dropdown Works and avoid duplicate
+                    .map((link) => (
+                      <li key={link.href}>
+                        <AppLink href={link.href} underline underlineColor={link.label === "Ciotto Bar" ? "bg-tertiary-text" : "bg-primary-text"} className={link.label === "Ciotto Bar" ? "text-tertiary-text font-bold" : ""}>
+                          {link.label}
+                        </AppLink>
+                      </li>
+                    ))}
                 </ul>
               </Copy>
             </div>
