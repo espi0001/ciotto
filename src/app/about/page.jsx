@@ -2,7 +2,7 @@ import PartnerCard from "../../components/02-molecules/PartnerCard";
 import Copy from "../../components/gsap-anim/TextAnimation";
 import Image from "next/image";
 import ImageText from "@/components/04-templates/ImageText";
-
+import SplitHero from "@/components/sticky-sections/SplitHero";
 export const metadata = {
   title: "Ciotto | About",
   description: "About Ciotto",
@@ -11,20 +11,7 @@ export const metadata = {
 const About = () => {
   return (
     <section className="grid max-w-screen">
-      <article className="w-full h-screen grid grid-cols-1 md:grid-cols-2 border-b-1">
-        <div className="flex">
-          <Image width={1000} height={1000} quality={100} className="w-full h-full object-cover" src="/image/about/abouthero.jpg" alt="" />
-          <div className="w-full h-full object-cover" />
-        </div>
-        <div className="absolute flex flex-col justify-center items-center h-full w-full">
-          <h1 className="tracking-wide mb-2">
-            <span className="text-secondary-text">ABOUT</span> CIOTTO
-          </h1>
-          <p className="tracking-widest mt-2">
-            <span className="text-secondary-text">ARI PRASETYA</span> SPIROS LOUKOPOULOS
-          </p>
-        </div>
-      </article>
+      <SplitHero />
       {/* ----- section 2----- */}
       <div className="px-section max-w-screen-2xl mx-auto section-spacing">
         <ImageText imageSrc="/image/about/started(1).avif" altText="A espresso machine on a the counter of Ciotto." h2="How it started">
