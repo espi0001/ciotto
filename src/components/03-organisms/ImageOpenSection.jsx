@@ -26,7 +26,6 @@ function ImageOpenSection() {
           <h2 className="h1-product font-[Playfair] font-semibold w-full md:text-center">
             Authenticity <span className="sm:block md:hidden">in</span>
           </h2>
-
           {/* Række med billede og "IN / EVERY" tekst */}
           <div className="flex justify-between w-full gap-4">
             <h2 className="hidden md:block h1-product font-[Playfair] font-semibold">in</h2>
@@ -71,8 +70,8 @@ function ImageOpenSection() {
           >
             <Image
               quality={100}
-              src="/image/landing/shadows.avif"
-              alt="Shadows of various kitchen items on a textured light-colored background."
+              src="/image/landing/toshi_stoolxciotto_cup.avif"
+              alt="A white Ciotto cup on top of the Toshi stool in the window of Ciotto."
               width={1920}
               height={1080}
               className="object-cover w-full"

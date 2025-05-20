@@ -171,7 +171,7 @@ export default function Home() {
                 <ImageReveal>
                   <Image
                     src="/image/landing/bar(1).avif"
-                    alt="A boot with a cigarette tucked in its toe and a Ciotto cup beside it."
+                    alt="Interior view of a Ciotto showcasing a door, a stone pillar, furniture, and natural light."
                     width={1000} //
                     height={1000}
                     quality={100}
