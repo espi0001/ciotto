@@ -3,6 +3,7 @@ import Image from "next/image";
 import Copy from "@/components/gsap-anim/TextAnimation";
 import HeroVideo from "@/components/HeroVideo";
 import ImageCarousel from "@/components/02-molecules/ImageCarousel";
+import DiffuserSection from "@/components/DiffuserSection";
 
 export const metadata = {
   title: "Ciotto | Ciotto Bar",
@@ -102,8 +103,8 @@ export default function CiottoBar() {
         </article>
       </div>
 
-      {/* DEFUSER */}
-      <article>DEFUSER HER</article>
+      {/* Diffuser */}
+      <DiffuserSection />
 
       {/* Opening hours */}
       <div className="px-section section-spacing max-w-screen-2xl mx-auto">
