@@ -17,6 +17,7 @@ export default function Navigation({ navColor = "#402d1f", transition = "color 0
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const pathname = usePathname();
   const effectiveNavColor = worksOpen ? "#402d1f" : navColor;
+  const isContactPage = pathname === "/contact";
   const handleWorksOpen = (open) => {
     setLocalWorksOpen(open);
     if (typeof setWorksOpen === "function") setWorksOpen(open);
@@ -53,21 +54,7 @@ export default function Navigation({ navColor = "#402d1f", transition = "color 0
               </button>
             </li>
           ) : (
-            <AppLink
-              key={link.href}
-              href={link.href}
-              highlighted={link.highlighted}
-              bold={link.label === "Ciotto Bar" || link.bold}
-              navColor={effectiveNavColor}
-              transition={transition}
-              asListItem
-              underlineColor={
-                link.label === "Ciotto Bar"
-                  ? "bg-tertiary-text" //
-                  : undefined
-              }
-              className={link.label === "Ciotto Bar" ? "text-tertiary-text font-bold" : undefined}
-            >
+            <AppLink key={link.href} href={link.href} highlighted={link.highlighted} bold={link.label === "Ciotto Bar" || link.bold} navColor={effectiveNavColor} transition={transition} asListItem underlineColor={link.label === "Ciotto Bar" ? "bg-tertiary-text" : isContactPage ? "bg-secondary-text" : undefined} className={link.label === "Ciotto Bar" ? "text-tertiary-text font-bold" : undefined}>
               {link.label}
             </AppLink>
           )
