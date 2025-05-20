@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function SplitHero() {
   return (
-    <section className="flex flex-row w-screen h-[60vw] min-h-[250px] md:h-screen split-hero-container relative">
+    <section className="flex flex-row w-screen h-[60vw] min-h-[250px] md:h-screen split-hero-container relative border-b">
       {/* Centered content container */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center w-full h-full pointer-events-none">
         <h1 className="flex flex-row w-full max-w-full hero-h1 font-[playfair] tracking-wide select-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
@@ -25,7 +25,7 @@ function SplitHero() {
         <div className="absolute inset-0 z-5" />
       </div>
       {/* Right Side */}
-      <div className="w-1/2 h-full bg-[#f3ede3] split-hero-right relative" />
+      <div className="w-1/2 h-full bg-primary-background split-hero-right relative" />
     </section>
   );
 }
