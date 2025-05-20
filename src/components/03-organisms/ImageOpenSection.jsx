@@ -43,7 +43,7 @@ function ImageOpenSection() {
             >
               <Image
                 quality={100}
-                src="/image/landing/toshi_stoolxciotto_cup.avif"
+                src="/image/landing/beit-salma-open-image.jpg"
                 alt="A white Ciotto cup on top of the Toshi stool in the window of Ciotto."
                 width={1920}
                 height={1080}
@@ -70,7 +70,7 @@ function ImageOpenSection() {
           >
             <Image
               quality={100}
-              src="/image/landing/toshi_stoolxciotto_cup.avif"
+              src="/image/landing/beit-salma-open-image.jpg"
               alt="A white Ciotto cup on top of the Toshi stool in the window of Ciotto."
               width={1920}
               height={1080}

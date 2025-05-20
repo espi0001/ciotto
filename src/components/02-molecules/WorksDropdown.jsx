@@ -8,7 +8,7 @@ const blurVariant = {
   initial: { opacity: 1, filter: "blur(0px)" },
 };
 
-export default function WorksDropdown({ open, setOpen, hoveredIndex, setHoveredIndex, onClose, context }) {
+export default function WorksDropdown({ open, setOpen, hoveredIndex, setHoveredIndex, onClose, context, textColor = "var(--color-primary-text)" }) {
   // context: 'desktop' or 'burger' (for styling differences if needed)
   return (
     <AnimatePresence>
@@ -32,7 +32,7 @@ export default function WorksDropdown({ open, setOpen, hoveredIndex, setHoveredI
               : undefined
           }
         >
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className={context === "desktop" ? "flex flex-row w-full items-center uppercase px-10" : "flex flex-col space-y-2"}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className={context === "desktop" ? "flex flex-row w-full items-center uppercase px-10" : "flex flex-col space-y-2"} style={context === "burger" ? { color: textColor } : undefined}>
             {/* Links */}
             {context === "desktop" ? (
               <div className="flex flex-col gap-4 w-1/2 pt-24">
@@ -76,6 +76,7 @@ export default function WorksDropdown({ open, setOpen, hoveredIndex, setHoveredI
                   }}
                   onClick={onClose}
                   className="uppercase"
+                  style={{ color: textColor }}
                 >
                   <span className="relative">{link.label}</span>
                 </motion.a>

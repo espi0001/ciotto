@@ -223,6 +223,7 @@ label {
 .burger-links {
   --fs-max: 2rem;
   --fs-min: 1.5rem;
+  color: var(--color-primary-text);
 }
 
 .logo-size {
@@ -286,4 +287,8 @@ body {
   .section-spacing-small {
     margin-top: 4.5rem;
   }
+}
+
+.text-tertiary-text {
+  color: var(--color-tertiary-text) !important;
 }

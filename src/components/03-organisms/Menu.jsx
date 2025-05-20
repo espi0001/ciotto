@@ -99,6 +99,10 @@ export default function Menu() {
   // Color for nav and plus icon
   const navColor = navLight ? "var(--color-secondary-text)" : "#402d1f";
   const effectiveNavColor = worksOpen ? "#402d1f" : navColor;
+  const burgerMenuColor = "#402d1f"; // Always the same
+  const isContactPage = pathname === "/contact";
+  const burgerMenuIconColor = isBurgerOpen ? "var(--color-primary-text)" : isContactPage ? "var(--color-secondary-text)" : "var(--color-primary-text)";
+  const animatedLineColor = isBurgerOpen ? "var(--color-primary-text)" : isContactPage ? "var(--color-secondary-text)" : "var(--color-primary-text)";
 
   return (
     <header ref={navRef} className="relative w-full flex justify-between items-center py-4 pt-8 px-section z-50" style={{ color: effectiveNavColor }}>
@@ -138,21 +142,21 @@ export default function Menu() {
         <div className="left-0 w-screen z-50 pointer-events-none">
           <div className="flex items-center justify-end">
             <motion.div initial="hidden" animate="visible" exit="hidden" variants={burgerVariants}>
-              <button className="w-8 h-8 flex items-center justify-center cursor-pointer pointer-events-auto" onClick={() => setIsBurgerOpen((open) => !open)} aria-label="Toggle menu" style={{ color: effectiveNavColor }}>
+              <button className="w-8 h-8 flex items-center justify-center cursor-pointer pointer-events-auto" onClick={() => setIsBurgerOpen((open) => !open)} aria-label="Toggle menu" style={{ color: burgerMenuIconColor }}>
                 <div className="relative w-6 h-6">
                   {/* Top bar */}
                   <div
                     className={`absolute left-0 top-1/2 w-6 h-0.5 bg-current transition-all duration-500 ease-in-out
                       ${isBurgerOpen ? "rotate-45 -translate-y-1/2" : "-translate-y-1.5"}
                     `}
-                    style={{ backgroundColor: effectiveNavColor }}
+                    style={{ backgroundColor: burgerMenuIconColor }}
                   />
                   {/* Bottom bar */}
                   <div
                     className={`absolute left-0 top-1/2 w-6 h-0.5 bg-current transition-all duration-500 ease-in-out
                       ${isBurgerOpen ? "-rotate-45 -translate-y-1/2" : "translate-y-1"}
                     `}
-                    style={{ backgroundColor: effectiveNavColor }}
+                    style={{ backgroundColor: burgerMenuIconColor }}
                   />
                 </div>
               </button>
@@ -162,10 +166,10 @@ export default function Menu() {
       )}
 
       {/* Mobile Navigation */}
-      <BurgerMenu isOpen={isBurgerOpen} onClose={() => setIsBurgerOpen(false)} />
+      <BurgerMenu isOpen={isBurgerOpen} onClose={() => setIsBurgerOpen(false)} textColor="var(--color-primary-text)" />
 
       {/* Animated Line at Bottom */}
-      <AnimatedLine width="100%" height="1px" color="var(--color-primary-text)" duration={0.7} delay={0.5} className="absolute left-0 bottom-0 w-full z-50" style={{ position: "absolute", left: 0, bottom: 0 }} />
+      <AnimatedLine width="100%" height="1px" color={animatedLineColor} duration={0.7} delay={0.5} className="absolute left-0 bottom-0 w-full z-50" style={{ position: "absolute", left: 0, bottom: 0 }} />
     </header>
   );
 }

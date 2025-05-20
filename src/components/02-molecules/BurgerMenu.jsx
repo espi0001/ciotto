@@ -30,7 +30,7 @@ const blurVariant = {
   initial: { opacity: 1, filter: "blur(0px)" },
 };
 
-export default function BurgerMenu({ isOpen, onClose }) {
+export default function BurgerMenu({ isOpen, onClose, textColor = "var(--color-primary-text)" }) {
   const [worksOpen, setWorksOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [mainHoveredIndex, setMainHoveredIndex] = useState(null);
@@ -45,7 +45,7 @@ export default function BurgerMenu({ isOpen, onClose }) {
               {/* Left column: nav links */}
               <div className="flex flex-col flex-1 space-y-12">
                 {/* Nav Links */}
-                <div className="flex flex-col space-y-6 uppercase">
+                <div className="flex flex-col space-y-6 uppercase" style={{ color: textColor }}>
                   {mainLinks.map((link, idx) => (
                     <motion.div
                       key={link.label}
@@ -91,6 +91,7 @@ export default function BurgerMenu({ isOpen, onClose }) {
                             setHoveredIndex={setHoveredIndex}
                             onClose={onClose}
                             context="burger"
+                            textColor={textColor}
                           />
                         </>
                       ) : (
@@ -119,7 +120,7 @@ export default function BurgerMenu({ isOpen, onClose }) {
               </div>
             </div>
             {/* Footer: SoMe and Contact Info */}
-            <footer className="w-full mt-12 flex flex-col space-y-4 py-8 border-t border-primary-text/20 px-section">
+            <footer className="w-full mt-12 flex flex-col space-y-4 py-8 border-t border-primary-text/20 px-section" style={{ color: textColor }}>
               {/* Logo */}
               <Logo size="text-3xl" color="#402d1f" className="mb-8" />
               <div className="flex justify-between max-w-[400px]">
