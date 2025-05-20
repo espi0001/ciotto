@@ -43,8 +43,8 @@ function ImageOpenSection() {
             >
               <Image
                 quality={100}
-                src="/image/landing/shadows.avif"
-                alt="Shadows of various kitchen items on a textured light-colored background."
+                src="/image/landing/toshi_stoolxciotto_cup.avif"
+                alt="A white Ciotto cup on top of the Toshi stool in the window of Ciotto."
                 width={1920}
                 height={1080}
                 className="object-cover max-w-[200px] md:max-w-[400px] max-h-[100px] md:max-h-[200px]"
