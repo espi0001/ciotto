@@ -4,6 +4,7 @@ import Image from "next/image";
 import InputField from "../components/02-molecules/InputField";
 import Button from "../components/01-atoms/Button";
 import { useState } from "react";
+import Copy from "../components/gsap-anim/TextAnimation";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -46,7 +47,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="nav-text-color-change h-[120vh]">
+    <section className="nav-text-color-change h-[110vh]">
       {/* Background Image */}
       <Image src="/image/contact/contact_hero.avif" alt="Interior design with wooden panels and chair" width={1920} height={1080} className="absolute top-0 left-0 object-cover z-0 h-[120vh]" priority quality={100} />
 
@@ -58,13 +59,17 @@ export default function ContactForm() {
         <div className="flex items-center justify-center bg-black/30 px-8 z-20 h-[120vh]">
           <div className="w-full max-w-md text-secondary-text">
             <div className="mb-8">
-              <h2 className="h2-small uppercase mb-2">Ari Prasetya</h2>
+              <Copy delay={1}>
+                <h2 className="h2-small uppercase mb-2">Ari Prasetya</h2>
+              </Copy>
               {/* Responsive h1: one line on md+, two lines on mobile/tablet */}
-              <h1 className="h1-small font-medium uppercase leading-tight">
-                Contact
-                <br />
-                For Inquiries
-              </h1>
+              <Copy delay={1}>
+                <h1 className="h1-small font-medium uppercase leading-tight">
+                  Contact
+                  <br />
+                  For Inquiries
+                </h1>
+              </Copy>
             </div>
 
             <form className="flex flex-col space-y-6 w-full" onSubmit={handleSubmit}>
