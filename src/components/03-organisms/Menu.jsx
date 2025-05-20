@@ -135,7 +135,7 @@ export default function Menu() {
 
       {/* Burger Menu Button - Mobile Only */}
       {!isDesktop && (
-        <div className="fixed left-0 w-screen px-section z-50 pointer-events-none">
+        <div className="left-0 w-screen px-section z-50 pointer-events-none">
           <div className="flex items-center justify-end">
             <motion.div initial="hidden" animate="visible" exit="hidden" variants={burgerVariants}>
               <button className="w-8 h-8 flex items-center justify-center cursor-pointer pointer-events-auto" onClick={() => setIsBurgerOpen((open) => !open)} aria-label="Toggle menu" style={{ color: effectiveNavColor }}>
