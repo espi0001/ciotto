@@ -17,17 +17,17 @@ function ImageOpenSection() {
   return (
     <article
       ref={sectionRef}
-      className="px-section section-spacing w-full flex justify-center" //
+      className="px-section section-spacing flex justify-center" //
     >
       {/* Begrænser max bredde og centrerer indholdet */}
-      <div className="w-full max-w-screen-2xl mx-auto flex flex-col items-center">
-        <div className="flex flex-col w-full items-center gap-6">
+      <div className="w-full md:w-[1200px] mx-auto">
+        <div className="flex flex-col items-center gap-8">
           {/* Første del af overskriften */}
-          <h2 className="h1-product font-[Playfair] font-semibold w-full md:text-center">
+          <h2 className="h1-product font-[Playfair] font-semibold w-full">
             Authenticity <span className="sm:block md:hidden">in</span>
           </h2>
           {/* Række med billede og "IN / EVERY" tekst */}
-          <div className="flex justify-between w-full gap-4">
+          <div className="flex w-full gap-18 items-center">
             <h2 className="hidden md:block h1-product font-[Playfair] font-semibold">in</h2>
 
             {/* Billede med animation – vises kun på desktop */}
@@ -79,7 +79,7 @@ function ImageOpenSection() {
             />
           </motion.div>
 
-          <div className="w-full flex max-sm:flex-col gap-6 md:gap-20 justify-center">
+          <div className="w-full flex flex-col md:flex-row items-center gap-6 md:gap-38">
             <h2 className="h1-product font-[Playfair] font-semibold hidden md:block">design</h2>
             <div>
               <Copy>

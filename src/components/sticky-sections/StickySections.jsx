@@ -9,7 +9,7 @@ const sections = [
     title: "Handmade furniture",
     description: "Nothing is mass-produced. Each piece is made by hand, with care and intention — built to be used, not hidden away.",
     image: {
-      src: "/image/landing/parallax-furniture.avif",
+      src: "/image/landing/sektions_furniture.jpg",
       alt: "Handmade furniture",
       width: 1440,
       height: 900,
@@ -20,7 +20,7 @@ const sections = [
     title: "Ceramic Works",
     description: "Nothing is mass-produced. Each piece is made by hand, with care and intention — built to be used, not hidden away.",
     image: {
-      src: "/image/landing/parallax-ceramic.avif",
+      src: "/image/landing/sektions_coffe-bar.jpg",
       alt: "Ciotto cups",
       width: 1440,
       height: 900,
@@ -31,7 +31,7 @@ const sections = [
     title: "Coffee Bar",
     description: "Nothing is mass-produced. Each piece is made by hand, with care and intention — built to be used, not hidden away.",
     image: {
-      src: "/image/landing/parallax-coffee.avif",
+      src: "/image/landing/sektions_ceramic1.jpg",
       alt: "Ciotto cup with coffee in it",
       width: 1440,
       height: 900,
