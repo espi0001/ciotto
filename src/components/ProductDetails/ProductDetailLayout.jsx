@@ -5,9 +5,10 @@ import ProductDescription from "./ProductDescription";
 import ProductImages from "./ProductImages";
 import ProductThumbnails from "./ProductThumbnails";
 import ProductSpecs from "./ProductSpecs";
-import ProductQuantity from "./ProductQuantity";
+// import ProductQuantity from "./ProductQuantity";
 import ProductGrid from "../04-templates/ProductGrid";
 import Copy from "../gsap-anim/TextAnimation";
+import Button from "../01-atoms/Button";
 
 function parseJSONField(field) {
   if (!field) return [];
@@ -37,8 +38,11 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
       <div className="grid lg:grid-cols-[1fr_2fr_auto] gap-8 items-start">
         <div className="flex flex-col gap-2">
           <ProductDescription description={product.description} price={product.price} colors={colors} colorSwatch={colorSwatch} selectedColor={colors[selectedColorIndex]} setSelectedColorIndex={setSelectedColorIndex} />
-          <div className="flex-1 max-w-[500px]">
-            <ProductQuantity product={product} colors={colors} sizes={sizes} prices={prices} />
+          <div className="flex-1 max-w-[500px] border-b border-text-primary pb-6">
+            <Button className="text-xl" variant="primary" link="/contact">
+              Contact to purchase
+            </Button>
+            {/* <ProductQuantity product={product} colors={colors} sizes={sizes} prices={prices} /> */}
           </div>
         </div>
         <ProductImages mainImage={mainImage} />

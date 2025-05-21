@@ -56,7 +56,7 @@ const ProductQuantity = ({ product, colors = [], sizes = [], prices = [] }) => {
       {/* Quantity and Add to Cart */}
       <div className="flex flex-col gap-4 border-b border-[#402D1F] pb-6">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <span className="font-semibold">QUANTITY</span>
             <div className="flex items-center gap-2 px-1">
               <button type="button" onClick={() => setQuantity(Math.max(1, quantity - 1))} className="text-xl flex items-center justify-center cursor-pointer">
@@ -67,9 +67,9 @@ const ProductQuantity = ({ product, colors = [], sizes = [], prices = [] }) => {
                 +
               </button>
             </div>
-          </div>
+          </div> */}
           <Button className="text-xl" variant="primary" type="submit">
-            Add to cart
+            Contact to purchase
           </Button>
         </div>
       </div>
