@@ -3,7 +3,7 @@ import Copy from "../../components/gsap-anim/TextAnimation";
 
 export default function ImageText({ imageSrc, altText, h2, children, reverse = false }) {
   return (
-    <article className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 items-center spacing-section-small md:spacing-section ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
+    <article className={`px-section max-w-screen-2xl mx-auto section-spacing grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 items-center ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
       <div>
         <Image src={imageSrc} alt={altText} width={1080} height={1350} className="max-h-[700px] w-full h-full object-cover" />
       </div>

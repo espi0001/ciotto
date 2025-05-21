@@ -49,7 +49,7 @@ export default function ContactForm() {
   return (
     <section className="nav-text-color-change h-[110vh]">
       {/* Background Image */}
-      <Image src="/image/contact/contact_hero.avif" alt="Interior design with wooden panels and chair" width={1920} height={1080} className="absolute top-0 left-0 object-cover z-0 h-[120vh]" priority quality={100} />
+      <Image src="/image/contact/ciotto_cupxgatti_chair.avif" alt="White Ciotto Cup on top of the brown Gatti chair." width={1920} height={1080} className="absolute top-0 left-0 object-cover z-0 h-[120vh]" priority quality={100} />
 
       {/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-[55%_45%] w-full absolute top-0">

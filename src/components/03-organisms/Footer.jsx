@@ -5,6 +5,7 @@ import Copy from "@/components/gsap-anim/TextAnimation";
 import AnimatedLine from "../01-atoms/AnimatedLine";
 import AppLink from "../01-atoms/NavLink";
 import { mainLinks } from "../../data/navLinks";
+import OpeningHours from "../footer/OpeningHours";
 
 export default function Footer() {
   return (
@@ -68,34 +69,13 @@ export default function Footer() {
               </Copy>
               <Copy startAtTenPercent={true}>
                 <div className="text-primary-text text-sm space-y-2">
-                  <div className="flex justify-between w-full">
-                    <span>Monday</span>
-                    <span>09:00-18:00</span>
-                  </div>
-                  <div className="flex justify-between w-full">
-                    <span>Tuesday</span>
-                    <span>09:00-18:00</span>
-                  </div>
-                  <div className="flex justify-between w-full">
-                    <span>Wednesday</span>
-                    <span>09:00-18:00</span>
-                  </div>
-                  <div className="flex justify-between w-full">
-                    <span>Thursday</span>
-                    <span>09:00-18:00</span>
-                  </div>
-                  <div className="flex justify-between w-full">
-                    <span>Friday</span>
-                    <span>09:00-18:00</span>
-                  </div>
-                  <div className="flex justify-between w-full">
-                    <span>Saturday</span>
-                    <span>10:00-14:00</span>
-                  </div>
-                  <div className="flex justify-between w-full">
-                    <span>Sunday</span>
-                    <span>Closed</span>
-                  </div>
+                  <OpeningHours days="Monday" hours="Closed" />
+                  <OpeningHours days="Tuesday" hours="Closed" />
+                  <OpeningHours days="Wednesday" hours="Closed" />
+                  <OpeningHours days="Thursday" hours="09:00 - 16:00" />
+                  <OpeningHours days="Friday" hours="09:00 - 16:00" />
+                  <OpeningHours days="Saturday" hours="09:00 - 16:00" />
+                  <OpeningHours days="Sunday" hours="09:00 - 16:00" />
                 </div>
               </Copy>
             </div>

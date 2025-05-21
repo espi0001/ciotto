@@ -32,17 +32,10 @@ export default function WorkDetailLayout({ work }) {
         </div>
       </section>
 
-      {/* Gallery Grid 1 */}
-      <section className="px-section grid grid-cols-2 gap-8 spacing-section-small md:spacing-section mb-16">
-        {galleryImages.slice(0, 2).map((img, i) => (
-          <Image key={i} width={1000} height={1000} src={img} alt={title} className="w-full max-h-[750px] object-cover drop-shadow-primary" />
-        ))}
-      </section>
-
       {/* Info & Details Section */}
-      <section className="px-section grid grid-cols-1 md:grid-cols-2 gap-12 spacing-section-small md:spacing-section mb-16">
+      <section className="px-section max-w-screen-2xl mx-auto section-spacing grid lg:grid-cols-2 gap-12">
         <div className="col-span-1">
-          <Image width={1000} height={1000} src={galleryImages[2]} alt={title} className="w-full max-h-[610px] object-cover drop-shadow-primary" />
+          <Image width={1000} height={1000} src={galleryImages[2]} alt={title} className="w-full max-h-[500px] lg:max-h-full object-cover drop-shadow-primary object-top" />
         </div>
         <div className="col-span-1 flex flex-col justify-center space-y-6">
           <div>
@@ -93,8 +86,15 @@ export default function WorkDetailLayout({ work }) {
         </div>
       </section>
 
+      {/* Gallery Grid 1 */}
+      <section className="px-section max-w-screen-2xl mx-auto section-spacing grid grid-cols-2 gap-8">
+        {galleryImages.slice(0, 2).map((img, i) => (
+          <Image key={i} width={1000} height={1000} src={img} alt={title} className="w-full max-h-[700px] object-cover drop-shadow-primary" />
+        ))}
+      </section>
+
       {/* Gallery Grid 2 */}
-      <section className="grid max-sm:gap-8	px-section spacing-section-small md:spacing-section mb-16">
+      {/* <section className="grid max-sm:gap-8	px-section spacing-section-small md:spacing-section mb-16">
         <div className="grid grid-cols-2 gap-8">
           <Image width={1000} height={1000} src={galleryImages[3]} alt={title} className="md:max-w-[425px] md:max-h-[590px] object-cover drop-shadow-primary" />
           <Image width={1000} height={1000} src={galleryImages[4]} alt={title} className="md:max-w-[540px] object-cover md:justify-self-end drop-shadow-primary" />
@@ -104,7 +104,7 @@ export default function WorkDetailLayout({ work }) {
           <Image width={1000} height={1000} src={galleryImages[5]} alt={title} className="md:max-w-[700px] md:max-h-[770px] object-cover drop-shadow-primary" />
           <Image width={1000} height={1000} src={galleryImages[6]} alt={title} className="md:max-w-[420px] md:max-h-[535px] object-cover drop-shadow-primary" />
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
