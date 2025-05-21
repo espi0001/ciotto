@@ -1,5 +1,5 @@
-import Copy from "@/components/gsap-anim/TextAnimation";
 import Link from "next/link";
+import Copy from "../Animations/gsap-anim/TextAnimation";
 
 export default function Button({ children, variant = "primary", link, size = "large", type = "button", withCopy = false, delayVariant = 0, startAtTenPercent = false, className = "" }) {
   const base = "font-semibold cursor-pointer inline-flex items-center gap-[1rem] transition-colors group uppercase";
@@ -16,7 +16,7 @@ export default function Button({ children, variant = "primary", link, size = "la
   };
 
   const sizes = {
-    large: "text-xl",
+    large: "body-text",
     small: "text-sm",
   };
 

@@ -9,7 +9,7 @@ function DiffuserSection() {
       </video>
       <div className="px-section py-[100px] relative z-10 text-secondary-text flex flex-col">
         <div>
-          <h2 className="h2-large font-[Playfair] uppercase tracking-wide mb-6 drop-shadow-lg max-w-[500px]">FEEL THE ATMOSPHERE IN CIOTTO BAR</h2>
+          <h2 className="h2-large uppercase tracking-wide mb-6 drop-shadow-lg max-w-[500px]">FEEL THE ATMOSPHERE IN CIOTTO BAR</h2>
         </div>
         <div className="flex justify-end">
           <p className="max-w-[400px]">Ciotto is a space you can feel. With handmade ceramics, furniture, and warm tones in a quiet harmony. Everything in the room is carefully chosen to create an honest and calm atmosphere, where you can experience the materials and find peace in simplicity. It's not about impressing, but about inviting – to sit down, take a pause, and feel the presence.</p>

@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import AppLink from "../01-atoms/NavLink";
+import AppLink from "./NavLink";
 import { mainLinks } from "../../data/navLinks";
 import WorksDropdown from "./WorksDropdown";
-import Logo from "../01-atoms/Logo";
-import Copy from "../gsap-anim/TextAnimation";
+import Logo from "./Logo";
 
 const menuVariants = {
   closed: {

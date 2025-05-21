@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic";
 
-import WorkDetailLayout from "../../../components/03-organisms/WorkDetailLayout";
+import WorkDetailLayout from "@/components/WorksDetails/WorkDetailLayout";
 import { getByColumn } from "@/utils/supabase/api";
 
 export const metadata = {

@@ -1,13 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import Copy from "@/components/gsap-anim/TextAnimation";
-import StickySections from "@/components/sticky-sections/StickySections";
-import ImageOpenSection from "@/components/03-organisms/ImageOpenSection";
-import ImageReveal from "@/components/gsap-anim/ImageReveal";
-import HeroVideo from "@/components/HeroVideo";
-import Button from "@/components/01-atoms/Button";
-import AnimatedLine from "@/components/01-atoms/AnimatedLine";
-import LineAnimated from "@/components/ui-elements/LineAnimated";
+
+import Copy from "@/components/Animations/gsap-anim/TextAnimation";
+import LineAnimated from "@/components/Animations/motion-anim/LineAnimated";
+import ImageReveal from "@/components/Animations/gsap-anim/ImageReveal";
+
+import HeroVideo from "@/components/Sections/HeroVideo";
+import ImageOpenSection from "@/components/Sections/ImageOpenSection";
+import StickySections from "@/components/Sections/sticky-sections/StickySections";
+
+import Button from "@/components/UI/Button";
 
 export const metadata = {
   title: "Ciotto | Home",
@@ -30,7 +32,7 @@ export default function Home() {
         {/* Venstre kolonne med overskrift og label */}
         <div className="flex md:flex-col justify-between">
           <Copy>
-            <h2 className="font-[Playfair] h2-large">
+            <h2 className="h2-large">
               Every <br />
               product <br />
               tells a <br />
@@ -90,7 +92,7 @@ export default function Home() {
           <div className="flex md:flex-row justify-between">
             <div className="flex flex-col gap-2">
               <Copy>
-                <h2 className="font-[Playfair] h2-large">
+                <h2 className="h2-large">
                   How it <br />
                   started
                 </h2>
@@ -157,7 +159,7 @@ export default function Home() {
           {/* Overskrift, tekst og knap nederst til venstre */}
           <div className="col-start-1 col-span-2 row-start-1 row-span-1 flex flex-col md:justify-end gap-4 ">
             <Copy>
-              <h2 className="uppercase font-[Playfair] h2-large text-9xl">
+              <h2 className="uppercase h2-large text-9xl">
                 The <br />
                 Ciotto <br />
                 Bar

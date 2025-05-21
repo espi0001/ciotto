@@ -1,11 +1,12 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import NavLinks from "../02-molecules/Navigation";
-import BurgerMenu from "../02-molecules/BurgerMenu";
 import { usePathname } from "next/navigation";
-import Logo from "../01-atoms/Logo";
-import AnimatedLine from "../01-atoms/AnimatedLine";
+
+import NavLinks from "./Navigation";
+import BurgerMenu from "./BurgerMenu";
+import Logo from "./Logo";
+import AnimatedLine from "../Animations/motion-anim/AnimatedLine";
 
 export default function Menu() {
   const [hovered, setHovered] = useState(false);

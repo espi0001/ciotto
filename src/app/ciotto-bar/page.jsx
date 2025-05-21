@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import Copy from "@/components/gsap-anim/TextAnimation";
-import HeroVideo from "@/components/HeroVideo";
-import ImageCarousel from "@/components/02-molecules/ImageCarousel";
-import DiffuserSection from "@/components/DiffuserSection";
-import Button from "@/components/01-atoms/Button";
-import OpeningHours from "@/components/bar/OpeningHours";
-import LineAnimated from "@/components/ui-elements/LineAnimated";
-import AnimatedLine from "@/components/01-atoms/AnimatedLine";
+import Copy from "@/components/Animations/gsap-anim/TextAnimation";
+import HeroVideo from "@/components/Sections/HeroVideo";
+import ImageCarousel from "@/components/CiottoBar/ImageCarousel";
+// import DiffuserSection from "@/components/Sections/DiffuserSection";
+import Button from "@/components/UI/Button";
+import OpeningHours from "@/components/CiottoBar/OpeningHours";
+import LineAnimated from "@/components/Animations/motion-anim/LineAnimated";
+import AnimatedLine from "@/components/Animations/motion-anim/AnimatedLine";
 
 export const metadata = {
   title: "Ciotto | Ciotto Bar",
@@ -59,23 +59,18 @@ export default function CiottoBar() {
           <div className="w-full">
             <h3 className="uppercase mb-3">Opening hours</h3>
 
-            <OpeningHours days="Monday" hours="Closed" />
-            <OpeningHours days="Tuesday" hours="Closed" />
-            <OpeningHours days="Wednesday" hours="Closed" />
-            <OpeningHours days="Thursday" hours="09:00 - 16:00" />
-            <OpeningHours days="Friday" hours="09:00 - 16:00" />
-            <OpeningHours days="Saturday" hours="09:00 - 16:00" />
-            <OpeningHours days="Sunday" hours="09:00 - 16:00" />
+            <OpeningHours days="Monday - Wednesday" hours="Closed" />
+            <OpeningHours days="Thursday - Sunday" hours="09:00 - 16:00" />
           </div>
         </div>
-        <div className="flex flex-wrap gap-[15px] md:gap-[35px]">
+        <div className="grid grid-cols-[auto_auto] gap-2 md:gap-4">
           <Image
             src="/image/ciottobar/moments(1).avif"
             alt="A Toshi stool with a Ciotto cup on top and a soft shadows on a light wall."
             width={1080} //
             height={1350}
             quality={100}
-            className="h-full w-[490px] max-w-fit object-cover"
+            className="max-h-full w-[490px] max-w-fit object-cover"
           />
           <Image
             src="/image/ciottobar/moments(2).avif"

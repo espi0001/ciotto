@@ -1,9 +1,9 @@
 export const dynamic = "force-dynamic";
-import ProductGrid from "../../components/04-templates/ProductGrid";
-import { getAll } from "../../utils/supabase/api";
-import TitleSection from "../../components/02-molecules/TitleSection";
-import Button from "@/components/01-atoms/Button";
-import Copy from "@/components/gsap-anim/TextAnimation";
+import ProductGrid from "@/components/ProductDetails/ProductGrid";
+import { getAll } from "@/utils/supabase/api";
+import TitleSection from "@/components/Sections/TitleSection";
+import Button from "@/components/UI/Button";
+import Copy from "@/components/Animations/gsap-anim/TextAnimation";
 
 export const metadata = {
   title: "Ciotto | Products",

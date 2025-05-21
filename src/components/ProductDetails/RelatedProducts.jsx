@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PropTypes from "prop-types";
 import Image from "next/image";
-import Button from "../01-atoms/Button";
+import Button from "../UI/Button";
 
 const ProductCard = ({ image, title, link, small = false }) => {
   if (small) {

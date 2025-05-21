@@ -1,9 +1,10 @@
-import PartnerCard from "../../components/02-molecules/PartnerCard";
-import Copy from "../../components/gsap-anim/TextAnimation";
+// import PartnerCard from "../../components/About/PartnerCard";
+import Copy from "@/components/Animations/gsap-anim/TextAnimation";
 import Image from "next/image";
-import ImageText from "@/components/04-templates/ImageText";
-import SplitHero from "@/components/sticky-sections/SplitHero";
-import LineAnimated from "@/components/ui-elements/LineAnimated";
+import ImageText from "@/components/Sections/ImageText";
+import SplitHero from "@/components/Sections/sticky-sections/SplitHero";
+import LineAnimated from "@/components/Animations/motion-anim/LineAnimated";
+
 export const metadata = {
   title: "Ciotto | About",
   description: "About Ciotto",
@@ -24,7 +25,7 @@ const About = () => {
           className="col-start-1 row-start-1 md:absolute md:top-0 md:left-[3.75rem] md:w-1/4 md:max-w-xs"
         />
 
-        <h1 className="col-span-3 row-start-2 font-[Playfair] z-40 text-center flex flex-col md:max-w-[1000px]">
+        <h1 className="col-span-3 row-start-2 z-40 text-center flex flex-col md:max-w-[1000px]">
           <Copy className="tect-center md:text-left">
             <span className="md:text-left md:ml-0">A LIVING DESIGN SPACE</span>
           </Copy>
@@ -103,7 +104,7 @@ const About = () => {
       <article className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 items-center px-section max-w-screen-2xl mx-auto section-spacing">
         <Copy>
           <div>
-            <h2 className="mb-4 text-center">Sustainability</h2>
+            <h2 className="mb-4">Sustainability</h2>
             <p>At Ciotto, sustainability isn’t just about materials — it’s about mindset. We believe the most responsible choice is to invest in furniture that stays with you. Pieces that are designed to last, both in function and in feeling.</p>
             <p className="mb-6"></p>
             <p>When you choose something you love — something made to grow with you, move with you, and still feel right years down the line — you step away from a culture of disposability. That’s why every Ciotto piece is crafted with care, intention, and longevity in mind. Thoughtfully designed, beautifully made — for a life well lived.</p>

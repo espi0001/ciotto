@@ -1,10 +1,8 @@
 "use client";
-
-// import { useState } from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-import Button from "../01-atoms/Button";
+import Button from "../UI/Button";
 
 // const ProductQuantity = ({ colors = [], sizes = [], prices = [] }) => {
 const ProductQuantity = ({ product, colors = [], sizes = [], prices = [] }) => {

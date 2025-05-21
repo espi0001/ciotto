@@ -1,4 +1,4 @@
-import RelatedProducts from "../02-molecules/RelatedProducts";
+import RelatedProducts from "./RelatedProducts";
 import PropTypes from "prop-types";
 
 const ProductGrid = ({ products, small = false }) => (

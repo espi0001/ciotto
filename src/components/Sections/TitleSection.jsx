@@ -1,4 +1,4 @@
-import Copy from "../gsap-anim/TextAnimation";
+import Copy from "../Animations/gsap-anim/TextAnimation";
 
 function TitleSection({ title, description }) {
   return (

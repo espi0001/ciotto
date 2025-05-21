@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { createClient } from "../../../utils/supabase/server";
+import { createClient } from "@/utils/supabase/server";
 import { Resend } from "resend";
-import { EmailTemplate } from "../../../components/EmailTemplate";
+import { EmailTemplate } from "@/components/Form/EmailTemplate";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

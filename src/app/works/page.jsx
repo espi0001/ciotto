@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 
-import WorkCard from "../../components/02-molecules/WorkCard";
-import TitleSection from "../../components/02-molecules/TitleSection";
+import WorkCard from "@/components/WorksDetails/WorkCard";
+import TitleSection from "@/components/Sections/TitleSection";
 import { getAll } from "@/utils/supabase/api";
 
 const isLargeCard = (index) => [1, 2, 5, 6].includes(index);

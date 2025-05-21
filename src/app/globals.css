@@ -152,14 +152,19 @@ h1,
   --fs-min: 2.5rem;
 }
 
+.hero-h1 {
+  --fs-max: 8.5rem;
+  --fs-min: 2.5rem;
+}
+
 .h1-small {
   --fs-max: 3rem;
   --fs-min: 1.8rem;
 }
 
-.hero-h1 {
-  --fs-max: 8.5rem;
-  --fs-min: 2.5rem;
+.h1-product {
+  --fs-max: 10.5rem;
+  --fs-min: 2rem;
 }
 
 h2 {
@@ -171,11 +176,6 @@ h2 {
   --fs-max: 1.13rem;
   --fs-min: 0.8rem;
   text-transform: uppercase;
-}
-
-.h1-product {
-  --fs-max: 10.5rem;
-  --fs-min: 2rem;
 }
 
 .h2-work-details {
@@ -278,10 +278,12 @@ body {
     }
   } */
   .section-spacing {
-    margin-top: 4.5rem; /* Default spacing for smaller screens */
+    margin-top: 4.5rem;
+    /* Default spacing for smaller screens */
 
     @media (min-width: 1024px) {
-      margin-top: 11.5rem; /* Larger spacing for screens >= 1024px */
+      margin-top: 11.5rem;
+      /* Larger spacing for screens >= 1024px */
     }
   }
 

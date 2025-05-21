@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import Copy from "../gsap-anim/TextAnimation";
+import Copy from "../../Animations/gsap-anim/TextAnimation";
 
 function SplitHero() {
   return (
     <section className="flex flex-row w-screen h-[60vw] min-h-[250px] md:h-screen split-hero-container relative border-b">
       {/* Centered content container */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center w-full h-full pointer-events-none">
-        <h1 className="flex flex-row w-full max-w-full hero-h1 font-[playfair] tracking-wide select-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
+        <h1 className="flex flex-row w-full max-w-full hero-h1 tracking-wide select-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
           <Copy delay={1}>
             <span className="w-1/2 flex justify-end pr-2 md:pr-4 text-secondary-text">ABOUT</span>
           </Copy>

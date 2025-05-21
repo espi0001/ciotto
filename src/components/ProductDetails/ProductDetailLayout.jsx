@@ -1,14 +1,17 @@
 "use client";
 import { useState, useEffect } from "react";
+import Copy from "../Animations/gsap-anim/TextAnimation";
+import Button from "../UI/Button";
+
 import ProductHeader from "./ProductHeader";
 import ProductDescription from "./ProductDescription";
+import ProductColorSwatch from "./ProductColorSwatch";
+
 import ProductImages from "./ProductImages";
 import ProductThumbnails from "./ProductThumbnails";
 import ProductSpecs from "./ProductSpecs";
-// import ProductQuantity from "./ProductQuantity";
-import ProductGrid from "../04-templates/ProductGrid";
-import Copy from "../gsap-anim/TextAnimation";
-import Button from "../01-atoms/Button";
+
+import ProductGrid from "./ProductGrid";
 
 function parseJSONField(field) {
   if (!field) return [];
@@ -28,7 +31,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
   }, [selectedColorIndex, images]);
 
   return (
-    <div className="px-section section-spacing-small">
+    <div className="px-section section-spacing max-w-screen-2xl mx-auto">
       {/* Large Heading at the Top */}
       <div>
         <ProductHeader title={product.single_name} />
@@ -37,13 +40,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
       {/* grid grid-cols-1 lg:grid-cols-[300px_1fr_186px] gap-8 items-start mb-10 */}
       <div className="grid lg:grid-cols-[1fr_2fr_auto] gap-8 items-start">
         <div className="flex flex-col gap-2">
-          <ProductDescription description={product.description} price={product.price} colors={colors} colorSwatch={colorSwatch} selectedColor={colors[selectedColorIndex]} setSelectedColorIndex={setSelectedColorIndex} />
-          <div className="flex-1 max-w-[500px] border-b border-text-primary pb-6">
-            <Button className="text-xl" variant="primary" link="/contact">
-              Contact to purchase
-            </Button>
-            {/* <ProductQuantity product={product} colors={colors} sizes={sizes} prices={prices} /> */}
-          </div>
+          <ProductDescription description={product.description} price={product.price} />
         </div>
         <ProductImages mainImage={mainImage} />
         <div className="hidden lg:flex flex-col gap-[18px]">
@@ -51,8 +48,18 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
         </div>
       </div>
 
-      {/* Specs and Quantity Section */}
-      <div className="flex flex-col lg:flex-row justify-between gap-[20%] ">
+      <div className="flex flex-col gap-2">
+        <Button className="text-xl body-text" size="large" variant="primary" link="/contact">
+          Contact for purchase
+        </Button>
+
+        <div className="flex-1 max-w-[500px] border-y border-text-primary py-6">
+          <ProductColorSwatch colors={colors} colorSwatch={colorSwatch} selectedColor={colors[selectedColorIndex]} setSelectedColorIndex={setSelectedColorIndex} />
+        </div>
+      </div>
+
+      {/* Specs Section */}
+      <div className="mt-20 flex flex-col lg:flex-row justify-between gap-[20%] ">
         <div className="flex-1 max-w-[500px]">
           <ProductSpecs measurements={measurements} />
         </div>
@@ -62,7 +69,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
       {relatedData && relatedData.length > 0 && (
         <div className="section-spacing">
           <Copy>
-            <h2 className="h2-product font-bold mb-6">You May Also Like</h2>
+            <h2 className="font-bold mb-6">You May Also Like</h2>
           </Copy>
           <ProductGrid
             products={relatedData.slice(0, 4).map((p) => ({

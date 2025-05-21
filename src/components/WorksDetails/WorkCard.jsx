@@ -1,6 +1,6 @@
 import Link from "next/link";
-import PropTypes from "prop-types";
 import Image from "next/image";
+import PropTypes from "prop-types";
 
 const WorkCard = ({ image, title, number, link, size = "small" }) => {
   return (

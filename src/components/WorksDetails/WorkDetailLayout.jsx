@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import Copy from "@/components/gsap-anim/TextAnimation";
-import AnimatedLine from "../01-atoms/AnimatedLine";
+import Copy from "../Animations/gsap-anim/TextAnimation";
+import AnimatedLine from "../Animations/motion-anim/AnimatedLine";
 
 export default function WorkDetailLayout({ work }) {
   if (!work) return null;

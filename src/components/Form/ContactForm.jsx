@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import InputField from "../components/02-molecules/InputField";
-import Button from "../components/01-atoms/Button";
+import InputField from "./InputField";
+import Button from "../UI/Button";
 import { useState } from "react";
-import Copy from "../components/gsap-anim/TextAnimation";
+import Copy from "../Animations/gsap-anim/TextAnimation";
 
 export default function ContactForm() {
   const [form, setForm] = useState({

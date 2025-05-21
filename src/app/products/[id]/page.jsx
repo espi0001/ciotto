@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic";
-import { getByColumn, getRelatedByName } from "../../../utils/supabase/api";
-import ProductDetailLayout from "../../../components/ProductDetails/ProductDetailLayout";
+import { getByColumn, getRelatedByName } from "@/utils/supabase/api";
+import ProductDetailLayout from "@/components/ProductDetails/ProductDetailLayout";
 
 export const metadata = {
   title: "Ciotto | Products",

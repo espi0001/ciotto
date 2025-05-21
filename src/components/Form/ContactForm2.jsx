@@ -1,9 +1,9 @@
 "use client";
 
-import Input from "../01-atoms/Input";
-import Textarea from "../01-atoms/Textarea";
-import Button from "../01-atoms/Button";
-import FormRow from "../02-molecules/FormRow";
+import Input from "./Input";
+import Textarea from "./Textarea";
+import Button from "../UI/Button";
+import FormRow from "./FormRow";
 
 export default function ContactForm() {
   const handleSubmit = (e) => {

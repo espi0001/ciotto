@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Copy from "../../components/gsap-anim/TextAnimation";
+import Copy from "../Animations/gsap-anim/TextAnimation";
 
 export default function ImageText({ imageSrc, altText, h2, children, reverse = false }) {
   return (
