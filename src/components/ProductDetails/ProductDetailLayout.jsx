@@ -31,7 +31,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
   }, [selectedColorIndex, images]);
 
   return (
-    <div className="px-section section-spacing max-w-screen-2xl mx-auto">
+    <div className="px-section section-spacing-small max-w-screen-2xl mx-auto">
       {/* Large Heading at the Top */}
       <div>
         <ProductHeader title={product.single_name} />
