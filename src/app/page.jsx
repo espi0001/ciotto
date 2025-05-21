@@ -21,8 +21,6 @@ export default function Home() {
     <section>
       <HeroVideo src="/video/ciotto-landing-hero.mp4" />
 
-      <LineAnimated inViewTrigger={true} />
-
       {/* ----- AUTHENTICITY IN EVERY DESIGN ----- */}
       <ImageOpenSection />
 
