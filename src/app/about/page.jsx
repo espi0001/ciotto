@@ -1,9 +1,11 @@
+import Image from "next/image";
 // import PartnerCard from "../../components/About/PartnerCard";
 import Copy from "@/components/Animations/gsap-anim/TextAnimation";
-import Image from "next/image";
-import ImageText from "@/components/Sections/ImageText";
-import SplitHero from "@/components/Sections/sticky-sections/SplitHero";
 import LineAnimated from "@/components/Animations/motion-anim/LineAnimated";
+
+import SplitHero from "@/components/Sections/sticky-sections/SplitHero";
+import ImageText from "@/components/Sections/ImageText";
+import GalleryText from "@/components/Sections/GalleryText";
 
 export const metadata = {
   title: "Ciotto | About",
@@ -46,18 +48,14 @@ const About = () => {
           className="col-start-2 row-start-3 md:absolute md:bottom-0 md:right-[3.75rem] md:w-1/4 md:max-w-xs"
         />
       </article>
-
       <LineAnimated inViewTrigger={true} />
-
       {/* ----- section 3----- */}
       <ImageText imageSrc="/image/about/started(1).avif" altText="A espresso machine on a the counter of Ciotto." h2="How it started">
         <p>It started quietly – with coffee, wood, and conversation. Ari was already deep in his craft, shaping furniture and ceramics with the same hands that pulled espresso shots. What began as solo explorations slowly attracted others who shared his pace and values. Spiros, with a background in design and a shared eye for detail, was one of them.</p>
         <p className="mb-6"></p>
         <p>Rather than chasing a brand or building a business plan, they followed instinct. They met around tools and textures, learning from each other through making. What emerged was a shared language – not just in form, but in rhythm, attitude, and care. The project grew from that space: intuitive, analogue, grounded in the physical world, and driven by a common belief that good things take time.</p>
       </ImageText>
-
       <LineAnimated inViewTrigger={true} />
-
       {/* ----- section 4----- */}
       <ImageText imageSrc="/image/about/ari(1).avif" altText="Black & white portait of Ari Prasetya" h2="Ari Prasetya" reverse>
         <p>Ari Prasetya is an Australian designer based in Copenhagen, known for his multidisciplinary work across furniture, ceramics, and interior design.</p>
@@ -67,9 +65,7 @@ const About = () => {
         <p className="mb-6"></p>
         <p>Ari’s approach is playful but deliberate. He lets materials lead, allowing rhythm, proportion, and the small overlooked details to define form. Whether it’s a chair, a counter, or a room, his aim is always the same: to make something that feels simple, grounded, and present — never over-designed, but deeply considered.</p>
       </ImageText>
-
       <LineAnimated inViewTrigger={true} />
-
       <ImageText imageSrc="/image/about/spiros(1).avif" altText="Black & white portait of Spiros Loukopoulos" h2="Spiros Loukopoulos">
         <p>Spiros Loukopoulos is a Copenhagen-based creative with a background spanning civil engineering, street photography, and spatial design.</p>
         <p className="mb-6"></p>
@@ -79,9 +75,7 @@ const About = () => {
         <p className="mb-6"></p>
         <p>In collaborative projects, he bridges technical know-how with artistic sensitivity, contributing to spaces that are both purposeful and expressive.</p>
       </ImageText>
-
       <LineAnimated inViewTrigger={true} />
-
       {/* ----- section 5----- */}
       {/* <article className="grid md:grid-cols-[1fr_3fr] flex-wrap gap-8 items-center px-section max-w-screen-2xl mx-auto section-spacing">
         <div className="border-b-1 border-r-1 h-full">
@@ -97,27 +91,23 @@ const About = () => {
           <PartnerCard image="/image/about/io_japanese_tea.avif" title="Io Japanese Tea" slug="io-japanese-tea" description="The materials and layout work together to create calm and presence." className="max-sm:col-start-1 max-sm:row-start-3" />
         </div>
       </article> */}
-
       {/*       <LineAnimated inViewTrigger={true} /> */}
-
       {/* ----- section 6----- */}
-      <article className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 items-center px-section max-w-screen-2xl mx-auto section-spacing">
-        <Copy>
-          <div>
-            <h2 className="mb-4">Sustainability</h2>
-            <p>At Ciotto, sustainability isn’t just about materials — it’s about mindset. We believe the most responsible choice is to invest in furniture that stays with you. Pieces that are designed to last, both in function and in feeling.</p>
-            <p className="mb-6"></p>
-            <p>When you choose something you love — something made to grow with you, move with you, and still feel right years down the line — you step away from a culture of disposability. That’s why every Ciotto piece is crafted with care, intention, and longevity in mind. Thoughtfully designed, beautifully made — for a life well lived.</p>
-          </div>
-        </Copy>
-
-        <div className="grid grid-cols-2">
-          <Image src="/image/about/sustainability(1).avif" alt="Close-up of a wooden Armmi chair with a blurred background." height={1000} width={1000} className="md:max-h-[340px] object-cover" />
-          <Image src="/image/about/sustainability(2).avif" alt="A hand holding a dark brown Ciotto cup." height={1000} width={1000} className="md:max-h-[340px] object-cover" />
-          <Image src="/image/about/sustainability(3).avif" alt="A beige Ciotto cup on a wooden surface." height={1000} width={1000} className="md:max-h-[340px] object-cover" />
-          <Image src="/image/about/sustainability(4).avif" alt="A close-up of a wooden Genno chair." height={1000} width={1000} className="md:max-h-[340px] object-cover" />
-        </div>
-      </article>
+      <GalleryText
+        h2="Sustainability"
+        imageSrc1="/image/about/sustainability(1).avif"
+        altText1="Close-up of a wooden Armmi chair with a blurred background." //
+        imageSrc2="/image/about/sustainability(2).avif"
+        altText2="A hand holding a dark brown Ciotto cup." //
+        imageSrc3="/image/about/sustainability(3).avif"
+        altText3="A beige Ciotto cup on a wooden surface." //
+        imageSrc4="/image/about/sustainability(4).avif"
+        altText4="A close-up of a wooden Genno chair with a blurred background." //
+      >
+        <p>At Ciotto, sustainability isn’t just about materials — it’s about mindset. We believe the most responsible choice is to invest in furniture that stays with you. Pieces that are designed to last, both in function and in feeling.</p>
+        <p className="mb-6"></p>
+        <p>When you choose something you love — something made to grow with you, move with you, and still feel right years down the line — you step away from a culture of disposability. That’s why every Ciotto piece is crafted with care, intention, and longevity in mind. Thoughtfully designed, beautifully made — for a life well lived.</p>
+      </GalleryText>
 
       {/* ----- section 7----- */}
       <article className="px-section max-w-screen-2xl mx-auto section-spacing">
