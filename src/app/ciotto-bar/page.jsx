@@ -1,33 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import Copy from "@/components/Animations/gsap-anim/TextAnimation";
-import HeroVideo from "@/components/Sections/HeroVideo";
-import ImageCarousel from "@/components/CiottoBar/ImageCarousel";
-// import DiffuserSection from "@/components/Sections/DiffuserSection";
-import Button from "@/components/UI/Button";
-import OpeningHours from "@/components/CiottoBar/OpeningHours";
 import LineAnimated from "@/components/Animations/motion-anim/LineAnimated";
 import AnimatedLine from "@/components/Animations/motion-anim/AnimatedLine";
+import Button from "@/components/UI/Button";
+
+import HeroVideo from "@/components/Sections/HeroVideo";
+import OpeningHours from "@/components/CiottoBar/OpeningHours";
+import GalleryText from "@/components/Sections/GalleryText";
+// import DiffuserSection from "@/components/Sections/DiffuserSection";
 
 export const metadata = {
   title: "Ciotto | Ciotto Bar",
   description: "Experience the Ciotto Bar",
 };
-
-const images = [
-  {
-    src: "/image/ciottobar/komuna(3).webp",
-    alt: "Two women standing outside on a coffee plantation.",
-  },
-  {
-    src: "/image/ciottobar/komuna(4).webp",
-    alt: "Workers processing coffee beans, with a house and flowering trees in the background.",
-  },
-  {
-    src: "/image/ciottobar/komuna(5).webp",
-    alt: "A man harvests ripe coffee cherries from a branch in a green coffee plantation.",
-  },
-];
 
 export default function CiottoBar() {
   return (
@@ -41,7 +27,7 @@ export default function CiottoBar() {
               <h2 className="mb-4">Ciotto Bar</h2>
               <p>Enjoy a freshly brewed cup made from carefully roasted beans sourced from Mexico. Served with intention, whether you're staying or taking it to go.</p>
               <p className="mb-2"></p>
-              <p>Take a moment to slow down and experience the atmosphere of the space, where you're welcome to explore the handmade products, feel and use the materials, and let design and coffee meet in everyday rhythm.</p>
+              <p>Take a moment to slow down and experience the atmosphere of the space, where you're welcome to explore the handmade products, feel and use the materials.</p>
             </Copy>
             <Button className="mt-4 mb-8" startAtTenPercent withCopy delayVariant={0.5} variant="primary" link="#menu">
               See Menu
@@ -73,8 +59,8 @@ export default function CiottoBar() {
             className="max-h-full w-[490px] max-w-fit object-cover"
           />
           <Image
-            src="/image/ciottobar/moments(2).avif"
-            alt="The Ciotto café with a wooden table, Gattii chairs, warm lighting and shelves with Ciotto cups."
+            src="/image/ciottobar/ciotto-sign.avif"
+            alt="A brown sign for Ciotto displaying a Ciotto Cup icon, stating 'open am-pm' and featuring the Instagram handle @ciotto.frb."
             width={1080} //
             height={1350}
             quality={100}
@@ -86,38 +72,19 @@ export default function CiottoBar() {
       <LineAnimated inViewTrigger={true} />
 
       {/* KOMUNA */}
-      <article className="px-section section-spacing max-w-screen-2xl mx-auto grid gap-5 md:gap-14">
-        <div className="grid md:grid-cols-2 gap-5 md:gap-14">
-          <div className="flex flex-col justify-end">
-            <div className="grid gap-2.5 pb-5 md:pb-14">
-              <Copy>
-                <h2 className="mb-4">Komuna Beans</h2>
-                <p>Our coffee is brewed with carefully sourced beans from Komuna Coffee a Mexican collective that works directly with smallholder farmers across the country. Komuna builds long term relationships with producers who grow expressive high quality coffees while championing sustainable farming and social impact.</p>
-              </Copy>
-            </div>
-            <Image
-              src="/image/ciottobar/komuna(1).avif"
-              alt="Close-up of Komuna coffee bags filled with roasted coffee beans."
-              width={1390} //
-              height={1080}
-              quality={100}
-              className="max-h-fit max-w-full md:max-w-[500px] object-cover"
-            />
-          </div>
-
-          <Image
-            src="/image/ciottobar/komuna(2).avif"
-            alt="A close-up of a coffee roaster pouring freshly roasted Komuna coffee beans into a bowl."
-            width={1080} //
-            height={1350}
-            quality={100}
-            className="max-w-fit object-cover md:block hidden"
-          />
-        </div>
-
-        {/* KOMUNA PHOTOS */}
-        <ImageCarousel images={images} />
-      </article>
+      <GalleryText
+        h2="Komuna Coffee"
+        imageSrc1="/image/ciottobar/komuna(1).avif"
+        altText1="A man harvests ripe coffee cherries from a branch in a green coffee plantation." //
+        imageSrc2="/image/ciottobar/komuna(2).avif"
+        altText2="A close-up of a coffee roaster pouring freshly roasted Komuna coffee beans into a bowl." //
+        imageSrc3="/image/ciottobar/komuna(3).avif"
+        altText3="Close-up of Komuna coffee bags filled with roasted coffee beans." //
+        imageSrc4="/image/ciottobar/komuna(4).avif"
+        altText4="Two women standing outside on a coffee plantation." //
+      >
+        <p>Our coffee is brewed with carefully sourced beans from Komuna Coffee a Mexican collective that works directly with smallholder farmers across the country. Komuna builds long term relationships with producers who grow expressive high quality coffees while championing sustainable farming and social impact.</p>
+      </GalleryText>
 
       <LineAnimated inViewTrigger={true} />
 
@@ -133,48 +100,6 @@ export default function CiottoBar() {
       {/* <DiffuserSection /> */}
 
       <LineAnimated inViewTrigger={true} />
-
-      {/* Opening hours */}
-      {/* <article className="px-section section-spacing max-w-screen-2xl mx-auto grid grid-cols-2 items-center">
-        <div>
-          <Copy>
-            <h2>Opening hours</h2>
-          </Copy>
-          <hr className="text-tertiary-text w-[110px] mb-[40px]" />
-          <div className="flex gap-[30px]">
-            <div className="space-y-[30px]">
-              <Copy>
-                <p className="h3-small md:h3-large">Monday</p>
-                <p className="h3-small md:h3-large">Tuesday</p>
-                <p className="h3-small md:h3-large">Wednesday</p>
-                <p className="h3-small md:h3-large">Thursday</p>
-                <p className="h3-small md:h3-large">Friday</p>
-                <p className="h3-small md:h3-large">Saturday</p>
-                <p className="h3-small md:h3-large">Sunday</p>
-              </Copy>
-            </div>
-            <div className="space-y-[30px]">
-              <Copy>
-                <p className="h3-small md:h3-large">Closed</p>
-                <p className="h3-small md:h3-large">Closed</p>
-                <p className="h3-small md:h3-large">Closed</p>
-                <p className="h3-small md:h3-large">09:00 - 16:00</p>
-                <p className="h3-small md:h3-large">09:00 - 16:00</p>
-                <p className="h3-small md:h3-large">09:00 - 16:00</p>
-                <p className="h3-small md:h3-large">09:00 - 16:00</p>
-              </Copy>
-            </div>
-          </div>
-        </div>
-
-        <Image
-          src="/image/ciottobar/opening_hours.avif"
-          alt="" // missing
-          width={1030}
-          height={1320}
-          className="max-h-[700px] object-cover"
-        />
-      </article> */}
 
       {/* Gallery */}
       <article className="px-section section-spacing max-w-screen-2xl mx-auto flex gap-12">
