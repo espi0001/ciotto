@@ -74,12 +74,12 @@ export default function ContactForm() {
 
             <form className="flex flex-col space-y-6 w-full" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <InputField label="First Name" id="firstName" name="firstName" value={form.firstName} onChange={handleChange} />
-                <InputField label="Last Name" id="lastName" name="lastName" value={form.lastName} onChange={handleChange} />
+                <InputField label="First Name" id="firstName" name="firstName" value={form.firstName} onChange={handleChange} placeholder="What's your first name?" />
+                <InputField label="Last Name" id="lastName" name="lastName" value={form.lastName} onChange={handleChange} placeholder="And your last name?" />
               </div>
-              <InputField label="Email" id="email" name="email" type="email" value={form.email} onChange={handleChange} />
-              <InputField label="Subject" id="subject" name="subject" value={form.subject} onChange={handleChange} />
-              <InputField label="Message" id="message" name="message" textarea rows={5} value={form.message} onChange={handleChange} />
+              <InputField label="Email" id="email" name="email" type="email" value={form.email} onChange={handleChange} placeholder="What's your email address?" />
+              <InputField label="Subject" id="subject" name="subject" value={form.subject} onChange={handleChange} placeholder="What would you like to talk about?" />
+              <InputField label="Message" id="message" name="message" textarea rows={5} value={form.message} onChange={handleChange} placeholder="Type your message here..." />
               <div className="flex justify-center">
                 <Button variant="secondary" type="submit" disabled={loading}>
                   {loading ? "Sending..." : "Send"}
