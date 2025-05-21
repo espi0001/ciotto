@@ -19,7 +19,7 @@ export const metadata = {
 export default function Home() {
   return (
     <section>
-      <HeroVideo src="/video/ciotto-bar-hero.mp4" />
+      <HeroVideo src="/video/ciotto-landing-hero.mp4" />
 
       <LineAnimated inViewTrigger={true} />
 
