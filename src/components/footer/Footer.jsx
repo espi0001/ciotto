@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
+import { mainLinks } from "../../data/navLinks";
 import Logo from "../Navigation/Logo";
+import AppLink from "../Navigation/NavLink";
 import Copy from "../Animations/gsap-anim/TextAnimation";
 import AnimatedLine from "../Animations/motion-anim/AnimatedLine";
-import AppLink from "../Navigation/NavLink";
-import { mainLinks } from "../../data/navLinks";
+
 import OpeningHours from "./OpeningHours";
 
 export default function Footer() {

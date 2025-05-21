@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-import Copy from "@/components/Animations/gsap-anim/TextAnimation";
-import LineAnimated from "@/components/Animations/motion-anim/LineAnimated";
-import ImageReveal from "@/components/Animations/gsap-anim/ImageReveal";
+import Copy from "../components/Animations/gsap-anim/TextAnimation";
+import LineAnimated from "../components/Animations/motion-anim/LineAnimated";
+import ImageReveal from "../components/Animations/gsap-anim/ImageReveal";
 
 import HeroVideo from "@/components/Sections/HeroVideo";
 import ImageOpenSection from "@/components/Sections/ImageOpenSection";
