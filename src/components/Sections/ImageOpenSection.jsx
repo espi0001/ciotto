@@ -21,7 +21,7 @@ function ImageOpenSection() {
     >
       {/* Begrænser max bredde og centrerer indholdet */}
       <div className="flex justify-center w-full mx-auto">
-        <div className="flex flex-col gap-8 w-[1200px]">
+        <div className="flex flex-col gap-8 w-[1100px] items-center">
           {/* Første del af overskriften */}
           <h2 className="hero-h1 font-medium w-full">
             Authenticity <span className="sm:block md:hidden">in</span>
@@ -79,7 +79,7 @@ function ImageOpenSection() {
             />
           </motion.div>
 
-          <div className="w-full flex flex-col md:flex-row gap-6 md:gap-38">
+          <div className="w-full flex flex-col md:flex-row gap-6 md:gap-40">
             <h2 className="hero-h1 font-medium hidden md:block">design</h2>
             <div>
               <Copy>
