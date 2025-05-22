@@ -12,7 +12,7 @@ const WorkCard = ({ image, title, number, link, size }) => {
 
   return (
     <Link href={link || "/"} className="">
-      <div className={`${baseClasses} ${aspectClass} md:max-w-[90%] mx-auto max-w-full md:scale-90`}>
+      <div className={`${baseClasses} ${aspectClass} mx-auto md:max-w-full md:scale-90`}>
         <div className="w-full h-full overflow-hidden">
           <Image
             width={1920}
