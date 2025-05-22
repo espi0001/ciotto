@@ -19,7 +19,7 @@ export const metadata = {
 export default function Home() {
   return (
     <section>
-      <HeroVideo src="/video/ciotto-landing-hero.mp4" />
+      <HeroVideo src="/video/ciotto-hero-video.mp4" />
 
       {/* ----- AUTHENTICITY IN EVERY DESIGN ----- */}
       <ImageOpenSection />
