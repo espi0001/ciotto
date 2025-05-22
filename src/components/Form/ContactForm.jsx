@@ -56,8 +56,8 @@ export default function ContactForm() {
         {/* Left side - just empty to show image */}
         <div />
         {/* Right side - Contact Form */}
-        <div className="flex items-center justify-center bg-[#2e1503]/90 backdrop-blur-lg px-8 h-screen">
-          <div className="w-full max-w-md text-secondary-text">
+        <div className="flex items-center justify-center bg-[#2e1503]/90 backdrop-blur-lg px-[97px] h-screen">
+          <div className="w-full text-secondary-text">
             <div className="mb-8">
               <Copy delay={0.5}>
                 <h2 className="h2-small uppercase mb-2">Ari Prasetya</h2>
