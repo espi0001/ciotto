@@ -27,18 +27,13 @@ const About = () => {
           className="col-start-1 row-start-1 md:absolute md:top-0 md:left-[3.75rem] md:w-1/4 md:max-w-xs"
         />
 
-        <h1 className="col-span-3 row-start-2 z-40 text-center flex flex-col md:max-w-[1000px]">
-          <Copy className="tect-center md:text-left">
-            <span className="md:text-left md:ml-0">A LIVING DESIGN SPACE</span>
-          </Copy>
-          <Copy>
-            <span className="md:text-left md:ml-40">IN THE HEART</span>
-          </Copy>
-
-          <Copy>
-            <span className="md:text-left md:ml-24 text-nowrap">OF COPENHAGEN</span>
-          </Copy>
-        </h1>
+        <Copy startAtZero>
+          <h1 className="col-span-3 row-start-2 z-40 text-center md:text-left md:max-w-[1000px] leading-tight">
+            <span className="block text-center md:text-left">A LIVING SPACE</span>
+            <span className="block text-center md:text-left md:ml-40">IN THE HEART</span>
+            <span className="block text-center md:text-left md:ml-40">OF COPENHAGEN</span>
+          </h1>
+        </Copy>
         <Image
           src="/image/about/genno_chair.avif"
           alt="A wooden table and Genno chair, with shelves displaying Ciotto cups."
@@ -63,7 +58,7 @@ const About = () => {
         <p>Rooted in Indonesian heritage and shaped by experience across continents, Ari brings a quiet precision to his practice — blending craftsmanship, curiosity, and an intuitive sense of space. His work often explores the meeting point between sculpture and function, guided by analogue processes and full-scale prototyping.</p>
 
         <p className="mb-6"></p>
-        <p>Ari’s approach is playful but deliberate. He lets materials lead, allowing rhythm, proportion, and the small overlooked details to define form. Whether it’s a chair, a counter, or a room, his aim is always the same: to make something that feels simple, grounded, and present — never over-designed, but deeply considered.</p>
+        <p>Ari's approach is playful but deliberate. He lets materials lead, allowing rhythm, proportion, and the small overlooked details to define form. Whether it's a chair, a counter, or a room, his aim is always the same: to make something that feels simple, grounded, and present — never over-designed, but deeply considered.</p>
       </ImageText>
       <LineAnimated inViewTrigger={true} />
       <ImageText imageSrc="/image/about/spiros(1).avif" altText="Black & white portait of Spiros Loukopoulos" h2="Spiros Loukopoulos">
@@ -104,9 +99,9 @@ const About = () => {
         imageSrc4="/image/about/sustainability(4).avif"
         altText4="A close-up of a wooden Genno chair with a blurred background." //
       >
-        <p>At Ciotto, sustainability isn’t just about materials — it’s about mindset. We believe the most responsible choice is to invest in furniture that stays with you. Pieces that are designed to last, both in function and in feeling.</p>
+        <p>At Ciotto, sustainability isn't just about materials — it's about mindset. We believe the most responsible choice is to invest in furniture that stays with you. Pieces that are designed to last, both in function and in feeling.</p>
         <p className="mb-6"></p>
-        <p>When you choose something you love — something made to grow with you, move with you, and still feel right years down the line — you step away from a culture of disposability. That’s why every Ciotto piece is crafted with care, intention, and longevity in mind. Thoughtfully designed, beautifully made — for a life well lived.</p>
+        <p>When you choose something you love — something made to grow with you, move with you, and still feel right years down the line — you step away from a culture of disposability. That's why every Ciotto piece is crafted with care, intention, and longevity in mind. Thoughtfully designed, beautifully made — for a life well lived.</p>
       </GalleryText>
 
       {/* ----- section 7----- */}
