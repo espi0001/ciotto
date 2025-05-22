@@ -44,7 +44,7 @@ export default function BurgerMenu({ isOpen, onClose, textColor = "var(--color-p
               {/* Left column: nav links */}
               <div className="flex flex-col flex-1 space-y-12">
                 {/* Nav Links */}
-                <div className="flex flex-col space-y-6 uppercase" style={{ color: textColor }}>
+                <div className="flex flex-col items-center md:items-start space-y-6 uppercase" style={{ color: textColor }}>
                   {mainLinks.map((link, idx) => (
                     <motion.div
                       key={link.label}
@@ -111,7 +111,7 @@ export default function BurgerMenu({ isOpen, onClose, textColor = "var(--color-p
                 </div>
               </div>
               {/* Right column: Big image only */}
-              <div className="flex flex-col flex-1 items-end justify-center">
+              <div className="md:flex flex-col flex-1 items-end justify-center hidden">
                 <div className="w-full flex justify-end">
                   {/* <Image width={400} height={600} src="/image/andra.avif" alt="Placeholder" className="object-cover w-[350px] h-[400px]" /> */}
                   <Image width={400} height={600} src="https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/works-images/andra-landing.avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJ3b3Jrcy1pbWFnZXMvYW5kcmEtbGFuZGluZy5hdmlmIiwiaWF0IjoxNzQ3NDkzOTM2LCJleHAiOjE3NzkwMjk5MzZ9.71AflfvLSPJmlmIosB5uEcpeGW3Mg41YuLJ8I47CR9o" alt="Placeholder" className="object-cover w-[350px] h-[400px]" />

@@ -23,26 +23,21 @@ export default function WorksDropdown({ open, setOpen, hoveredIndex, setHoveredI
           }}
           className={context === "desktop" ? "absolute top-0 left-0 w-screen bg-[#CAB696] z-20 flex overflow-hidden" : "mt-8 overflow-hidden"}
           onMouseEnter={context === "desktop" ? () => setOpen(true) : undefined}
-          onMouseLeave={
-            context === "desktop"
-              ? () => {
-                  setOpen(false);
-                  setHoveredIndex(null);
-                }
-              : undefined
-          }
+          onMouseLeave={() => {
+            setOpen(false);
+            setHoveredIndex(null);
+          }}
         >
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className={context === "desktop" ? "flex flex-row w-full items-center uppercase px-10" : "flex flex-col space-y-2"} style={context === "burger" ? { color: textColor } : undefined}>
             {/* Links */}
             {context === "desktop" ? (
-              <div className="flex flex-col gap-4 w-1/2 pt-24">
+              <div className="flex flex-col items-start gap-4 w-1/2 pt-24">
                 {worksLinks.map((link, idx) => (
                   <motion.a
                     key={link.label}
                     href={link.href}
-                    className={context === "desktop" ? "works-link text-4xl font-semibold tracking-wide relative group" : undefined}
+                    className={context === "desktop" ? "works-link text-4xl font-semibold tracking-wide relative group w-auto" : undefined}
                     onMouseEnter={() => setHoveredIndex(idx)}
-                    onMouseLeave={() => setHoveredIndex(null)}
                     variants={blurVariant}
                     initial="initial"
                     animate={hoveredIndex === null ? "initial" : hoveredIndex === idx ? "focused" : "blurred"}
