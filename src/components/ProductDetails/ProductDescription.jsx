@@ -11,8 +11,6 @@ const ProductDescription = ({ description, price }) => {
           <p className="">{description}</p>
         </div>
         <p className="font-semibold mt-6">Only available to purchase by contacting Ciotto.</p>
-
-        <p className="mt-6">Price from: {price}</p>
       </Copy>
     </div>
   );

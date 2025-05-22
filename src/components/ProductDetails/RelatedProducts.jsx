@@ -10,7 +10,7 @@ const ProductCard = ({ image, title, link, small = false }) => {
         <div className="w-full aspect-[1/1] flex items-center justify-center overflow-hidden">
           <Image quality={100} src={image} alt={title} width={1920} height={1080} className="w-full h-full object-cover aspect-[1/1] hover:scale-[1.10] transition overflow-hidden" />
         </div>
-        <div className="flex flex-row justify-between items-center w-full mt-2">
+        <div className="flex flex-col xl:flex-row justify-between w-full mt-2">
           <span className="text-xs text-black font-normal">{title}</span>
           <Button className="!text-sm" size="small" variant="primary" link={link || "/"}>
             View Piece
