@@ -81,7 +81,7 @@ export default function Footer() {
               </Copy>
             </div>
             {/* Contact Info + Social Media */}
-            <div className="max-w-[190px]">
+            <div className="max-w-[250px]">
               <Copy startAtTenPercent={true}>
                 <h3 className="text-primary-text font-bold mb-4 tracking-wide">CONTACT INFO</h3>
               </Copy>
