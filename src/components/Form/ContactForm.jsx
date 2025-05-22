@@ -52,7 +52,7 @@ export default function ContactForm() {
       <Image src="/image/contact/ciotto_cupxgatti_chair.avif" alt="White Ciotto Cup on top of the brown Gatti chair." fill className="absolute inset-0 w-full h-full object-cover z-0" priority quality={100} />
 
       {/* Content Grid */}
-      <div className="relative grid grid-cols-1 md:grid-cols-[50%_50%] z-10">
+      <div className="relative grid grid-cols-1 md:grid-cols-[55%_45%] z-10">
         {/* Left side - just empty to show image */}
         <div />
         {/* Right side - Contact Form */}
