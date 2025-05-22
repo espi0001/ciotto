@@ -40,7 +40,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
       {/* grid grid-cols-1 lg:grid-cols-[300px_1fr_186px] gap-8 items-start mb-10 */}
       <div className="grid lg:grid-cols-[1fr_2fr_auto] gap-8 items-start">
         <div className="flex flex-col gap-2">
-          <ProductDescription description={product.description} price={product.price} />
+          <ProductDescription description={product.description} />
         </div>
         <ProductImages mainImage={mainImage} />
         <div className="hidden lg:flex flex-col gap-[18px]">
@@ -49,12 +49,14 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
       </div>
 
       <div className="flex flex-col gap-2">
-        <Button className="text-xl body-text" size="large" variant="primary" link="/contact">
-          Contact for purchase
-        </Button>
-
-        <div className="flex-1 max-w-[500px] border-y border-text-primary py-6">
-          <ProductColorSwatch colors={colors} colorSwatch={colorSwatch} selectedColor={colors[selectedColorIndex]} setSelectedColorIndex={setSelectedColorIndex} />
+        <div className="flex flex-col gap-10 max-w-[500px] border-y border-text-primary py-6">
+          <div className="flex justify-between">
+            <ProductColorSwatch colors={colors} colorSwatch={colorSwatch} selectedColor={colors[selectedColorIndex]} setSelectedColorIndex={setSelectedColorIndex} />
+            <p price={product.prices}>Price from: {prices}</p>
+          </div>
+          <Button className="text-xl body-text" size="large" variant="primary" link="/contact">
+            Contact to purchase
+          </Button>
         </div>
       </div>
 
