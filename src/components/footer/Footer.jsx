@@ -23,7 +23,7 @@ export default function Footer() {
         style={{ position: "absolute", left: 0, top: 0 }}
       />
       <div className="max-w-screen-2xl mx-auto pt-16 pb-8 relative px-section">
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 lg:gap-48">
+        <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-4 xl:gap-48">
           {/* Left: Logo */}
           <div className="flex flex-col justify-between h-full min-w-[200px]">
             <div className="mb-4">
@@ -34,14 +34,14 @@ export default function Footer() {
             </div>
             {/* Copyright: only show on desktop here */}
             <Copy>
-              <p className="p-product mt-auto text-xs text-primary-text opacity-80 hidden lg:block">Copyright 2025 © Ciotto, All rights reserved</p>
+              <p className="p-product mt-auto text-xs text-primary-text opacity-80 hidden xl:block">Copyright 2025 © Ciotto, All rights reserved</p>
             </Copy>
           </div>
 
           {/* Right: 3 columns */}
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-16 lg:gap-[126px] flex-1">
+          <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-16 xl:gap-[126px] flex-1">
             {/* Pages */}
-            <div className="max-w-[100px]">
+            <div className="w-[100px]">
               <Copy>
                 <h3 className="text-primary-text font-bold mb-4 tracking-wide">PAGES</h3>
                 <ul className="space-y-2">
@@ -64,7 +64,7 @@ export default function Footer() {
               </Copy>
             </div>
             {/* Opening Hours */}
-            <div className="max-w-[210px]">
+            <div className="w-[210px]">
               <Copy startAtTenPercent={true}>
                 <h3 className="text-primary-text font-bold mb-4 tracking-wide">OPENING HOURS</h3>
               </Copy>
@@ -81,7 +81,7 @@ export default function Footer() {
               </Copy>
             </div>
             {/* Contact Info + Social Media */}
-            <div className="max-w-[250px]">
+            <div className="w-[220px]">
               <Copy startAtTenPercent={true}>
                 <h3 className="text-primary-text font-bold mb-4 tracking-wide">CONTACT INFO</h3>
               </Copy>
