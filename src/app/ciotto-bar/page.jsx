@@ -10,6 +10,7 @@ import HeroVideo from "@/components/Sections/HeroVideo";
 import OpeningHours from "@/components/CiottoBar/OpeningHours";
 import GalleryText from "@/components/Sections/GalleryText";
 import DiffuserSection from "@/components/Sections/DiffuserSection";
+import Gallery from "@/components/Sections/Gallery";
 
 export const metadata = {
   title: "Ciotto | Ciotto Bar",
@@ -21,7 +22,7 @@ export default function CiottoBar() {
     <section className="">
       <HeroVideo src="/video/ciotto-bar-hero.mp4" />
 
-      <article className="px-section section-spacing max-w-screen-2xl mx-auto grid md:grid-cols-[1fr_2fr] gap-[30px] md:gap-[100px]">
+      <article className="px-section section-spacing max-w-screen-2xl mx-auto grid md:grid-cols-2 xl:grid-cols-[1fr_2fr] gap-8 md:gap-16">
         <div className="content-center flex flex-col gap-4 w-full">
           <div>
             <Copy>
@@ -50,28 +51,30 @@ export default function CiottoBar() {
             <OpeningHours days="Thursday - Sunday" hours="09:00 - 16:00" />
           </div>
         </div>
-        <div className="grid grid-cols-[auto_auto] gap-2 md:gap-4">
-          <ImageReveal>
-            <Image
-              src="/image/ciottobar/moments(1).avif"
-              alt="A Toshi stool with a Ciotto cup on top and a soft shadows on a light wall."
-              width={1080} //
-              height={1350}
-              quality={100}
-              className="max-h-full w-[490px] max-w-fit object-cover"
-            />
-          </ImageReveal>
-          <ImageReveal className="content-end">
-            <Image
-              src="/image/ciottobar/ciotto-sign.avif"
-              alt="A brown sign for Ciotto displaying a Ciotto Cup icon, stating 'open am-pm' and featuring the Instagram handle @ciotto.frb."
-              width={1080} //
-              height={1350}
-              quality={100}
-              className="hidden md:block w-[130px] h-[180px] md:w-[320px] md:h-[430px] max-w-fit object-cover "
-            />
-          </ImageReveal>
-        </div>
+        <ImageReveal>
+          <div className="flex gap-2 md:gap-4">
+            <div className="w-full">
+              <Image
+                src="/image/ciottobar/moments(1).avif"
+                alt="A Toshi stool with a Ciotto cup on top and a soft shadows on a light wall."
+                width={1080} //
+                height={1350}
+                quality={100}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="hidden xl:block self-end w-full max-w-[320px]">
+              <Image
+                src="/image/ciottobar/ciotto-sign.avif"
+                alt="A brown sign for Ciotto displaying a Ciotto Cup icon, stating 'open am-pm' and featuring the Instagram handle @ciotto.frb."
+                width={1080} //
+                height={1350}
+                quality={100}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </ImageReveal>
       </article>
 
       <LineAnimated inViewTrigger={true} />
@@ -105,74 +108,7 @@ export default function CiottoBar() {
       <DiffuserSection />
 
       {/* Gallery */}
-      <article className="px-section section-spacing max-w-screen-2xl mx-auto grid lg:grid-cols-[3fr_2fr] gap-5">
-        <div className="grid grid-cols-2 gap-5">
-          <div className="grid gap-5">
-            <Image
-              src="/image/ciottobar/gallery(1).avif"
-              alt="" // missing
-              width={360}
-              height={434}
-              className="object-cover w-full max-h-[434px]"
-            />
-
-            <Image
-              src="/image/ciottobar/gallery(2).avif"
-              alt="" // missing
-              width={360}
-              height={360}
-              className="object-cover w-full max-h-[354px]"
-            />
-          </div>
-          <div className="grid gap-5">
-            <Image
-              src="/image/ciottobar/gallery(3).avif"
-              alt="" // missing
-              width={400}
-              height={342}
-              className="object-cover w-full max-h-[342px]"
-            />
-
-            <Image
-              src="/image/ciottobar/gallery(4).avif"
-              alt="" // missing
-              width={400}
-              height={454}
-              className="object-cover w-full max-h-[454px]"
-            />
-          </div>
-        </div>
-
-        <div className="hidden lg:block">
-          <div className="grid gap-5 ">
-            <Image
-              src="/image/ciottobar/gallery(5-1).avif"
-              alt="" // missing
-              width={515}
-              height={527}
-              className="object-cover w-full max-h-[527px]"
-            />
-
-            <div className="grid grid-cols-2 gap-[30px]">
-              <Image
-                src="/image/ciottobar/gallery(6).avif"
-                alt="" // missing
-                width={245}
-                height={269}
-                className="w-full max-h-[269px] object-cover"
-              />
-
-              <Image
-                src="/image/ciottobar/gallery(7).avif"
-                alt="" // missing
-                width={245}
-                height={269}
-                className="w-full max-h-[269px] object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </article>
+      <Gallery />
     </section>
   );
 }
