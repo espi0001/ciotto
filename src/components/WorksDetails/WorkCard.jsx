@@ -1,18 +1,27 @@
 import Link from "next/link";
-import Image from "next/image";
 import PropTypes from "prop-types";
+import Image from "next/image";
 
-const WorkCard = ({ image, title, number, link, size = "small" }) => {
+const WorkCard = ({ image, title, number, link, size }) => {
+  // Brug forskellige aspect-ratio afhængigt af skærmstørrelse og card-type
+  const baseClasses = "w-full break-inside-avoid";
+  const aspectClass =
+    size === "big"
+      ? "aspect-[4/5] md:aspect-[3/4]" // store: højere
+      : "aspect-[4/5]  md:aspect-[5/6]"; // små: lidt lavere
+
   return (
-    <Link href={link || "/"}>
-      <div
-        className={`
-    ${size === "big" ? "w-[600px] h-[700px]" : "w-[480px] h-[540px]"}
-    box-border
-  `}
-      >
+    <Link href={link || "/"} className="">
+      <div className={`${baseClasses} ${aspectClass} md:max-w-[90%] mx-auto max-w-full md:scale-90`}>
         <div className="w-full h-full overflow-hidden">
-          <Image quality={100} width={1920} height={1080} src={image} alt={title} className="w-full h-full object-cover hover:scale-110 transition-all duration-300" />
+          <Image
+            width={1920}
+            height={1080} //
+            quality={100}
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover hover:scale-110 transition-all duration-300"
+          />
         </div>
         <div className="flex mt-2 justify-between items-center">
           <p>{String(number).padStart(3, "0")}</p>
