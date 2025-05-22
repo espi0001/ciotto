@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { worksLinks } from "../../data/navLinks";
-import AppLink from "./NavLink";
 
 const blurVariant = {
   focused: { opacity: 1, filter: "blur(0px)" },
@@ -133,6 +132,7 @@ export default function WorksDropdown({ open, setOpen, hoveredIndex, setHoveredI
                 </AnimatePresence>
               </div>
             )}
+            {context === "desktop" && worksLinks.map((link) => <img key={link.label} src={link.image} alt="" style={{ display: "none" }} aria-hidden="true" />)}
           </motion.div>
         </motion.div>
       )}
