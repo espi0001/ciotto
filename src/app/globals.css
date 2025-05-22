@@ -252,10 +252,10 @@ html {
   font-size: var(--fs, var(--☠️-fs-clamp, var(--fs-def, var(--fs-min, var(--fs-max)))));
 }
 
-h1,
+/* h1,
 h2 {
   font-family: "Ivypresto Display", sans-serif;
-}
+} */
 
 h1,
 h2,
