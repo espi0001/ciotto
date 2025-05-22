@@ -5,13 +5,13 @@ const ProductDescription = ({ description, price }) => {
   return (
     // w-full lg:w-[207px]
     <div className="mt-[70px]">
-      <Copy delay={1}>
+      <Copy startAtTenPercent="true" delay={1}>
         <div>
           <h2 className="mb-4 font-bold h3-product">Description:</h2>
           <p className="">{description}</p>
         </div>
       </Copy>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 mb-6">
         <p className="font-semibold mt-6">Only available to purchase by contacting Ciotto.</p>
         <p>{price}</p>
         <Button className="text-xl body-text" size="large" variant="primary" link="/contact">

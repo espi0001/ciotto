@@ -277,8 +277,8 @@ h1,
 }
 
 .h1-product {
-  --fs-max: 10.5rem;
-  --fs-min: 2rem;
+  --fs-max: 11.5rem;
+  --fs-min: 2.5rem;
 }
 
 h2 {
@@ -403,6 +403,10 @@ body {
 
   .section-spacing-small {
     margin-top: 8rem;
+  }
+
+  .section-spacing-extrasmall {
+    margin-top: 4rem;
   }
 }
 
