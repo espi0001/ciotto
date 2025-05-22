@@ -1,4 +1,3 @@
-@import url("https://use.typekit.net/jlw5rkn.css");
 @import "tailwindcss";
 
 *,
@@ -251,11 +250,6 @@ html {
   /* property value */
   font-size: var(--fs, var(--☠️-fs-clamp, var(--fs-def, var(--fs-min, var(--fs-max)))));
 }
-
-/* h1,
-h2 {
-  font-family: "Ivypresto Display", sans-serif;
-} */
 
 h1,
 h2,
