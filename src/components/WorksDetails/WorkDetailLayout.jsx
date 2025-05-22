@@ -92,19 +92,6 @@ export default function WorkDetailLayout({ work }) {
           <Image key={i} width={1000} height={1000} src={img} alt={title} className="w-full max-h-[700px] object-cover drop-shadow-primary" />
         ))}
       </section>
-
-      {/* Gallery Grid 2 */}
-      {/* <section className="grid max-sm:gap-8	px-section spacing-section-small md:spacing-section mb-16">
-        <div className="grid grid-cols-2 gap-8">
-          <Image width={1000} height={1000} src={galleryImages[3]} alt={title} className="md:max-w-[425px] md:max-h-[590px] object-cover drop-shadow-primary" />
-          <Image width={1000} height={1000} src={galleryImages[4]} alt={title} className="md:max-w-[540px] object-cover md:justify-self-end drop-shadow-primary" />
-        </div>
-
-        <div className="grid grid-cols-2 md:justify-items-end items-end gap-8">
-          <Image width={1000} height={1000} src={galleryImages[5]} alt={title} className="md:max-w-[700px] md:max-h-[770px] object-cover drop-shadow-primary" />
-          <Image width={1000} height={1000} src={galleryImages[6]} alt={title} className="md:max-w-[420px] md:max-h-[535px] object-cover drop-shadow-primary" />
-        </div>
-      </section> */}
     </>
   );
 }

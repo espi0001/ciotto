@@ -18,7 +18,7 @@ export default async function WorkDetail({ params }) {
     designer: "Ari Prasetya",
     subtitle: work.words,
     heroImage: work.heroimage,
-    galleryImages: [work.image1, work.image2, work.image3, work.image4, work.image5, work.image6, work.image7].filter(Boolean),
+    galleryImages: [work.image1, work.image2, work.image3].filter(Boolean),
     infoText: work.info,
     details: [
       { label: "Location", value: work.location },
