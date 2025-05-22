@@ -105,7 +105,7 @@ const About = () => {
       </GalleryText>
 
       {/* ----- section 7----- */}
-      <article className="px-section max-w-screen-2xl mx-auto section-spacing">
+      <article className="max-w-screen-2xl mx-auto section-spacing">
         <Image src="/image/about/toshixciotto.avif" alt="A Toshi stool with a brown Ciotto cup on top illuminated by soft sunlight." width={1920} height={1080} className="md:max-h-[600px] object-cover" />
       </article>
     </section>
