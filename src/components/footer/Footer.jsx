@@ -48,11 +48,11 @@ export default function Footer() {
                   {/* Always show 'Works' linking to all works */}
                   <li>
                     <AppLink href="/works" underline underlineColor="bg-primary-text">
-                      Works
+                      All Works
                     </AppLink>
                   </li>
                   {mainLinks
-                    .filter((link) => !link.dropdown && link.label !== "Works") // Exclude dropdown Works and avoid duplicate
+                    .filter((link) => !link.dropdown && link.label !== "Works")
                     .map((link) => (
                       <li key={link.href}>
                         <AppLink href={link.href} underline underlineColor={link.label === "Ciotto Bar" ? "bg-tertiary-text" : "bg-primary-text"} className={link.label === "Ciotto Bar" ? "text-tertiary-text font-bold" : ""}>
