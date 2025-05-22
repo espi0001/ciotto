@@ -34,26 +34,6 @@ export default function Menu() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    const nav = navRef.current;
-    if (!nav) return;
-
-    const handleIntersect = (entries) => {
-      setNavLight(entries.some((entry) => entry.isIntersecting));
-    };
-
-    const observer = new window.IntersectionObserver((entries) => handleIntersect(entries), {
-      root: null,
-      threshold: 0,
-    });
-
-    document.querySelectorAll(".nav-text-color-change").forEach((section) => {
-      observer.observe(section);
-    });
-
-    return () => observer.disconnect();
-  }, [pathname]);
-
   const navVariants = {
     hidden: {
       opacity: 0,
@@ -98,12 +78,11 @@ export default function Menu() {
   };
 
   // Color for nav and plus icon
-  const navColor = navLight ? "var(--color-secondary-text)" : "#402d1f";
+  const navColor = "#402d1f";
   const effectiveNavColor = worksOpen ? "#402d1f" : navColor;
   const burgerMenuColor = "#402d1f"; // Always the same
-  const isContactPage = pathname === "/contact";
-  const burgerMenuIconColor = isBurgerOpen ? "var(--color-primary-text)" : isContactPage ? "var(--color-secondary-text)" : "var(--color-primary-text)";
-  const animatedLineColor = isBurgerOpen ? "var(--color-primary-text)" : isContactPage ? "var(--color-secondary-text)" : "var(--color-primary-text)";
+  const burgerMenuIconColor = isBurgerOpen ? "var(--color-primary-text)" : "var(--color-primary-text)";
+  const animatedLineColor = isBurgerOpen ? "var(--color-primary-text)" : "var(--color-primary-text)";
 
   return (
     <header ref={navRef} className="relative w-full flex justify-between items-center py-4 pt-8 px-section z-50" style={{ color: effectiveNavColor }}>

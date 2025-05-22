@@ -55,7 +55,7 @@ export default function Navigation({ navColor = "#402d1f", transition = "color 0
               </button>
             </li>
           ) : (
-            <AppLink key={link.href} href={link.href} highlighted={link.highlighted} bold={link.label === "Ciotto Bar" || link.bold} navColor={effectiveNavColor} transition={transition} asListItem underlineColor={link.label === "Ciotto Bar" ? "bg-tertiary-text" : isContactPage ? "bg-secondary-text" : undefined} className={link.label === "Ciotto Bar" ? "text-tertiary-text font-bold" : undefined}>
+            <AppLink key={link.href} href={link.href} highlighted={link.highlighted} bold={link.label === "Ciotto Bar" || link.bold} navColor={effectiveNavColor} transition={transition} asListItem underlineColor={link.label === "Ciotto Bar" ? "bg-tertiary-text" : undefined} className={link.label === "Ciotto Bar" ? "text-tertiary-text font-bold" : undefined}>
               {link.label}
             </AppLink>
           )
