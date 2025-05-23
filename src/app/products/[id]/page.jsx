@@ -21,7 +21,7 @@ console.log(process.env);
 export default async function ProductDetail({ params }) {
   try {
     const { id } = await params;
-    const product = await getByColumn("ciotto", "id", id);
+    const product = await getByColumn("ciotto", "slug", id);
     const relatedData = await getRelatedByName("ciotto", product.id, product.name);
 
     // Parse fields

@@ -17,7 +17,7 @@ export default async function Products() {
     id: item.id,
     image: Array.isArray(item.image) ? item.image[0] : typeof item.image === "string" && item.image.startsWith("[") ? JSON.parse(item.image)[0] : item.image,
     title: item.name || item.title,
-    link: `/products/${item.id}`,
+    link: `/products/${item.slug}`,
   }));
   return (
     <section className="px-section">
