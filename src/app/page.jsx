@@ -30,7 +30,7 @@ export default function Home() {
         {/* Venstre kolonne med overskrift og label */}
         <div className="flex md:flex-col justify-between">
           <Copy>
-            <h2 className="h2-large">
+            <h2 className="h2-medium">
               Every <br />
               product <br />
               tells a <br />
@@ -90,7 +90,7 @@ export default function Home() {
           <div className="flex md:flex-row justify-between">
             <div className="flex flex-col gap-2">
               <Copy>
-                <h2 className="h2-large">
+                <h2 className="h2-medium">
                   How it <br />
                   started
                 </h2>
@@ -157,7 +157,7 @@ export default function Home() {
           {/* Overskrift, tekst og knap nederst til venstre */}
           <div className="col-start-1 col-span-2 row-start-1 row-span-1 flex flex-col md:justify-end gap-4 ">
             <Copy>
-              <h2 className="uppercase h2-large text-9xl">
+              <h2 className="uppercase h2-medium">
                 The <br />
                 Ciotto <br />
                 Bar

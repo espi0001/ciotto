@@ -23,12 +23,12 @@ function ImageOpenSection() {
       <div className="flex justify-center w-full mx-auto">
         <div className="flex flex-col gap-8 w-[1100px] items-center">
           {/* Første del af overskriften */}
-          <h2 className="hero-h1 font-medium w-full">
+          <h2 className="h2-large font-medium w-full">
             Authenticity <span className="sm:block md:hidden">in</span>
           </h2>
           {/* Række med billede og "IN / EVERY" tekst */}
           <div className="flex w-full gap-18 items-center">
-            <h2 className="hidden md:block hero-h1 font-medium">in</h2>
+            <h2 className="hidden md:block h2-large font-medium">in</h2>
 
             {/* Billede med animation – vises kun på desktop */}
             <motion.div
@@ -53,7 +53,7 @@ function ImageOpenSection() {
             </motion.div>
 
             {/* "EVERY" vises altid – "DESIGN" kun på mobil */}
-            <h2 className="hero-h1 font-medium">
+            <h2 className="h2-large font-medium">
               every <span className="md:hidden">design</span>
             </h2>
           </div>
@@ -79,8 +79,8 @@ function ImageOpenSection() {
             />
           </motion.div>
 
-          <div className="w-full flex flex-col md:flex-row gap-6 md:gap-40">
-            <h2 className="hero-h1 font-medium hidden md:block">design</h2>
+          <div className="w-full flex flex-col md:flex-row gap-6 md:gap-16">
+            <h2 className="h2-large font-medium hidden md:block">design</h2>
             <div>
               <Copy>
                 <p className="max-w-[400px] mb-4">Exploring the intersection of craft, design, and storytelling, each collaboration is a journey shaped by shared values and a commitment to thoughtful creation and meaningful connection.</p>
