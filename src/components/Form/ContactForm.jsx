@@ -16,14 +16,32 @@ export default function ContactForm() {
   });
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    const newErrors = {};
+    if (!form.firstName.trim()) newErrors.firstName = "First name is required.";
+    if (!form.lastName.trim()) newErrors.lastName = "Last name is required.";
+    if (!form.email.trim()) newErrors.email = "Email is required.";
+    else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email)) newErrors.email = "Enter a valid email address.";
+    if (!form.subject.trim()) newErrors.subject = "Subject is required.";
+    if (!form.message.trim()) newErrors.message = "Message is required.";
+    return newErrors;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: undefined })); // Clear error on change
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
     setLoading(true);
     setStatus("");
     try {
@@ -36,6 +54,7 @@ export default function ContactForm() {
       if (res.ok) {
         setStatus("Thank you! Your message has been sent.");
         setForm({ firstName: "", lastName: "", email: "", subject: "", message: "" });
+        setErrors({});
       } else {
         setStatus(data.error || "Something went wrong. Please try again.");
       }
@@ -52,7 +71,7 @@ export default function ContactForm() {
       <Image src="/image/contact/ciotto_cupxgatti_chair.avif" alt="White Ciotto Cup on top of the brown Gatti chair." fill className="absolute inset-0 w-full h-full object-cover z-0" priority quality={100} />
 
       {/* Content Grid */}
-      <div className="relative grid grid-cols-1 md:grid-cols-[55%_45%] z-10">
+      <div className="relative grid grid-cols-1 md:grid-cols-[30%_70%] lg:grid-cols-[40%_60%] xl:grid-cols-[55%_45%] z-10">
         {/* Left side - just empty to show image */}
         <div />
         {/* Right side - Contact Form */}
@@ -72,14 +91,14 @@ export default function ContactForm() {
               </Copy>
             </div>
 
-            <form className="flex flex-col space-y-6 w-full" onSubmit={handleSubmit}>
+            <form className="flex flex-col space-y-6 w-full" onSubmit={handleSubmit} noValidate>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <InputField label="First Name" id="firstName" name="firstName" value={form.firstName} onChange={handleChange} placeholder="What's your first name?" />
-                <InputField label="Last Name" id="lastName" name="lastName" value={form.lastName} onChange={handleChange} placeholder="And your last name?" />
+                <InputField label="First Name" id="firstName" name="firstName" value={form.firstName} onChange={handleChange} error={!!errors.firstName} errorMessage={errors.firstName} />
+                <InputField label="Last Name" id="lastName" name="lastName" value={form.lastName} onChange={handleChange} error={!!errors.lastName} errorMessage={errors.lastName} />
               </div>
-              <InputField label="Email" id="email" name="email" type="email" value={form.email} onChange={handleChange} placeholder="What's your email address?" />
-              <InputField label="Subject" id="subject" name="subject" value={form.subject} onChange={handleChange} placeholder="What would you like to talk about?" />
-              <InputField label="Message" id="message" name="message" textarea rows={5} value={form.message} onChange={handleChange} placeholder="Type your message here..." />
+              <InputField label="Email" id="email" name="email" type="email" value={form.email} onChange={handleChange} error={!!errors.email} errorMessage={errors.email} />
+              <InputField label="Subject" id="subject" name="subject" value={form.subject} onChange={handleChange} error={!!errors.subject} errorMessage={errors.subject} />
+              <InputField label="Message" id="message" name="message" textarea rows={5} value={form.message} onChange={handleChange} placeholder="Type your message here..." error={!!errors.message} errorMessage={errors.message} />
               <div className="flex justify-center">
                 <Button variant="secondary" type="submit" disabled={loading}>
                   {loading ? "Sending..." : "Send"}
