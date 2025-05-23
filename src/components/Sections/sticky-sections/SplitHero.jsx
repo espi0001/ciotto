@@ -34,7 +34,9 @@ function SplitHero() {
         <div className="absolute inset-0 z-5" />
       </div>
       {/* Right Side */}
-      <div className="w-1/2 h-full bg-primary-background split-hero-right relative" />
+      <div className="w-1/2 h-full bg-primary-background split-hero-right relative">
+        <Image src="/image/about/gatti-mahogony.avif" alt="Gatti Mahogony" fill className="object-cover object-center z-0" priority />
+      </div>
     </section>
   );
 }
