@@ -44,7 +44,15 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
         </div>
         <ProductImages mainImage={mainImage} />
         <div className="hidden lg:flex flex-col gap-[18px]">
-          <ProductThumbnails thumbnails={images} mainImage={mainImage} setMainImage={setMainImage} />
+          <ProductThumbnails
+            thumbnails={images}
+            mainImage={mainImage}
+            setMainImage={(img) => {
+              setMainImage(img);
+              const idx = images.indexOf(img);
+              if (idx !== -1) setSelectedColorIndex(idx);
+            }}
+          />
         </div>
       </div>
 
