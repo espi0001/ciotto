@@ -47,7 +47,7 @@ function ImageOpenSection() {
                 alt="A white Ciotto cup on top of the Toshi stool in the window of Ciotto."
                 width={1920}
                 height={1080}
-                className="object-cover max-w-[200px] md:max-w-[400px] max-h-[100px] md:max-h-[200px]"
+                className="object-cover max-w-[200px] md:max-w-[400px] max-h-[100px] md:max-h-[150px]"
                 onLoad={() => setImgLoaded(true)} // Sæt load-status når billedet er færdig
               />
             </motion.div>
