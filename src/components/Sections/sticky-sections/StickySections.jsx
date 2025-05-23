@@ -54,7 +54,7 @@ function StickySection({ title, description, image, number }) {
       <div className="px-section text-secondary-text relative flex justify-between items-start h-full w-full pt-[112px] z-10">
         <div className="flex flex-col">
           <Copy>
-            <h2 className="h2-large mb-8 font-semibold">{title}</h2>
+            <h2 className="h2-medium mb-8 font-semibold">{title}</h2>
             <p className="p-product mb-8 max-w-[400px]">{description}</p>
           </Copy>
         </div>
