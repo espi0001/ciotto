@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import AppLink from "./NavLink";
@@ -15,7 +15,7 @@ const menuVariants = {
     },
   },
   open: {
-    height: "100vh",
+    height: "90vh",
     transition: {
       duration: 1,
       ease: [0.23, 1, 0.32, 1],
@@ -38,7 +38,7 @@ export default function BurgerMenu({ isOpen, onClose, textColor = "var(--color-p
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div variants={menuVariants} initial="closed" animate="open" exit="closed" className="fixed inset-0 bg-[#CAB696] z-40 overflow-y-auto">
+        <motion.div variants={menuVariants} initial="closed" animate="open" exit="closed" className="absolute inset-0 w-screen z-40 bg-[#CAB696] overflow-y-auto border-b border-primary-text/20">
           <div className="pt-32">
             <div className="w-full px-6 flex gap-8 px-section">
               {/* Left column: nav links */}
@@ -114,7 +114,7 @@ export default function BurgerMenu({ isOpen, onClose, textColor = "var(--color-p
               <div className="md:flex flex-col flex-1 items-end justify-center hidden">
                 <div className="w-full flex justify-end">
                   {/* <Image width={400} height={600} src="/image/andra.avif" alt="Placeholder" className="object-cover w-[350px] h-[400px]" /> */}
-                  <Image width={400} height={600} src="https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/works-images/andra-landing.avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJ3b3Jrcy1pbWFnZXMvYW5kcmEtbGFuZGluZy5hdmlmIiwiaWF0IjoxNzQ3NDkzOTM2LCJleHAiOjE3NzkwMjk5MzZ9.71AflfvLSPJmlmIosB5uEcpeGW3Mg41YuLJ8I47CR9o" alt="Placeholder" className="object-cover w-[350px] h-[400px]" />
+                  <Image width={400} height={600} src="https://tgjjsvjkhezqddxxcfsb.supabase.co/storage/v1/object/sign/works-images/andra-landing.avif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzIwYTRhMjdmLWM3OTAtNGY5Yy1hYjA1LTFmYzk4ZWZhMGIwNyJ9.eyJ1cmwiOiJ3b3Jrcy1pbWFnZXMvYW5kcmEtbGFuZGluZy5hdmlmIiwiaWF0IjoxNzQ3NDkzOTM2LCJleHAiOjE3NzkwMjk5MzZ9.71AflfvLSPJmlmIosB5uEcpeGW3Mg41YuLJ8I47CR9o" alt="Placeholder" className="object-cover w-[300px] h-[300px]" />
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@ export default function BurgerMenu({ isOpen, onClose, textColor = "var(--color-p
                 </div>
                 <div>
                   {/* Instagram */}
-                  <AppLink href="https://www.instagram.com/ciotto.frb/" target="_blank" rel="noopener noreferrer" className="flex gap-2" aria-label="Follow us on Instagram">
+                  <AppLink href="https://www.instagram.com/ciotto.frb/" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center" aria-label="Follow us on Instagram">
                     <Image width={24} height={24} src="/image/insta-svg.svg" alt="Instagram" className="w-4 h-4 transition-all duration-300" aria-hidden="true" />
                     ciotto.frb
                   </AppLink>

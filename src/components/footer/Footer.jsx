@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { mainLinks } from "../../data/navLinks";
 import Logo from "../Navigation/Logo";
 import AppLink from "../Navigation/NavLink";
