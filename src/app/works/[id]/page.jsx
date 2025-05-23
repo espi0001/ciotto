@@ -9,13 +9,13 @@ export const metadata = {
 };
 
 export default async function WorkDetail({ params }) {
-  const work = await getByColumn("works", "slug", params.id); // 'id' is the slug
+  const work = await getByColumn("works", "slug", params.id);
   if (!work) return <div>Not found</div>;
 
   // Transform data to match the component's expected props
   const workData = {
     title: work.name,
-    designer: "Ari Prasetya",
+    designer: work.by,
     subtitle: work.words,
     heroImage: work.heroimage,
     galleryImages: [work.image1, work.image2, work.image3].filter(Boolean),
