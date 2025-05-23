@@ -1,14 +1,11 @@
 import React from "react";
 import Image from "next/image";
-
 import Copy from "../components/Animations/gsap-anim/TextAnimation";
 import LineAnimated from "../components/Animations/motion-anim/LineAnimated";
 import ImageReveal from "../components/Animations/gsap-anim/ImageReveal";
-
 import HeroVideo from "@/components/Sections/HeroVideo";
 import ImageOpenSection from "@/components/Sections/ImageOpenSection";
 import StickySections from "@/components/Sections/sticky-sections/StickySections";
-
 import Button from "@/components/UI/Button";
 
 export const metadata = {
@@ -177,10 +174,10 @@ export default function Home() {
               <Image
                 src="/image/landing/bar(2).avif"
                 alt="A espresso machine on a the counter of Ciotto."
-                width={540} //
-                height={711}
+                width={1920} //
+                height={1080}
                 quality={100}
-                className="object-cover md:max-w-[525px] max-w-[350px] max-h-[645px]"
+                className="object-cover md:max-w-[525px] max-h-[645px]"
               />
             </ImageReveal>
           </div>

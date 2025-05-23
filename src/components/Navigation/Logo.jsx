@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function Logo({ className = "", size = "text-4xl", color = "primary-text", ...props }) {
+export default function Logo({ className = "", size = "text-4xl", ...props }) {
   return (
-    <Link href="/" className={`font-medium tracking-wide ${size} ${className}`} style={{ color }} {...props}>
+    <Link href="/" className={`font-medium tracking-wide ${size} ${className}`} {...props}>
       CIOTTO
     </Link>
   );

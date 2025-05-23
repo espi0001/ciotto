@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import AppLink from "./NavLink";
@@ -33,7 +33,6 @@ export default function BurgerMenu({ isOpen, onClose, textColor = "var(--color-p
   const [worksOpen, setWorksOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [mainHoveredIndex, setMainHoveredIndex] = useState(null);
-  const [footerHovered, setFooterHovered] = useState(null);
 
   return (
     <AnimatePresence>

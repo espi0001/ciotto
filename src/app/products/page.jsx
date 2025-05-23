@@ -3,7 +3,6 @@ import ProductGrid from "@/components/ProductDetails/ProductGrid";
 import { getAll } from "@/utils/supabase/api";
 import TitleSection from "@/components/Sections/TitleSection";
 import Button from "@/components/UI/Button";
-import Copy from "@/components/Animations/gsap-anim/TextAnimation";
 
 export const metadata = {
   title: "Ciotto | Products",

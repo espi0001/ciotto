@@ -16,8 +16,6 @@ function parseJSONField(field) {
   }
 }
 
-console.log(process.env);
-
 export default async function ProductDetail({ params }) {
   try {
     const { id } = await params;
