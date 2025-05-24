@@ -82,7 +82,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
               id: p.id,
               image: parseJSONField(p.image)[0],
               title: p.name,
-              link: `/products/${p.id}`,
+              link: `/products/${p.slug}`,
             }))}
             small
           />
