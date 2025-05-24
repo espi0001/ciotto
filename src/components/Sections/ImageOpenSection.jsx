@@ -20,7 +20,7 @@ function ImageOpenSection() {
       className="px-section mx-auto section-spacing flex max-w-full justify-center" //
     >
       {/* Begrænser max bredde og centrerer indholdet */}
-      <div className="flex flex-col">
+      <div className="flex flex-col xl:w-[1150px]">
         <div className="lg:flex flex-col gap-8">
           {/* Første del af overskriften */}
           <h2 className="h2-large font-medium hidden lg:block">Authenticity</h2>
