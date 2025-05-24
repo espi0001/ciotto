@@ -20,16 +20,16 @@ export const metadata = {
 export default function CiottoBar() {
   return (
     <section className="">
-      <HeroVideo src="/video/ciotto-bar-hero.mp4" />
+      <HeroVideo src="/video/ciotto-bar-hero.mp4" text1="Ciotto Bar" text2="Godthåbsvej 18 A" />
 
       <article className="px-section section-spacing max-w-screen-2xl mx-auto grid md:grid-cols-2 xl:grid-cols-[1fr_2fr] gap-8 md:gap-16">
         <div className="content-center flex flex-col gap-4 w-full">
           <div>
             <Copy>
-              <h2 className="mb-4">Ciotto Bar</h2>
-              <p>Enjoy a freshly brewed cup made from carefully roasted beans sourced from Mexico. Served with intention, whether you're staying or taking it to go.</p>
+              <h2 className="mb-4">Tactile moments</h2>
+              <p>Enjoy a freshly brewed coffee made from carefully roasted Mexican beans from Komuna Coffee.</p>
               <p className="mb-2"></p>
-              <p>Take a moment to slow down and experience the atmosphere of the space, where you're welcome to explore the handmade products, feel and use the materials.</p>
+              <p>Feel free to explore space, try the furniture, and get a sense of the materials and experience the atmosphere. IIt’s a place to slow down, look around, and stay as long as you like.</p>
             </Copy>
             <Button className="mt-4 mb-8" startAtTenPercent withCopy delayVariant={0.5} variant="primary" link="#menu">
               See Menu
@@ -91,7 +91,9 @@ export default function CiottoBar() {
         imageSrc4="/image/ciottobar/komuna(4).avif"
         altText4="Two women standing outside on a coffee plantation." //
       >
-        <p>Our coffee is brewed with carefully sourced beans from Komuna Coffee a Mexican collective that works directly with smallholder farmers across the country. Komuna builds long term relationships with producers who grow expressive high quality coffees while championing sustainable farming and social impact.</p>
+        <p>Our coffee is brewed with carefully sourced beans from Komuna Coffee a Mexican collective that works directly with smallholder farmers across the country.</p>
+        <p className="mb-2"></p>
+        <p>Komuna builds long term relationships with producers who grow expressive high quality coffees while championing sustainable farming and social impact.</p>
       </GalleryText>
 
       <LineAnimated inViewTrigger={true} />

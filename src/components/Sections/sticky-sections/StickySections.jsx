@@ -6,8 +6,8 @@ import Copy from "../../Animations/gsap-anim/TextAnimation";
 
 const sections = [
   {
-    title: "Handmade furniture",
-    description: "Nothing is mass-produced. Each piece is made by hand, with care and intention — built to be used, not hidden away.",
+    title: "Unique furniture",
+    description: "Handmade furniture with unique shapes & details",
     image: {
       src: "/image/landing/sektions_furniture.jpg",
       alt: "Handmade furniture",
@@ -17,8 +17,8 @@ const sections = [
     number: 1,
   },
   {
-    title: "Ceramic Works",
-    description: "Nothing is mass-produced. Each piece is made by hand, with care and intention — built to be used, not hidden away.",
+    title: "Ceramic works",
+    description: "Nothing is mass produced. Each piece is made with care and intention",
     image: {
       src: "/image/landing/sektions_coffe-bar.jpg",
       alt: "Ciotto cups",
@@ -29,7 +29,7 @@ const sections = [
   },
   {
     title: "Coffee Bar",
-    description: "Nothing is mass-produced. Each piece is made by hand, with care and intention — built to be used, not hidden away.",
+    description: "Slow down and enjoy a lovely brewed cup of coffee at Ciotto Bar",
     image: {
       src: "/image/landing/sektions_ceramic.jpg",
       alt: "Ciotto cup with coffee in it",
@@ -55,7 +55,7 @@ function StickySection({ title, description, image, number }) {
         <div className="flex flex-col">
           <Copy>
             <h2 className="h2-medium mb-8 font-semibold">{title}</h2>
-            <p className="p-product mb-8 max-w-[400px]">{description}</p>
+            <p className="p-product uppercase mb-8">{description}</p>
           </Copy>
         </div>
         <p className="logo-size">({number})</p>

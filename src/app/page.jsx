@@ -16,15 +16,15 @@ export const metadata = {
 export default function Home() {
   return (
     <section>
-      <HeroVideo src="/video/ciotto-hero-video.mp4" />
+      <HeroVideo src="/video/ciotto-hero-video.mp4" text1="Handcrafted furniture, ceramic" text2="works and a coffee bar" />
 
       {/* ----- AUTHENTICITY IN EVERY DESIGN ----- */}
       <ImageOpenSection />
 
       <LineAnimated inViewTrigger={true} />
       {/* ------ Products ------ */}
-      <article className="px-section max-w-screen-2xl mx-auto section-spacing grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
-        {/* Venstre kolonne med overskrift og label */}
+      {/* <article className="px-section max-w-screen-2xl mx-auto section-spacing grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
+        
         <div className="flex md:flex-col justify-between">
           <Copy>
             <h2 className="h2-medium">
@@ -39,7 +39,6 @@ export default function Home() {
           </Copy>
         </div>
 
-        {/* Højre kolonne med billede, tekst og knap */}
         <div className="flex flex-col md:flex-row gap-6 md:gap-16">
           <ImageReveal>
             <Image
@@ -61,15 +60,15 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </article>
+      </article> */}
 
       {/* ----- Parralax ----- */}
       <StickySections />
 
       {/* ------ About ------ */}
-      <article className="px-section max-w-screen mx-auto section-spacing grid md:grid-cols-[2fr_3fr] gap-16">
+      <article className="px-section max-w-screen mx-auto section-spacing grid lg:grid-cols-[2fr_3fr] gap-16">
         {/* Venstre billede – kun vist på desktop */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <ImageReveal>
             <Image
               src="/image/landing/started(1).avif"
