@@ -17,70 +17,66 @@ function ImageOpenSection() {
   return (
     <section
       ref={sectionRef}
-      className="px-section max-w-screen-2xl mx-auto section-spacing w-full flex" //
+      className="px-section mx-auto section-spacing flex max-w-full justify-center" //
     >
       {/* Begrænser max bredde og centrerer indholdet */}
-      <div className="flex max-w-full">
-        <div className="flex flex-col gap-8">
-          <div className="lg:flex flex-col gap-8">
-            {/* Første del af overskriften */}
-            <h2 className="h2-large font-medium w-full flex">
-              Authenticity <span className="lg:hidden"> &nbsp;in</span>
-            </h2>
-            {/* Række med billede og "IN / EVERY" tekst */}
-            <div className="flex w-full gap-8 lg:gap-18 items-center">
-              <h2 className="hidden lg:block h2-large font-medium">in</h2>
+      <div className="flex flex-col">
+        <div className="lg:flex flex-col gap-8">
+          {/* Første del af overskriften */}
+          <h2 className="h2-large font-medium hidden lg:block">Authenticity</h2>
+          {/* Række med billede og "IN / EVERY" tekst */}
+          <div className="flex lg:gap-18 items-center">
+            <h2 className="hidden lg:block h2-large font-medium">in</h2>
 
-              {/* Billede med animation – vises kun på desktop */}
-              <motion.div
-                style={{ overflow: "hidden", height: "100%" }}
-                initial={{ width: "0%" }}
-                animate={{ width: shouldAnimate ? "400px" : "0px" }} // Animer bredde ved visning
-                transition={{
-                  duration: 2.5,
-                  ease: [0.19, 1, 0.22, 1],
-                }}
-                className="hidden lg:block max-w-[200px] md:max-w-[400px]"
-              >
-                <Image
-                  quality={100}
-                  src="/image/contact/contact_hero.avif"
-                  alt="The Gamma chair in a dark room next to a table."
-                  width={1920}
-                  height={1080}
-                  className="object-cover max-w-[200px] md:max-w-[400px] max-h-[100px] md:max-h-[200px]"
-                  onLoad={() => setImgLoaded(true)} // Sæt load-status når billedet er færdig
-                />
-              </motion.div>
-
-              {/* "EVERY" vises altid – "DESIGN" kun på mobil */}
-              <h2 className="h2-large font-medium">
-                every <span className="lg:hidden">design</span>
-              </h2>
-            </div>
-          </div>
-          <div className="max-w-screen-2xl mx-auto">
-            <ImageReveal>
+            {/* Billede med animation – vises kun på desktop */}
+            <motion.div
+              style={{ overflow: "hidden", height: "100%" }}
+              initial={{ width: "0%" }}
+              animate={{ width: shouldAnimate ? "400px" : "0px" }} // Animer bredde ved visning
+              transition={{
+                duration: 2.5,
+                ease: [0.19, 1, 0.22, 1],
+              }}
+              className="hidden lg:block max-w-[200px] md:max-w-[400px]"
+            >
               <Image
                 quality={100}
                 src="/image/contact/contact_hero.avif"
                 alt="The Gamma chair in a dark room next to a table."
                 width={1920}
                 height={1080}
-                className="object-cover max-w-full lg:hidden"
+                className="object-cover max-w-[200px] md:max-w-[400px] max-h-[100px] md:max-h-[200px]"
                 onLoad={() => setImgLoaded(true)} // Sæt load-status når billedet er færdig
               />
-            </ImageReveal>
+            </motion.div>
+            {/* "EVERY" vises altid – "DESIGN" kun på mobil */}
+            <h2 className="h2-large font-medium hidden lg:block">every</h2>
           </div>
-          <div className="w-full flex flex-col md:flex-row gap-6 md:gap-34">
+          <div className="flex">
             <h2 className="h2-large font-medium hidden lg:block">design</h2>
-            <div>
-              <Copy>
-                <p className="lg:max-w-[400px] max-w-[64ch] mb-4">Exploring the intersection of craft, design, and storytelling, each collaboration is a journey shaped by shared values and a commitment to thoughtful creation and meaningful connection.</p>
-              </Copy>
-              <Button startAtTenPercent withCopy delayVariant={0.5} size="large" type="button" link="/works">
-                GO TO WORKS
-              </Button>
+            <div className="flex flex-col md:flex-row gap-12 md:gap-34">
+              <div className="text-center lg:hidden">
+                <h2 className="h2-medium font-medium">Authenticity in every design</h2>
+              </div>
+              <ImageReveal>
+                <Image
+                  quality={100}
+                  src="/image/contact/contact_hero.avif"
+                  alt="The Gamma chair in a dark room next to a table."
+                  width={1920}
+                  height={1080}
+                  className="object-cover lg:hidden"
+                  onLoad={() => setImgLoaded(true)} // Sæt load-status når billedet er færdig
+                />
+              </ImageReveal>
+              <div>
+                <Copy>
+                  <p className="lg:max-w-[400px] max-w-[64ch] mb-4">Exploring the intersection of craft, design, and storytelling, each collaboration is a journey shaped by shared values and a commitment to thoughtful creation and meaningful connection.</p>
+                </Copy>
+                <Button startAtTenPercent withCopy delayVariant={0.5} size="large" type="button" link="/works">
+                  GO TO WORKS
+                </Button>
+              </div>
             </div>
           </div>
         </div>
