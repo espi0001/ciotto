@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { usePathname } from "next/navigation";
 
 import NavLinks from "./Navigation";
 import BurgerMenu from "./BurgerMenu";
@@ -12,10 +11,8 @@ export default function Menu() {
   const [hovered, setHovered] = useState(false);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(true);
-  const [navLight, setNavLight] = useState(false);
   const [worksOpen, setWorksOpen] = useState(false);
   const navRef = useRef(null);
-  const pathname = usePathname();
 
   useEffect(() => {
     const handleResize = () => {
@@ -64,23 +61,9 @@ export default function Menu() {
     },
   };
 
-  const logoVariants = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-      transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] },
-    },
-  };
-
   // Color for nav and plus icon
   const navColor = "#402d1f";
   const effectiveNavColor = worksOpen ? "#402d1f" : navColor;
-  const burgerMenuColor = "#402d1f"; // Always the same
   const burgerMenuIconColor = isBurgerOpen ? "var(--color-primary-text)" : "var(--color-primary-text)";
   const animatedLineColor = isBurgerOpen ? "var(--color-primary-text)" : "var(--color-primary-text)";
 

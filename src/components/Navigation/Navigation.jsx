@@ -1,17 +1,9 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { mainLinks } from "../../data/navLinks";
 
 import AppLink from "./NavLink";
 import WorksDropdown from "./WorksDropdown";
-
-const blurVariant = {
-  focused: { opacity: 1, filter: "blur(0px)" },
-  blurred: { opacity: 0.4, filter: "blur(2px)" },
-  initial: { opacity: 1, filter: "blur(0px)" },
-};
 
 export default function Navigation({ navColor = "#402d1f", transition = "color 0.4s cubic-bezier(0.4,0,0.2,1)", setWorksOpen }) {
   const [worksOpen, setLocalWorksOpen] = useState(false);
