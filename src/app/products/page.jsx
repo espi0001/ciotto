@@ -26,7 +26,7 @@ export default async function Products() {
           Contact us
         </Button>
       </article>
-      <article className="mt-28">
+      <article className="mt-10 md:mt-28">
         <ProductGrid products={products} />
       </article>
     </section>

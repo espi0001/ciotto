@@ -38,7 +38,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
       </div>
       {/* Top Section: Description | Main Image | Thumbnails */}
       {/* grid grid-cols-1 lg:grid-cols-[300px_1fr_186px] gap-8 items-start mb-10 */}
-      <div className="grid lg:grid-cols-[1fr_2fr_auto] gap-8 items-start">
+      <div className="grid lg:grid-cols-[1fr_2fr_auto] md:gap-4 lg:gap-8 items-start">
         <div className="flex flex-col gap-2">
           <ProductDescription description={product.description} price={product.price} />
         </div>
@@ -65,7 +65,7 @@ const ProductDetailLayout = ({ product, images, colors, colorSwatch, sizes, pric
       </div>
 
       {/* Specs Section */}
-      <div className="mt-20 flex flex-col lg:flex-row justify-between gap-[20%] ">
+      <div className="mt-10 md:mt-20 flex flex-col lg:flex-row justify-between gap-[20%] ">
         <div className="flex-1 max-w-[500px]">
           <ProductSpecs measurements={measurements} />
         </div>
