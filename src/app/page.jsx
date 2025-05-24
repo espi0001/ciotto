@@ -20,8 +20,6 @@ export default function Home() {
 
       {/* ----- AUTHENTICITY IN EVERY DESIGN ----- */}
       <ImageOpenSection />
-
-      <LineAnimated inViewTrigger={true} />
       {/* ------ Products ------ */}
       {/* <article className="px-section max-w-screen-2xl mx-auto section-spacing grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
         
