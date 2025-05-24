@@ -28,11 +28,11 @@ const About = () => {
         />
 
         <Copy startAtZero>
-          <h1 className="hero-h1 col-span-3 row-start-2 z-40 text-center md:text-left md:max-w-[1000px] leading-tight">
+          <h2 className="h2-medium col-span-3 row-start-2 z-40 text-center md:text-left md:max-w-[1000px] leading-tight">
             <span className="block text-center md:text-left">A living design space</span>
             <span className="block text-center md:text-left md:ml-40">in the heart</span>
             <span className="block text-center md:text-left md:ml-40">of Copenhagen</span>
-          </h1>
+          </h2>
         </Copy>
         <Image
           src="/image/about/genno_chair.avif"
