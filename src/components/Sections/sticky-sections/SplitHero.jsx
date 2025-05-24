@@ -30,12 +30,12 @@ function SplitHero() {
       </div>
       {/* Left Side with Image */}
       <div className="w-1/2 h-full relative overflow-hidden split-hero-left">
-        <Image src="/image/about/abouthero.jpg" alt="About Hero" fill className="object-cover object-center z-0" priority />
+        <Image src="/image/about/abouthero.jpg" alt="A door in Ciotto behind the bar" fill className="object-cover object-center z-0" priority />
         <div className="absolute inset-0 z-5" />
       </div>
       {/* Right Side */}
       <div className="w-1/2 h-full bg-primary-background split-hero-right relative">
-        <Image src="/image/about/gatti-mahogony.avif" alt="Gatti Mahogony" fill className="object-cover object-center z-0" priority />
+        <Image src="/image/about/gatti_chair.avif" alt="Gatti chair in mahogony" fill className="object-cover object-center z-0" priority />
       </div>
     </section>
   );
