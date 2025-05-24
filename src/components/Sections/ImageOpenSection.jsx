@@ -45,7 +45,7 @@ function ImageOpenSection() {
                 <Image
                   quality={100}
                   src="/image/contact/contact_hero.avif"
-                  alt="A white Ciotto cup on top of the Toshi stool in the window of Ciotto."
+                  alt="The Gamma chair in a dark room next to a table."
                   width={1920}
                   height={1080}
                   className="object-cover max-w-[200px] md:max-w-[400px] max-h-[100px] md:max-h-[200px]"
@@ -61,8 +61,8 @@ function ImageOpenSection() {
           <ImageReveal>
             <Image
               quality={100}
-              src="/image/landing/beit-salma-open-image.jpg"
-              alt="A white Ciotto cup on top of the Toshi stool in the window of Ciotto."
+              src="/image/contact/contact_hero.avif"
+              alt="The Gamma chair in a dark room next to a table."
               width={1920}
               height={1080}
               className="object-cover max-w-full lg:hidden"
