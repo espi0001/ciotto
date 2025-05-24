@@ -66,7 +66,7 @@ export default function Home() {
       <StickySections />
 
       {/* ------ About ------ */}
-      <article className="px-section max-w-screen mx-auto section-spacing grid lg:grid-cols-[2fr_3fr] gap-16">
+      <article className="px-section max-w-screen-2xl mx-auto section-spacing w-full grid lg:grid-cols-[2fr_3fr] gap-16">
         {/* Venstre billede – kun vist på desktop */}
         <div className="hidden lg:block">
           <ImageReveal>
