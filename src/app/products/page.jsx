@@ -21,7 +21,7 @@ export default async function Products() {
   return (
     <section className="px-section">
       <article className="flex flex-col gap-8">
-        <TitleSection title="Products" description="Handcrafted with precision and care, each product is a unique expression of craftsmanship, made to bring beauty and function into everyday life. Explore the collection — and discover even more pieces in Ciotto." strongtext="Only available to purchase by contacting Ciotto." />
+        <TitleSection title="Products" description="Handcrafted with precision and care, each product is a unique expression of craftsmanship, made to bring beauty and function into everyday life. Explore the collection — and discover even more pieces in Ciotto." />
 
         <Button withCopy delayVariant={1.5} variant="primary">
           Contact to purchase

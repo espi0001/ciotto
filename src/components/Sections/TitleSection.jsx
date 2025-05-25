@@ -1,6 +1,6 @@
 import Copy from "../Animations/gsap-anim/TextAnimation";
 
-function TitleSection({ title, description, strongtext }) {
+function TitleSection({ title, description }) {
   return (
     <div className="section-spacing-small">
       <Copy delay={1}>
@@ -8,7 +8,6 @@ function TitleSection({ title, description, strongtext }) {
       </Copy>
       <Copy delay={1}>
         <p className="p-large max-w-[600px]">{description}</p>
-        <p className="p-large font-bold max-w-[600px] mt-1">{strongtext}</p>
       </Copy>
     </div>
   );
