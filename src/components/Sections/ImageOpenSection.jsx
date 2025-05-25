@@ -41,7 +41,7 @@ function ImageOpenSection() {
             >
               <Image
                 quality={100}
-                src="/image/landing/landing_hero.avif"
+                src="/image/landing/gamma_chair.avif"
                 alt="The Gamma chair in a dark room next to a table."
                 width={1920}
                 height={1080}
@@ -61,7 +61,7 @@ function ImageOpenSection() {
               <ImageReveal>
                 <Image
                   quality={100}
-                  src="/image/landing/landing_hero.avif"
+                  src="/image/landing/gamma_chair.avif"
                   alt="The Gamma chair in a dark room next to a table."
                   width={1920}
                   height={1080}
