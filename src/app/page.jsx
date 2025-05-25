@@ -16,7 +16,7 @@ export const metadata = {
 export default function Home() {
   return (
     <section>
-      <HeroVideo src="/video/ciotto-hero-video.mp4" text1="Handcrafted furniture, ceramic" text2="works and coffee bar" />
+      <HeroVideo src="/video/ciotto-hero-video-1.mp4" text1="Handcrafted furniture, ceramic" text2="works and coffee bar" />
 
       {/* ----- AUTHENTICITY IN EVERY DESIGN ----- */}
       <ImageOpenSection />
