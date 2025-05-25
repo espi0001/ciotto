@@ -17,7 +17,7 @@ export default async function Works() {
     <section className="px-section max-w-screen-2xl mx-auto ">
       <TitleSection title="WORKS OF ARI PRASETYA" />
 
-      <article className="section-spacing grid grid-cols-2 gap-y-10 gap-x-6 md:gap-x-20 lg:gap-x-30 mb-48">
+      <article className="mt-10 md:mt-28 grid grid-cols-2 gap-y-10 gap-x-6 md:gap-x-20 lg:gap-x-30 mb-48">
         {works.map((work, index) => (
           <WorkCard
             key={work.id} //
