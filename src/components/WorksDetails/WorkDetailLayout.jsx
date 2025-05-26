@@ -24,7 +24,7 @@ export default function WorkDetailLayout({ work }) {
             <div className="mb-2 text-lg md:text-xl font-light tracking-wide uppercase">Designed by {designer}</div>
           </Copy>
           <Copy startAtTenPercent={true} delay={0.5}>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-2 uppercase">{title}</h1>
+            <h1 className="h1-medium text-4xl md:text-6xl font-bold tracking-tight mb-2 uppercase">{title}</h1>
           </Copy>
           <Copy startAtTenPercent={true}>
             <div className="text-xl md:text-2xl font-light uppercase">{subtitle}</div>

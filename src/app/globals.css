@@ -154,6 +154,11 @@ h1,
   --fs-min: 2.5rem;
 }
 
+.h1-medium {
+  --fs-max: 6.125rem;
+  --fs-min: 1.8rem;
+}
+
 .h1-small {
   --fs-max: 3rem;
   --fs-min: 1.8rem;
