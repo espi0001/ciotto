@@ -17,7 +17,7 @@ export default async function Works() {
   return (
     <section className="px-section max-w-screen-2xl mx-auto ">
       <article className="flex flex-col gap-8">
-        <TitleSection title="Works" description="Handcrafted with precision and care, each product is a unique expression of craftsmanship, made to bring beauty and function into everyday life. Explore the collection — and discover even more pieces in Ciotto." />
+        <TitleSection title="Works" description="Ari’s work spans homes, restaurants, hotels and more — each piece shaped through close collaboration and thoughtful design. Browse the works — and reach out to start your own project together." />
 
         <Button withCopy delayVariant={1.5} variant="primary" link="/contact">
           Contact for inquiries
