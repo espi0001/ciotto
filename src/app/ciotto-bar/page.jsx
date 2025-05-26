@@ -23,7 +23,7 @@ export default function CiottoBar() {
       <HeroVideo src="/video/ciotto-bar-hero.mp4" text1="Ciotto Bar" text2="Godthåbsvej 18 A" />
 
       <article className="px-section section-spacing max-w-screen-2xl mx-auto grid md:grid-cols-2 xl:grid-cols-[1fr_2fr] gap-8 md:gap-16">
-        <div className="content-center flex flex-col gap-4 w-full">
+        <div className="content-center flex flex-col justify-between w-full">
           <div>
             <Copy>
               <h2 className="mb-4">Tactile moments</h2>
@@ -35,16 +35,16 @@ export default function CiottoBar() {
               See Menu
             </Button>
           </div>
-
-          <AnimatedLine
-            inViewTrigger={true}
-            width="100%"
-            height="1px"
-            color="var(--color-primary-text)" //
-            duration={0.7}
-            delay={0.5}
-          />
           <div className="w-full">
+            <AnimatedLine
+              className="mb-6"
+              inViewTrigger={true}
+              width="100%"
+              height="1px"
+              color="var(--color-primary-text)" //
+              duration={0.7}
+              delay={0.5}
+            />
             <h3 className="uppercase mb-3">Opening hours</h3>
 
             <OpeningHours days="Monday - Wednesday" hours="Closed" />
