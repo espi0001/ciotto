@@ -1,16 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import Copy from "../Animations/gsap-anim/TextAnimation";
-import Button from "../UI/Button";
-
 import ProductHeader from "./ProductHeader";
 import ProductDescription from "./ProductDescription";
 import ProductColorSwatch from "./ProductColorSwatch";
-
 import ProductImages from "./ProductImages";
 import ProductThumbnails from "./ProductThumbnails";
 import ProductSpecs from "./ProductSpecs";
-
 import ProductGrid from "./ProductGrid";
 
 function parseJSONField(field) {

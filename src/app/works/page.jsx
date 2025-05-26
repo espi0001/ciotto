@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 import { getAll } from "@/utils/supabase/api";
 import TitleSection from "@/components/Sections/TitleSection";
 import WorkCard from "@/components/WorksDetails/WorkCard";
+import Button from "@/components/UI/Button";
 
 const isLargeCard = (index) => [1, 2, 5, 6].includes(index); // Husk 0-indeks!
 
@@ -15,7 +16,13 @@ export default async function Works() {
 
   return (
     <section className="px-section max-w-screen-2xl mx-auto ">
-      <TitleSection title="WORKS OF ARI PRASETYA" />
+      <article className="flex flex-col gap-8">
+        <TitleSection title="Works" description="Handcrafted with precision and care, each product is a unique expression of craftsmanship, made to bring beauty and function into everyday life. Explore the collection — and discover even more pieces in Ciotto." />
+
+        <Button withCopy delayVariant={1.5} variant="primary" link="/contact">
+          Contact for inquiries
+        </Button>
+      </article>
 
       <article className="mt-10 md:mt-28 grid grid-cols-2 gap-y-10 gap-x-6 md:gap-x-20 lg:gap-x-30 mb-48">
         {works.map((work, index) => (
