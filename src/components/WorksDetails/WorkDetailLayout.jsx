@@ -54,23 +54,31 @@ export default function WorkDetailLayout({ work }) {
             <AnimatedLine />
             <ul className="text-base space-y-1">
               <li className="my-2">
-                <h3 className="font-semibold mb-1 tracking-wide">Location</h3>
-                <p>{location}</p>
+                <Copy delay={1}>
+                  <h3 className="font-semibold mb-1 tracking-wide">Location</h3>
+                  <p>{location}</p>
+                </Copy>
               </li>
               <AnimatedLine />
               <li className="my-2">
-                <h3 className="font-semibold mb-1 tracking-wide">Main features</h3>
-                <p>{mainFeatures}</p>
+                <Copy delay={1}>
+                  <h3 className="font-semibold mb-1 tracking-wide">Main features</h3>
+                  <p>{mainFeatures}</p>
+                </Copy>
               </li>
               <AnimatedLine />
               <li className="my-2">
-                <h3 className="font-semibold mb-1 tracking-wide">Designed by</h3>
-                <p>{by}</p>
+                <Copy delay={1}>
+                  <h3 className="font-semibold mb-1 tracking-wide">Designed by</h3>
+                  <p>{by}</p>
+                </Copy>
               </li>
               <AnimatedLine />
               {filteredDetails.length > 0 && (
                 <li>
-                  <h3 className="text-lg font-bold mb-1 tracking-wide">Details</h3>
+                  <Copy delay={1}>
+                    <h3 className="text-lg font-bold mb-1 tracking-wide">Details</h3>
+                  </Copy>
                   <ul className="text-base space-y-1">
                     {filteredDetails.map((d, i) => (
                       <li key={i} className="flex flex-row gap-2">
