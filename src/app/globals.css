@@ -59,91 +59,16 @@
 }
 
 /*********** TYPOGRAPHY ***********/
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia-Pro-Bold.woff2") format("opentype");
-  font-weight: 700;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia-Pro-Semi-Bold.woff2") format("opentype");
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia-Pro-Medium.woff2") format("opentype");
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia-Pro-Regular.woff2") format("opentype");
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: url("/fonts/Sofia-Pro-Light.woff2") format("opentype");
-  font-weight: 1 300;
-  font-display: swap;
-}
-
-/* Playfair */
-@font-face {
-  font-family: "Playfair";
-  src: url("/fonts/Playfair-VariableFont_opsz,wdth,wght.ttf") format("opentype");
-  font-weight: 1 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Gopher";
-  src: url("/fonts/Gopher-Thin.woff2") format("woff2");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("/fonts/Gopher-ThinItalic.woff2") format("woff2");
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("/fonts/Gopher-Hairline.woff2") format("woff2");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("/fonts/Gopher-HairlineItalic.woff2") format("woff2");
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
+/* Gopher font */
 @font-face {
   font-family: "Gopher";
   src: url("/fonts/Gopher-Light.woff2") format("woff2");
-  font-weight: 300;
+  font-weight: 1 300;
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Gopher";
-  src: url("/fonts/Gopher-LightItalic.woff2") format("woff2");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
+
 @font-face {
   font-family: "Gopher";
   src: url("/fonts/Gopher-Regular.woff2") format("woff2");
@@ -151,13 +76,7 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Gopher";
-  src: url("/fonts/Gopher-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
+
 @font-face {
   font-family: "Gopher";
   src: url("/fonts/Gopher-Medium.woff2") format("woff2");
@@ -165,53 +84,12 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Gopher";
-  src: url("/fonts/Gopher-MediumItalic.woff2") format("woff2");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
+
 @font-face {
   font-family: "Gopher";
   src: url("/fonts/Gopher-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("/fonts/Gopher-BoldItalic.woff2") format("woff2");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("/fonts/Gopher-Heavy.woff2") format("woff2");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("/fonts/Gopher-HeavyItalic.woff2") format("woff2");
-  font-weight: 800;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("/fonts/Gopher-Black.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gopher";
-  src: url("/fonts/Gopher-BlackItalic.woff2") format("woff2");
-  font-weight: 900;
-  font-style: italic;
   font-display: swap;
 }
 
