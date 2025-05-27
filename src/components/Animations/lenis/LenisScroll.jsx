@@ -6,15 +6,16 @@ import Lenis from "lenis";
 const useLenis = () => {
   useEffect(() => {
     const lenis = new Lenis({
-      autoRaf: true,
+      autoRaf: true, // true = den automatisk bruger requestAnimationFrame til at opdatere scroll-animationer
     });
 
     lenis.on("scroll", (e) => {
-      console.log(e);
+      // lytter til scoll-events
+      console.log(e); // logger det i konsollen
     });
 
     return () => {
-      lenis.destroy();
+      lenis.destroy(); // ryder op ved lenis.destroy() når komponenten fjernes
     };
   }, []);
 };
